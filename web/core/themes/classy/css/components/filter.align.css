@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Override of core/modules/filter/css/filter.align.css.
+ */
+
+/**
+ * Constrain the width of aligned elements to a max of 75% when left or right
+ * aligned.
+ */
+.align-right,
+.align-left {
+  max-width: 75%;
+}
+
+/**
+ * Add space between the aligned element and whatever might surround it (such
+ * as a paragraph)
+ */
+.align-right {
+  margin-left: 1em;
+}
+
+.align-left {
+  margin-right: 1em;
+}

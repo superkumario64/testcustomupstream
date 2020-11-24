@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * HTML Title module to enable limited HTML tags in title.
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function html_title_views_data_alter(&$data) {
+  $data['node_field_data']['title']['field']['id'] = 'node_html_title';
+}
+
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function html_title_preprocess_page_title(&$variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node'] = $node;
+    $node = $variables['node'];
+    $variables['title'] = \Drupal::service('html_title.filter')
+      ->decodeToMarkup($node->getTitle());
+  }
+}
+
+/**
+ * Implements hook_preprocess_search_result().
+ */
+function html_title_preprocess_search_result(&$variables) {
+  if (isset($variables['result']['node']) && $variables['result']['node'] instanceof NodeInterface) {
+    $variables['title'] = \Drupal::service('html_title.filter')->decodeToMarkup($variables['title']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function html_title_preprocess_breadcrumb(&$vars) {
+  if (!empty($vars['breadcrumb'])) {
+    $last = &$vars['breadcrumb'][count($vars['breadcrumb']) - 1];
+    if (empty($last['url'])) {
+      $text = $last['text'];
+      // It's possible that $text is a renderable array.
+      if (is_array($text)) {
+        $text = $text['#markup'];
+      }
+
+      $last['text'] = \Drupal::service('html_title.filter')->decodeToMarkup($text);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function html_title_preprocess_views_view_row_rss(&$variables) {
+  $variables['title'] = strip_tags($variables['title']);
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function html_title_theme_registry_alter(&$theme_registry) {
+  if (isset($theme_registry['breadcrumb'])) {
+    $hooks = $theme_registry['breadcrumb']['preprocess functions'];
+    if (($pos = array_search('html_title_preprocess_breadcrumb', $hooks)) !== FALSE) {
+      unset($hooks[$pos]);
+    }
+    $hooks[] = 'html_title_preprocess_breadcrumb';
+
+    $theme_registry['breadcrumb']['preprocess functions'] = array_values($hooks);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function html_title_node_view(array &$build, EntityInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+  $build['title'][0]['#context']['value'] = \Drupal::service('html_title.filter')->decodeToMarkup($build['title'][0]['#context']['value']);
+}
