@@ -1,0 +1,30 @@
+uuid: cf937cbd-80e9-455b-914a-71ca429d2321
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.alerts
+  module:
+    - system
+    - views
+  theme:
+    - santa_cruz
+id: santa_cruz_views_block__alerts_block_1
+theme: santa_cruz
+region: alert_high
+weight: -17
+provider: null
+plugin: 'views_block:alerts-block_1'
+settings:
+  id: 'views_block:alerts-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

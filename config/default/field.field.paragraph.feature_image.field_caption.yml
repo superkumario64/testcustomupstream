@@ -1,0 +1,19 @@
+uuid: e0cad097-319d-4390-b74b-8c551e1c14db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.feature_image
+id: paragraph.feature_image.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: feature_image
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

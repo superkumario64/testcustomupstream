@@ -1,0 +1,21 @@
+uuid: 859a668d-e4f7-4c1b-b396-0b370349cc02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_formatted
+    - node.type.podcast
+  module:
+    - text
+id: node.podcast.field_lead_formatted
+field_name: field_lead_formatted
+entity_type: node
+bundle: podcast
+label: 'Lead Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

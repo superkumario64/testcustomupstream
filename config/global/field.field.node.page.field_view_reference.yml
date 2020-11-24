@@ -1,0 +1,82 @@
+uuid: d25f5a59-f402-4ff5-9c1d-9873d7a204db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_reference
+    - node.type.page
+  module:
+    - viewsreference
+id: node.page.field_view_reference
+field_name: field_view_reference
+entity_type: node
+bundle: page
+label: 'View Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    page: page
+    block: block
+    attachment: 0
+    rest_export: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    alerts: 0
+    a_z_list: 0
+    block_content: 0
+    carousels: 0
+    content: 0
+    content_recent: 0
+    directory: 0
+    events: 0
+    events_calendar: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    locations: 0
+    major_card_list: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    moderated_content: 0
+    news: 0
+    news_card_grid: 0
+    podcast_card_list: 0
+    policy_card_list: 0
+    redirect: 0
+    related_content_grid: 0
+    related_links_list: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    teaser_archive: 0
+    teaser_card_list: 0
+    teaser_collection_grid: 0
+    three_story_teaser_grid: 0
+    user_admin_people: 0
+    view_search: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    title: title
+    pager: 0
+    limit: 0
+    offset: 0
+field_type: viewsreference

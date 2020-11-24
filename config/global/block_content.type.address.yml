@@ -1,0 +1,8 @@
+uuid: f889ddde-466a-45ff-9e41-396b33a97e84
+langcode: en
+status: true
+dependencies: {  }
+id: address
+label: 'Address Advanced'
+revision: 1
+description: 'Address with additional fields like emails, phones, social links.'

@@ -1,0 +1,15 @@
+uuid: 7b5bae3f-479e-4704-9f17-99835548c654
+langcode: en
+status: true
+dependencies: {  }
+name: sidebar_profile
+label: 'Sidebar Profile'
+effects:
+  dbea4065-6be8-4a1a-8a5a-6a362533bbae:
+    uuid: dbea4065-6be8-4a1a-8a5a-6a362533bbae
+    id: image_scale
+    weight: 2
+    data:
+      width: 495
+      height: null
+      upscale: false

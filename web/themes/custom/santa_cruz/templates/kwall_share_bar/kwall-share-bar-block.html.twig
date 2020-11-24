@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation to Kwall Share Bar block.
+ *
+ * Available variables:
+ * - providers: An array of providers.
+ * - url: URL to the page or node.
+ * - title: Title of the page or node.
+ *
+ * @ingroup themeable
+#}
+
+{% for provider in providers %}
+  {% if provider == 'twitter' %}
+    {% set icon = 'fab fa-' ~ provider %}
+    {% set link = 'https://twitter.com/intent/tweet?text=' ~ title ~ '&url=' ~ url %}
+    <a class="share-on {{ provider }}"
+       href="{{ link }}"
+       target="popup"
+       onclick="window.open('{{ link }}', 'popup', 'width=600, height=600'); return false;"><i
+          class="{{ icon }}"></i></a>
+  {% endif %}
+  {% if provider == 'facebook' %}
+    {% set icon = 'fab fa-' ~ provider %}
+    {% set link = 'https://www.facebook.com/sharer/sharer.php?u=' ~ url ~ '&t=' ~ title %}
+    <a class="share-on {{ provider }}"
+       href="{{ link }}"
+       target="popup"
+       onclick="window.open('{{ link }}', 'popup', 'width=600, height=600'); return false;"><i
+          class="{{ icon }}"></i></a>
+  {% endif %}
+  {% if provider == 'linkedin' %}
+    {% set icon = 'fab fa-' ~ provider %}
+    {% set link = 'https://www.linkedin.com/shareArticle?mini=true&url=' ~ url ~ '&title=' ~ title %}
+    <a class="share-on {{ provider }}"
+       href="{{ link }}"
+       target="popup"
+       onclick="window.open('{{ link }}', 'popup', 'width=600, height=600'); return false;"><i
+          class="{{ icon }}"></i></a>
+  {% endif %}
+  {% if provider == 'reddit' %}
+    {% set icon = 'fab fa-' ~ provider %}
+    {% set link = 'https://www.reddit.com/submit?url=' ~ url ~ '&title=' ~ title %}
+    <a class="share-on {{ provider }}"
+       href="{{ link }}"
+       target="popup"
+       onclick="window.open('{{ link }}', 'popup', 'width=600, height=600'); return false;"><i
+          class="{{ icon }}"></i></a>
+  {% endif %}
+  {% if provider == 'email' %}
+    {% set icon = 'fas fa-envelope' %}
+    {% set link = 'mailto:?Subject=' ~ title ~ '&Body=' ~ url %}
+    <a class="share-on {{ provider }}"
+       href="{{ link }}"
+       target="popup"
+       onclick="window.open('{{ link }}', 'popup', 'width=600, height=600'); return false;"><i
+          class="{{ icon }}"></i></a>
+  {% endif %}
+{% endfor %}

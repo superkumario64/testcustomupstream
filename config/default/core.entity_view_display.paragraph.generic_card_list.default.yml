@@ -1,0 +1,32 @@
+uuid: cb762ede-dffa-46e8-a3d8-350071c1323b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.generic_card_list.field_paragraphs
+    - paragraphs.paragraphs_type.generic_card_list
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.generic_card_list.default
+targetEntityType: paragraph
+bundle: generic_card_list
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: grid_card
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }

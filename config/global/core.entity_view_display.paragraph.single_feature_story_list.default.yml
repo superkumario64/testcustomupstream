@@ -1,0 +1,61 @@
+uuid: d1606efc-61da-48cf-b12a-5648af17ae14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_feature_story_list.field_department
+    - field.field.paragraph.single_feature_story_list.field_link
+    - field.field.paragraph.single_feature_story_list.field_read_more_style
+    - field.field.paragraph.single_feature_story_list.field_title
+    - field.field.paragraph.single_feature_story_list.field_variation
+    - paragraphs.paragraphs_type.single_feature_story_list
+  module:
+    - link
+    - options
+id: paragraph.single_feature_story_list.default
+targetEntityType: paragraph
+bundle: single_feature_story_list
+mode: default
+content:
+  field_department:
+    type: entity_reference_entity_id
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_read_more_style:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_variation:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 7ac5c233-de45-44ab-b33e-978814670931
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_specific_title_or_logo
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.site_specific_title_or_logo.field_link
+field_name: field_link
+entity_type: block_content
+bundle: site_specific_title_or_logo
+label: 'Header Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 2
+field_type: link

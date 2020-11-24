@@ -1,0 +1,10 @@
+uuid: aee2ad84-d012-4bae-a283-8099079f4993
+langcode: en
+status: true
+dependencies: {  }
+id: feature_image
+label: 'Feature Image'
+icon_uuid: null
+icon_default: null
+description: 'Page Banner.'
+behavior_plugins: {  }

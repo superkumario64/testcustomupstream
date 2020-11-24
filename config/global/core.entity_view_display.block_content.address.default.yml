@@ -1,0 +1,73 @@
+uuid: 79b6ab9f-865b-4452-823d-89d8b292bc59
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address
+    - field.field.block_content.address.body
+    - field.field.block_content.address.field_address
+    - field.field.block_content.address.field_emails
+    - field.field.block_content.address.field_faxes
+    - field.field.block_content.address.field_links
+    - field.field.block_content.address.field_phones
+  module:
+    - address
+    - link
+    - telephone
+    - text
+id: block_content.address.default
+targetEntityType: block_content
+bundle: address
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_emails:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_faxes:
+    weight: 3
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_links:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_phones:
+    weight: 2
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden:
+  langcode: true

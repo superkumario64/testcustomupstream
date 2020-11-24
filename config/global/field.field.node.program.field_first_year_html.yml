@@ -1,0 +1,29 @@
+uuid: 657d26d1-982a-4947-992c-75eafac8a5c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_year_html
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.program.field_first_year_html
+field_name: field_first_year_html
+entity_type: node
+bundle: program
+label: 'Information for First-Year Students'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

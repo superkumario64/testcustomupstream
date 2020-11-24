@@ -1,0 +1,8 @@
+uuid: 12845e0e-7e9b-4790-98fe-08d043721c7e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Policy Card Category'
+vid: policy_card
+description: ''
+weight: 0

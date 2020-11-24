@@ -1,0 +1,154 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@import 'node_modules/owl.carousel/src/scss/owl.carousel.scss';
+@import "fonts/fontawesome.scss";
+@import "fonts/solid.scss";
+
+@include foundation-global-styles;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+//
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+// @include foundation-prototype-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+// ELEMENTS
+@import 'components/base';
+@import 'components/buttons';
+@import 'components/typography';
+@import 'components/callout';
+@import 'components/citations';
+@import 'components/helpers';
+@import 'components/images';
+@import 'components/list-linked';
+@import 'components/list-stepped';
+@import 'components/table';
+
+// COMPONENTS
+
+// Content Layouts
+@import 'components/full-media';
+@import 'components/tabs';
+@import 'components/content-left';
+@import 'components/content-centered';
+@import 'components/content-w-media';
+@import 'components/column-layouts';
+@import 'components/ribbon';
+
+// Page Alerts
+@import 'components/alerts';
+
+// Social
+@import 'components/social-sharing';
+
+// News Collections
+@import 'components/hero';
+
+// Cards
+@import 'components/award-card';
+@import 'components/events-card';
+@import 'components/document-card';
+@import 'components/factoid-card';
+@import 'components/generic-card';
+@import 'components/job-posting-card';
+@import 'components/policy-card';
+@import 'components/major-card';
+@import 'components/news-card';
+@import 'components/podcast-card';
+@import 'components/media-object';
+@import 'components/profile';
+
+// List/Grids
+@import 'components/button-list';
+@import 'components/steps';
+@import 'components/generic-grid';
+@import 'components/image-grid';
+@import 'components/newsletter-list';
+@import 'components/social-post';
+@import 'components/everything-grid';
+@import 'components/pagination';
+
+// Heroes
+@import 'components/page-feature';
+
+// Historical Facts
+@import 'components/historical-fact';
+
+// Quotes
+@import 'components/quote';
+
+// Accordions
+@import 'components/accordions';
+
+// Menus
+@import 'components/menu-a-z';
+@import 'components/menu-section';
+@import 'components/section-menu';
+@import 'components/menu-sidebar';
+@import 'components/global-menu';
+@import 'components/filter-box';
+@import 'components/search-bar';
+
+
+// Headers
+@import 'components/header-global';
+@import 'components/search-global';
+@import 'components/header-main';
+@import 'components/header-sub-site';
+
+// Footers
+@import 'components/footer-global';
+@import 'components/footer-main';
+
+
+// TEMPLATES
+@import 'components/sections';
+@import 'components/zones';
+@import 'components/search-results';
+@import 'components/image-gallery';
+
+// Prototyping Tools - Delete once in CMS
+@import 'tools/prototyping';

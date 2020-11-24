@@ -1,0 +1,8 @@
+uuid: d2d35a95-1511-4cb0-8531-e8bf6216a28c
+langcode: en
+status: true
+dependencies: {  }
+id: footer---connect-to-to-ucsc
+label: 'Footer - Connect to to UCSC'
+description: ''
+locked: false

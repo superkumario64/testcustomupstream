@@ -1,0 +1,22 @@
+uuid: 83a338b8-f979-41f4-a639-389237b2ab6c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - santa_cruz
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: santa_cruz_local_tasks
+theme: santa_cruz
+region: helper
+weight: -16
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 4fb6d727-22f1-42d8-93f9-1f8163d87355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.step_grid.field_paragraphs
+    - paragraphs.paragraphs_type.step_grid
+  module:
+    - paragraphs
+id: paragraph.step_grid.default
+targetEntityType: paragraph
+bundle: step_grid
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    settings:
+      title: Step
+      title_plural: Steps
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: step
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true

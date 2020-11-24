@@ -1,0 +1,36 @@
+uuid: cd8c5896-141a-4681-8528-4dd3e3539adc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_collection.field_node_refs
+    - field.field.paragraph.news_collection.field_title
+    - field.field.paragraph.news_collection.field_view_reference
+    - paragraphs.paragraphs_type.news_collection
+id: paragraph.news_collection.default
+targetEntityType: paragraph
+bundle: news_collection
+mode: default
+content:
+  field_node_refs:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

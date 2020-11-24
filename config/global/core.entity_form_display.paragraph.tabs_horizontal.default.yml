@@ -1,0 +1,29 @@
+uuid: d38aac5b-d63d-4596-a936-6408b7ffa07f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs_horizontal.field_paragraphs
+    - paragraphs.paragraphs_type.tabs_horizontal
+  module:
+    - paragraphs
+id: paragraph.tabs_horizontal.default
+targetEntityType: paragraph
+bundle: tabs_horizontal
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    settings:
+      title: Tab
+      title_plural: Tabs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tabs_horizontal_item
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true

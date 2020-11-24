@@ -1,0 +1,10 @@
+uuid: 412a1ef4-d424-4376-8d1f-a1e8fd8a86f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.grid_card
+label: 'Grid Card'
+targetEntityType: media
+cache: true

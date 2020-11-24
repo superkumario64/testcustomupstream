@@ -1,0 +1,10 @@
+uuid: c11bed0c-afbe-4c5d-b3f9-79c3d9c8793d
+langcode: en
+status: true
+dependencies: {  }
+id: job_posting_card_list
+label: 'Job Posting Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,26 @@
+uuid: 6af7461e-b70e-4745-8a8d-b9eacaf7dcfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile
+    - node.type.division
+id: node.division.field_profile
+field_name: field_profile
+entity_type: node
+bundle: division
+label: Dean
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: e3cca450-ba93-4536-a42c-b518e43b087f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  enforced:
+    config:
+      - user.role.group_member
+id: site_section-a007929fd
+label: 'Group Member'
+weight: -6
+internal: true
+audience: outsider
+group_type: site_section
+permissions_ui: false
+permissions: {  }

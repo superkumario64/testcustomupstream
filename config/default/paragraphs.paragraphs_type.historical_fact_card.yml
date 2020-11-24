@@ -1,0 +1,10 @@
+uuid: 01f77df5-cdd2-45ea-b375-e3d49d0bb35c
+langcode: en
+status: true
+dependencies: {  }
+id: historical_fact_card
+label: 'Historical Fact Card'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Historical Timeline</em> paragraph.'
+behavior_plugins: {  }

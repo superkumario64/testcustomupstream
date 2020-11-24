@@ -1,0 +1,92 @@
+uuid: 03565b57-e428-48ce-9234-84206d0905a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid_card
+    - field.field.node.major.field_alumni_focus_html
+    - field.field.node.major.field_awards_html
+    - field.field.node.major.field_caption_formatted
+    - field.field.node.major.field_careers
+    - field.field.node.major.field_careers_html
+    - field.field.node.major.field_degrees
+    - field.field.node.major.field_eap_html
+    - field.field.node.major.field_facilities_html
+    - field.field.node.major.field_first_year_html
+    - field.field.node.major.field_general_catalog_html
+    - field.field.node.major.field_hero_content
+    - field.field.node.major.field_link
+    - field.field.node.major.field_media
+    - field.field.node.major.field_more_information_html
+    - field.field.node.major.field_opportunities_html
+    - field.field.node.major.field_sidebar_content
+    - field.field.node.major.field_transfers_html
+    - node.type.major
+  module:
+    - fences
+    - link
+    - user
+id: node.major.grid_card
+targetEntityType: node
+bundle: major
+mode: grid_card
+content:
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: grid_card
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_alumni_focus_html: true
+  field_awards_html: true
+  field_caption_formatted: true
+  field_careers: true
+  field_careers_html: true
+  field_degrees: true
+  field_eap_html: true
+  field_facilities_html: true
+  field_first_year_html: true
+  field_general_catalog_html: true
+  field_hero_content: true
+  field_more_information_html: true
+  field_opportunities_html: true
+  field_sidebar_content: true
+  field_transfers_html: true
+  langcode: true
+  search_api_excerpt: true
+  sharethis: true

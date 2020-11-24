@@ -1,0 +1,23 @@
+uuid: 447d704a-c6ec-4143-bac1-ebb7d8ec478c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_division_link
+    - paragraphs.paragraphs_type.sidebar_content_block
+  module:
+    - link
+id: paragraph.sidebar_content_block.field_division_link
+field_name: field_division_link
+entity_type: paragraph
+bundle: sidebar_content_block
+label: 'Division Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

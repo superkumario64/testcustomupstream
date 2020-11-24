@@ -1,0 +1,23 @@
+uuid: 88b9d707-b1d5-4f96-bb79-0bbaac34f2a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_background_style
+    - paragraphs.paragraphs_type.content_with_media
+id: paragraph.content_with_media.field_show_background_style
+field_name: field_show_background_style
+entity_type: paragraph
+bundle: content_with_media
+label: 'Show Background Style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

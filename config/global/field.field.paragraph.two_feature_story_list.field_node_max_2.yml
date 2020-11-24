@@ -1,0 +1,28 @@
+uuid: 0a9425fc-d930-4df5-a96a-c5b4abe89538
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_max_2
+    - node.type.article
+    - paragraphs.paragraphs_type.two_feature_story_list
+id: paragraph.two_feature_story_list.field_node_max_2
+field_name: field_node_max_2
+entity_type: paragraph
+bundle: two_feature_story_list
+label: 'Left News Cards'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

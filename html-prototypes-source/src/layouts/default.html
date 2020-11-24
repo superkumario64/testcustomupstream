@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{{ variables.clientName }}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="{{pageClass}}" id="{{type}}">
+
+    <div id="page">
+
+        {{#ifpage 'template-alert-low'}}
+            {{>alert-low}}
+        {{/ifpage}}
+
+        {{> global-nav-main }}
+        
+        <div data-sticky-container>
+            <div id="page-header" role="navigation" class="page-header sticky" aria-expanded="false" aria-label="Page header" data-anchor="main-content" data-sticky data-margin-top='0'>
+    
+                {{> global-header}}
+                {{> gateway-header}}
+                {{> mobile-menu }}
+            
+            </div>
+        </div>
+    
+        {{> body}}        
+        
+        <div class="site-footer">
+            <div class="grid-container large">
+                <div class="gateway-footer">
+                    <div class="hide-for-large">
+                        <div class="grid-x grid-margin-x grid-padding-x large-padding-collapse large-margin-collapse">
+                            <div class="large-12 small-order-2 cell">
+                                <img class="white-ucsc-logo" src="{{root}}assets/img/build-resources/uc-santa-cruz-reverse.svg" />
+                                <p class="address">1156 High Street, Santa Cruz, CA 95064</p>
+                            </div>
+                        </div>
+                    </div>
+                        {{> nav-footer-block }}
+                </div>
+                {{> global-footer type="gateway"}}
+            
+            </div>
+
+
+        </div>
+
+        {{> global-search}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+        <script>
+            var wow = new WOW();
+            wow.init();
+        </script>
+
+        <script src="{{root}}assets/js/app.js"></script>
+        <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+        <script>
+            /*----  this is here to aid in setting the elements in our custom breakpoints */
+            $(window).on('load resize', function () {
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+        </script>
+</body>
+
+</html>

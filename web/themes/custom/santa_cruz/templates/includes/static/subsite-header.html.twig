@@ -1,0 +1,78 @@
+{% if page.subsite_header %}
+  <div class="subsite-header">
+    <div class="grid-container large show-for-large">
+      <div class="grid-x grid-margin-x">
+        {% if page.subsite_brand %}
+          <div class="cell xxlarge-5 xlarge-12">
+            {{ page.subsite_brand }}
+          </div>
+        {% endif %}
+        {% if page.subsite_header %}
+          <div class="cell xxlarge-7 xlarge-12">
+            <div class="subsite-menu" id="site-menu">
+              {{ page.subsite_header }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if page.subsite_brand %}
+      <div class="grid-container large hide-for-large">
+        <div class="grid-x grid-margin-x grid-collapse">
+          <div class="cell">
+            {{ page.subsite_brand_mobile }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% if page.subsite_header_collapse %}
+  <div class="subsite-header">
+    <div class="subsite-header">
+      <div class="grid-container large">
+        <div class="grid-x large-padding-collapse large-margin-collapse">
+          {% if page.subsite_brand %}
+            {{ page.subsite_brand }}
+          {% endif %}
+          {{ page.subsite_header_collapse }}
+        </div>
+      </div>
+      {% include '@santa_cruz/includes/static/newscenter-filter.html.twig' %}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.subsite_header_align_bottom %}
+  <div class="subsite-header">
+    <div class="grid-container large show-for-large">
+      <div class="grid-x grid-margin-x align-bottom">
+        {% if page.subsite_brand %}
+          <div class="cell large-3">
+            {{ page.subsite_brand }}
+          </div>
+        {% endif %}
+        {% if page.subsite_header_align_bottom %}
+          <div class="cell large-auto show-for-xlarge">
+            <div class="subsite-menu" id="site-menu">
+              {{ page.subsite_header_align_bottom }}
+            </div>
+          </div>
+        {% endif %}
+        {% if page.subsite_header_align_bottom_mobile %}
+          <div class="cell large-auto hide-for-xlarge">
+            <div class="subsite-menu" id="site-menu">
+              {{ page.subsite_header_align_bottom_mobile }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if page.subsite_brand %}
+    <div class="subsite-bottom-header-logo hide-for-large">
+      {{ page.subsite_brand }}
+    </div>
+  {% endif %}
+{% endif %}

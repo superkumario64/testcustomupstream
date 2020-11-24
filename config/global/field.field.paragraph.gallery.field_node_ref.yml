@@ -1,0 +1,28 @@
+uuid: 8bedf9aa-1b0e-403d-99e1-c8f82def0eb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_ref
+    - node.type.gallery
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_node_ref
+field_name: field_node_ref
+entity_type: paragraph
+bundle: gallery
+label: 'Image Gallery Node'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gallery: gallery
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

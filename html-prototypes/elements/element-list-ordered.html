@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        
+        <div class="docs-heading">Ordered Lists</div>
+        
+        <div class="docs-sub-heading">Default</div>
+        
+        <ol>
+            <li>Cheese (essential)</li>
+            <li>Pepperoni</li>
+            <li>Bacon
+                <ol>
+                    <li>Normal bacon</li>
+                    <li>Canadian bacon</li>
+                </ol>
+            </li>
+            <li>Sausage</li>
+            <li>Onions</li>
+            <li>Mushrooms</li>
+        </ol>
+        
+        <div class="docs-sub-heading">Step-by-Step</div>
+        <p>Use <code>.list-stepped</code> to make an ordered list look more like a step by step tutorial. Nesting is allowed but use with caution.</p>
+        
+        <ol class="list-stepped">
+            <li>Create an ordered list.
+        
+            </li>
+            <li>Add the class <code>.list-stepped</code> to the <code>&lt;ul&gt;</code>.</li>
+            <li>Write your steps.
+                <ol>
+                    <li>If you want to nest steps now is the time.</li>
+                </ol>
+            </li>
+            <li>Watch your pupils shine.</li>
+        </ol>
+        
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

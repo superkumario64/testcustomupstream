@@ -1,0 +1,17 @@
+uuid: 294f5406-9557-4907-a2a6-561181357199
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: grid_card
+label: 'Grid Card (408×250)'
+effects:
+  fc15e2d3-7a91-4b98-9b8d-da348c8c4768:
+    uuid: fc15e2d3-7a91-4b98-9b8d-da348c8c4768
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 408
+      height: 250
+      crop_type: focal_point

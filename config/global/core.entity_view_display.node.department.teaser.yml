@@ -1,0 +1,44 @@
+uuid: 07b3949c-eb9f-45b5-bb97-8fa8db304d8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.department.body
+    - field.field.node.department.field_address
+    - field.field.node.department.field_link
+    - field.field.node.department.field_location_txt
+    - field.field.node.department.field_phone_numbers_txt
+    - node.type.department
+  module:
+    - text
+    - user
+id: node.department.teaser
+targetEntityType: node
+bundle: department
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address: true
+  field_link: true
+  field_location_txt: true
+  field_phone_numbers_txt: true
+  langcode: true

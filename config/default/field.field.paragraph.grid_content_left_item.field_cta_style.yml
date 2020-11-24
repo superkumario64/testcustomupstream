@@ -1,0 +1,23 @@
+uuid: 612b7de4-7e2f-4dd0-938b-dd314e0f28ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_style
+    - paragraphs.paragraphs_type.grid_content_left_item
+  module:
+    - options
+id: paragraph.grid_content_left_item.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+bundle: grid_content_left_item
+label: 'CTA Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: button
+default_value_callback: ''
+settings: {  }
+field_type: list_string

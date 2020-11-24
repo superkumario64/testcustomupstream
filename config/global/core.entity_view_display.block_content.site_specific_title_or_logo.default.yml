@@ -1,0 +1,58 @@
+uuid: 5a708413-4bf1-4706-b9da-57f4e15467e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_specific_title_or_logo
+    - field.field.block_content.site_specific_title_or_logo.field_description
+    - field.field.block_content.site_specific_title_or_logo.field_link
+    - field.field.block_content.site_specific_title_or_logo.field_media
+    - field.field.block_content.site_specific_title_or_logo.field_title
+  module:
+    - fences
+    - link
+    - media
+id: block_content.site_specific_title_or_logo.default
+targetEntityType: block_content
+bundle: site_specific_title_or_logo
+mode: default
+content:
+  field_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_description: true
+  langcode: true

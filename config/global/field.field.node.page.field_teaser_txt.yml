@@ -1,0 +1,19 @@
+uuid: 716fa7b7-d5d7-43be-a9c1-f4be0b95e9f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_txt
+    - node.type.page
+id: node.page.field_teaser_txt
+field_name: field_teaser_txt
+entity_type: node
+bundle: page
+label: 'Teaser Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,75 @@
+uuid: 3cc931aa-86fb-4cd8-9b7f-aee0fbbe6caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person_carousel.field_boolean
+    - field.field.paragraph.person_carousel.field_display_count
+    - field.field.paragraph.person_carousel.field_fluid_width
+    - field.field.paragraph.person_carousel.field_hide_overflow
+    - field.field.paragraph.person_carousel.field_link
+    - field.field.paragraph.person_carousel.field_scroll_count
+    - field.field.paragraph.person_carousel.field_title
+    - field.field.paragraph.person_carousel.field_view_reference
+    - paragraphs.paragraphs_type.person_carousel
+  module:
+    - link
+id: paragraph.person_carousel.default
+targetEntityType: paragraph
+bundle: person_carousel
+mode: default
+content:
+  field_boolean:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_count:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_fluid_width:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_hide_overflow:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_scroll_count:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true
+  uid: true

@@ -1,0 +1,29 @@
+uuid: 1aee349f-db80-468b-8ff7-50b2ff7af2e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_awards_html
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.program.field_awards_html
+field_name: field_awards_html
+entity_type: node
+bundle: program
+label: 'Awards, Honors, and Recognitions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

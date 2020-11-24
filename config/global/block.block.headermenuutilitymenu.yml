@@ -1,0 +1,32 @@
+uuid: 2af0afdf-10bb-4a4e-b258-29ca547bd380
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-menu
+  module:
+    - menu_block
+  theme:
+    - santa_cruz
+id: headermenuutilitymenu
+theme: santa_cruz
+region: mobile_menus
+weight: 0
+provider: null
+plugin: 'menu_block:utility-menu'
+settings:
+  id: 'menu_block:utility-menu'
+  label: 'Header Menu - Utility Menu [For Mobile]'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'utility-menu:'
+  suggestion: vertical_simple
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+visibility: {  }

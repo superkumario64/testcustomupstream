@@ -1,0 +1,19 @@
+uuid: 9b29e7a2-9cfa-45fb-ae20-78f7bfcd9ec5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.historical_fact_card
+id: paragraph.historical_fact_card.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: historical_fact_card
+label: 'Card Caption'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

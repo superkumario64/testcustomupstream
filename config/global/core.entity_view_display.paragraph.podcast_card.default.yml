@@ -1,0 +1,31 @@
+uuid: 0798f0e2-e99b-4dd2-b986-425e6fe90f64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcast_card.field_node_ref
+    - paragraphs.paragraphs_type.podcast_card
+  module:
+    - fences
+id: paragraph.podcast_card.default
+targetEntityType: paragraph
+bundle: podcast_card
+mode: default
+content:
+  field_node_ref:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: fullwidth_paragraph
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

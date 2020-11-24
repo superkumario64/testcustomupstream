@@ -1,0 +1,17 @@
+uuid: 9f52106f-084f-4828-8279-7620dbc5adfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: content_with_media
+label: 'Content with Media'
+effects:
+  7a1f7111-9e29-4d06-adf9-995032b7edea:
+    uuid: 7a1f7111-9e29-4d06-adf9-995032b7edea
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 832
+      height: 608
+      crop_type: focal_point

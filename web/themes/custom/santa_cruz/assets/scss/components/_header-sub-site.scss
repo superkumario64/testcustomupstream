@@ -1,0 +1,161 @@
+
+
+.subsite-brand-container {
+    margin: 57px 0 19px 0;
+
+    h1 {
+        margin-left: 0 !important;
+    }
+
+    @include breakpoint(large) {
+        display: none;
+    }
+
+    &.centered {
+        text-align: center;
+    }
+
+}
+
+.subsite-header {
+
+    background-color: $primary-blue;
+    margin-left: 0;
+    display: none;
+
+    @include breakpoint(large) {
+        background-color: #ffffff;
+        display: block;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    h1 { color: $primary-gray; }
+
+    .grid-container {
+        transition: all 1s ease;
+        //padding: 0 0 0 .7rem;
+
+        h1 {
+            font-size: 1.8rem;
+            @include breakpoint(xlarge){
+                font-size: 2.6rem;
+            }
+            margin: 14px 0 7px 10px;
+
+            span {
+                color: lighten($primary-gray, 30%);
+            }
+        }
+
+        &.large {
+            @include clearfix;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+
+            h1 {
+                display: none;
+
+                @include breakpoint(large) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .menu {
+        font-size: 1.15rem;
+        margin-top: 0;
+    }
+
+    .menu.dropdown {
+        > li {
+            &.is-active {
+                background-color: #f1f1f1;
+            }
+
+            > .menu {
+                margin-top: 0;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    a {
+        color: $primary-blue;
+        transition: background-color 700ms ease;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+   .subsite-brand-container {
+        position: absolute;
+        top: 80px;
+        left: 14px;
+        margin: 0;
+
+        //a {
+        //    padding: 0;
+        //}
+
+        @include breakpoint(large) {
+            position: relative;
+            display: block;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .subsite-brand {
+        max-width: 260px;
+        width: 100%;
+        @include breakpoint(xlarge) {
+            float: left;
+        }
+
+    }
+
+    .subsite-menu-toggle {
+        float: right;
+        text-align: right;
+        color: $primary-color !important;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .menu {
+        margin-top: 24px;
+        font-size: 1.2rem;
+        float: right;
+
+        @include breakpoint(xlarge down) {
+            float: none;
+            margin-top: 16px;
+        }
+
+    }
+
+}
+
+.subsite-bottom-header-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 120px;
+  z-index: 1;
+  .subsite-brand-container{
+    margin: 32px 0 6px 0;
+  }
+  a.div{
+    position: relative;
+    top: -6px;
+    left: 0;
+    font-size: .6rem !important;
+    bottom: auto;
+  }
+}

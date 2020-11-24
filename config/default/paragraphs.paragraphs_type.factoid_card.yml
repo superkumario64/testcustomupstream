@@ -1,0 +1,10 @@
+uuid: 42817b93-b577-4621-9fb2-998022d1e8c0
+langcode: en
+status: true
+dependencies: {  }
+id: factoid_card
+label: 'Factoid Card'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Factoid Card List</em> paragraph.'
+behavior_plugins: {  }

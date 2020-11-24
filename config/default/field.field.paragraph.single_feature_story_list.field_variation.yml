@@ -1,0 +1,23 @@
+uuid: ba0b1e69-b3e6-4070-b99d-5aeac9fc321e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_variation
+    - paragraphs.paragraphs_type.single_feature_story_list
+  module:
+    - options
+id: paragraph.single_feature_story_list.field_variation
+field_name: field_variation
+entity_type: paragraph
+bundle: single_feature_story_list
+label: Variation
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: advanced
+default_value_callback: ''
+settings: {  }
+field_type: list_string

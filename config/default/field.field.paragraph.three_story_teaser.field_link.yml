@@ -1,0 +1,23 @@
+uuid: 1acef0b4-c6ef-4316-84aa-3c706a9c3599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.three_story_teaser
+  module:
+    - link
+id: paragraph.three_story_teaser.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: three_story_teaser
+label: 'CTA Button'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,22 @@
+uuid: 67fbcc2c-7802-4654-9b9d-5d171bd0727d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wysiwyg_template
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  wysiwyg_template:
+    default_template: ''
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Podcast
+type: podcast
+description: 'Use <em>podcasts</em> for Soundcloud''s podcast.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,29 @@
+uuid: 45175f99-702a-412a-b904-ef3a73028bf1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f9654f63-c34c-42c2-94f1-38393f0d550f'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'nav-global cell'
+id: copyright
+theme: santa_cruz
+region: footer_last
+weight: -17
+provider: null
+plugin: 'block_content:f9654f63-c34c-42c2-94f1-38393f0d550f'
+settings:
+  id: 'block_content:f9654f63-c34c-42c2-94f1-38393f0d550f'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

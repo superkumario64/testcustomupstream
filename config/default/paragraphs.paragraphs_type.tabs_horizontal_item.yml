@@ -1,0 +1,10 @@
+uuid: 348ffd13-ad5d-4018-ad22-56a29560c9ec
+langcode: en
+status: true
+dependencies: {  }
+id: tabs_horizontal_item
+label: Tab
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Tabs Horizontal</em> paragraph.'
+behavior_plugins: {  }

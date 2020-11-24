@@ -1,0 +1,35 @@
+uuid: 43aa49db-59df-4784-a7bc-a0a507f8d768
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_button.field_link
+    - paragraphs.paragraphs_type.sidebar_button
+  module:
+    - fences
+    - link
+id: paragraph.sidebar_button.default
+targetEntityType: paragraph
+bundle: sidebar_button
+mode: default
+content:
+  field_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+hidden: {  }

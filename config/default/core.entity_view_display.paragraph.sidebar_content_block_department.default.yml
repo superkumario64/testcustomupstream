@@ -1,0 +1,72 @@
+uuid: be906ef4-7c4b-4eac-adb4-803e24e76311
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_content_block_department.field_body_unformatted
+    - field.field.paragraph.sidebar_content_block_department.field_email
+    - field.field.paragraph.sidebar_content_block_department.field_person_link
+    - field.field.paragraph.sidebar_content_block_department.field_phones
+    - paragraphs.paragraphs_type.sidebar_content_block_department
+  module:
+    - custom_module
+    - fences
+    - link
+id: paragraph.sidebar_content_block_department.default
+targetEntityType: paragraph
+bundle: sidebar_content_block_department
+mode: default
+content:
+  field_body_unformatted:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_email:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_person_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_phones:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: '80'
+      url_only: ''
+      url_plain: ''
+      rel: 0
+      target: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: phone_number_formatter
+    region: content
+hidden: {  }

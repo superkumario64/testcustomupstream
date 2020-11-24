@@ -1,0 +1,46 @@
+uuid: 2637e8a5-e1b3-4bd9-bce0-b3b7dca57665
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs_horizontal_item.field_body_formatted
+    - field.field.paragraph.tabs_horizontal_item.field_title
+    - paragraphs.paragraphs_type.tabs_horizontal_item
+  module:
+    - fences
+    - text
+id: paragraph.tabs_horizontal_item.default
+targetEntityType: paragraph
+bundle: tabs_horizontal_item
+mode: default
+content:
+  field_body_formatted:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden: {  }

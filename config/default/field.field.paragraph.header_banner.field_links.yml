@@ -1,0 +1,23 @@
+uuid: a7afbf3e-07d2-4254-8b7d-738c8624644d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.header_banner
+  module:
+    - link
+id: paragraph.header_banner.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: header_banner
+label: 'Buttons Links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

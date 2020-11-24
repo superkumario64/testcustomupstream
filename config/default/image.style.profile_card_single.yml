@@ -1,0 +1,17 @@
+uuid: 16213791-2415-4aa2-8a69-0735cd36d96e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: profile_card_single
+label: 'Profile Card - Single'
+effects:
+  d75278e5-fc84-4edd-b0d8-b765d6728e94:
+    uuid: d75278e5-fc84-4edd-b0d8-b765d6728e94
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 167
+      height: 155
+      crop_type: focal_point

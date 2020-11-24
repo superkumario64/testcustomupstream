@@ -1,0 +1,125 @@
+uuid: 5bbad092-abd3-46de-9ac2-353f43f38ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_centered.field_body_formatted
+    - field.field.paragraph.content_centered.field_links__max_2
+    - field.field.paragraph.content_centered.field_pre_title
+    - field.field.paragraph.content_centered.field_title
+    - paragraphs.paragraphs_type.content_centered
+  module:
+    - custom_module
+    - fences
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_content_wrapper:
+      children:
+        - group_grid
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: content-centered
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper'
+    group_grid:
+      children:
+        - field_pre_title
+        - field_title
+        - field_body_formatted
+        - field_links__max_2
+      parent_name: group_content_wrapper
+      weight: 5
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'grid-container large'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Grid
+id: paragraph.content_centered.default
+targetEntityType: paragraph
+bundle: content_centered
+mode: default
+content:
+  field_body_formatted:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_links__max_2:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: ucsc_buttons_link
+    region: content
+  field_pre_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: category
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h2
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden: {  }

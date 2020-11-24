@@ -1,0 +1,40 @@
+uuid: acd17105-ba71-40b3-abcc-cdba824030ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_posting_list.field_node_refs
+    - field.field.paragraph.job_posting_list.field_title
+    - paragraphs.paragraphs_type.job_posting_list
+  module:
+    - fences
+id: paragraph.job_posting_list.default
+targetEntityType: paragraph
+bundle: job_posting_list
+mode: default
+content:
+  field_node_refs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: grid_card
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

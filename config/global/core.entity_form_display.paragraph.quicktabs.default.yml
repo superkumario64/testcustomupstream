@@ -1,0 +1,38 @@
+uuid: 6197492e-ae82-451b-9601-9a6668aa7408
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quicktabs.field_quicktab
+    - field.field.paragraph.quicktabs.field_title
+    - paragraphs.paragraphs_type.quicktabs
+  module:
+    - paragraphs
+id: paragraph.quicktabs.default
+targetEntityType: paragraph
+bundle: quicktabs
+mode: default
+content:
+  field_quicktab:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

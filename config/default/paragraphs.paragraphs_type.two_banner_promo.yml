@@ -1,0 +1,10 @@
+uuid: 71685159-54e5-4ae8-a339-1dec0e2a3c4c
+langcode: en
+status: true
+dependencies: {  }
+id: two_banner_promo
+label: 'Two-Banner Promo'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

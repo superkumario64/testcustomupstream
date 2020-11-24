@@ -1,0 +1,32 @@
+uuid: cfcabaa5-0765-4115-8fe7-ec4148ed1694
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-menu---cta-buttons
+  module:
+    - menu_block
+  theme:
+    - santa_cruz
+id: headermenuctabuttons_2
+theme: santa_cruz
+region: mobile_menus
+weight: 0
+provider: null
+plugin: 'menu_block:header-menu---cta-buttons'
+settings:
+  id: 'menu_block:header-menu---cta-buttons'
+  label: 'Header Menu - CTA Buttons [For mobile]'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'header-menu---cta-buttons:'
+  suggestion: links_only
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+visibility: {  }

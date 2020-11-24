@@ -1,0 +1,15 @@
+uuid: 09c00843-7e47-4a7b-816a-35025e983a88
+langcode: en
+status: true
+dependencies: {  }
+name: inline_media
+label: 'Inline Media Large'
+effects:
+  83bf5d15-8bcf-4f9d-b7b1-f468b631dd9d:
+    uuid: 83bf5d15-8bcf-4f9d-b7b1-f468b631dd9d
+    id: image_scale
+    weight: 2
+    data:
+      width: 1024
+      height: null
+      upscale: false

@@ -1,0 +1,51 @@
+uuid: 66e18391-3c28-403c-8d26-198b1e7493d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.related_links_list.field_links
+    - field.field.paragraph.related_links_list.field_title
+    - paragraphs.paragraphs_type.related_links_list
+  module:
+    - fences
+    - link
+id: paragraph.related_links_list.default
+targetEntityType: paragraph
+bundle: related_links_list
+mode: default
+content:
+  field_links:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden: {  }

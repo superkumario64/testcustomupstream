@@ -1,0 +1,24 @@
+<a class="news-card" href="{{ url }}" aria-label="" id="node-{{ node.id }}">
+  {% if content.field_teaser_image|field_value is not empty %}
+    {% set image_url = file_url(content.field_teaser_image[0]['#item'].entity.uri.value|image_style('featured_article')) %}
+    {% set image_title = content.field_teaser_image[0]['#item'].title %}
+    {% set image_alt = content.field_teaser_image[0]['#item'].alt %}
+
+    {% if image_url %}
+      <div class="image">
+        <img alt="{{ image_alt }}" title="{{ image_title }}" src="{{ image_url }}">
+      </div>
+    {% endif %}
+  {% endif %}
+  <div class="news-card-content">
+    {% if content.field_categories|field_value is not empty %}
+      <div class="category btn-link">
+        {{ content.field_categories }}
+      </div>
+    {% endif %}
+    <div class="underline isolated">
+    <h3>{{ label }}</h3>
+      <div class="tags">{{ content.field_date.0['#text'] }}</div>
+    </div>
+  </div>
+</a>

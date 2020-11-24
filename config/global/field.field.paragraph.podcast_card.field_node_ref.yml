@@ -1,0 +1,28 @@
+uuid: 2dec76bf-620b-43be-8d80-5faa0d74de8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_ref
+    - node.type.podcast
+    - paragraphs.paragraphs_type.podcast_card
+id: paragraph.podcast_card.field_node_ref
+field_name: field_node_ref
+entity_type: paragraph
+bundle: podcast_card
+label: 'Podcast Node'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      podcast: podcast
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

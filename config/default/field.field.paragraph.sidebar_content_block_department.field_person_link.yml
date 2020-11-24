@@ -1,0 +1,23 @@
+uuid: 50f08b37-e4ea-4fb3-9e4f-d281e18f277e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_person_link
+    - paragraphs.paragraphs_type.sidebar_content_block_department
+  module:
+    - link
+id: paragraph.sidebar_content_block_department.field_person_link
+field_name: field_person_link
+entity_type: paragraph
+bundle: sidebar_content_block_department
+label: 'Person Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

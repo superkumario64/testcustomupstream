@@ -1,0 +1,17 @@
+uuid: 99ce239e-8399-46bc-9a54-25a0b9726ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  enforced:
+    config:
+      - user.role.content_publisher
+id: site_section-106f51549
+label: 'Content Publisher'
+weight: -3
+internal: true
+audience: outsider
+group_type: site_section
+permissions_ui: false
+permissions: {  }

@@ -1,0 +1,23 @@
+uuid: d8ce904c-1d6b-4e79-aa15-6e0f46892c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.banner_promo
+  module:
+    - link
+id: paragraph.banner_promo.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: banner_promo
+label: 'Link URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

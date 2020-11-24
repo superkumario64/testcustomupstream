@@ -1,0 +1,32 @@
+uuid: 70f7d2d7-73c3-4491-90ff-6f97c8e43c3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.button_list.field_paragraphs__max_4
+    - paragraphs.paragraphs_type.button_list
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.button_list.default
+targetEntityType: paragraph
+bundle: button_list
+mode: default
+content:
+  field_paragraphs__max_4:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: 'button-list align-center'
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+hidden: {  }

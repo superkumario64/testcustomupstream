@@ -1,0 +1,75 @@
+uuid: 1d2ec518-7878-4ade-8f89-7ce0c250a21c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.department.body
+    - field.field.node.department.field_address
+    - field.field.node.department.field_link
+    - field.field.node.department.field_location_txt
+    - field.field.node.department.field_phone_numbers_txt
+    - node.type.department
+  module:
+    - address
+    - link
+    - text
+    - user
+id: node.department.default
+targetEntityType: node
+bundle: department
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_link:
+    weight: 105
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_location_txt:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone_numbers_txt:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

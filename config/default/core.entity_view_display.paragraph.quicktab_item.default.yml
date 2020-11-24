@@ -1,0 +1,24 @@
+uuid: d9aebcaf-d317-4050-9c39-2b2ada80a123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quicktab_item.field_body_formatted
+    - field.field.paragraph.quicktab_item.field_title
+    - paragraphs.paragraphs_type.quicktab_item
+  module:
+    - text
+id: paragraph.quicktab_item.default
+targetEntityType: paragraph
+bundle: quicktab_item
+mode: default
+content:
+  field_body_formatted:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_title: true

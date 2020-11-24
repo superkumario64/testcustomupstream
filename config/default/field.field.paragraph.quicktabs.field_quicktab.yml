@@ -1,0 +1,124 @@
+uuid: a41c3f4c-9d56-4b5f-850b-a82a3bc9e3f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quicktab
+    - paragraphs.paragraphs_type.quicktab_item
+    - paragraphs.paragraphs_type.quicktabs
+  module:
+    - entity_reference_revisions
+id: paragraph.quicktabs.field_quicktab
+field_name: field_quicktab
+entity_type: paragraph
+bundle: quicktabs
+label: Quicktab
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quicktab_item: quicktab_item
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 33
+        enabled: false
+      3_column_cta:
+        weight: 34
+        enabled: false
+      4_column_cta:
+        weight: 35
+        enabled: false
+      accordion:
+        weight: 36
+        enabled: false
+      accordion_item:
+        weight: 37
+        enabled: false
+      adjustable_media_and_content:
+        weight: 38
+        enabled: false
+      column_section:
+        weight: 39
+        enabled: false
+      flexible_bg_image_block:
+        weight: 40
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 41
+        enabled: false
+      flexible_cta_block:
+        weight: 42
+        enabled: false
+      flexible_cta_blocks:
+        weight: 43
+        enabled: false
+      full_width_image_section:
+        weight: 44
+        enabled: false
+      gridder:
+        weight: 45
+        enabled: false
+      gridder_item:
+        weight: 46
+        enabled: false
+      hero_banner:
+        weight: 47
+        enabled: false
+      hero_slide:
+        weight: 48
+        enabled: false
+      hero_slideshow:
+        weight: 49
+        enabled: false
+      interior_column_section:
+        weight: 50
+        enabled: false
+      interior_slideshow:
+        weight: 51
+        enabled: false
+      interior_slideshow_slide:
+        weight: 52
+        enabled: false
+      person_carousel:
+        weight: 53
+        enabled: false
+      quick_link:
+        weight: 54
+        enabled: false
+      quick_link_minimal:
+        weight: 55
+        enabled: false
+      quicktab_item:
+        enabled: true
+        weight: 56
+      quicktabs:
+        weight: 57
+        enabled: false
+      recent_articles:
+        weight: 58
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 59
+        enabled: false
+      upcoming_events:
+        weight: 60
+        enabled: false
+      video_embed:
+        weight: 61
+        enabled: false
+      video_tab_carousel:
+        weight: 62
+        enabled: false
+      video_tab_item:
+        weight: 63
+        enabled: false
+      wysiwyg:
+        weight: 64
+        enabled: false
+field_type: entity_reference_revisions

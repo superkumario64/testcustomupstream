@@ -1,0 +1,43 @@
+uuid: 2f78528c-4861-464d-a585-37378c174a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion.field_accordion_items
+    - field.field.paragraph.accordion.field_boolean
+    - field.field.paragraph.accordion.field_title
+    - field.field.paragraph.accordion.field_toggle_all
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - paragraphs
+id: paragraph.accordion.default
+targetEntityType: paragraph
+bundle: accordion
+mode: default
+content:
+  field_accordion_items:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Tab
+      title_plural: Tabs
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_boolean: true
+  field_toggle_all: true
+  status: true
+  uid: true

@@ -1,0 +1,50 @@
+uuid: 6e07322e-6358-4c2f-aeb1-29bd371a529b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alert.body
+    - field.field.node.alert.field_active
+    - field.field.node.alert.field_alert_body
+    - field.field.node.alert.field_alert_level
+    - field.field.node.alert.field_expiration_date_alert
+    - field.field.node.alert.field_not_dismissable
+    - node.type.alert
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.alert.default
+targetEntityType: node
+bundle: alert
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_active: true
+  field_alert_body: true
+  field_alert_level: true
+  field_expiration_date_alert: true
+  field_not_dismissable: true
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: 1677ca3b-0b06-47dc-85d2-eb628486eb06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_list_color
+    - paragraphs.paragraphs_type.button_list_item
+  module:
+    - options
+id: paragraph.button_list_item.field_button_list_color
+field_name: field_button_list_color
+entity_type: paragraph
+bundle: button_list_item
+label: 'Button Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: black
+default_value_callback: ''
+settings: {  }
+field_type: list_string

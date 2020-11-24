@@ -1,0 +1,29 @@
+uuid: 9feca12c-115c-4319-a91b-c58ac36ac84c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:address_simple:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'hide-for-large large-12 small-order-2 cell'
+id: testingaddresssimple_3
+theme: santa_cruz
+region: footer_first
+weight: -19
+provider: null
+plugin: 'block_content:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
+settings:
+  id: 'block_content:ee7e490a-483c-4d4e-8c61-e808cc1bc773'
+  label: 'Testing Address Simple'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

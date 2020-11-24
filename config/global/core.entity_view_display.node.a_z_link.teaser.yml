@@ -1,0 +1,32 @@
+uuid: 7cf766b1-6b79-4561-9ed9-6b7dd5354e4f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.a_z_link.field_audiences
+    - field.field.node.a_z_link.field_categories
+    - field.field.node.a_z_link.field_link
+    - node.type.a_z_link
+  module:
+    - user
+id: node.a_z_link.teaser
+targetEntityType: node
+bundle: a_z_link
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_audiences: true
+  field_categories: true
+  field_link: true
+  langcode: true

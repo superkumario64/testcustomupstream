@@ -1,0 +1,28 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'featured-slide'
+] %}
+
+{% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_slideshow')) %}
+
+{% block paragraph %}
+  {% block content %}
+    <div{{ attributes.addClass(classes) }} aria-label="content slide" style="background-image: url( {{ image_url }})">
+      <div class="featured-slide-content">
+        {% if content.field_title|field_value is not empty %}
+          <h1>{{ content.field_title[0]['#context'].value }}</h1>
+        {% endif %}
+{#        {% if content.field_caption|field_value is not empty %}#}
+{#          <div class="caption">{{ content.field_caption }}</div>#}
+{#        {% endif %}#}
+        {% if content.field_links|field_value is not empty %}
+          {{ content.field_links }}
+        {% endif %}
+      </div>
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

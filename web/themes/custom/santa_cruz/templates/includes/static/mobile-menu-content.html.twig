@@ -1,0 +1,23 @@
+<div class="menu-explore off-canvas position-right wave-pattern secondary-blue" id="mobile-menu" data-off-canvas>
+  <div class="scroll">
+    <div class="close-main">
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="menu-id">
+      <img class="white-ucsc-logo" src="{{ base_path ~ directory }}/logo-reverse.svg"/>
+    </div>
+    <div class="aev-links">
+      <div class="expanded button-group">
+        {{ drupal_entity('block', 'headermenuctabuttons_2') }}
+      </div>
+    </div>
+    <div class="primary-links lower-divider">
+      {{ drupal_entity('block', 'mainnavigation_2') }}
+    </div>
+    <div class="global-links">
+      {{ drupal_entity('block', 'headermenuutilitymenu') }}
+    </div>
+  </div>
+</div>

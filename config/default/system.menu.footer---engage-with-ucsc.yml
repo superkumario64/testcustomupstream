@@ -1,0 +1,8 @@
+uuid: 992011ea-5680-47f7-b035-b4bd60ca3289
+langcode: en
+status: true
+dependencies: {  }
+id: footer---engage-with-ucsc
+label: 'Footer - Engage with UCSC'
+description: ''
+locked: false

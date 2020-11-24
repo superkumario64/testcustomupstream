@@ -1,0 +1,51 @@
+.section-menu-trigger {
+}
+
+.section-menu-icon {
+    float: left;
+    margin-right: 10px;
+}
+
+.section-menu-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9rem;
+    line-height: 1.2
+}
+
+
+.section-menu {
+
+    margin-top: 10px;
+
+    .menu {
+        @include menu-direction(vertical);
+
+        @include breakpoint(xlarge) {
+            @include flex-align(center);
+            @include menu-direction(horizontal);
+            @include menu-align(center);
+        }
+
+    }
+
+    @include breakpoint(xlarge) {
+        margin-top: 0;
+    }
+
+    .parent {
+
+        color: #000;
+        font-weight: bold;
+
+        a {
+            color: #000;
+        }
+
+        @include breakpoint(xlarge) {
+
+            border-right: 1px solid #ccc;
+        }
+
+    }
+}

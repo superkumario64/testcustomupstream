@@ -1,0 +1,253 @@
+uuid: 752fc7ea-0c7a-4ce6-bfe3-9a472b16a720
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.sidebar_content_block
+    - paragraphs.paragraphs_type.sidebar_content_block_department
+  module:
+    - entity_reference_revisions
+id: paragraph.sidebar_content_block.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: sidebar_content_block
+label: Persons
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sidebar_content_block_department: sidebar_content_block_department
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 76
+        enabled: false
+      3_column_cta:
+        weight: 77
+        enabled: false
+      4_column_cta:
+        weight: 78
+        enabled: false
+      accordion:
+        weight: 79
+        enabled: false
+      accordion_item:
+        weight: 80
+        enabled: false
+      adjustable_media_and_content:
+        weight: 81
+        enabled: false
+      article_card:
+        weight: 82
+        enabled: false
+      article_card_list:
+        weight: 83
+        enabled: false
+      article_slideshow:
+        weight: 84
+        enabled: false
+      article_slideshow_item:
+        weight: 85
+        enabled: false
+      button_list:
+        weight: 86
+        enabled: false
+      button_list_item:
+        weight: 87
+        enabled: false
+      column_section:
+        weight: 88
+        enabled: false
+      content_centered:
+        weight: 89
+        enabled: false
+      content_left:
+        weight: 90
+        enabled: false
+      content_quote:
+        weight: 91
+        enabled: false
+      content_with_media:
+        weight: 92
+        enabled: false
+      cta_buttons:
+        weight: 93
+        enabled: false
+      feature_image:
+        weight: 94
+        enabled: false
+      feature_slideshow:
+        weight: 95
+        enabled: false
+      feature_slideshow_item:
+        weight: 96
+        enabled: false
+      flexible_bg_image_block:
+        weight: 97
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 98
+        enabled: false
+      flexible_cta_block:
+        weight: 99
+        enabled: false
+      flexible_cta_blocks:
+        weight: 100
+        enabled: false
+      full_image:
+        weight: 101
+        enabled: false
+      full_video:
+        weight: 102
+        enabled: false
+      full_width_image_section:
+        weight: 103
+        enabled: false
+      gridder:
+        weight: 104
+        enabled: false
+      gridder_item:
+        weight: 105
+        enabled: false
+      grid_content_centered:
+        weight: 106
+        enabled: false
+      grid_content_centered_item:
+        weight: 107
+        enabled: false
+      grid_content_left:
+        weight: 108
+        enabled: false
+      grid_content_left_item:
+        weight: 109
+        enabled: false
+      header_banner:
+        weight: 110
+        enabled: false
+      hero_banner:
+        weight: 111
+        enabled: false
+      hero_slide:
+        weight: 112
+        enabled: false
+      hero_slideshow:
+        weight: 113
+        enabled: false
+      image_gallery:
+        weight: 114
+        enabled: false
+      image_gallery_item:
+        weight: 115
+        enabled: false
+      interior_column_section:
+        weight: 116
+        enabled: false
+      interior_slideshow:
+        weight: 117
+        enabled: false
+      interior_slideshow_slide:
+        weight: 118
+        enabled: false
+      major_card:
+        weight: 119
+        enabled: false
+      major_card_list:
+        weight: 120
+        enabled: false
+      person_carousel:
+        weight: 121
+        enabled: false
+      podcast_card:
+        weight: 122
+        enabled: false
+      podcast_card_list:
+        weight: 123
+        enabled: false
+      policy_card:
+        weight: 124
+        enabled: false
+      policy_card_list:
+        weight: 125
+        enabled: false
+      profile_card:
+        weight: 126
+        enabled: false
+      profile_card_details_fields:
+        weight: 127
+        enabled: false
+      profile_card__fullwidth:
+        weight: 128
+        enabled: false
+      profile_list:
+        weight: 129
+        enabled: false
+      quicktabs:
+        weight: 130
+        enabled: false
+      quicktab_item:
+        weight: 131
+        enabled: false
+      quick_link:
+        weight: 132
+        enabled: false
+      quick_link_minimal:
+        weight: 133
+        enabled: false
+      quote:
+        weight: 134
+        enabled: false
+      recent_articles:
+        weight: 135
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 136
+        enabled: false
+      related_links_list:
+        weight: 137
+        enabled: false
+      ribbon_image:
+        weight: 138
+        enabled: false
+      sidebar_content_block:
+        weight: 139
+        enabled: false
+      sidebar_content_block_department:
+        enabled: true
+        weight: 140
+      step:
+        weight: 141
+        enabled: false
+      step_grid:
+        weight: 142
+        enabled: false
+      tabs_horizontal:
+        weight: 143
+        enabled: false
+      tabs_horizontal_item:
+        weight: 144
+        enabled: false
+      upcoming_events:
+        weight: 145
+        enabled: false
+      video_embed:
+        weight: 146
+        enabled: false
+      video_tab_carousel:
+        weight: 147
+        enabled: false
+      video_tab_item:
+        weight: 148
+        enabled: false
+      views:
+        weight: 149
+        enabled: false
+      wysiwyg:
+        weight: 150
+        enabled: false
+field_type: entity_reference_revisions

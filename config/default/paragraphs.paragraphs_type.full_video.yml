@@ -1,0 +1,10 @@
+uuid: c5ef764d-92d2-4da2-809f-e71dba8696c3
+langcode: en
+status: true
+dependencies: {  }
+id: full_video
+label: 'Full Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

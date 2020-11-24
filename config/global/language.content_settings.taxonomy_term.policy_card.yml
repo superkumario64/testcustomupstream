@@ -1,0 +1,11 @@
+uuid: 5560c72c-55e2-4392-9892-1c806a2bd1ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.policy_card
+id: taxonomy_term.policy_card
+target_entity_type_id: taxonomy_term
+target_bundle: policy_card
+default_langcode: site_default
+language_alterable: false

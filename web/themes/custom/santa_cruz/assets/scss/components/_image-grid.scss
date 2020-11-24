@@ -1,0 +1,46 @@
+$masonry-css-column-gap: $global-margin;
+$masonry-css-column-gap: 1px;
+
+.masonry-css {
+    padding: 5rem;
+}
+
+.masonry-css {
+  column-count: 1;
+  column-gap: $masonry-css-column-gap;
+
+  a {
+      display: block;
+  }
+
+  @include breakpoint(small) {
+    column-count: 2;
+  }
+
+  @include breakpoint(large) {
+    column-count: 3;
+  }
+
+  @include breakpoint(xlarge) {
+    column-count: 4;
+  }
+
+  @include breakpoint(xxlarge) {
+    column-count: 5;
+  }
+}
+
+.masonry-css-item {
+  break-inside: avoid;
+  margin-bottom: $masonry-css-column-gap;
+}
+
+
+.image-gallery {
+
+    // .featured {
+    //     width: 30%;
+    // }
+
+
+}

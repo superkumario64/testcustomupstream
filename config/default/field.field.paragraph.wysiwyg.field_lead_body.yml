@@ -1,0 +1,21 @@
+uuid: 60b0bdbc-5fad-4150-8e16-8a8212a7c092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lead_body
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - text
+id: paragraph.wysiwyg.field_lead_body
+field_name: field_lead_body
+entity_type: paragraph
+bundle: wysiwyg
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

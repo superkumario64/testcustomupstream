@@ -1,0 +1,58 @@
+uuid: 0eec86f2-4db1-4698-8f67-9ceb58e6eeca
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address_simple
+    - field.field.block_content.address_simple.body
+    - field.field.block_content.address_simple.field_address
+    - field.field.block_content.address_simple.field_media
+  module:
+    - address
+    - fences
+    - media
+    - text
+id: block_content.address_simple.default
+targetEntityType: block_content
+bundle: address_simple
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: address_plain
+    region: content
+  field_media:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: white-ucsc-logo
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+hidden:
+  langcode: true

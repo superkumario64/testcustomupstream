@@ -1,0 +1,98 @@
+.steps {
+
+    background-color: #eee;
+    padding: 5rem 2rem;
+
+    .intro {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+}
+
+.step {
+
+    .unit {
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid #333;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .support {
+        margin-bottom: 1em;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+    }
+
+    .content {
+        padding: 2rem 2rem 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .convert {
+        padding: 2rem;
+    }
+
+}
+
+.step-by-step-grid {
+
+    @include xy-grid;
+
+    .step {
+        padding: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 10px);
+            top: calc(100% + 10px);
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f063";
+        }
+
+        .unit-container {
+            text-align: center;
+            @include breakpoint(xlarge) {
+                text-align: left;
+            }
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(4);
+
+            &:after {
+                left: calc(100% + 10px);
+                top: calc(30% - 10px);
+                content: "\f061";
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,11 @@
+uuid: bb5eed35-2f09-4cb2-8393-ae97c91f5b37
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.podcast_categories
+id: taxonomy_term.podcast_categories
+target_entity_type_id: taxonomy_term
+target_bundle: podcast_categories
+default_langcode: site_default
+language_alterable: false

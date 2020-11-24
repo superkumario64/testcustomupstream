@@ -1,0 +1,10 @@
+uuid: 59177d30-17fe-4fad-80dc-cad1f1ea53d3
+langcode: en
+status: true
+dependencies: {  }
+id: podcast_card
+label: 'Podcast Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

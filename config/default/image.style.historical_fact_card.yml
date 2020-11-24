@@ -1,0 +1,17 @@
+uuid: d989d237-c548-4735-858b-c4508e25c849
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: historical_fact_card
+label: 'Historical Fact Card'
+effects:
+  1cec9a2d-277d-4260-9346-d3782a831669:
+    uuid: 1cec9a2d-277d-4260-9346-d3782a831669
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 595
+      height: 410
+      crop_type: focal_point

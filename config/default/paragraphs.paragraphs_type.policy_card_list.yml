@@ -1,0 +1,10 @@
+uuid: 24c86fff-9326-4f3b-bead-9f50060916e5
+langcode: en
+status: true
+dependencies: {  }
+id: policy_card_list
+label: 'Policy Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

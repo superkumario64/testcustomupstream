@@ -1,0 +1,71 @@
+uuid: 323919d8-a608-410b-8c3d-6627600312a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.grid_card
+    - field.field.media.file.field_caption
+    - field.field.media.file.field_categories
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_subheader
+    - media.type.file
+  module:
+    - fences
+    - file
+_core:
+  default_config_hash: 9s0lWIanCnW5Xrrkmedxohs9F0yk4LO8ZcmVQ9xyuu4
+id: media.file.grid_card
+targetEntityType: media
+bundle: file
+mode: grid_card
+content:
+  field_caption:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_media_file:
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: file_url_plain
+    weight: 3
+    region: content
+  field_subheader:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_categories: true
+  langcode: true
+  thumbnail: true
+  uid: true

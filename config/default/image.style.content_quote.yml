@@ -1,0 +1,17 @@
+uuid: b2b01e80-7fe5-412c-9d29-4c0f43de1f42
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: content_quote
+label: 'Content Quote'
+effects:
+  c8fdfb88-f097-4268-ad80-9c33326c0364:
+    uuid: c8fdfb88-f097-4268-ad80-9c33326c0364
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1082
+      height: 641
+      crop_type: focal_point

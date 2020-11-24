@@ -1,0 +1,21 @@
+uuid: 3c03676b-a439-4a93-8197-1fd11a8c2931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_formatted
+    - paragraphs.paragraphs_type.content_centered
+  module:
+    - text
+id: paragraph.content_centered.field_body_formatted
+field_name: field_body_formatted
+entity_type: paragraph
+bundle: content_centered
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

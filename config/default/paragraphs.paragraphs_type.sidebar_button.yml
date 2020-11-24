@@ -1,0 +1,10 @@
+uuid: cddbe89c-82d9-461e-ab1e-935fd0d7924d
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_button
+label: 'Sidebar Button'
+icon_uuid: null
+icon_default: null
+description: 'Sidebar Button to link to other pages.'
+behavior_plugins: {  }

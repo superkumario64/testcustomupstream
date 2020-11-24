@@ -1,0 +1,231 @@
+uuid: db824b46-d7f2-4366-990f-2c7e3d74074e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.fullwidth_paragraph
+    - field.field.node.article.body
+    - field.field.node.article.field_after_content
+    - field.field.node.article.field_audiences
+    - field.field.node.article.field_author
+    - field.field.node.article.field_author_link
+    - field.field.node.article.field_categories
+    - field.field.node.article.field_colleges_departments
+    - field.field.node.article.field_date
+    - field.field.node.article.field_featured
+    - field.field.node.article.field_media
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_subtitle_formatted
+    - field.field.node.article.field_teaser_image
+    - field.field.node.article.field_teaser_txt
+    - field.field.node.article.field_topics
+    - node.type.article
+  module:
+    - datetime
+    - entity_reference_revisions
+    - fences
+    - link
+    - text
+    - user
+_core:
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.fullwidth_paragraph
+targetEntityType: node
+bundle: article
+mode: fullwidth_paragraph
+content:
+  body:
+    type: text_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-5
+        fences_label_tag: div
+        fences_label_classes: ''
+    label: hidden
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_after_content:
+    weight: 18
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_audiences:
+    weight: 15
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_author_link:
+    weight: 17
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_categories:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_colleges_departments:
+    weight: 14
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_media:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-4
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_subtitle_formatted:
+    weight: 19
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 16
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+  field_teaser_txt:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_topics:
+    weight: 12
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  sharethis:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_featured: true
+  field_meta_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

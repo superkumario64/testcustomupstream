@@ -1,0 +1,29 @@
+uuid: cc743cca-95b1-4069-ab36-ffb829144893
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_category
+    - paragraphs.paragraphs_type.feature_image
+    - taxonomy.vocabulary.categories
+id: paragraph.feature_image.field_category
+field_name: field_category
+entity_type: paragraph
+bundle: feature_image
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

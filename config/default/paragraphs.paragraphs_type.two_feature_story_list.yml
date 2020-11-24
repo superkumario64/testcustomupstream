@@ -1,0 +1,10 @@
+uuid: 8ba7d5c4-9aaa-40fe-b9b5-07ad8ac56d12
+langcode: en
+status: true
+dependencies: {  }
+id: two_feature_story_list
+label: 'Two-Feature Story List (Nodes)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,88 @@
+uuid: a86a1cc2-2e03-47e8-8172-4babcc08d49a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alert.field_active
+    - field.field.node.alert.field_alert_body
+    - field.field.node.alert.field_alert_level
+    - field.field.node.alert.field_alert_type
+    - field.field.node.alert.field_expiration_date_alert
+    - field.field.node.alert.field_link
+    - node.type.alert
+  module:
+    - datetime
+    - fences
+    - link
+    - options
+    - text
+    - user
+id: node.alert.default
+targetEntityType: node
+bundle: alert
+mode: default
+content:
+  field_active:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_alert_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_alert_level:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_alert_type:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_expiration_date_alert:
+    weight: 2
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

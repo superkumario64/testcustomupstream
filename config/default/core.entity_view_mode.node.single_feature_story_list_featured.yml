@@ -1,0 +1,10 @@
+uuid: a5a62498-4e02-465e-ab90-b3394ddc5bd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.single_feature_story_list_featured
+label: 'Single-Feature Story List: Featured'
+targetEntityType: node
+cache: true

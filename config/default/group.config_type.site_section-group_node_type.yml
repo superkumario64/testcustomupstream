@@ -1,0 +1,18 @@
+uuid: c2c68e59-4e7d-4463-8c90-c343e02450d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  module:
+    - gnode
+    - node
+id: site_section-group_node_type
+label: 'Site Section: Group content type'
+description: 'Adds content type to groups both publicly and privately.'
+group_type: site_section
+config_plugin: group_node_type
+plugin_config:
+  group_cardinality: '0'
+  entity_cardinality: '0'
+  use_creation_wizard: 1

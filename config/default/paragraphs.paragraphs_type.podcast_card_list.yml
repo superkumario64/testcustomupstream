@@ -1,0 +1,10 @@
+uuid: 088e0d23-d953-4189-aa41-0e073eda78b6
+langcode: en
+status: true
+dependencies: {  }
+id: podcast_card_list
+label: 'Podcast Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

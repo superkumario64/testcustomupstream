@@ -1,0 +1,29 @@
+uuid: 786f4fc1-e3f9-40af-a4bc-832cab229e31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy
+    - paragraphs.paragraphs_type.three_story_teaser
+    - taxonomy.vocabulary.article_category
+id: paragraph.three_story_teaser.field_taxonomy
+field_name: field_taxonomy
+entity_type: paragraph
+bundle: three_story_teaser
+label: Taxonomy
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      article_category: article_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,87 @@
+.global-search-container {
+   background: transparent;
+   box-shadow: none !important;
+   overflow: visible;
+   z-index: 1000 !important;
+   @include xy-grid;
+   text-align: center;
+   opacity: 0;
+   transition: all 500ms ease;
+
+   &.is-open {
+       opacity: 1;
+   }
+
+   .input-group-button a, .input-group-button button {
+       padding-top: 1rem;
+       padding-bottom: 1rem;
+    }   
+
+   @include breakpoint(medium){
+        height: auto;
+        width: 100%;
+   }
+
+    .global-search {
+        z-index: 5000;
+        padding: .5rem 1.5rem 3rem 1.5rem;
+        color: white;
+        max-width: 1800px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        background: $primary-blue;
+        position: relative;
+
+        @include breakpoint(large){
+            padding: .5rem 3rem 3rem 3rem;
+        }
+
+        .input-group-field {
+            height: 2.5rem;
+
+            @include breakpoint(large){
+                height: auto;
+            }
+        }
+
+        &:before {
+            background: linear-gradient(135deg, $primary-blue 35%, lighten( $primary-blue, 15% ) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            content: "";
+        }
+
+        h2, .footer-links {
+            color: white;
+            a { color: white}
+        }
+
+        .button {
+            width: 100%;
+            max-width: none;
+            margin: 0 auto;
+            max-height: 2.5rem;
+            padding-top: 7px;
+            
+            @include breakpoint(large) {
+                max-width: 450px;
+                max-height: none;
+                padding-top: 1rem;
+            }
+        }
+
+        .close-modal {
+            color: white;
+        }
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(6);
+        }
+    }
+}

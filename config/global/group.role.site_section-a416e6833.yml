@@ -1,0 +1,17 @@
+uuid: 0fd1756c-d274-4f4d-8c2b-e940f8faa05d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  enforced:
+    config:
+      - user.role.administrator
+id: site_section-a416e6833
+label: Administrator
+weight: -1
+internal: true
+audience: outsider
+group_type: site_section
+permissions_ui: false
+permissions: {  }

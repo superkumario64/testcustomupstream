@@ -1,0 +1,19 @@
+uuid: 40519a4a-f469-4dcf-bfc4-1545b18e32e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic_title_advanced
+    - paragraphs.paragraphs_type.feature_image
+id: paragraph.feature_image.field_topic_title_advanced
+field_name: field_topic_title_advanced
+entity_type: paragraph
+bundle: feature_image
+label: 'Topic Title Advanced'
+description: 'ex. "Issue 13"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

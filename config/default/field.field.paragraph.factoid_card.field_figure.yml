@@ -1,0 +1,19 @@
+uuid: 87005dab-cfba-4cc9-acf8-120bfdd59a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_figure
+    - paragraphs.paragraphs_type.factoid_card
+id: paragraph.factoid_card.field_figure
+field_name: field_figure
+entity_type: paragraph
+bundle: factoid_card
+label: Figure
+description: 'ex. "2,000"'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

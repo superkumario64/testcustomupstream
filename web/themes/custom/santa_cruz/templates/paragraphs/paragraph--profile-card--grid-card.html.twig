@@ -1,0 +1,40 @@
+{% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value|image_style('sidebar_profile')) %}
+{% set image_title = content.field_image[0]['#item'].title %}
+{% set image_alt = content.field_image[0]['#item'].alt %}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      <div style="max-width: 500px">
+        {% if content.field_link|field_value is not empty %}
+        <a href="{{ content.field_link[0]['#url'] }}"
+           class="profile carousel-item"
+           target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+          {% endif %}
+          {% if image_url %}
+            <div class="image">
+              <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+            </div>
+          {% endif %}
+          <div class="profile-info">
+            <h4 class="underline tighten">{{ content.field_title[0]['#context'].value }}</h4>
+            <div class="tags">
+              <p>{{ content.field_subtitle[0]['#context'].value }}</p>
+              <p class="btn-link"><i class="fas fa-envelope"></i> {{ content.field_email[0]['#context'].value }}</p>
+            </div>
+          </div>
+          {% if content.field_link|field_value is not empty %}
+        </a>
+        {% endif %}
+      </div>
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

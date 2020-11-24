@@ -1,0 +1,36 @@
+.w-img {
+    padding: 6rem 0;
+    background-color: #f1f1f1;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bordered {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.w-video {
+    padding: 6rem 0;
+    background-color: #f1f1f1;
+}
+
+.w-color {
+    padding: 4rem 0;
+
+    &.primary {
+        background-color: $primary-color;
+        color: #fff;
+    }
+
+    &.secondary {
+        background-color: lighten( $light-gray, 10% )
+    }
+
+    &.no-padding {
+        padding: 0;
+    }
+
+}

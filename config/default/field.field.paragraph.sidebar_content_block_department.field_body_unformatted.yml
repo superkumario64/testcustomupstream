@@ -1,0 +1,19 @@
+uuid: 1eae7b34-25b3-4d00-bace-7debfea34654
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_unformatted
+    - paragraphs.paragraphs_type.sidebar_content_block_department
+id: paragraph.sidebar_content_block_department.field_body_unformatted
+field_name: field_body_unformatted
+entity_type: paragraph
+bundle: sidebar_content_block_department
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

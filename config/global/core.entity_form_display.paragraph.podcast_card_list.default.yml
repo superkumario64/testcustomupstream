@@ -1,0 +1,16 @@
+uuid: f6d13792-f606-4140-9e91-7bd973aeec86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcast_card_list.field_view_reference
+    - paragraphs.paragraphs_type.podcast_card_list
+id: paragraph.podcast_card_list.default
+targetEntityType: paragraph
+bundle: podcast_card_list
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

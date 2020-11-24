@@ -1,0 +1,19 @@
+uuid: 9786be47-19e4-4e90-9136-de155315d007
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.teaser_card_list
+id: paragraph.teaser_card_list.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: teaser_card_list
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

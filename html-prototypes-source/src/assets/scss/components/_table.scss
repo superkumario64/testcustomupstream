@@ -1,0 +1,36 @@
+tbody {
+    background: rgba($white, 0.7);
+}
+
+tbody tr:nth-child(even) {
+    background: rgba($primary-gray, .05);
+}
+
+thead {
+    background: rgba($primary-gray, .1);
+
+    th {
+        padding: 0.5rem 0.625rem 0.625rem;
+    }
+}
+
+table.hover {
+    thead {
+        tr:hover {
+            cursor: pointer;
+            background: rgba($primary-gray, .15); 
+        }
+    }
+
+    tbody {
+        tr:hover {
+            cursor: pointer;
+            background: rgba($primary-blue, .1); 
+        }
+
+        tr:nth-child(even):hover {
+            cursor: pointer;
+            background: rgba($primary-blue, .15);
+        }
+    }
+}

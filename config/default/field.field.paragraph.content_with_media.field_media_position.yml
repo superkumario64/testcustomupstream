@@ -1,0 +1,23 @@
+uuid: 40e97395-5d1a-4736-b1f5-e84deae4cb89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_position
+    - paragraphs.paragraphs_type.content_with_media
+  module:
+    - options
+id: paragraph.content_with_media.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+bundle: content_with_media
+label: 'Media Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,33 @@
+uuid: b7682ed2-e951-4897-a90b-4ab325981bde
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_button_list_color
+field_name: field_button_list_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: black
+      label: Black
+    -
+      value: green
+      label: Green
+    -
+      value: magenta
+      label: Magenta
+    -
+      value: orange
+      label: Orange
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

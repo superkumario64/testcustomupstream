@@ -1,0 +1,21 @@
+uuid: 45ff1ab7-9773-4b1d-89f0-a30ce213f592
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.podcast
+  module:
+    - metatag
+id: node.podcast.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: podcast
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

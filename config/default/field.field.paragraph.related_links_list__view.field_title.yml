@@ -1,0 +1,19 @@
+uuid: 1d7dca9e-9a3d-40bb-b706-9fb30a605218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.related_links_list__view
+id: paragraph.related_links_list__view.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: related_links_list__view
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

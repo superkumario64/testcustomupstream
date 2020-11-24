@@ -1,0 +1,30 @@
+.letter-group {
+    margin-bottom: 2rem;
+}
+
+.letter {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @include breakpoint(large){
+        font-size: 2rem;
+    }
+}
+
+.letter-result {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+
+    .letter-result-title {
+        font-size: 2rem;
+        display: inline-block;
+    }
+
+    .letter-category {
+        font-size: 1rem;
+        background-color: $secondary-color;
+        display: inline-block;
+        margin-left: 10px;
+        color: #fff;
+        padding: 2px 10px;
+    }
+}

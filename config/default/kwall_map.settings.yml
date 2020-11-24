@@ -1,0 +1,24 @@
+kwall_map:
+  page_title: 'Map Page'
+  source_text: 'Some source text?'
+  overlay_path: Path/to/overlay.png
+  sw_lat: '11.1111'
+  sw_lon: '-22.2222'
+  ne_lat: '33.3333'
+  ne_lon: '-44.4444'
+  styles: '[]'
+_core:
+  default_config_hash: mXRQ6iQPE_fr9pMquwOUCl9nZnJ_AzffHpLejoSsnEU
+num_campuses: '1'
+overlay_1: {  }
+overlay_path_1: ''
+ne_lat_1: ''
+ne_lon_1: ''
+sw_lat_1: ''
+sw_lon_1: ''
+overlay_2: {  }
+overlay_path_2: ''
+ne_lat_2: ''
+ne_lon_2: ''
+sw_lat_2: ''
+sw_lon_2: ''

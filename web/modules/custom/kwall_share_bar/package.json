@@ -1,0 +1,26 @@
+{
+  "name": "kwall_share_bar",
+  "version": "1.0.2",
+  "authors": [
+    {
+      "name": "Ruslan Piskarov",
+      "email": "ruslan.piskarev@kwallcompany.com",
+      "role": "Kwall Developer",
+      "homepage": "https://makedrupaleasy.com"
+    }
+  ],
+  "homepage": "https://www.kwallcompany.com",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp.spritesmith": "^6.11.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "main": "gulpfile.js",
+  "dependencies": {}
+}

@@ -1,0 +1,10 @@
+uuid: 6f67d440-20e4-4496-8663-ef0c84eaaf22
+langcode: en
+status: true
+dependencies: {  }
+id: grid_content_left_item
+label: 'Grid Item (Left)'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Grid Content (Left)</em> paragraph.'
+behavior_plugins: {  }

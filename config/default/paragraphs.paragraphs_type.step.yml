@@ -1,0 +1,10 @@
+uuid: 5375351f-671c-4ec1-bc09-a30cb6248cf8
+langcode: en
+status: true
+dependencies: {  }
+id: step
+label: Step
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Step By Step Grid</em> paragraph.'
+behavior_plugins: {  }

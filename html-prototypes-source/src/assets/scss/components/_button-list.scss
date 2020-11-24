@@ -1,0 +1,76 @@
+.button-list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    z-index: 2;
+    position: relative;
+    @include xy-grid;
+    margin: 1rem 0 0;
+
+    .button {
+        border: 1px solid $primary-gray;
+        background: white;
+        color: $primary-gray;
+        font-size: 1rem;
+        line-height: 1.25;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        align-items: center;
+        max-width: none;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        @include xy-cell(12, true, 0);
+        margin-top: .5rem;
+        padding: .7rem 0;
+
+        &::after{ display: none; }
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(auto);
+            border: 2px solid lighten($primary-gray, 70%);
+            padding: 1.5rem 0;
+        }
+    
+        &:nth-child(1), &:nth-child(5){
+            border-color: $secondary-orange;
+            
+            &:hover {
+                background: lighten($secondary-orange, 35%);
+            }
+        }
+
+        &:nth-child(2), &:nth-child(6){
+            border-color: $secondary-green;
+            
+            &:hover {
+                background: lighten($secondary-green, 35%);
+            }
+        }
+
+        &:nth-child(3), &:nth-child(7){
+            border-color: $secondary-pink;
+            
+            &:hover {
+                background: lighten($secondary-pink, 45%);
+            }
+        }
+
+        &:nth-child(4), &:nth-child(8){
+            border-color: darken($secondary-seagreen, 60%);
+            
+            &:hover {
+                background: lighten($secondary-seagreen, 65%);
+            }
+        }     
+        
+        .button-text {
+            box-sizing: inherit;
+            font-size: .9rem;
+            
+            @include breakpoint(large down) { box-sizing: content-box;}
+        }
+
+    }
+}

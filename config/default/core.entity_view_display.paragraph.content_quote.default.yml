@@ -1,0 +1,217 @@
+uuid: d1215d6b-012b-4f0c-8ff1-4fb1addd4ca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_quote.field_author
+    - field.field.paragraph.content_quote.field_body_unformatted
+    - field.field.paragraph.content_quote.field_image
+    - field.field.paragraph.content_quote.field_link
+    - image.style.content_quote
+    - paragraphs.paragraphs_type.content_quote
+  module:
+    - custom_module
+    - fences
+    - field_group
+    - media
+third_party_settings:
+  field_group:
+    group_content_wrapper:
+      children:
+        - group_grid
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'quote wave-pattern blue'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper'
+    group_grid:
+      children:
+        - group_inner_wrapper
+      parent_name: group_content_wrapper
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'grid-container large'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Grid
+    group_inner_wrapper:
+      children:
+        - group_media
+        - group_content
+      parent_name: group_grid
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: inner
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Inner wrapper'
+    group_media:
+      children:
+        - field_image
+      parent_name: group_inner_wrapper
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: media
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Media
+    group_content:
+      children:
+        - group_blockquote
+        - field_link
+      parent_name: group_inner_wrapper
+      weight: 21
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+    group_blockquote:
+      children:
+        - field_body_unformatted
+        - group_cite
+      parent_name: group_content
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: blockquote
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Blockquote
+    group_cite:
+      children:
+        - field_author
+      parent_name: group_blockquote
+      weight: 22
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: cite
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Cite
+id: paragraph.content_quote.default
+targetEntityType: paragraph
+bundle: content_quote
+mode: default
+content:
+  field_author:
+    weight: 22
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_body_unformatted:
+    weight: 21
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_image:
+    weight: 21
+    label: hidden
+    settings:
+      image_style: content_quote
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+  field_link:
+    weight: 23
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: ucsc_buttons_link
+    region: content
+hidden: {  }

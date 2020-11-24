@@ -1,0 +1,19 @@
+uuid: 89f90c29-df13-4d4a-ab3c-003b16f28038
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_email
+    - paragraphs.paragraphs_type.sidebar_content_block
+id: paragraph.sidebar_content_block.field_email
+field_name: field_email
+entity_type: paragraph
+bundle: sidebar_content_block
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

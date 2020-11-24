@@ -1,0 +1,19 @@
+uuid: 922ece19-6c6d-4d98-a365-187e2447fbe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.historical_fact_card
+id: paragraph.historical_fact_card.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: historical_fact_card
+label: 'Card Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: f2cfc16b-dacf-4f95-8050-53415344d31d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_slideshow.field_paragraphs
+    - paragraphs.paragraphs_type.feature_slideshow
+  module:
+    - paragraphs
+id: paragraph.feature_slideshow.default
+targetEntityType: paragraph
+bundle: feature_slideshow
+mode: default
+content:
+  field_paragraphs:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: feature_slideshow_item
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true

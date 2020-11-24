@@ -1,0 +1,10 @@
+uuid: b8812ae4-7a80-45aa-b639-9b5b45c4da0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.story_hero
+label: 'Story Hero'
+targetEntityType: node
+cache: true

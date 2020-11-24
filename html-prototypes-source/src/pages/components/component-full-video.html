@@ -1,0 +1,59 @@
+---
+layout: viewer-components
+---
+
+<div class="hero-viewport inner-page">
+    <div class="hero-caption wow">
+        <h3 class="secondary-blue-text">Subheader</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum quisquam nobis atque nostrum culpa sequi ducimus aut, quod quas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum quisquam nobis atque nostrum culpa sequi ducimus aut, quod quas? </p>
+        <a class="button primary">Link to something relevant</a>
+    </div>
+    <div class="hero-container">
+        <div class="header-wrapper content-centered">
+            <h1 class="white-text">Go Banana Slugs!</h1>
+        </div>
+        <div id="hero" class="hero">
+            <div class="hero-video">
+                <div class="hero-video-container">
+                    <div id="muteYouTubeVideoPlayer"></div>
+                </div>
+            </div>
+            <img src="{{root}}assets/img/content/banana-slug.jpg" alt="alt tag" />
+            
+        </div>
+    </div>
+</div>
+
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+    function onYouTubeIframeAPIReady() {
+        var player;
+        player = new YT.Player('muteYouTubeVideoPlayer', {
+            videoId: 'mHvCQSGanJg', // YouTube Video ID
+            playerVars: {
+                autoplay: 1, // Auto-play the video on load
+                controls: 0, // Show pause/play buttons in player
+                showinfo: 0, // Hide the video title
+                modestbranding: 1, // Hide the Youtube Logo
+                loop: 1, // Run the video in a loop
+                fs: 0, // Hide the full screen button
+                cc_load_policy: 0, // Hide closed captions
+                iv_load_policy: 3, // Hide the Video Annotations
+                autohide: 0, // Hide video controls when playing
+                rel: 0
+            },
+            events: {
+                onReady: function(e) {
+                    e.target.mute();
+                    $("#muteYouTubeVideoPlayer").removeAttr("height").removeAttr("width");
+                }
+            }
+        });
+
+    }
+</script>
+
+    
+

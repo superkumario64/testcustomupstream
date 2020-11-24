@@ -1,0 +1,10 @@
+uuid: 68672ea1-a5f6-4925-b363-75b57d21b818
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.inline_content_large
+label: 'Inline Content Large'
+targetEntityType: media
+cache: true

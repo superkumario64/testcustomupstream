@@ -1,0 +1,24 @@
+<div class="global-search-container off-canvas position-top align-center" id="global-search" data-off-canvas>
+  <div class="global-search">
+    <a href="#" class="close-modal" data-toggle="global-search">
+      <i class="fas fa-times"></i>
+    </a>
+    <h2 class="mt-25">{{ "Search UCSC"|t }}:</h2>
+    <form action="/search" method="get">
+      <div class="input-group">
+        <input class="input-group-field" type="search" placeholder="Search this site" id="searchInput">
+        <div class="input-group-button">
+          <a class="button secondary" href="#"><i class="fas fa-search"></i> <span
+                class="show-for-large">{{ "Search"|t }}</span></a>
+
+        </div>
+      </div>
+    </form>
+    <div class="footer-links">
+      {{ "Other ways to search"|t }}:
+      <a href="#" aria-label="">{{ "People"|t }}</a>
+      | <a href="/a-z-list" aria-label="">{{ "A-Z Index"|t }}</a>
+      | <a href="#" aria-label="">{{ "Calendars"|t }}</a>
+    </div>
+  </div>
+</div>

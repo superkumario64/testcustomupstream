@@ -1,0 +1,10 @@
+uuid: 8c8be778-ad2a-4cc7-9e7c-c2d200d95628
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.single_feature_story_list_interior_list
+label: 'Single-Feature Story List (Interior): List'
+targetEntityType: node
+cache: true

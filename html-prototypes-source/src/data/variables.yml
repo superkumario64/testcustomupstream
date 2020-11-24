@@ -1,0 +1,252 @@
+---
+clientName: "UCSC"
+featuredSites: 
+  -
+    title: Featured site 1
+    img: http://via.placeholder.com/65x40?text=Reused+Image
+  -
+    title: Featured site 2
+    img: http://via.placeholder.com/65x40?text=Reused+Image
+  -
+    title: Featured site 3
+    img: http://via.placeholder.com/65x40?text=Reused+Image
+  -
+    title: Featured site 4
+    img: http://via.placeholder.com/65x40?text=Reused+Image
+
+specialReports: 
+  -
+    title: Special reports 1
+  -
+    title: Special reports 2
+  -
+    title: Special reports 3
+
+newsBriefs: 
+  -
+    title: News briefs 1
+  -
+    title: News briefs 2
+  -
+    title: News briefs 3
+  -
+    title: News briefs 4
+  
+campusMessages: 
+  -
+    title: Campus messages 1
+  -
+    title: Campus messages 2
+  -
+    title: Campus messages 3
+  -
+    title: Campus messages 4
+    
+recentNews:
+  -
+    category: Category
+    title: A year of growth, change, and forging ahead at UC Santa Cruz
+  -
+    category: Category
+    title: An art pioneer gets his due
+  -
+    category: Category
+    title: Two new books published by UC Santa Cruz poet, lecturer, and alumnus Gary Young
+  -
+    category: Category
+    title: New book reframes activism of Native leaders who sowed seeds of Red Power Movement
+  -
+    category: Category
+    title: The complex history of Earth’s magnetic reversals
+ 
+
+inTheNews: 
+  -
+    source: San Jose Mercury News
+    title: Scientists listen to the sounds of silence in Monterey Bay
+  -
+    source: Christian Science Monitor
+    title: What's made rates of degree attainment for immigrant students spike?
+  -
+    source: Scientific American
+    title: Caught in the act—Astronomers get their best look yet at a supernova blowing up
+  -
+    source: Santa Cruz Sentinel
+    title: How does climate change impact water?
+  
+eventList: 
+  -
+    venue: Stevenson Event Center
+    title: CruzHacks
+  -
+    venue: Music Center Recital Hall
+    title: Amahl and the Night Visitors
+  -
+    venue: UCSC Event Center
+    title: Questions That Matter "Date and Democracy"
+  -
+    venue: UCSC Event Center
+    title: Foundation Medal honoring Janet Yellen 
+
+visitUCSCCards: 
+  -
+    title: Maps & Directions
+    bodyCopy: UC Santa Cruz is located in Central California on 2,000 acres overlooking the Monterey Bay. It is easily reached by major highways, with airports nearby.
+  -
+    title: Take a Campus tour
+    bodyCopy: Once on campus, you'll want to take a tour to experience all that UC Santa Cruz has to offer before beginning your own explorations.
+  -
+    title: Major UCSC Destinations
+    bodyCopy: McHenry Library, 10 unique colleges, Science Hill, the East Field, Quarry Plaza, the Farm and Garden, a Theater Arts center, and that's just a start.
+  -
+    title: Transportation & Parking
+    bodyCopy: The campus is best experienced on foot. Shuttles provide convenient transportation across campus and between the colleges and academic centers.
+  -
+    title: Take a Virtual Tour
+    bodyCopy: If you can't make it to campus, take a virtual tour and explore the setting and many attractions of the UC Santa Cruz campus.
+
+visitUCSCFooterLinks: 
+  -
+    link: Eating On Campus
+    href: http://housing.ucsc.edu/dining/
+  -
+    link: Eating Off Campus
+    href: http://www.santacruzca.org/things/dining.php
+  -
+    link: Places to Stay Off Campus
+    href: http://www.santacruzca.org/lodg-dine/places-to-stay.php
+  -
+    link: UC Regulations Governing Visitor Conduct
+    href: http://policy.ucop.edu/doc/3000127/NonAffiliateRegs
+  -
+    link: UCSC Conference Services
+    href: http://conferenceservices.ucsc.edu/
+  
+aboutUCSCFooterLinks:
+  -
+    link: Crime Awareness & Campus Security
+    href: https://www.ucsc.edu/about/crime-stats/index.html
+  -
+    link: Economic Impact
+    href: https://www.ucsc.edu/about/economic-impact.html
+  -
+    link: Long-Range Development Plan
+    href: https://lrdp.ucsc.edu/
+  -
+    link: International Reputation for Excellent Facts
+    href: https://news.ucsc.edu/awards/files/some-facts.pdf
+  -
+    link: Campus Portrait Document
+    href: https://planning.ucsc.edu/portrait/
+  -
+    link: Gainful Employment
+    href: https://scicom.ucsc.edu/apply/disclosure.html
+  -
+    link: Conserving Water
+    href: https://www.ucsc.edu/conserving-water/
+
+historyFooterLinks1: 
+  -
+    link: Undergraduate Advising and Events Calendar
+    href: https://history.ucsc.edu/undergraduate/undergraduate-advising/index.html
+  -
+    link: Forms and Petitions
+    href: https://history.ucsc.edu/undergraduate/forms.html
+  -
+    link: 2018 - 2019 Course List
+    href: https://history.ucsc.edu/courses/class-schedule-view.php
+  -
+    link: Major Requirements
+    href: https://history.ucsc.edu/undergraduate/history-major/index.html
+  -
+    link: Major Declaration
+    href: https://history.ucsc.edu/undergraduate/declaration/index.html
+  
+historyFooterLinks2: 
+  -
+    link: Donate Now
+    href: https://secure.ucsc.edu/s/1069/index.aspx?sid=1069&gid=1001&pgid=761&dids=103
+  -
+    link: Giving to History
+    href: https://history.ucsc.edu/about/giving.html
+  -
+    link: Ways to Give
+    href: https://giving.ucsc.edu/ways-to-give/
+  
+historyFooterLinks3: 
+  -
+    link: Classical Studies
+    href: https://classicalstudies.ucsc.edu/index.html
+  -
+    link: East Asian Studies
+    href: https://eastasianstudies.ucsc.edu/index.html
+  -
+    link: German Studies
+    href: https://germanstudies.ucsc.edu/index.html
+  -
+    link: Jewish Studies
+    href: https://jewishstudies.ucsc.edu/index.html
+
+jobPostings: 
+  -
+    title: Art Department 2D Visual Art Lecturer Pool (Ongoing)
+    date: January 30, 2019
+    field: Art Department 2D Visual Art Lecturer Pool
+    rank: Assistant	Professor
+    job-number: JPF09000-01
+    closing: Open	Until	Filled.	For	full consideration, apply	by January 15, 2018
+    job-type: Tenure &	Tenure Track Positions by Division/Arts	Division,	Library	Positions
+    job-category: Interships
+  -
+    title: Digital Arts and New Media Department (DANM) Lecturer Pool (Ongoing)
+    date: February 8, 2019
+    field: Digital Arts and New Media Department (DANM) Lecturer Pool (Ongoing)
+    rank: Assistant	Professor
+    job-number: JPF11405-61
+    closing: Open	Until	Filled.	For	full consideration, apply	by January 15, 2018
+    job-type: Tenure&	Tenure Track Positions by Division/Arts	Division,	Library	Positions
+    job-category: Lecturer
+  -
+    title: Film and Digital Media Department Film and Television Industry Lecturer Pool (Ongoing)
+    date: February 21, 2019
+    field: Film and Digital Media Department Film and Television Industry Lecturer Pool (Ongoing)
+    rank: Assistant	Professor
+    job-number: JPF00995-0
+    closing: Open	Until	Filled.	For	full consideration, apply	by January 15, 2018
+    job-type: Tenure &	Tenure Track Positions by Division/Arts	Division,	Library	Positions
+    job-category: Faculty
+
+policies:
+  -
+    title: BAS0002 Non-research Animal Policy 
+    last-updated: March 21, 2018
+    policy-link: https://policy.ucop.edu/doc/2710518/PACAOS-11
+    policy-category: Business and Administrative Services (BAS)
+  -
+    title: BAS0004 Responding to a Death Policy
+    last-updated: June 1, 2016
+    policy-link: https://policy.ucop.edu/doc/2710518/PACAOS-11
+    policy-category: Business and Administrative Services (BAS)
+  -
+    title: BAS0009 Campus Alcoholic Beverage Policy for UCSC Sponsored Events
+    last-updated: January 8, 2018
+    policy-category: Business and Administrative Services (BAS)
+  -
+    title: Child Abuse and Neglect Reporting Act (CANRA)
+    last-updated: August 5, 2018
+    policy-category: Conduct Policies
+  -
+    title: UR0002 UCSC Policy and Guidelines for Support Groups
+    last-updated: July 1, 2012
+    policy-link: https://policy.ucop.edu/doc/2710518/PACAOS-11
+    policy-category: Development Administration
+  -
+    title: Commercial Activities Policy
+    last-updated: September 20, 2018
+    policy-link: https://policy.ucop.edu/doc/2710518/PACAOS-11
+    policy-category: Development Administration
+  -
+    title: ACG0006 Advanced Payment for Vendors  
+    last-updated: January 2, 2018
+    policy-link: https://policy.ucop.edu/doc/2710518/PACAOS-11
+    policy-category: Financial and Accounting

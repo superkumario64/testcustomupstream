@@ -1,0 +1,10 @@
+uuid: e9c3c445-d262-495a-b124-75d4c324ad88
+langcode: en
+status: true
+dependencies: {  }
+id: ribbon_image
+label: 'Ribbon Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

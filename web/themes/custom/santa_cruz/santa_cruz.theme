@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks for Radix.
+ */
+
+use Drupal\media\Entity\Media;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
+}
+
+function santa_cruz_preprocess_html(&$variables) {
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+
+  /**
+   * google GSE
+   */
+  $variables['cse_token'] = '012090462228956765947:d0ywvq7bxee';
+}
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function santa_cruz_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->getType() == "teaser_card_list") {
+    $field = $paragraph->get('field_node_refs')->getValue();
+    foreach ($field as $key => $value) {
+      $node_id = $value['target_id'];
+      $node = Node::load($node_id);
+      if ($node->getType() == 'page' || $node->getType() == 'article') {
+        $image_id = $node->get('field_teaser_image')->target_id;
+        $media = Media::load($image_id);
+        if ($media) {
+          $media_uri = $media->field_media_image->entity->getFileUri();
+          $media_url = file_create_url($media_uri);
+          $variables['media_url'] = $media_url;
+        }
+      }
+      if ($node->getType() == 'major') {
+        $image_id = $node->get('field_media')->target_id;
+        $media = Media::load($image_id);
+        if ($media) {
+          $media_uri = $media->field_media_image->entity->getFileUri();
+          $media_url = file_create_url($media_uri);
+          $variables['media_url'] = $media_url;
+        }
+      }
+    }
+  }
+  if ($paragraph->getType() == "two_banner_promo") {
+    foreach ($paragraph->get('field_paragraphs__max_2')
+               ->getValue() as $key => $value) {
+      $p = Paragraph::load($value['target_id']);
+      $image_tar = $p->get('field_image')->target_id;
+      $media = Media::load($image_tar);
+      if ($media) {
+        $media_uri = $media->field_media_image->entity->getFileUri();
+        $media_url = file_create_url($media_uri);
+        $variables['promo_image_url_' . $key . ''] = $media_url;
+      }
+    }
+  }
+  if ($paragraph->getType() == "header_banner") {
+    $node = \Drupal::request()->attributes->get('node');
+    $variables['node_type'] = $node->getType();
+  }
+}
+
+/**
+ * Implements template_preprocess_form().
+ */
+function santa_cruz_preprocess_form(&$variables) {
+  if ($variables["attributes"]["id"] === "user-login-form") {
+    $variables['attributes']['class'] = 'grid-container large';
+  }
+}

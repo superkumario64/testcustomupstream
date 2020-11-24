@@ -1,0 +1,88 @@
+uuid: a5e15c32-2ac7-4d86-9ea8-45c96aa20773
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Underline
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+            - PasteText
+            - PasteFromWord
+        -
+          name: List
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Media
+          items:
+            - Blockquote
+            - Table
+            - HorizontalRule
+            - DrupalMediaLibrary
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - TemplateSelector
+            - ShowBlocks
+            - Source
+            - Maximize
+  plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
+    language:
+      language_list: un
+    stylescombo:
+      styles: "blockquote|blockquote\r\npre|pre\r\ncode|code\r\nsmall|small\r\nimg.img-responsive|Img Responsive\r\ndiv.inline|Inline\r\ndiv.last-mod-date|Last Modified\r\n"
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

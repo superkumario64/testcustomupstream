@@ -1,0 +1,19 @@
+uuid: 58886274-8efa-4f8d-9525-ae070e33440e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.quicktab_item
+id: paragraph.quicktab_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: quicktab_item
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

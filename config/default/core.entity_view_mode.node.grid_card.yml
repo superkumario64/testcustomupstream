@@ -1,0 +1,10 @@
+uuid: f62f0c74-86c4-410a-aac2-565327c9cec6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.grid_card
+label: 'Grid Card'
+targetEntityType: node
+cache: true

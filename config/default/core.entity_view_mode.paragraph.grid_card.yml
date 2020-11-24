@@ -1,0 +1,10 @@
+uuid: cdc4a3b6-5366-4e05-ba54-2aaa3ba59525
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.grid_card
+label: 'Grid Card'
+targetEntityType: paragraph
+cache: true

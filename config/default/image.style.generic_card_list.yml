@@ -1,0 +1,17 @@
+uuid: a49e6d6d-5996-4e1f-9dd0-4188aaaf2d7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: generic_card_list
+label: 'Generic Card List'
+effects:
+  2667463d-3c59-48f6-be99-4203200df7af:
+    uuid: 2667463d-3c59-48f6-be99-4203200df7af
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 562
+      height: 200
+      crop_type: focal_point

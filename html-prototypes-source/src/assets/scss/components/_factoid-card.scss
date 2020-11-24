@@ -1,0 +1,68 @@
+.factoid {
+    @include xy-cell(12);
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid rgba($secondary-turquiose, .5);
+    max-width: none;
+    margin-bottom: 2em;
+    padding-bottom: 1.5rem;
+    
+    &:first-of-type {
+        margin-top: 2rem;
+        @include breakpoint(large) { margin-top: 0; }
+    }
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+
+    .value {
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: .5rem;
+
+        @include breakpoint(large) {
+            font-size: 5rem;
+            margin-bottom: .2rem;
+        }
+    }
+    
+    .unit {
+        font-size: 1.3rem;
+        @include breakpoint(large) {font-size: 1.3rem; }
+    }
+
+    .convert {
+        margin: .5rem 0 1rem;
+    }
+
+    @include breakpoint(large) {
+        padding: 1rem;
+        border: 1px solid lighten($primary-gray, 65%);
+        background: rgba($secondary-blue, .1);
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+
+}
+
+.factoid-card-list {
+
+    @include xy-grid;
+
+    .factoid {
+               
+        @include xy-cell(12);
+
+        @include breakpoint(large) {
+             @include xy-cell(auto);
+             margin-bottom: 0
+        }
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(4);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+uuid: 7f4daa9d-571b-4343-9bbe-cf48cf1c5972
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_refs
+    - node.type.article
+    - node.type.major
+    - node.type.page
+    - paragraphs.paragraphs_type.teaser_card_list
+id: paragraph.teaser_card_list.field_node_refs
+field_name: field_node_refs
+entity_type: paragraph
+bundle: teaser_card_list
+label: Nodes
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      major: major
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

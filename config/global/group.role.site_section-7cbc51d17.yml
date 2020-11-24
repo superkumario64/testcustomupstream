@@ -1,0 +1,17 @@
+uuid: 7e2c8ae0-d3cf-4d49-a55f-f7c1a501fc21
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  enforced:
+    config:
+      - user.role.group_content_editor
+id: site_section-7cbc51d17
+label: 'Group Content Editor'
+weight: -4
+internal: true
+audience: outsider
+group_type: site_section
+permissions_ui: false
+permissions: {  }

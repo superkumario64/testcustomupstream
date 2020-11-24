@@ -1,0 +1,21 @@
+uuid: ad2fa087-ae70-4e4c-aa54-4eecba334b17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.job
+  module:
+    - datetime
+id: node.job.field_date
+field_name: field_date
+entity_type: node
+bundle: job
+label: 'Open Date'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

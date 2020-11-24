@@ -1,0 +1,31 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+
+        <div class="content">
+
+          {% if content.field_title|field_value is not empty %}
+            <section class="heading">
+              <h2 class="underline">{{ content.field_title }}</h2>
+            </section>
+          {% endif %}
+
+          {% if content.field_node_refs|field_value is not empty %}
+            <div style="max-width: 450px">
+              <div class="job-posting-card-list list owl-carousel">
+                {{ content|without('field_title')|without('field_job_category') }}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

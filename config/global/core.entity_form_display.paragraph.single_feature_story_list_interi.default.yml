@@ -1,0 +1,32 @@
+uuid: 6b5562b1-cd9d-49ed-beeb-b16d979034b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_feature_story_list_interi.field_department
+    - field.field.paragraph.single_feature_story_list_interi.field_link
+    - paragraphs.paragraphs_type.single_feature_story_list_interi
+  module:
+    - link
+id: paragraph.single_feature_story_list_interi.default
+targetEntityType: paragraph
+bundle: single_feature_story_list_interi
+mode: default
+content:
+  field_department:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

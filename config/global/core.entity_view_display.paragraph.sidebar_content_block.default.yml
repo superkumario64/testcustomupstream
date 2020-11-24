@@ -1,0 +1,181 @@
+uuid: bc80238e-d558-4721-9372-3015ab8beaca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_content_block.field_address
+    - field.field.paragraph.sidebar_content_block.field_day_time_range
+    - field.field.paragraph.sidebar_content_block.field_department
+    - field.field.paragraph.sidebar_content_block.field_division_link
+    - field.field.paragraph.sidebar_content_block.field_email
+    - field.field.paragraph.sidebar_content_block.field_faxes
+    - field.field.paragraph.sidebar_content_block.field_link
+    - field.field.paragraph.sidebar_content_block.field_location_text
+    - field.field.paragraph.sidebar_content_block.field_mailing_address_text
+    - field.field.paragraph.sidebar_content_block.field_other_information
+    - field.field.paragraph.sidebar_content_block.field_paragraphs
+    - field.field.paragraph.sidebar_content_block.field_phones
+    - paragraphs.paragraphs_type.sidebar_content_block
+  module:
+    - address
+    - custom_module
+    - entity_reference_revisions
+    - fences
+    - link
+id: paragraph.sidebar_content_block.default
+targetEntityType: paragraph
+bundle: sidebar_content_block
+mode: default
+content:
+  field_address:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: address_plain
+    region: content
+  field_day_time_range:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_department:
+    weight: 6
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_division_link:
+    weight: 9
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_email:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_faxes:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: '80'
+      url_only: ''
+      url_plain: ''
+      rel: 0
+      target: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: phone_number_formatter
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_location_text:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mailing_address_text:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_other_information:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_paragraphs:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_phones:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: '80'
+      url_only: ''
+      url_plain: ''
+      rel: 0
+      target: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: phone_number_formatter
+    region: content
+hidden: {  }

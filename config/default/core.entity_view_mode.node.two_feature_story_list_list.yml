@@ -1,0 +1,10 @@
+uuid: 4c7347e0-a0bf-4344-a926-3b0e5e38c393
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.two_feature_story_list_list
+label: 'Two-Feature Story List: List'
+targetEntityType: node
+cache: true

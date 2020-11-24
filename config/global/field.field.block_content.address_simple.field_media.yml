@@ -1,0 +1,28 @@
+uuid: 9efb668d-a300-46d8-ae81-d209c70656b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address_simple
+    - field.storage.block_content.field_media
+    - media.type.image
+id: block_content.address_simple.field_media
+field_name: field_media
+entity_type: block_content
+bundle: address_simple
+label: Media
+description: 'Uses for a logo, map, picture.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

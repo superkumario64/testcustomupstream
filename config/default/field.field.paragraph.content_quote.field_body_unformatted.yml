@@ -1,0 +1,19 @@
+uuid: 4e557b94-eeee-4133-bd07-8117841dae5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_unformatted
+    - paragraphs.paragraphs_type.content_quote
+id: paragraph.content_quote.field_body_unformatted
+field_name: field_body_unformatted
+entity_type: paragraph
+bundle: content_quote
+label: 'Quoted Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

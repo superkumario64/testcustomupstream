@@ -1,0 +1,10 @@
+uuid: f1783cb4-885c-45a8-a1b0-0b1fc5ac7112
+langcode: en
+status: true
+dependencies: {  }
+id: tabs_horizontal
+label: 'Tabs Horizontal'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

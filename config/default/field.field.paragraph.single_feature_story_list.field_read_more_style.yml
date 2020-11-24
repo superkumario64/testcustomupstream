@@ -1,0 +1,23 @@
+uuid: fd46fdc3-095f-4738-98c6-152eb82d4f7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_read_more_style
+    - paragraphs.paragraphs_type.single_feature_story_list
+  module:
+    - options
+id: paragraph.single_feature_story_list.field_read_more_style
+field_name: field_read_more_style
+entity_type: paragraph
+bundle: single_feature_story_list
+label: 'Read More Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: button
+default_value_callback: ''
+settings: {  }
+field_type: list_string

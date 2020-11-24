@@ -1,0 +1,19 @@
+uuid: 1dd630dc-59bc-44f6-b893-026e00f140ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+id: site_section-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: site_section
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'view group_node:page entity'
+  2: 'view group_node:page content'
+  6: 'view group_node:webform entity'
+  7: 'view group_node:webform content'

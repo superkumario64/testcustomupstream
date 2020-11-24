@@ -1,0 +1,29 @@
+uuid: c7ac6a7d-7e4b-43b8-8718-7e08f828b88b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:address:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: footer-address
+id: testingaddressadvanced
+theme: santa_cruz
+region: subsite_footer_first
+weight: -23
+provider: null
+plugin: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+settings:
+  id: 'block_content:a65f1daf-db5f-4781-b59f-84e5ca8241b0'
+  label: 'History Department | Humanities Division'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

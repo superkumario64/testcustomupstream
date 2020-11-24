@@ -1,0 +1,43 @@
+uuid: dbe34db1-921d-47d4-9261-f15762350bb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.factoid_card.field_figure
+    - field.field.paragraph.factoid_card.field_link
+    - field.field.paragraph.factoid_card.field_title
+    - paragraphs.paragraphs_type.factoid_card
+  module:
+    - link
+id: paragraph.factoid_card.default
+targetEntityType: paragraph
+bundle: factoid_card
+mode: default
+content:
+  field_figure:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

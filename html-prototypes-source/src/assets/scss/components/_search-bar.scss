@@ -1,0 +1,64 @@
+.search-bar {
+    width: 100%;
+    padding: 1rem 0;
+    border-top: lighten($primary-gray, 70%) 1px solid;
+	border-bottom: lighten($primary-gray, 70%) 1px solid;
+	background: white;
+	color: $secondary-blue;
+	margin-bottom: 1rem;
+
+	@include breakpoint(large){
+		padding: 2rem 0;
+	};
+
+	.input-group {
+		@include xy-grid();
+		margin-bottom: 0;
+
+		.input-group-field {
+			background: none;
+			border: none;
+			box-shadow: none;
+			font-size: 1rem;
+			transition: color 400ms;
+			color: $secondary-turquiose;
+
+			&:focus {
+				color: $primary-gray;
+			}
+
+			@include breakpoint(large){
+				font-size: 1.6rem;
+			}
+		}
+
+		.input-group-button {
+			& >  button, a {
+				font-size: .8rem;
+			
+				@include breakpoint(large){
+					font-size: inherit;
+					padding: .8rem .6rem 0rem 2rem;
+				}
+
+				i {
+					font-size: 1rem;
+					color: $primary-blue;
+					margin-top: 10px;
+		
+					@include breakpoint(large){
+						position: absolute;
+						font-size: 1rem;
+						top: 17px;
+						left: 10px;
+						margin-top: 0;
+					}
+				}
+
+				&:focus {
+					i { color: white; }
+				}
+			}
+		}
+	}
+}

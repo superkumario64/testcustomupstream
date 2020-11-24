@@ -1,0 +1,21 @@
+uuid: b3514fd8-c285-4fb9-af6f-0a528db27bed
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wysiwyg_template
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  wysiwyg_template:
+    default_template: ''
+name: Program
+type: program
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

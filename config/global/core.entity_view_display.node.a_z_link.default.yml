@@ -1,0 +1,58 @@
+uuid: a738ca02-f56c-4831-8694-d254384cfc21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.a_z_link.field_audiences
+    - field.field.node.a_z_link.field_categories
+    - field.field.node.a_z_link.field_link
+    - node.type.a_z_link
+  module:
+    - fences
+    - link
+    - user
+id: node.a_z_link.default
+targetEntityType: node
+bundle: a_z_link
+mode: default
+content:
+  field_categories:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_audiences: true
+  langcode: true

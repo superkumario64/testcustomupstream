@@ -1,0 +1,10 @@
+uuid: e1906ff5-6d4c-4b53-ab3b-3bbf511ce3f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fullwidth_paragraph
+label: 'Full-Width Paragraph'
+targetEntityType: node
+cache: true

@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for unformatted summary links.
+ *
+ * Available variables:
+ * - rows: The rows contained in this view.
+ *   - url: The URL to this row's content.
+ *   - count: The number of items this summary item represents.
+ *   - separator: A separator between each row.
+ *   - attributes: HTML attributes for a row.
+ *   - active: A flag indicating whether the row is active.
+ * - options: Flags indicating how each row should be displayed. This contains:
+ *   - count: A flag indicating whether the row's 'count' should be displayed.
+ *   - inline: A flag indicating whether the item should be wrapped in an inline
+ *     or block level HTML element.
+ *
+ * @see template_preprocess_views_view_summary_unformatted()
+ */
+#}
+<ul class="menu expanded" data-magellan data-deep-linking="true">
+  {% for row in rows  %}
+    <li><a {{ row.attributes.addClass(row.active ? 'is-active').addClass(['button','secondary'])|without('href') }} href="#{{ row.url|split('/')|last }}" data-smooth-scroll>{{ row.link }}</a></li>
+  {% endfor %}
+</ul>
+

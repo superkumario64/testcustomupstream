@@ -1,0 +1,10 @@
+uuid: efa121bb-b8ae-45cb-9b73-f521c315ec36
+langcode: en
+status: true
+dependencies: {  }
+id: generic_card_list
+label: 'Generic Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

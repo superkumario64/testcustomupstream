@@ -1,0 +1,21 @@
+uuid: aa047b60-c173-40de-9abd-f687a284ab8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caption_formatted
+    - node.type.program
+  module:
+    - text
+id: node.program.field_caption_formatted
+field_name: field_caption_formatted
+entity_type: node
+bundle: program
+label: Introduction
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

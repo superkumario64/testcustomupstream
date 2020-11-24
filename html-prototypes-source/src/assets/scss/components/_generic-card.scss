@@ -1,0 +1,69 @@
+.generic-card {
+    padding: 0;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    color: $primary-gray;
+    text-decoration: none;
+   
+    @include breakpoint(large){
+        padding: 1rem;
+        margin-bottom: 0;
+    }    
+
+    &:hover, &:focus {
+        h4, h5 { color: $primary-blue; }
+        p {color: $primary-gray;}
+        outline: none;
+    }    
+
+    .image { 
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        @include breakpoint(large) {
+            height: 250px;
+        }
+    }
+
+    .card-text {
+        padding: .5rem .5rem 0 .5rem;
+
+        @include breakpoint(large) {
+            padding: .5rem 1.5rem 1rem 1.5rem;
+        }
+    }   
+
+}
+
+.generic-card-list {
+
+    @include xy-grid;
+
+    .generic-card {
+        max-width: none;
+        margin-top: 1rem;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+        &.small {
+            @include breakpoint(large) {
+                @include xy-cell(3);
+            }
+        }
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+            margin-bottom: .5rem;
+        }
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(4);
+       }
+
+    }
+
+}

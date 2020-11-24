@@ -1,0 +1,22 @@
+uuid: 21dcae5b-298c-435b-b297-bbcdbe65e544
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - santa_cruz
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: santa_cruz_help
+theme: santa_cruz
+region: helper
+weight: -18
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

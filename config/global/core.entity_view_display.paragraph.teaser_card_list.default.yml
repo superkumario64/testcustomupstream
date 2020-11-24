@@ -1,0 +1,49 @@
+uuid: 28576bb8-b2ed-43ff-9c19-37eeeeaf2d7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teaser_card_list.field_node_refs
+    - field.field.paragraph.teaser_card_list.field_title
+    - field.field.paragraph.teaser_card_list.field_view_reference
+    - paragraphs.paragraphs_type.teaser_card_list
+  module:
+    - fences
+id: paragraph.teaser_card_list.default
+targetEntityType: paragraph
+bundle: teaser_card_list
+mode: default
+content:
+  field_node_refs:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: list_item
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  field_view_reference: true

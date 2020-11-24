@@ -1,0 +1,16 @@
+{% set classes = [
+  'paragraph',
+  'sidebar-nav',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    <h4>{{ content.field_title[0]['#context'].value }}</h4>
+    {# Look field--paragraph--field-links--related-links-list.html.twig. #}
+    {{ content.field_links }}
+  </section>
+{% endblock paragraph %}

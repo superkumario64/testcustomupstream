@@ -1,0 +1,8 @@
+uuid: 4be69bba-ecad-4efd-afb2-48ebb4785824
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Category'
+vid: media_category
+description: ''
+weight: 0

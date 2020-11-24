@@ -1,0 +1,10 @@
+uuid: 5de01082-2843-42b3-8677-136ba5e9d978
+langcode: en
+status: true
+dependencies: {  }
+id: content_left
+label: 'Content Left'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

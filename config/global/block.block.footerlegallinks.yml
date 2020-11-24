@@ -1,0 +1,37 @@
+uuid: c12c88ad-f4fb-4424-985b-6632e5d9fa7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer---legal-links
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'nav-global cell'
+id: footerlegallinks
+theme: santa_cruz
+region: footer_last
+weight: -18
+provider: null
+plugin: 'menu_block:footer---legal-links'
+settings:
+  id: 'menu_block:footer---legal-links'
+  label: 'Footer - Legal links'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer---legal-links:'
+  suggestion: footer___legal_links
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
+visibility: {  }

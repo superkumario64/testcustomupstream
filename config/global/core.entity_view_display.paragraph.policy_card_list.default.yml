@@ -1,0 +1,32 @@
+uuid: fe4adf8e-88ad-430c-bf6c-63afcbb795a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.policy_card_list.field_node_refs
+    - field.field.paragraph.policy_card_list.field_view_reference
+    - paragraphs.paragraphs_type.policy_card_list
+  module:
+    - fences
+id: paragraph.policy_card_list.default
+targetEntityType: paragraph
+bundle: policy_card_list
+mode: default
+content:
+  field_node_refs:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+hidden:
+  field_view_reference: true

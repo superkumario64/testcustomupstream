@@ -1,0 +1,175 @@
+.page-feature {
+    position: relative;
+    height: 50vh;
+    min-height: 500px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-color: #333;
+    background-position: center center;
+    background-size: cover;
+
+    @include breakpoint(xlarge) {
+        height: 70vh;
+        min-height: 500px;
+
+        .page-feature-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            margin: 0 auto;
+            z-index: 20;
+        }
+
+    }
+
+    .page-feature-content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        margin: 0 auto;
+        text-shadow: 2px 2px 3px rgba(black,0.25);
+        z-index: 20;
+        color: #fff;
+
+        & > *:first-child {
+            margin-top: 0;
+        }
+
+    }
+
+}
+
+.featured-links {
+
+    margin-bottom: 3rem;
+
+
+    .button-group {
+        @include button-group-stack('.button');
+
+        @include breakpoint(xlarge) {
+
+            @include button-group-expand('.button');
+
+        }
+
+    }
+
+}
+
+.hero-video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  
+  @include breakpoint(large) {
+      display: block;
+  }
+}
+
+.hero-video-container,
+.hero-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-video-container {
+  display: none;
+
+  @include breakpoint(xlarge) {
+    display: block;
+  }
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+
+  .hero-video-container {
+    height: 300%;
+    top: -100%;
+  }
+
+}
+
+@media (max-aspect-ratio: 16/9) {
+
+  .hero-video-container {
+    width: 300%;
+    left: -100%;
+  }
+
+}
+
+
+
+// Featured - Slideshow
+
+.featured-slideshow {
+    height: 100%;
+
+    .owl-stage-outer {
+        height: 100%;
+
+        .owl-stage {
+            height: 100%;
+
+            .owl-item {
+                height: 100%;
+            }
+        }
+
+    }
+}
+
+.featured-slide {
+    height: 100%;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-color: #333;
+    background-position: center center;
+    background-size: cover;
+
+    @include breakpoint(xlarge) {
+
+
+        .feature-slide-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            margin: 0 auto;
+            z-index: 20;
+        }
+
+    }
+
+
+    .featured-slide-content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        margin: 0 auto;
+        text-shadow: 2px 2px 3px rgba(black,0.25);
+        z-index: 20;
+        color: #fff;
+
+        & > *:first-child {
+            margin-top: 0;
+        }
+
+    }
+
+}

@@ -1,0 +1,10 @@
+uuid: bbd5ba53-1937-413e-a0f7-99dc6e0b6504
+langcode: en
+status: true
+dependencies: {  }
+id: gallery
+label: 'Image Gallery'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

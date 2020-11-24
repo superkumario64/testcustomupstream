@@ -1,0 +1,39 @@
+uuid: 49402a2d-2692-49d4-a477-53aa73ef0f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-navigation-subsite-version3
+  module:
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+id: mainnavigationsubsiteversionthree
+theme: santa_cruz
+region: subsite_header
+weight: 0
+provider: null
+plugin: 'menu_block:main-navigation-subsite-version3'
+settings:
+  id: 'menu_block:main-navigation-subsite-version3'
+  label: 'Main navigation - Subsite Version Three'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main-navigation-subsite-version3:'
+  suggestion: dropdown
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /history-department
+    negate: false
+    context_mapping: {  }

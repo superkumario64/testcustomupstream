@@ -1,0 +1,37 @@
+uuid: ee5f45a5-2685-4873-bc1f-073f5a199f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-menu---cta-buttons
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: aev-menu
+id: headermenuctabuttons
+theme: santa_cruz
+region: header
+weight: -20
+provider: null
+plugin: 'menu_block:header-menu---cta-buttons'
+settings:
+  id: 'menu_block:header-menu---cta-buttons'
+  label: 'Header Menu - CTA Buttons'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'header-menu---cta-buttons:'
+  suggestion: header_menu___cta_buttons
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
+visibility: {  }

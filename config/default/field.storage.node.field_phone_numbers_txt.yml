@@ -1,0 +1,21 @@
+uuid: bfae3503-808e-4cc1-9957-1cdacc94cbb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_phone_numbers_txt
+field_name: field_phone_numbers_txt
+entity_type: node
+type: string
+settings:
+  max_length: 120
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

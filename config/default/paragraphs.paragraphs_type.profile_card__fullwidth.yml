@@ -1,0 +1,10 @@
+uuid: b53fa1e1-7712-41ee-8675-a018a2c27cdb
+langcode: en
+status: true
+dependencies: {  }
+id: profile_card__fullwidth
+label: 'Profile Card (Full-Width)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

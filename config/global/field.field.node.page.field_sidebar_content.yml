@@ -1,0 +1,319 @@
+uuid: 22b8da40-ac87-4afe-81c6-0b9762386c4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_content
+    - node.type.page
+    - paragraphs.paragraphs_type.cta_buttons
+    - paragraphs.paragraphs_type.job_posting_list
+    - paragraphs.paragraphs_type.profile_card
+    - paragraphs.paragraphs_type.quick_link
+    - paragraphs.paragraphs_type.quick_link_minimal
+    - paragraphs.paragraphs_type.sidebar_button
+    - paragraphs.paragraphs_type.sidebar_content_block
+  module:
+    - entity_reference_revisions
+id: node.page.field_sidebar_content
+field_name: field_sidebar_content
+entity_type: node
+bundle: page
+label: 'Right Sidebar Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quick_link: quick_link
+      cta_buttons: cta_buttons
+      job_posting_list: job_posting_list
+      profile_card: profile_card
+      quick_link_minimal: quick_link_minimal
+      sidebar_button: sidebar_button
+      sidebar_content_block: sidebar_content_block
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 13
+        enabled: false
+      3_column_cta:
+        weight: 14
+        enabled: false
+      4_column_cta:
+        weight: 15
+        enabled: false
+      accordion:
+        weight: 25
+        enabled: false
+      accordion_item:
+        weight: 26
+        enabled: false
+      adjustable_media_and_content:
+        weight: 27
+        enabled: false
+      article_card:
+        weight: 46
+        enabled: false
+      article_card_list:
+        weight: 47
+        enabled: false
+      article_slideshow:
+        weight: 48
+        enabled: false
+      article_slideshow_item:
+        weight: 49
+        enabled: false
+      banner_promo:
+        weight: 104
+        enabled: false
+      button_list:
+        weight: 50
+        enabled: false
+      button_list_item:
+        weight: 51
+        enabled: false
+      column_section:
+        weight: 16
+        enabled: false
+      content_centered:
+        weight: 52
+        enabled: false
+      content_left:
+        weight: 53
+        enabled: false
+      content_quote:
+        weight: 54
+        enabled: false
+      content_with_media:
+        weight: 55
+        enabled: false
+      cta_buttons:
+        enabled: true
+        weight: 31
+      document_card_list:
+        weight: 65
+        enabled: false
+      embed:
+        weight: 67
+        enabled: false
+      factoid_card:
+        weight: 68
+        enabled: false
+      factoid_card_list:
+        weight: 69
+        enabled: false
+      feature_image:
+        weight: 56
+        enabled: false
+      feature_slideshow:
+        weight: 57
+        enabled: false
+      feature_slideshow_item:
+        weight: 58
+        enabled: false
+      flexible_bg_image_block:
+        weight: 28
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 29
+        enabled: false
+      flexible_cta_block:
+        weight: 30
+        enabled: false
+      flexible_cta_blocks:
+        weight: 32
+        enabled: false
+      full_image:
+        weight: 59
+        enabled: false
+      full_video:
+        weight: 60
+        enabled: false
+      full_width_image_section:
+        weight: 17
+        enabled: false
+      gallery:
+        weight: 76
+        enabled: false
+      generic_card:
+        weight: 78
+        enabled: false
+      generic_card_list:
+        weight: 80
+        enabled: false
+      grid_content_centered:
+        weight: 61
+        enabled: false
+      grid_content_centered_item:
+        weight: 62
+        enabled: false
+      grid_content_left:
+        weight: 63
+        enabled: false
+      grid_content_left_item:
+        weight: 64
+        enabled: false
+      gridder:
+        weight: 38
+        enabled: false
+      gridder_item:
+        weight: 39
+        enabled: false
+      header_banner:
+        weight: 66
+        enabled: false
+      historical_fact_card:
+        weight: 87
+        enabled: false
+      historical_timeline:
+        weight: 88
+        enabled: false
+      image_gallery:
+        weight: 70
+        enabled: false
+      image_gallery_item:
+        weight: 71
+        enabled: false
+      interior_column_section:
+        weight: 21
+        enabled: false
+      interior_slideshow:
+        weight: 22
+        enabled: false
+      interior_slideshow_slide:
+        weight: 23
+        enabled: false
+      job_posting_card_list:
+        weight: 98
+        enabled: false
+      job_posting_list:
+        enabled: true
+        weight: 35
+      major_card:
+        weight: 72
+        enabled: false
+      major_card_list:
+        weight: 73
+        enabled: false
+      news_collection:
+        weight: 148
+        enabled: false
+      person_carousel:
+        weight: 40
+        enabled: false
+      podcast_card:
+        weight: 74
+        enabled: false
+      podcast_card_list:
+        weight: 75
+        enabled: false
+      policy_card:
+        weight: 77
+        enabled: false
+      policy_card_list:
+        weight: 79
+        enabled: false
+      profile_card:
+        enabled: true
+        weight: 81
+      profile_card__fullwidth:
+        weight: 84
+        enabled: false
+      profile_card_details_fields:
+        weight: 83
+        enabled: false
+      profile_list:
+        weight: 85
+        enabled: false
+      quick_link:
+        enabled: true
+        weight: 24
+      quick_link_minimal:
+        enabled: true
+        weight: 82
+      quicktab_item:
+        weight: 41
+        enabled: false
+      quicktabs:
+        weight: 42
+        enabled: false
+      quote:
+        weight: 86
+        enabled: false
+      recent_articles:
+        weight: 33
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 34
+        enabled: false
+      related_links_list:
+        weight: 89
+        enabled: false
+      related_links_list__view:
+        weight: 100
+        enabled: false
+      ribbon_image:
+        weight: 90
+        enabled: false
+      sidebar_button:
+        enabled: true
+        weight: 91
+      sidebar_content_block:
+        enabled: true
+        weight: 92
+      sidebar_content_block_department:
+        weight: 96
+        enabled: false
+      single_feature_story_list:
+        weight: 171
+        enabled: false
+      single_feature_story_list_interi:
+        weight: 172
+        enabled: false
+      step:
+        weight: 93
+        enabled: false
+      step_grid:
+        weight: 94
+        enabled: false
+      tabs_horizontal:
+        weight: 95
+        enabled: false
+      tabs_horizontal_item:
+        weight: 97
+        enabled: false
+      teaser_card_list:
+        weight: 101
+        enabled: false
+      three_story_teaser:
+        weight: 178
+        enabled: false
+      two_banner_promo:
+        weight: 179
+        enabled: false
+      two_feature_story_list:
+        weight: 180
+        enabled: false
+      upcoming_events:
+        weight: 36
+        enabled: false
+      video_embed:
+        weight: 43
+        enabled: false
+      video_tab_carousel:
+        weight: 44
+        enabled: false
+      video_tab_item:
+        weight: 45
+        enabled: false
+      views:
+        weight: 99
+        enabled: false
+      wysiwyg:
+        weight: 37
+        enabled: false
+field_type: entity_reference_revisions

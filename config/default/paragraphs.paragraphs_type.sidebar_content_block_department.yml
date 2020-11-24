@@ -1,0 +1,10 @@
+uuid: e022a27e-0a21-4268-9cb0-036799ae47b7
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_content_block_department
+label: 'Sidebar Content Block - Department Heads'
+icon_uuid: null
+icon_default: null
+description: 'Used in <i>Sidebar Content Block</i> paragraph.'
+behavior_plugins: {  }

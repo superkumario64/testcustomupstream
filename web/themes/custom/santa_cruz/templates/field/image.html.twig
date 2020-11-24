@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override of an image.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
+ * @see template_preprocess_image()
+ */
+#}
+
+{% set class = style_name ? 'image-style--' ~ style_name|clean_id : 'image-style--original' %}
+{% set attributes = attributes.addClass(class) %}
+
+<img{{ attributes }} />

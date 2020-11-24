@@ -1,0 +1,11 @@
+uuid: 55fff328-accd-4ba0-9854-b2c222c74a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.policy
+id: node.policy
+target_entity_type_id: node
+target_bundle: policy
+default_langcode: site_default
+language_alterable: false

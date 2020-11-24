@@ -1,0 +1,23 @@
+uuid: e716c8a4-33e5-40c7-9b96-aa8f442e5b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_level
+    - node.type.alert
+  module:
+    - options
+id: node.alert.field_alert_level
+field_name: field_alert_level
+entity_type: node
+bundle: alert
+label: 'Alert Level'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: info
+default_value_callback: ''
+settings: {  }
+field_type: list_string

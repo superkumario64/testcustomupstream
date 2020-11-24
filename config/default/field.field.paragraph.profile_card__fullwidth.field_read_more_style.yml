@@ -1,0 +1,23 @@
+uuid: 6df0b4b7-f3ef-4a9a-b55e-e65900c02242
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_read_more_style
+    - paragraphs.paragraphs_type.profile_card__fullwidth
+  module:
+    - options
+id: paragraph.profile_card__fullwidth.field_read_more_style
+field_name: field_read_more_style
+entity_type: paragraph
+bundle: profile_card__fullwidth
+label: 'Read More Style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: button
+default_value_callback: ''
+settings: {  }
+field_type: list_string

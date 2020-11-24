@@ -1,0 +1,8 @@
+uuid: c70e6b2c-7e25-467d-a829-c29454104dbd
+langcode: en
+status: true
+dependencies: {  }
+name: College/Department
+vid: college_department
+description: ''
+weight: 0

@@ -1,0 +1,96 @@
+uuid: 71c6be55-333d-40da-965d-cc3b5dd72c41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_image.field_caption
+    - field.field.paragraph.feature_image.field_category
+    - field.field.paragraph.feature_image.field_feature_image_display_mode
+    - field.field.paragraph.feature_image.field_link
+    - field.field.paragraph.feature_image.field_media
+    - field.field.paragraph.feature_image.field_title
+    - field.field.paragraph.feature_image.field_topic_date
+    - field.field.paragraph.feature_image.field_topic_title
+    - field.field.paragraph.feature_image.field_topic_title_advanced
+    - paragraphs.paragraphs_type.feature_image
+  module:
+    - datetime
+    - link
+    - media_library
+id: paragraph.feature_image.default
+targetEntityType: paragraph
+bundle: feature_image
+mode: default
+content:
+  field_caption:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_category:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_feature_image_display_mode:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_media:
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topic_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_topic_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topic_title_advanced:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,8 @@
+uuid: 624ae9e9-1e39-4423-b56c-4536be9c3d1c
+langcode: en
+status: true
+dependencies: {  }
+id: main-navigation-subsite-version1
+label: 'Main navigation - Subsite Version One'
+description: ''
+locked: false

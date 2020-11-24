@@ -1,0 +1,19 @@
+uuid: 8e5b3bfe-ff60-4382-bd4b-48c1c0d76726
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.ribbon_image
+id: paragraph.ribbon_image.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: ribbon_image
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

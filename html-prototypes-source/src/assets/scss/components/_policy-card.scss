@@ -1,0 +1,66 @@
+.policy-card {
+
+    .body {
+        font-size: .9em;
+    }
+
+    a { 
+        color: $primary-gray;
+        text-decoration: none;
+
+        &:hover, &:focus { 
+            color: $primary-gray;
+            h4 { color: $primary-blue }
+            p { color: $primary-gray }
+        }
+    }
+
+    p:last-child {
+        margin-bottom: 5px;
+    }
+
+}
+
+.policy-card-list {
+    @include xy-grid;
+
+    &.list {
+        .policy-card {
+            margin-bottom: .6rem;
+            @include xy-cell(12);
+
+            .category, .body, .tags{ display: none; }
+
+            h4 { font-size: 1.25rem;}
+
+            p { font-size: .8rem; }
+
+            .underline:after {
+                display: none;
+            }
+        }
+    }
+
+    .policy-card {
+
+        .category {
+            font-size: .7rem;
+            margin-bottom: .3rem;
+        }
+
+        .date {
+            margin-bottom: 0;
+            font-size: .7rem;
+        }
+
+        margin-bottom: 2.5rem;
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(12);
+            margin-bottom: 1.5rem;
+        }
+
+    }
+
+}
+

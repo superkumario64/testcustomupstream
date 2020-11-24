@@ -1,0 +1,47 @@
+.callout {
+
+    border: none;
+    p, a { display: inline-block;}
+    p { margin-bottom: 0;}
+    padding: 5px;
+
+    @include breakpoint(large){
+        padding: 20px 30px;
+    }
+
+    & > *:first-child, .button {
+        margin-top: 0;
+    }
+
+    &.primary {
+        background-color: transparent;
+        color: white;
+
+        @include breakpoint(large){
+            background-color: $secondary-green;
+         }
+
+        a { color: white; }
+
+        
+    }
+
+    &.secondary {
+        background-color: transparent;
+
+        @include breakpoint(large){
+            background-color: lighten($primary-gray, 75%);
+            border: 1px solid #dedede;
+        }
+    }
+
+    &.warning {
+        background-color: #fff;
+        border-color: purple;
+    }
+
+    &.alert {
+        background-color: lighten($secondary-pink, 40%);
+    }
+
+}

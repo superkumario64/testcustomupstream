@@ -1,0 +1,45 @@
+uuid: 5b859f8d-2c83-4cf4-98b6-c44cb85611cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_posting_card_list.field_link
+    - field.field.paragraph.job_posting_card_list.field_node_refs
+    - field.field.paragraph.job_posting_card_list.field_title
+    - paragraphs.paragraphs_type.job_posting_card_list
+  module:
+    - link
+id: paragraph.job_posting_card_list.default
+targetEntityType: paragraph
+bundle: job_posting_card_list
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_node_refs:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

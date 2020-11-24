@@ -1,0 +1,352 @@
+.hero {
+    
+    width: 100%;
+
+    .grid-container {
+        overflow: hidden;
+    }
+
+    @include breakpoint(large){
+        background: #e8e8e8;
+    }
+}
+
+.hero-wrapper {
+    position: relative;
+    background: none;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+
+    .grid-container {
+        padding: 0;
+        
+        @include breakpoint(large){
+            padding-right: 0.625rem;
+            padding-left: 0.625rem;
+        }
+    }
+
+    &.hero-image {
+        &::before {
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Hero+Image)');
+            @include breakpoint(large){
+                background: none;
+                content: "Hero Image";
+            }
+        }
+    }
+
+    &.hero-image-optional {
+        &::before {
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Hero+Image');
+            @include breakpoint(large){
+                background: none;
+                content: "Hero Image ";
+            }
+        }
+    }
+
+    &.hero-image-video {
+        &::before {
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Hero+Image/Video');
+            @include breakpoint(large){
+                background: none;
+                content: "Hero Image/Video";
+            }
+        }
+    }
+
+    &.hero-image-video-optional {
+        &::before {
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Hero+Image/Video');
+            @include breakpoint(large){
+                background: none;
+                content: "Hero Image/Video";
+            }
+        }
+    }
+
+    &.hero-image-small {
+        &::before {
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Small+Hero+Image');
+            @include breakpoint(large){
+                background: none;
+                content: "Small Hero Image ";
+            }
+        }
+    }
+
+    &.hero-image-small-optional {
+        &::before {
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Small+Hero+Image');
+            @include breakpoint(large){
+                background: none;
+                content: "Small Hero Image ";
+            }
+        }
+    }
+
+    &.hero-image-featured-news {
+        &::before {
+            content: "Featured News Hero";
+            background: url('http://via.placeholder.com/400x250/000000/999999/?text=Featured+News+Hero');
+            @include breakpoint(large){
+                background: none;
+                content: "Featured News Hero";
+            }
+        }
+    }
+
+    /* LABEL */
+    
+    &::before {
+        position: relative;
+        margin-bottom:-10px;
+        width: auto;
+        left: auto;
+        top: auto;
+        display:block;
+        content:" ";
+        background: url(http://via.placeholder.com/400x250/000000/999999/?text=hero);
+        background-size:cover;
+        margin-left:calc(-50vw + 50%);
+        margin-right:calc(-50vw + 50%);
+        height:250px;
+        color: #4b4d50;
+        font-size: 2rem;
+        top: 50%;
+        z-index: -1;
+
+        @include breakpoint(large){
+            position: absolute;
+            left: 50%;
+            margin-left: -50%;
+            width: 100%;
+            text-align: center;
+            font-size: 5rem;
+            top: 38%;
+            height: auto;
+            background: #000000;
+        }
+  }
+
+   &.empty {
+        padding-top: 35vh;
+        padding-bottom: 35vh;
+        
+   }
+
+   &.textBottomLeft, 
+   &.textBottomRight {
+        @include breakpoint(large){
+            padding-bottom: 5vh;
+        }
+   }
+
+   &.textCaption {
+        padding-top: calc(-50vh + 77%);
+        padding-bottom: 0;
+
+        h5 {
+            @include breakpoint(large) {
+                color: white;
+            }
+        }
+   }
+
+    .specs {
+        border: none;
+        margin-bottom: 8px;
+    }
+
+    &.textLeft {
+
+        .hero-ribbon {
+            position:static;
+            background:none;
+            max-width:500px;
+            margin-left:auto;
+            margin-right:auto;
+            z-index: 10;
+
+            @include breakpoint(large) {
+                margin-left:0;
+            }
+
+            li {
+                &.secondary {
+                    ul {display: none}
+                }
+            }
+
+
+        }
+    }
+
+    &.textRight {
+       
+        .hero-ribbon {
+            margin-right: 0;
+            position:static;
+            background:none;
+            max-width:500px;
+            margin-left:auto;
+
+            li {
+                &.secondary {
+                    ul {display: none}
+                }
+            }
+        }
+    }
+
+    &.textBottom {
+        padding-left: calc(50vw - 50%);
+        padding-top: calc(100vh - 40%);
+        padding-bottom: 50px;
+
+        .hero-ribbon {
+            max-width: none;
+
+            li {
+                display: inline-table;
+                border-bottom: none;
+                font-size: 1.3rem;
+                line-height: 1;
+
+                ul {display: none}
+
+                &.secondary {
+                    border: none;
+                    padding-top: 0;
+                    padding-bottom: 0;                    
+                }
+            }
+
+            &:before, &:after { position: static }
+            
+            >li {
+                max-width: 20%;
+                margin: 0 0 0 25px;
+            }
+        }
+    }
+
+    >div {
+        overflow-y: hidden;
+    }
+
+    .hero-ribbon {
+        list-style: none;
+        max-width: 500px;
+        padding: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        position: relative;
+        z-index: 1;
+
+        h1, p { color: white;  }
+
+        h1, h2, h3, h4 {
+            font-weight: bold;
+        }       
+
+        .specs {
+            .date, .tags { color: white; }
+        }
+
+        &.overflow {
+            overflow-y: hidden;
+        }
+
+        &.label {
+            &:before, &:after { display: none; }
+        }
+
+       li {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: -10px;
+            box-sizing: border-box;
+            border-bottom: 1px dotted gray;
+
+            &:first-of-type {
+                font-size: 1.4rem;
+                line-height: 1.2;
+            }
+
+            ul {
+                list-style: none;
+                margin-left: 0;
+                li {
+                    border-bottom: none;
+                    font-size: .9rem;
+                    &:first-of-type {
+                        font-size: .9rem;
+                    }
+                }
+            }            
+
+            &.secondary {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                margin-right: 15px;
+                box-sizing: border-box;
+                border-bottom: 1px dotted gray;
+                list-style: none;
+                line-height: 1.4em;
+            }
+    
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    
+        a {
+            text-decoration: none;
+            line-height: 1.4;
+            background: white;
+            padding: .3rem 1rem;
+        }
+
+        &.white{
+            margin-right: 0;
+            background-color: rgba(256,256,256,.95);
+            h1, p { color: inherit;  }
+
+            .specs {
+                .date, .tags { color: inherit; }
+            }
+
+            a {
+                background: transparent;
+                padding: 0;
+            }
+        }
+
+        @include breakpoint(large) {
+            border: none;
+            padding: 30px;
+        }
+
+    }
+
+    @include breakpoint(large) {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        background: url(http://via.placeholder.com/1800x1200/000000/000000/?text=hero);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 640px;
+
+    }
+}
+@media only screen and (max-width:768px){
+    
+}

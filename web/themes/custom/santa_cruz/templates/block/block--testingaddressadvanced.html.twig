@@ -1,0 +1,138 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - block.subject: Block title.
+ * - content: Block content.
+ * - block.module: Module that generated the block.
+ * - block.delta: An ID for the block, unique within each module.
+ * - block.region: The block region embedding the current block.
+ * - classes: String of classes that can be used to style contextually through
+ *   CSS. It can be manipulated through the variable classes_array from
+ *   preprocess functions. The default values can be one or more of the following:
+ *   - block: The current template type, i.e., "theming hook".
+ *   - block-[module]: The module generating the block. For example, the user module
+ *     is responsible for handling the default user navigation block. In that case
+ *     the class would be "block-user".
+ * - title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ *
+ * Helper variables:
+ * - classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable classes.
+ * - block_zebra: Outputs 'odd' and 'even' dependent on each block region.
+ * - zebra: Same output as block_zebra but independent of any block region.
+ * - block_id: Counter dependent on each block region.
+ * - id: Same output as block_id but independent of any block region.
+ * - is_front: Flags true when presented in the front page.
+ * - logged_in: Flags true when the current user is a logged-in member.
+ * - is_admin: Flags true when the current user is an administrator.
+ * - block_html_id: A valid HTML ID and guaranteed unique.
+ * - content_attributes: Raw HTML attributes for block content.
+ * - title_attributes: Raw HTML attributes for the block title tag.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_block()
+ * @see template_process()
+ */
+#}
+{% if block.delta != 'main' %}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'large-4 small-order-2 cell',
+] %}
+<section{{ attributes.addClass(classes) }}>
+  {% endif %}
+
+  {{ title_prefix }}
+  {% if label %}
+    <h4 {{ title_attributes }}>{{ label }}</h4>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+    <p>
+      {%- if content.field_address.0.organization["#value"]|length -%}
+        {{- content.field_address.0.organization["#value"] -}}<br>
+      {%- endif -%}
+      {% if content.field_address.0.address_line1["#value"]|length %}
+      {{ content.field_address.0.address_line1["#value"] }}<br>
+      {% endif %}
+      {% if content.field_address.0.address_line2["#value"]|length %}
+        {{ content.field_address.0.address_line2["#value"] }}<br>
+      {% endif %}
+        {{ content.field_address.0.locality["#value"] }}, {{ content.field_address.0.administrative_area["#value"] }} {{ content.field_address.0.postal_code["#value"] }}<br>
+      {{ content.field_address.0.country["#value"] }}<br>
+
+      {% if content.field_emails.0["#title"]|length %}
+        <strong>Email:&nbsp;</strong>
+        {%- for key, item in content.field_emails if key|first != '#' -%}
+          {%- if key matches '/^\\d+$/' -%}
+            {%- if key > 0 -%}
+              , &nbsp;{{- item["#title"] -}}
+            {% else %}
+              {{- item["#title"] -}}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <br>
+      {% endif %}
+      {% if content.field_phones.0["#title"]|length %}
+        <strong>Phone:&nbsp;</strong>
+        {%- for key, item in content.field_phones if key|first != '#' -%}
+          {%- if key matches '/^\\d+$/' -%}
+            {%- if key > 0 -%}
+              , &nbsp;{{- item["#title"] -}}
+            {% else %}
+             {{- item["#title"] -}}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <br>
+      {% endif %}
+      {% if content.field_faxes.0["#title"]|length %}
+        <strong>Fax:&nbsp;</strong>
+        {%- for key, item in content.field_faxes if key|first != '#' -%}
+          {%- if key matches '/^\\d+$/' -%}
+            {%- if key > 0 -%}
+              , &nbsp;{{- item["#title"] -}}
+            {% else %}
+              {{- item["#title"] -}}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <br>
+      {% endif %}
+    </p>
+    {{ content.body.0 }}
+    {% if content.field_links.0["#title"]|length %}
+      <div class="toggle-trigger" data-toggle="connect" aria-controls="connect">
+        <h5 class="underline">Connect<span class="thin"> to History</span> <i class="fas fa-plus hide-for-large"></i>
+        </h5>
+      </div>
+      <div id="connect" class="show-for-large" data-toggler=".show-for-large" aria-expanded="true">
+        <div class="nav-social">
+          <ul>
+            {% for key, item in content.field_links if key|first != '#' %}
+              {% if key matches '/^\\d+$/' %}
+                <li><a href="{{ item['#url'] }}" target="_blank">
+                    <i class="fab fa-{{ item['#title'] == 'facebook' ? 'facebook-square' : item['#title'] }}"></i></a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+  {% if block.delta != 'main' %}
+</section>
+{% endif %}

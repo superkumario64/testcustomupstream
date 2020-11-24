@@ -1,0 +1,59 @@
+// This page is to be used for alerts as page take-overs
+
+.alert-low {
+
+    .callout {
+        margin-top: 40px;
+        margin-bottom: 0;
+
+        @include breakpoint(large) {
+            margin-top: 0;
+        }
+
+        .grid-container {
+            position: relative;
+        }
+
+        .close-button {
+            top: 0;
+        }
+    }
+}
+
+.callout {
+
+    @include clearfix();
+
+    .button {
+        vertical-align: middle;
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+
+}
+
+
+.alert-high {
+
+    .callout {
+        height: 60vh;
+        padding: 10vh 3vh;
+        
+        text-align: center;
+        margin-bottom: 0;
+        font-size: .7rem;
+
+        .button {
+            margin-bottom: 1rem;
+            margin-left: 0;
+        }
+
+        @include breakpoint(large) {
+            height: 57vh;
+            padding: 18vh;
+        }
+
+    }
+
+
+}

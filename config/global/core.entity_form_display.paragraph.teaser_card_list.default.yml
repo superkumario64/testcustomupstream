@@ -1,0 +1,36 @@
+uuid: bdc6d278-7f1c-4061-ac05-00a440f513b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teaser_card_list.field_node_refs
+    - field.field.paragraph.teaser_card_list.field_title
+    - field.field.paragraph.teaser_card_list.field_view_reference
+    - paragraphs.paragraphs_type.teaser_card_list
+id: paragraph.teaser_card_list.default
+targetEntityType: paragraph
+bundle: teaser_card_list
+mode: default
+content:
+  field_node_refs:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

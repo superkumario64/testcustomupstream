@@ -1,0 +1,55 @@
+uuid: 97d64467-eae5-4395-90d2-f9bb1a46d4ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_list.field_link
+    - field.field.paragraph.profile_list.field_paragraphs
+    - field.field.paragraph.profile_list.field_title
+    - paragraphs.paragraphs_type.profile_list
+  module:
+    - entity_reference_revisions
+    - fences
+    - link
+id: paragraph.profile_list.default
+targetEntityType: paragraph
+bundle: profile_list
+mode: default
+content:
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_paragraphs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: grid_card
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

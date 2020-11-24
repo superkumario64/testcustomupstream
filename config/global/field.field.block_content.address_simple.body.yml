@@ -1,0 +1,23 @@
+uuid: e211e26e-1927-449d-8961-61be0c525807
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address_simple
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.address_simple.body
+field_name: body
+entity_type: block_content
+bundle: address_simple
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

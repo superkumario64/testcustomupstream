@@ -1,0 +1,27 @@
+uuid: 0f350ca6-af20-4dc2-82e5-8cd568ba0d5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: 'Media on the Left'
+    -
+      value: right
+      label: 'Media on the Right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

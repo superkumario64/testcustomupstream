@@ -1,0 +1,10 @@
+<ul class="menu vertical">
+  {% for item in items %}
+    <li>
+      <a href="{{ item.content['#url'] }}"
+         class="{{ item.content['#options'].attributes.class }}"
+         target="{{ item.content['#url'].isExternal() ? '_blank' : '' }}"
+         rel="{{ item.content['#url'].isExternal() ? 'nofollow' : '' }}">{{ item.content['#title'] }}</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,27 @@
+uuid: 9d33d76f-b454-478a-8946-fdee0b5f1827
+langcode: en
+status: true
+dependencies: {  }
+id: file
+label: File
+media_types:
+  audio: audio
+  file: file
+  image: image
+  video: video
+  remote_video: 0
+  article_featured_image: 0
+  article_slideshow_item: 0
+  column_cta_image: 0
+  course_image: 0
+  event_featured_image: 0
+  event_teaser_image: 0
+  flexible_bg_image_block: 0
+  full_width_image_section: 0
+  gridder_icon: 0
+  hero_banner_image: 0
+  hero_slide_image: 0
+  inline_media: 0
+  interior_slideshow_slide: 0
+  person_profile_image: 0
+form_mode: media_library

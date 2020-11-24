@@ -1,0 +1,10 @@
+uuid: e898f344-928a-4077-bbc3-6fe12b37073a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.related_grid_card
+label: 'Related Grid Card'
+targetEntityType: node
+cache: true

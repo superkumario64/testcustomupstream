@@ -1,0 +1,10 @@
+uuid: 05dae282-6a93-43dc-a318-905da516e476
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.grid_card__minimal
+label: 'Grid Card (Minimal)'
+targetEntityType: node
+cache: true

@@ -1,0 +1,227 @@
+.profile-prefix { font-weight: bold; }
+
+.profile-prefix, .profile-name{
+    display: inline;
+}
+
+.profile {
+    background: white;
+    @include xy-cell(12,true,0);
+    text-decoration: none;
+    @include xy-grid;
+
+    h2, h3, h4, p, div {
+        color: $primary-gray;
+    }
+
+    &:hover {
+        h2, h3, h4 { color: $primary-blue; }
+    }
+
+    .image {
+        @include xy-cell(4, true, 0);
+        overflow: hidden;
+        max-height: auto;
+        
+        @include breakpoint(large){
+            max-height: 155px;
+        }
+    }   
+
+    .accordion {
+        margin-bottom: 20px;
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .profile-info {
+        @include xy-cell(8);
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+    }  
+
+    &.sidebar {
+        margin: 0;
+        padding: 0;
+        @include xy-grid;
+        text-decoration: none;
+    
+        p {
+            font-size: .9rem;
+            margin-bottom: .5rem;
+            line-height: 1.3;
+        }
+
+        .image {
+           min-height: 100%;
+            @include xy-cell(12);
+    
+            @include breakpoint(large) {
+                margin-left: 0 !important;
+                @include xy-cell(5);
+                min-height: 100%;
+            }
+            img {
+                position: relative;
+                top: 50%;
+                margin-top: -50%;
+
+                @include breakpoint(large) {
+                    min-height: 100%;
+                    position: static;
+                    top: 0;
+                    margin-top: 0;
+                }
+            }
+        }   
+
+        .profile-info {
+            
+            @include xy-cell(12);
+            background: transparent;
+
+            @include breakpoint(large) {
+                @include xy-cell(7, true, 0);
+                padding: .6rem 0;
+
+                h4 {
+                    font-size: 1.1rem;
+                }
+                p {
+                    font-size: .8rem;
+                    margin: 0;
+                }
+            }
+        }
+             
+    }
+}
+
+.profile-w-media {
+    padding: 1rem 0;
+
+   @include breakpoint(large) {
+        padding: 5rem 0;
+    }
+
+    .image {
+        margin: 0;
+        @include xy-cell(12, true, 0);
+        max-height: none;
+    }
+
+    .wrap {
+        @include xy-grid-container;
+    }
+
+    .inner {
+        @include xy-grid;
+
+        @include breakpoint(large){
+            background: #f6fbff;
+            border: 1px solid #b9d3e7;
+        }
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .media {
+    
+        .profile-image {
+            width: 100%;
+            max-width: none;
+        }
+
+    }
+
+}
+
+.profile-w-media.left {
+
+    .content {
+        @include xy-cell(12, true, 0);
+        
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(8);
+            @include flex-order(2);
+            padding-left: 0;
+        }
+    }
+
+    .media {
+        @include xy-cell(12);
+        
+        @include breakpoint(xlarge) {
+            @include xy-cell(4, true, 0);
+            @include flex-order(1);
+        }
+
+        .image {
+            @include breakpoint(xlarge){
+                clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+            }
+        }
+    }
+
+}
+
+.profile-w-media.right {
+
+    .content {
+        @include xy-cell(12);
+    
+        @include breakpoint(xlarge) {
+            @include xy-cell(8);
+            @include flex-order(1);
+        }
+    }
+
+    .media {
+        @include xy-cell(12);
+
+        .image {
+            @include breakpoint(large){
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%);
+            }
+        }
+        
+        @include breakpoint(xlarge) {
+            @include xy-cell(4, true, 0);
+            @include flex-order(2);
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(xlarge) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.profile-w-media + .profile-w-media {
+    border-top: none;
+}
+
+.profile-list {
+    @include xy-grid;
+    
+    .profile {
+        padding: 1rem;
+
+        @include breakpoint(large) {
+            @include xy-cell(4);
+        } 
+        
+        &.carousel-item {
+            @include breakpoint(large) {
+                @include xy-cell(12, true, 0);
+            } 
+        }
+    }
+   
+}
+

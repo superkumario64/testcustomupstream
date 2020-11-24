@@ -1,0 +1,67 @@
+uuid: eb72728e-91e5-49a4-96a4-9d72dbc97d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.person_carousel
+  module:
+    - viewsreference
+id: paragraph.person_carousel.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: person_carousel
+label: 'View Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    attachment: 0
+    page: 0
+    entity_browser: 0
+    feed: 0
+    rest_export: 0
+  preselect_views:
+    carousels: carousels
+    article_view: 0
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    directory: 0
+    events_calendar: 0
+    event_view: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    hero_banner: 0
+    locations: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    moderated_content: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    pager: 0
+    argument: 0
+    limit: 0
+    offset: 0
+    title: 0
+field_type: viewsreference

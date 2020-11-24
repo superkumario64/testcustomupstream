@@ -1,0 +1,22 @@
+uuid: 7d54074b-5edb-4cff-9386-7c2205526814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_color
+    - paragraphs.paragraphs_type.header_banner
+  module:
+    - color_field
+id: paragraph.header_banner.field_overlay_color
+field_name: field_overlay_color
+entity_type: paragraph
+bundle: header_banner
+label: 'Overlay Color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

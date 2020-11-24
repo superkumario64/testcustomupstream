@@ -1,0 +1,28 @@
+uuid: df9364de-abb4-4b12-9ea9-0e331438e259
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_ref
+    - node.type.department
+    - node.type.program
+id: node.program.field_department_ref
+field_name: field_department_ref
+entity_type: node
+bundle: program
+label: Department
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      department: department
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

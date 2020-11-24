@@ -1,0 +1,29 @@
+uuid: e28ab160-94c6-4d8d-8945-f8cb408d14dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_formatted
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.program.field_lead_formatted
+field_name: field_lead_formatted
+entity_type: node
+bundle: program
+label: 'Lead Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

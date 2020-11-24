@@ -1,0 +1,46 @@
+.ribbon {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    max-height: 650px;
+    overflow: hidden;
+    background: $primary-blue;
+    
+    .img-mask {
+        //clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
+    }
+
+    img {
+        width: 100%;
+        transform: translate(0, -10%);
+    }
+
+    figure {
+        display: block;
+    }
+    
+    figcaption {
+        left: 65%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-align: left;
+
+        @include breakpoint(large){
+            width: 100%;
+            text-align: center;
+            
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+
+        @include breakpoint(large){
+            font-size: 2.5rem;
+        }
+    }
+     
+}
+  

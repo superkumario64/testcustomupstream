@@ -1,0 +1,62 @@
+uuid: aa18c4f6-0a26-4288-ad85-390271add651
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid_card
+    - field.field.node.podcast.body
+    - field.field.node.podcast.field_author
+    - field.field.node.podcast.field_author_link
+    - field.field.node.podcast.field_categories
+    - field.field.node.podcast.field_date
+    - field.field.node.podcast.field_embed_txt
+    - field.field.node.podcast.field_featured
+    - field.field.node.podcast.field_lead_formatted
+    - field.field.node.podcast.field_media
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_subtitle_formatted
+    - field.field.node.podcast.field_teaser_image
+    - field.field.node.podcast.field_teaser_txt
+    - node.type.podcast
+  module:
+    - datetime
+    - fences
+    - user
+id: node.podcast.grid_card
+targetEntityType: node
+bundle: podcast
+mode: grid_card
+content:
+  field_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+hidden:
+  body: true
+  field_author: true
+  field_author_link: true
+  field_categories: true
+  field_embed_txt: true
+  field_featured: true
+  field_lead_formatted: true
+  field_media: true
+  field_meta_tags: true
+  field_subtitle_formatted: true
+  field_teaser_image: true
+  field_teaser_txt: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

@@ -1,0 +1,89 @@
+uuid: 76d70708-daee-406e-aef1-6b327acd7c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.short
+    - field.field.node.alert.field_active
+    - field.field.node.alert.field_alert_body
+    - field.field.node.alert.field_alert_level
+    - field.field.node.alert.field_alert_type
+    - field.field.node.alert.field_expiration_date_alert
+    - field.field.node.alert.field_link
+    - node.type.alert
+  module:
+    - datetime
+    - fences
+    - link
+    - options
+    - text
+    - user
+id: node.alert.short
+targetEntityType: node
+bundle: alert
+mode: short
+content:
+  field_active:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_alert_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_alert_level:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_alert_type:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_expiration_date_alert:
+    weight: 2
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

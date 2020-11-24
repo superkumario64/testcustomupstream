@@ -1,0 +1,29 @@
+uuid: 0f8895bd-5946-4db3-8bc8-cc209d6f8880
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.button_list.field_paragraphs__max_4
+    - paragraphs.paragraphs_type.button_list
+  module:
+    - paragraphs
+id: paragraph.button_list.default
+targetEntityType: paragraph
+bundle: button_list
+mode: default
+content:
+  field_paragraphs__max_4:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Button
+      title_plural: Buttons
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: button_list_item
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,23 @@
+.document-card {
+    max-width: 400px;
+}
+
+.document-card-list {
+
+     @include xy-grid;
+
+    .document-card {
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+
+        @include breakpoint(medium) {
+            @include xy-cell(6);
+        }
+
+        @include breakpoint(large) {
+            @include xy-cell(4);
+        }
+
+    }
+
+}

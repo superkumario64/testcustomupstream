@@ -1,0 +1,10 @@
+uuid: a5768cd7-2562-460d-a353-2300c9c46157
+langcode: en
+status: true
+dependencies: {  }
+id: news_collection
+label: 'News Collection'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+attributes:
+  title:
+    label: ''
+    description: ''
+  target:
+    label: ''
+    description: ''
+  class:
+    label: ''
+    description: ''
+  rel:
+    label: Relationship
+    description: ''
+  data:
+    label: Attribute
+    description: ''
+  id:
+    label: ID
+    description: ''
+  aria-label:
+    label: 'Aria Label'
+    description: 'The aria-label attribute is used to define a string that labels the current element. Use it in cases where a text label is not visible on the screen. If there is visible text labeling the element, use aria-labelledby instead.'

@@ -1,0 +1,34 @@
+uuid: a64a8c2c-fd1f-45a7-9540-63f581734272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quicktab_item.field_body_formatted
+    - field.field.paragraph.quicktab_item.field_title
+    - paragraphs.paragraphs_type.quicktab_item
+  module:
+    - text
+id: paragraph.quicktab_item.default
+targetEntityType: paragraph
+bundle: quicktab_item
+mode: default
+content:
+  field_body_formatted:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

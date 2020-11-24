@@ -1,0 +1,25 @@
+{% set file_url = file_url(content.field_media[0]['#media'].field_media_file.entity.uri.value) %}
+{% set file_name = content.field_media[0]['#media'].field_media_file.entity.filename.value %}
+
+<div class="job-posting-card">
+  <a id="node-{{ node.id }}" href="{{ file_url }}" download="{{ file_name }}" target="_blank"
+     class="job-posting-card grid carousel-item">
+    <h4 class="underline">{{ label[0]['#context'].value }}</h4>
+    <div class="specs">
+      {% if content.field_date|field_value is not empty
+        or content.field_date_closing|field_value is not empty %}
+        <div class="date">
+          {{ 'Listed'|t }}: {{ content.field_date[0]['#text'] }}<br/>
+          {{ 'Apply by'|t }}: {{ content.field_date_closing[0]['#text'] }}
+        </div>
+      {% endif %}
+      {% if content.field_job_number|field_value is not empty %}
+        <div class="tags">
+          <p class="job-number">
+            {{ content.field_job_number }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </a>
+</div>

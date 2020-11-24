@@ -1,0 +1,17 @@
+uuid: f33e9ed4-3d21-4aed-8c79-f7a1d24f2494
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: media_library
+label: 'Media Library (220x220)'
+effects:
+  41e68570-5650-4550-adba-74de9e151c0e:
+    uuid: 41e68570-5650-4550-adba-74de9e151c0e
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 220
+      height: 220
+      crop_type: focal_point

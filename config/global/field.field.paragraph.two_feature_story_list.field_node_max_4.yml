@@ -1,0 +1,28 @@
+uuid: 9e7692f9-c859-4c0f-a112-c6a85c4c230e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_max_4
+    - node.type.article
+    - paragraphs.paragraphs_type.two_feature_story_list
+id: paragraph.two_feature_story_list.field_node_max_4
+field_name: field_node_max_4
+entity_type: paragraph
+bundle: two_feature_story_list
+label: 'Right News Cards'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

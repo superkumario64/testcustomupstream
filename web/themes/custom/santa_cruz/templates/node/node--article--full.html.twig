@@ -1,0 +1,85 @@
+<div class="page-content" id="main-content">
+  <div class="grid-container large">
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-12">
+        <a class="category btn-link" href="{{ content.field_categories[0]['#url'] }}"
+           aria-label="">{{ content.field_categories[0]['#title'] }}</a>
+      </div>
+      <div class="cell xlarge-8">
+        <h1>{{ label }}</h1>
+        {% if content.field_subtitle_formatted|field_value is not empty %}
+          <div class="lead">{{ content.field_subtitle_formatted|field_value }}</div>
+        {% endif %}
+      </div>
+      <div class="cell xlarge-4">
+        <div class="sidebar">
+          <div class="profile-info">
+            <div class="profile-prefix">By</div>
+            <div class="profile-name">
+              <a class="btn-link" href="{{ content.field_author_link[0]['#url'] }}"
+                 aria-label="">{{ content.field_author }}</a>
+            </div>
+            <div class="profile-date">{{ node.changedtime|date("F j, Y") }}</div>
+          </div>
+          <h5>{{ "Share this story"|t }}:</h5>
+          {# {{>social-sharing type='top && right'}} #}
+          <div class="social-sharing top right">
+            {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+  <div class="grid-container large">
+    {% if content.field_media[0]['#media'].field_media_image is not null %}
+      {% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value) %}
+      {% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
+      {% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
+      <figure class="img-full">
+        <div class="image">
+          <img alt="{{ image_alt }}" title="{{ image_title }}" src="{{ image_url }}">
+        </div>
+        <figcaption>
+          <div class="caption-title"></div>
+          <div class="caption-desc">
+            {% if content.field_media[0]['#media'].field_caption %}
+              <p>{{ content.field_media[0]['#media'].field_caption.value }}</p>
+            {% endif %}
+          </div>
+        </figcaption>
+      </figure>
+    {% endif %}
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell">
+        {{ content.body }}
+        <p>Topics:
+          {% for key, item in content.field_categories if key|first != '#' %}
+            {% if key matches '/^\\d+$/' %}
+              <a class="btn-link"
+                 href="{{ content.field_categories.key['#url'] }}"> {{ content.field_categories.0['#title'] }}</a>
+            {% endif %}
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+
+    {# {{>social-sharing type='bottom'}} #}
+    <div class="social-sharing bottom">
+      {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+    </div>
+
+  </div>
+
+  {% if relatedcontentgrid is not empty %}
+    <section class="heading">
+      <h2 class="underline">{{ 'Related News'|t }}</h2>
+    </section>
+    <div class="grid-container large">
+      {{ relatedcontentgrid }}
+    </div>
+  {% endif %}
+</div>

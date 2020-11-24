@@ -1,0 +1,21 @@
+uuid: b6ce964d-3bfd-40bc-b23c-6d76b89d5d5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic_date
+    - paragraphs.paragraphs_type.feature_image
+  module:
+    - datetime
+id: paragraph.feature_image.field_topic_date
+field_name: field_topic_date
+entity_type: paragraph
+bundle: feature_image
+label: 'Topic Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

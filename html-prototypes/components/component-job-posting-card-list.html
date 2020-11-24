@@ -1,0 +1,188 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        
+        <!-- This style list can be used in a large content area and used in a carousel-->
+        <h1>Block List Example</h1><br>
+        <div class="job-posting-card-list">
+        
+        
+                <!------------------------------------------------------------------>
+                <!---------- <a> and <div> can be used interechanegeably ----------->
+                <!------------------------------------------------------------------>
+                <a class="job-posting-card">
+                    <div class="category" href="javascript:void(0)" aria-label="">
+                        Internship
+                    </div>
+                    <h4 class="underline">2D Visual Art Lecturer Pool (Ongoing)</h4>
+                    <div class="specs">
+                        <p class="date">
+                            Listed: March 24, 2019<br />
+                            Apply by: May 6, 2019
+                        </p>
+                        <div class="tags">
+                            <p class="job-number">
+                                JPF00505-18
+                            </p>
+                        </div>
+                    </div>
+                </a>
+        
+                <!------------------------------------------------------------------>
+                <!---------- <a> and <div> can be used interechanegeably ----------->
+                <!------------------------------------------------------------------>
+                <a class="job-posting-card">
+                    <div class="category" href="javascript:void(0)" aria-label="">
+                        Internship
+                    </div>
+                    <h4 class="underline">2D Visual Art Lecturer Pool (Ongoing)</h4>
+                    <div class="specs">
+                        <p class="date">
+                            Listed: March 24, 2019<br />
+                            Apply by: May 6, 2019
+                        </p>
+                        <div class="tags">
+                            <p class="job-number">
+                                JPF00505-18
+                            </p>
+                        </div>
+                    </div>
+                </a>
+        
+                <!------------------------------------------------------------------>
+                <!---------- <a> and <div> can be used interechanegeably ----------->
+                <!------------------------------------------------------------------>
+                <a class="job-posting-card">
+                    <div class="category" href="javascript:void(0)" aria-label="">
+                        Internship
+                    </div>
+                    <h4 class="underline">2D Visual Art Lecturer Pool (Ongoing)</h4>
+                    <div class="specs">
+                        <p class="date">
+                            Listed: March 24, 2019<br />
+                            Apply by: May 6, 2019
+                        </p>
+                        <div class="tags">
+                            <p class="job-number">
+                                JPF00505-18
+                            </p>
+                        </div>
+                    </div>
+                </a>
+        
+        </div>
+        <br><br>
+        
+        <!-- This style list can be used in a sidebar area. Add "list" to job-posting-card-list container -->
+        <h1>Concise Listing Example</h1><br>
+        <div style="max-width: 450px"> <!-- max width here only to demonstrated a column-->
+            <div class="job-posting-card-list list">
+            
+            
+                    <!------------------------------------------------------------------>
+                    <!---------- <a> and <div> can be used interechanegeably ----------->
+                    <!------------------------------------------------------------------>
+                    <a class="job-posting-card">
+                        <div class="category" href="javascript:void(0)" aria-label="">
+                            Internship
+                        </div>
+                        <h4 class="underline">2D Visual Art Lecturer Pool (Ongoing)</h4>
+                        <div class="specs">
+                            <p class="date">
+                                Listed: March 24, 2019<br />
+                                Apply by: May 6, 2019
+                            </p>
+                            <div class="tags">
+                                <p class="job-number">
+                                    JPF00505-18
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+            
+                    <!------------------------------------------------------------------>
+                    <!---------- <a> and <div> can be used interechanegeably ----------->
+                    <!------------------------------------------------------------------>
+                    <a class="job-posting-card">
+                        <div class="category" href="javascript:void(0)" aria-label="">
+                            Internship
+                        </div>
+                        <h4 class="underline">2D Visual Art Lecturer Pool (Ongoing)</h4>
+                        <div class="specs">
+                            <p class="date">
+                                Listed: March 24, 2019<br />
+                                Apply by: May 6, 2019
+                            </p>
+                            <div class="tags">
+                                <p class="job-number">
+                                    JPF00505-18
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+            
+                    <!------------------------------------------------------------------>
+                    <!---------- <a> and <div> can be used interechanegeably ----------->
+                    <!------------------------------------------------------------------>
+                    <a class="job-posting-card">
+                        <div class="category" href="javascript:void(0)" aria-label="">
+                            Internship
+                        </div>
+                        <h4 class="underline">2D Visual Art Lecturer Pool (Ongoing)</h4>
+                        <div class="specs">
+                            <p class="date">
+                                Listed: March 24, 2019<br />
+                                Apply by: May 6, 2019
+                            </p>
+                            <div class="tags">
+                                <p class="job-number">
+                                    JPF00505-18
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+            
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

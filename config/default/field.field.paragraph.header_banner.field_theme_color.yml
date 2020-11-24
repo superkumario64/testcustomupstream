@@ -1,0 +1,23 @@
+uuid: decbe5d5-abf7-4ef4-b05c-43a839b03c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_theme_color
+    - paragraphs.paragraphs_type.header_banner
+  module:
+    - options
+id: paragraph.header_banner.field_theme_color
+field_name: field_theme_color
+entity_type: paragraph
+bundle: header_banner
+label: 'Theme Color'
+description: '<strong>Basic</strong>: with yellow title; <strong>Alternative</strong>: with white title; <strong>Black</strong>: force black title.'
+required: true
+translatable: false
+default_value:
+  -
+    value: basic
+default_value_callback: ''
+settings: {  }
+field_type: list_string

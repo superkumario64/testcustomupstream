@@ -1,0 +1,623 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\block\Entity\Block;
+use Drupal\block_content\BlockContentInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Site\Settings;
+use Drupal\media\Entity\Media;
+use Drupal\node\NodeInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function custom_module_help($path, $arg) {
+  switch ($path) {
+    case "help.page.custom_module":
+      return '' . t("Nothing to show for now.") . '';
+  }
+}
+
+/**
+ * Implements hook__page_attachments()
+ */
+function custom_module_page_attachments(array &$attachments) {
+  // Get current route.
+  $route = \Drupal::routeMatch()->getRouteName();
+  // Check route set in custom_module.routing.yml file.
+  if ($route == 'custom_module.content') {
+    $attachments['#attached']['library'][] = 'custom_module/global-styling';
+    $attachments['#attached']['library'][] = 'custom_module/global-scripts';
+  }
+
+  $attachments['#attached']['library'][] = 'custom_module/advance-link';
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function custom_module_preprocess_block(&$variables) {
+  // Allow to have some HTML for the titles of the blocks.
+  if (\Drupal::service('module_handler')->moduleExists('html_title')) {
+    // Case - menu block.
+    if (isset($variables['configuration']['label'])
+      && $variables['configuration']['label'] !== '') {
+      $variables['configuration']['label'] = \Drupal::service('html_title.filter')
+        ->decodeToMarkup($variables['configuration']['label']);
+    }
+    elseif (isset($variables['content']['#menu_block_configuration']['label'])
+      && $variables['content']['#menu_block_configuration']['label'] != '') {
+      $variables['content']['#menu_block_configuration']['label'] = \Drupal::service('html_title.filter')
+        ->decodeToMarkup($variables['content']['#menu_block_configuration']['label']);
+    }
+    elseif (isset($variables['label'])
+      && is_string($variables['label'])
+      && $variables['label'] != '') {
+      $content = $variables['elements']['content'];
+      // Case - Content block.
+      if (isset($content['#block_content'])
+        && $content['#block_content'] instanceof BlockContentInterface) {
+        $block = Block::load($variables['elements']['#id']);
+        if ($block->label() != '[current-page:title]') {
+          $variables['label'] = \Drupal::service('html_title.filter')
+            ->decodeToMarkup($block->label());
+        }
+      } // Case - Plugin block.
+      else {
+        $block = Block::load($variables['elements']['#id']);
+        $variables['label'] = \Drupal::service('html_title.filter')
+          ->decodeToMarkup($block->label());
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_block_view_BASE_BLOCK_ID_alter().
+ */
+function custom_module_block_view_system_branding_block_alter(array &$build, BlockPluginInterface $block) {
+  $build['#pre_render'][] = 'custom_module_block_view_pre_render';
+}
+
+/**
+ * #pre_render callback: Sets color preset logo.
+ */
+function custom_module_block_view_pre_render(array $build) {
+  // Force a sub site logo for debugging by adding /?force-subsite to a request.
+  // Or always add $settings['is_subsite'] = TRUE; for each sub site.
+  if (Settings::get('is_subsite', FALSE) === TRUE) {
+    $theme_key = \Drupal::theme()->getActiveTheme()->getName();
+    $config = \Drupal::config($theme_key);
+
+    CacheableMetadata::createFromRenderArray($build)
+      ->addCacheableDependency($config)
+      ->applyTo($build);
+
+    if (isset($build['content']['site_logo']) && $build['content']['site_logo'] && preg_match('!' . $theme_key . '/logo.svg$!', $build['content']['site_logo']['#uri'])) {
+      $build['content']['site_logo']['#uri'] = str_replace('logo.svg', 'logo-reverse.svg', $build['content']['site_logo']['#uri']);
+    }
+  }
+
+  return $build;
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function custom_module_block_access(Block $block, $operation, AccountInterface $account) {
+  // Hide a sub site "Site branding" block for main website.
+  if ($operation == 'view'
+    && $block->getPluginId() == 'system_branding_block'
+    && $block->id() == 'sitebranding') {
+    return AccessResult::forbiddenIf(Settings::get('is_subsite', FALSE) === FALSE)
+      ->addCacheableDependency($block);
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function custom_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if (!empty($fields['field_end_date'])) {
+    $fields['field_end_date']->addConstraint('StartEndDateChecking');
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_field.
+ */
+function kwall_preprocess_views_view_field(&$vars) {
+  if ($vars['view']->storage->id() == 'academics') {
+
+    if ($vars['field']->options['id'] == 'term_node_tid_1') {
+      $content = '';
+      $icons = explode(',', $vars['field']->last_render);
+      foreach ($icons as $k => $v) {
+        $term = Term::load($v);
+        if (isset($term->field_font_awesome_icon->value)) {
+          $content .= '<i class="' . $term->field_font_awesome_icon->value . '"></i>';
+        }
+      }
+      $vars['output'] = t($content);
+      $vars['field']->last_render = $vars['output'];
+    }
+
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  // Apply custom arguments to the views.
+  // View display in column content paragraph.
+  if ($view->id() == 'article_view' && $display_id == 'block_2') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+
+            if (!empty(kwall_get_article_selected_taxonomy($paragraph['target_id']))) {
+              $args[] = kwall_get_article_selected_taxonomy($paragraph['target_id']);
+            }
+
+          }
+        }
+      }
+    }
+  }
+  // View display in column content paragraph.
+  if ($view->id() == 'event_view' && $display_id == 'block_1') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+
+            if (!empty(kwall_get_news_selected_taxonomy($paragraph['target_id']))) {
+              $args[] = kwall_get_news_selected_taxonomy($paragraph['target_id']);
+              break;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  if ($view->id() == 'article_view' && $display_id == 'block_3') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+            $single = Paragraph::load($paragraph['target_id']);
+
+            if ($single->getType() == 'recent_articles_upcoming_events') {
+              $category = $single->get('field_article_category')
+                ->getValue();
+              if (!empty($category)) {
+                $args[] = $category[0]['target_id'];
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  if ($view->id() == 'event_view' && $display_id == 'block_2') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+
+            $single = Paragraph::load($paragraph['target_id']);
+
+            if ($single->getType() == 'recent_articles_upcoming_events') {
+              $category = $single->get('field_event_category')
+                ->getValue();
+              if (!empty($category)) {
+                $args[] = $category[0]['target_id'];
+              }
+              break;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @param $pid
+ *
+ * @return string
+ * @deprecated Use _cm_get_nodes_by_term() or _cm_check_content_field_uses().
+ */
+function kwall_get_article_selected_taxonomy($pid) {
+  $connection = \Drupal::database();
+  $cat = '';
+  $result = $connection->query("SELECT paragraphs_item_revision_field_data.id AS paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id AS paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category.field_article_category_target_id AS paragraph_revision__field_article_category_field_article_cat, MIN(paragraphs_item_revision_field_data.revision_id) AS revision_id, MIN(paragraphs_item_field_data_paragraph_revision__field_column_section.id) AS paragraphs_item_field_data_paragraph_revision__field_column__1
+FROM
+{paragraphs_item_revision_field_data} paragraphs_item_revision_field_data
+LEFT JOIN {paragraph_revision__field_column_section} paragraph_revision__field_column_section ON paragraphs_item_revision_field_data.revision_id = paragraph_revision__field_column_section.revision_id AND paragraph_revision__field_column_section.deleted = '0'
+LEFT JOIN {paragraphs_item_field_data} paragraphs_item_field_data_paragraph_revision__field_column_section ON paragraph_revision__field_column_section.field_column_section_target_revision_id = paragraphs_item_field_data_paragraph_revision__field_column_section.revision_id
+LEFT JOIN {paragraph__field_article_category} paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category ON paragraphs_item_field_data_paragraph_revision__field_column_section.id = paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.entity_id AND paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.deleted = '0'
+LEFT JOIN {paragraph_revision__field_article_category} paragraph_revision__field_article_category ON paragraphs_item_revision_field_data.revision_id = paragraph_revision__field_article_category.revision_id AND paragraph_revision__field_article_category.deleted = '0'
+WHERE ((paragraphs_item_revision_field_data.id = '" . $pid . "')) AND ((paragraphs_item_revision_field_data.status = '1') AND (paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id IS NOT NULL))
+GROUP BY paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category_field_article_cat");
+  foreach ($result as $id) {
+    if (isset($id->paragraphs_item_field_data_paragraph_revision__field_column_)) {
+      $cat .= $id->paragraphs_item_field_data_paragraph_revision__field_column_;
+    }
+  }
+  return $cat;
+}
+
+/**
+ * @param $pid
+ *
+ * @return string
+ * @deprecated Use _cm_get_nodes_by_term() or _cm_check_content_field_uses().
+ */
+function kwall_get_news_selected_taxonomy($pid) {
+  $connection = \Drupal::database();
+  $cat = '';
+  $result = $connection->query("SELECT paragraphs_item_field_data.id AS id, paragraphs_item_field_data_paragraph__field_column_section.id AS paragraphs_item_field_data_paragraph__field_column_section_i, taxonomy_term_field_data_paragraph__field_event_category.tid AS taxonomy_term_field_data_paragraph__field_event_category_tid
+FROM
+{paragraphs_item_field_data} paragraphs_item_field_data
+LEFT JOIN {paragraph__field_column_section} paragraph__field_column_section ON paragraphs_item_field_data.id = paragraph__field_column_section.entity_id AND paragraph__field_column_section.deleted = '0'
+LEFT JOIN {paragraphs_item_field_data} paragraphs_item_field_data_paragraph__field_column_section ON paragraph__field_column_section.field_column_section_target_revision_id = paragraphs_item_field_data_paragraph__field_column_section.revision_id
+LEFT JOIN {paragraph__field_event_category} paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category ON paragraphs_item_field_data_paragraph__field_column_section.id = paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.entity_id AND paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.deleted = '0'
+LEFT JOIN {taxonomy_term_field_data} taxonomy_term_field_data_paragraph__field_event_category ON paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.field_event_category_target_id = taxonomy_term_field_data_paragraph__field_event_category.tid
+WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_field_data.status = '1') AND (paragraphs_item_field_data.type IN ('column_section')) AND (paragraphs_item_field_data_paragraph__field_column_section.type IN ('upcoming_events')))");
+  foreach ($result as $id) {
+    if (isset($id->taxonomy_term_field_data_paragraph__field_event_category_tid)) {
+      $cat .= $id->taxonomy_term_field_data_paragraph__field_event_category_tid;
+    }
+  }
+  return $cat;
+}
+
+/**
+ *
+ */
+function custom_module_entity_extra_field_info() {
+  $extra_field = [];
+
+  $extra_field['node']['event']['display']['extra_date_field'] = [
+    'label' => t('Event Date (Custom Extra Field)'),
+    'description' => t('Event Date we need for different place'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+  $extra_field['node']['event']['display']['event_time'] = [
+    'label' => t('Event Time (Custom Event Time Field)'),
+    'description' => t('Custom Event Time Field.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+
+  return $extra_field;
+
+}
+
+/**
+ *
+ */
+function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($view_mode == 'full' && $entity->getType() == 'event') {
+    if ($display->getComponent('extra_date_field')) {
+
+      $date = $entity->get('field_start_date')->value;
+
+      $timestamp = strtotime($date);
+
+      $date_month = \Drupal::service('date.formatter')
+        ->format($timestamp, 'custom', 'M', drupal_get_user_timezone());
+
+      $date_day = \Drupal::service('date.formatter')
+        ->format($timestamp, 'custom', 'j', drupal_get_user_timezone());
+
+      $build['extra_date_field'] = [
+        '#type' => 'markup',
+        '#markup' => '<div class="date"> <span class="date-month">' . $date_month . '</span> <span class="date-day">' . $date_day . '</span> </div>',
+      ];
+    }
+
+    if ($display->getComponent('event_time')) {
+      if ($entity->get('field_all_day_event')->value != 0) {
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . 'ALL DAY' . '</div>',
+        ];
+      }
+      else {
+
+        date_default_timezone_set("UTC");
+
+        // Start time.
+        $start_time = strtotime($entity->get('field_start_date')->value);
+        $start_time = DrupalDateTime::createFromTimestamp($start_time);
+
+        $start_time = $start_time->format('g:ia');
+
+        // End time.
+        $end_time = strtotime($entity->get('field_end_date')->value);
+        $end_time = DrupalDateTime::createFromTimestamp($end_time);
+
+        $end_time = $end_time->format('g:ia');
+
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . $start_time . ' - ' . $end_time . '</div>',
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ * implement hook_form_formid_alter
+ */
+
+/**
+ * Add Class if we have values in Exposed form.
+ */
+function custom_module_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  if ($view) {
+    $inputs = $form_state->getUserInput();
+    if ($inputs) {
+      $flag = FALSE;
+      foreach ($inputs as $key => $input) {
+        if (isset($form[$key]) && isset($form[$key]['#default_value']) && $form[$key]['#default_value'] != $input) {
+          $flag = TRUE;
+          break;
+        }
+      }
+      if ($flag) {
+        $form['#attributes']['class'][] = 'form-values-exist';
+      }
+    }
+    // Check if View Ajax Enabled then make sure its reload current page.
+    if ($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
+      $currPathAlias = \Drupal::service('path.alias_manager')
+        ->getAliasByPath('/node/87');
+      $form['#action'] = $currPathAlias;
+    }
+
+    /**
+     * year filter
+     */
+    if (isset($form['#id']) && $form['#id'] == 'views-exposed-form-teaser-archive-news-archive-page') {
+
+      $options = &drupal_static(__FUNCTION__);
+      if (is_null($options)) {
+        $cid = 'custom_module:article:year';
+        $data = \Drupal::cache()->get($cid);
+        if (!$data) {
+          $options = [];
+          $options['all'] = new TranslatableMarkup('- All -');
+          $query = \Drupal::entityQuery('node');
+          $query->condition('type', 'article')
+            ->condition('status', 1)
+            ->sort('field_date', 'ASC');
+          $result = $query->execute();
+          if ($result) {
+            $nodes = Node::loadMultiple($result);
+            foreach ($nodes as $node) {
+              $date = $node->field_date->value;
+              if ($date) {
+                $date = new DrupalDateTime($date, new DateTimeZone('UTC'));
+                $year = $date->format('Y');
+                if (!isset($options[$year])) {
+                  $options[$year] = $year;
+                }
+              }
+            }
+          }
+
+          $cache_tags = ['node:article:year'];
+          \Drupal::cache()
+            ->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+        }
+        else {
+          $options = $data->data;
+        }
+
+      }
+      $form["year"] = [
+        '#prefix' => '<div class="filter-box filter-year-box" id="filter-year" data-toggler="1jx6wi-toggler" data-animate="fade-in fade-out" aria-expanded="false">
+                        <div class="grid-container">
+                            <a class="close-modal" data-toggle="filter-year" aria-controls="filter-year">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <h4>Filter by Year</h4> 
+                            <br>
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell">
+                                    <ul class="menu-list" style="column-count: 3">',
+        '#suffix' => '</ul></div></div></div></div>',
+      ];
+      foreach ($options as $key => $value) {
+        $current_path = \Drupal::service('path.current')->getPath();
+        $cat = \Drupal::request()->query->get('field_categories_target_id');
+        $yr = \Drupal::request()->query->get('year');
+        if (!empty($cat)) {
+          $url = \Drupal::service('path.alias_manager')
+              ->getAliasByPath($current_path) . "?field_categories_target_id=" . $cat . "&year=" . $key . "";
+        }
+        else {
+          $url = \Drupal::service('path.alias_manager')
+              ->getAliasByPath($current_path) . "?year=" . $key . "";
+        }
+        if (!empty($yr)) {
+          if (!empty($cat)) {
+            $url = $url . "&year=" . $key . "";
+          }
+          else {
+            $url = $url . "?year=" . $key . "";
+          }
+        }
+        if ($key != 'all') {
+          $form['year'][$key] = [
+            '#title' => $key,
+            '#type' => 'link',
+            '#url' => Url::fromUserInput($url),
+            '#prefix' => '<li>',
+            '#suffix' => '</li>',
+          ];
+        }
+      }
+
+    }
+
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function custom_module_entity_presave(EntityInterface $entity) {
+  // For better user experience set a media name the same as image title.
+  if ($entity instanceof Media) {
+    if ($entity->hasField('field_media_image') && !$entity->get('field_media_image')
+        ->isEmpty()) {
+      $image = $entity->get('field_media_image')->getValue()[0];
+      if ($image['title'] != '') {
+        $entity->set('name', $image['title']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function custom_module_preprocess_paragraph(&$variables) {
+  if (isset($variables['paragraph'])
+    && $variables['paragraph']->getType() == 'from_library'
+    && $variables['paragraph']->hasField('field_reusable_paragraph')
+    && $variables['paragraph']->field_reusable_paragraph->entity) {
+
+    $library_item = $variables['paragraph']->field_reusable_paragraph->entity;
+
+    // Only replace the content if access is allowed to the library. Access
+    // cacheability metadata is already returned by the original widget in case
+    // access is not allowed.
+    if ($library_item->access('view')) {
+      $view_builder = \Drupal::entityTypeManager()
+        ->getViewBuilder('paragraphs_library_item');
+      $library_item_render_array = $view_builder->view($library_item, $variables['elements']['field_reusable_paragraph'][0]['#view_mode']);
+
+      // This will remove all fields other then field_reusable_paragraph.
+      $build = $view_builder->build($library_item_render_array);
+
+      // In case, if the deprecated "Field Layout" module provided by Drupal core is enabled.
+      if (isset($build['_field_layout'])) {
+        $build = $build['_field_layout']['content'];
+      }
+
+      if (!empty($build['paragraphs'])) {
+        $variables['content'] = $build['paragraphs'];
+      }
+    }
+  }
+}
+
+/**
+ * Helper for getting nodes uses by the term.
+ *
+ * @param $term_id
+ *
+ * @return mixed
+ */
+function _cm_get_nodes_by_term($term_id) {
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->fields('ti', ['nid']);
+  $query->condition('ti.tid', $term_id);
+  $nodes = $query->execute()->fetchAssoc();
+  return $nodes;
+}
+
+/**
+ * Helper for getting nodes uses by the field value.
+ *
+ * @param string $field_name_1
+ * @param string $value_1
+ * @param string $field_name_2
+ * @param string $value_2
+ * @param string $entity_type
+ * @param string $entity_bundle
+ *
+ * @return int|void
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function _cm_check_content_field_uses($field_name_1 = '', $value_1 = '', $field_name_2 = '', $value_2 = '', $entity_type = 'node', $entity_bundle = '') {
+  $params = [
+    'status' => 1,
+  ];
+
+  if ($entity_bundle != '') {
+    $params['type'] = $entity_bundle;
+  }
+
+  $field_definitions = \Drupal::service('entity_field.manager')
+    ->getFieldDefinitions($entity_type, $entity_bundle);
+
+  // Check if the fields are exists in the $entity_type.
+  if ($field_name_1 != '' && $value_1 != '') {
+    if (array_key_exists($field_name_1, $field_definitions)) {
+      // And add the value of the field as a parameter.
+      $params[$field_name_1] = $value_1;
+    }
+  }
+  if ($field_name_2 != '' && $value_2 != '') {
+    if (array_key_exists($field_name_2, $field_definitions)) {
+      // And add the value of the field as a parameter.
+      $params[$field_name_2] = $value_2;
+    }
+  }
+
+  // Load the entities by the parameters.
+  $nodes = \Drupal::entityTypeManager()
+    ->getStorage($entity_type)
+    ->loadByProperties($params);
+
+  return count($nodes);
+}

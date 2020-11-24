@@ -1,0 +1,10 @@
+uuid: 77edb295-3174-4338-a063-ed0a3295ead7
+langcode: en
+status: true
+dependencies: {  }
+id: document_card_list
+label: 'Document Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

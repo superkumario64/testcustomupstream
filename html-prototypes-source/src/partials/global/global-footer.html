@@ -1,0 +1,81 @@
+<div class="global-footer">
+    
+    <div class="grid-x grid-margin-x grid-padding-x large-padding-collapse large-margin-collapse">
+        <div class="cell large-4 show-for-large">
+            <img class="white-ucsc-logo" src="{{root}}assets/img/build-resources/uc-santa-cruz-reverse.svg" />
+            <p class="address">1156 High Street, Santa Cruz, CA 95064</p>
+        </div>
+    
+        {{#ifequal type "gateway"}}
+            <div class="cell large-4">
+                <div class="toggle-trigger" data-toggle="connect">
+                    <h5 class="underline">Connect <span class="thin">to UCSC</span> <i class="fas fa-plus hide-for-large"></i></h5>
+                </div>
+            
+                <div class="show-for-large nav-social" data-toggler=".show-for-large" id="connect">
+                    <ul>
+                        <li><a href="javascript:void(0)" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="javascript:void(0)" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="javascript:void(0)" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="javascript:void(0)" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="javascript:void(0)" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                
+                    <ul class="menu vertical show-for-large">
+                        <li><a href="javascript:void(0)" aria-label="">@UCSantaCruz</a></li>
+                        <li><a href="javascript:void(0)" aria-label="">#bananaslugs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cell large-4">
+                <div class="toggle-trigger" data-toggle="engage">
+                    <h5 class="underline">Engage <span class="thin">with UCSC</span> <i class="fas fa-plus hide-for-large"></i></h5>
+                </div>
+    
+                <div id="engage" class="show-for-large" data-toggler=".show-for-large">
+                    <ul class="menu vertical">
+                        <li><a href="#javascript:void(0)">Site Feedback</a></li>
+                        <li><a href="#javascript:void(0)">Employment</a></li>
+                        <li><a href="#javascript:void(0)">Volunteer</a></li>
+                        <li><a href="#javascript:void(0)">Emergency Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            {{ else }}
+            <div class="cell large-8">
+                <div class="toggle-trigger" data-toggle="engage">
+                    <h5 class="underline">Engage <span class="thin">with UCSC</span> <i class="fas fa-plus hide-for-large"></i></h5>
+                </div>
+    
+                <div id="engage" class="show-for-large" data-toggler=".show-for-large">
+                   <ul class="menu horizontal">
+                        <li><a href="#javascript:void(0)">Site Feedback</a></li>
+                        <li><a href="#javascript:void(0)">Employment</a></li>
+                        <li><a href="#javascript:void(0)">Volunteer</a></li>
+                        <li><a href="#javascript:void(0)">Emergency Information</a></li>
+                    </ul>
+                </div>
+            </div>
+        {{/ifequal}}
+    </div>
+    
+    <div class="grid-x grid-margin-x text-center mt-25">
+        <div class="cell large-4 hide-for-large">
+            <img class="white-ucsc-logo" src="{{root}}assets/img/build-resources/uc-santa-cruz-reverse.svg" />
+            <p class="address">
+                1156 High Street, Santa Cruz, CA 95064
+            </p>
+        </div>
+        <div class="nav-global cell">
+            <ul class="primary-set">
+                <li><a href="#javascript:void(0)">Accreditation</a></li>
+                <li><a href="#javascript:void(0)">Non-Discrimination Policy</a></li>
+                <li><a href="#javascript:void(0)">Privacy Policy &amp; Terms of Use</a></li>
+                <li><a href="#javascript:void(0)">Sexual Violence Prevention &amp; Response</a></li>
+            </ul>
+            <p>&copy;2019 Regents of the University of California.<br>All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+

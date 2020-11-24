@@ -1,0 +1,11 @@
+uuid: f0031fc9-a2a5-4eff-bfe1-3ffdb7927d15
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.careers
+id: taxonomy_term.careers
+target_entity_type_id: taxonomy_term
+target_bundle: careers
+default_langcode: site_default
+language_alterable: false

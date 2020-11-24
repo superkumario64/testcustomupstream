@@ -1,0 +1,84 @@
+{% set display_mode = content.field_feature_image_display_mode[0]['#markup'] %}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'hero-viewport',
+  display_mode == 'Split Alignment' ? 'inner-page-standard wave-pattern blue' : 'inner-page'
+] %}
+
+{# inner-page-standard wave-pattern blue #}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      {% if display_mode == 'Split Alignment' %}
+
+        {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('feature_image')) %}
+        {% set image_title = content.field_media[0]['#item'].title %}
+        {% set image_alt = content.field_media[0]['#item'].alt %}
+
+        <div class="grid-container large">
+          <div class="hero-container">
+            <div id="hero" class="hero hero-text-left">
+              <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+              <div class="hero-text">
+                {% if content.field_link|field_value is not empty %}
+                <a href="{{ content.field_link[0]['#url'] }}"
+                   target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+                  {% endif %}
+                  {% if content.field_category|field_value is not empty %}
+                    <p class="category">{{ content.field_category[0]['#plain_text'] }}</p>
+                  {% endif %}
+                  <h1 class="hero-header underline">{{ content.field_title[0]['#context'].value }}</h1>
+
+                  {% if content.field_caption|field_value is not empty %}
+                    <p class="hero-body">{{ content.field_caption[0]['#context'].value }}</p>
+                  {% endif %}
+                  {% if content.field_link|field_value is not empty %}
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% else %}
+
+        {% set image_url = file_url(content.field_media[0]['#item'].entity.uri.value|image_style('full_width')) %}
+        {% set image_title = content.field_media[0]['#item'].title %}
+        {% set image_alt = content.field_media[0]['#item'].alt %}
+
+        <div class="hero-container">
+          <div id="hero" class="hero hero-text-right">
+            <div class="angle"></div>
+            <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+            <div class="hero-text">
+              <h2 class="hero-header">{{ content.field_title[0]['#context'].value }}</h2>
+              <div class="tags">
+                <div class="topics-title">
+                  {% if content.field_link|field_value is not empty %}
+                    <a href="{{ content.field_link[0]['#url'] }}" class="topic btn-link light"
+                       target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_topic_title[0]['#context'].value }}</a> /
+                  {% endif %}
+                </div>
+                {% if content.field_topic_title_advanced|field_value is not empty %}
+                  <div class="topics-title">{{ content.field_topic_title_advanced[0]['#context'].value }}</div>
+                {% endif %}
+                {% if content.field_topic_date|field_value is not empty %}
+                  <div class="topics-title">{{ content.field_topic_date[0]['#text'] }}</div>
+                {% endif %}
+              </div>
+              {% if content.field_caption|field_value is not empty %}
+                <p class="mt-10">{{ content.field_caption[0]['#context'].value }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

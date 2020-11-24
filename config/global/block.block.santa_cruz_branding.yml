@@ -1,0 +1,29 @@
+uuid: 7fe408a4-c09e-4e14-b4c1-6af739b61f25
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'site-logo content'
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: santa_cruz_branding
+theme: santa_cruz
+region: gateway_header
+weight: -21
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding global'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

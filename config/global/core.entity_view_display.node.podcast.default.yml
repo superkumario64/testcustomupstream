@@ -1,0 +1,170 @@
+uuid: 9c488dad-e49c-498d-b3fc-8e5632329a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.podcast.body
+    - field.field.node.podcast.field_author
+    - field.field.node.podcast.field_author_link
+    - field.field.node.podcast.field_categories
+    - field.field.node.podcast.field_date
+    - field.field.node.podcast.field_embed_txt
+    - field.field.node.podcast.field_featured
+    - field.field.node.podcast.field_lead_formatted
+    - field.field.node.podcast.field_media
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_subtitle_formatted
+    - field.field.node.podcast.field_teaser_image
+    - field.field.node.podcast.field_teaser_txt
+    - node.type.podcast
+  module:
+    - datetime
+    - fences
+    - link
+    - text
+    - user
+id: node.podcast.default
+targetEntityType: node
+bundle: podcast
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-5
+        fences_label_tag: div
+        fences_label_classes: ''
+    label: hidden
+  field_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_author_link:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_categories:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_embed_txt:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_lead_formatted:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_media:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: mb-4
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_subtitle_formatted:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  links:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_featured: true
+  field_meta_tags: true
+  field_teaser_image: true
+  field_teaser_txt: true
+  langcode: true
+  search_api_excerpt: true

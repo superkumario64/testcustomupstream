@@ -1,0 +1,19 @@
+{{ attach_library('santa_cruz/owl_carousel2') }}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'owl-carousel',
+  'featured-slideshow'
+] %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

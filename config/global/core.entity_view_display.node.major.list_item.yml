@@ -1,0 +1,198 @@
+uuid: eb61eff0-876f-4583-8e01-53f3816e3253
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.list_item
+    - field.field.node.major.field_alumni_focus_html
+    - field.field.node.major.field_awards_html
+    - field.field.node.major.field_caption_formatted
+    - field.field.node.major.field_careers
+    - field.field.node.major.field_careers_html
+    - field.field.node.major.field_degrees
+    - field.field.node.major.field_eap_html
+    - field.field.node.major.field_facilities_html
+    - field.field.node.major.field_first_year_html
+    - field.field.node.major.field_general_catalog_html
+    - field.field.node.major.field_hero_content
+    - field.field.node.major.field_link
+    - field.field.node.major.field_media
+    - field.field.node.major.field_more_information_html
+    - field.field.node.major.field_opportunities_html
+    - field.field.node.major.field_sidebar_content
+    - field.field.node.major.field_transfers_html
+    - node.type.major
+  module:
+    - fences
+    - link
+    - text
+    - user
+id: node.major.list_item
+targetEntityType: node
+bundle: major
+mode: list_item
+content:
+  field_alumni_focus_html:
+    type: text_default
+    weight: 19
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_awards_html:
+    type: text_default
+    weight: 17
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_caption_formatted:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_careers:
+    weight: 25
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_careers_html:
+    type: text_default
+    weight: 11
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_degrees:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_eap_html:
+    type: text_default
+    weight: 15
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_facilities_html:
+    type: text_default
+    weight: 13
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_first_year_html:
+    type: text_default
+    weight: 8
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_general_catalog_html:
+    type: text_default
+    weight: 21
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_more_information_html:
+    type: text_default
+    weight: 23
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_opportunities_html:
+    type: text_default
+    weight: 5
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_transfers_html:
+    type: text_default
+    weight: 9
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_hero_content: true
+  field_sidebar_content: true
+  langcode: true
+  search_api_excerpt: true

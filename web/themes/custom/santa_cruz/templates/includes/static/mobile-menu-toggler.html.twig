@@ -1,0 +1,17 @@
+<a class="mobile-menu-logo" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+  <img src="{{ base_path ~ directory }}/logo.svg">
+</a>
+<ul class="menu">
+  <li>
+    <a class="global-mobile-search-trigger" href="#0" data-toggle="global-search">
+      <i class="fas fa-search"></i>
+    </a>
+  </li>
+  <li>
+    <a href="#global-menu" role="button" id="page-header-toggle" class="page-header-toggle" offcanvas-trigger
+       data-open="mobile-menu">
+      <span>{{ "Menu"|t }}</span>
+      <span class="fa fa-bars" aria-hidden="true"></span>
+    </a>
+  </li>
+</ul>

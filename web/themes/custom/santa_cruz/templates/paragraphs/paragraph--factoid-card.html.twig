@@ -1,0 +1,28 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'factoid'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      {% if content.field_figure|field_value is not empty %}
+        <h3 class="value {{ color }}-text">{{ content.field_figure }}</h3>
+      {% endif %}
+      {% if content.field_title|field_value is not empty %}
+        <h4 class="unit">{{ content.field_title }}</h4>
+      {% endif %}
+      {% if content.field_link|field_value is not empty %}
+        <div class="convert">
+          <a href="{{ content.field_link[0]['#url'] }}" class="btn-link"
+             target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}
+            <span class="small"></span></a>
+        </div>
+      {% endif %}
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

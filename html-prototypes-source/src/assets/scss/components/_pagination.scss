@@ -1,0 +1,8 @@
+.pagination a:hover, .pagination button:hover {
+    background-color: $secondary-seagreen;
+    color: white;
+}
+
+.pagination .disabled {
+    color: #717171;
+}

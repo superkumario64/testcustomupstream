@@ -1,0 +1,38 @@
+uuid: 2509ebb9-0804-4da3-b0c0-b34fd9e5d079
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-navigation-subsite-version1
+  module:
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+id: mainnavigationsubsiteversionone
+theme: santa_cruz
+region: subsite_header_align_bottom
+weight: -14
+provider: null
+plugin: 'menu_block:main-navigation-subsite-version1'
+settings:
+  id: 'menu_block:main-navigation-subsite-version1'
+  label: 'Main navigation - Subsite Version One'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'main-navigation-subsite-version1:'
+  suggestion: dropdown
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/testing-global-nav-and-menus-template-home-subsite\r\n/node/145\r\n/newscenter\r\n/history-department"
+    negate: true
+    context_mapping: {  }

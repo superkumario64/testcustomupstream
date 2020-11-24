@@ -1,0 +1,63 @@
+<div class="grid-x grid-margin-x grid-padding-x large-padding-collapse large-margin-collapse">
+    <div class="large-12 small-order-2 cell">
+    {{#ifequal type "history"}}
+        <div class="nav-footer-block">
+            <div class="toggle-trigger" data-toggle="quick-1">
+                <h5 class="underline"><i class="fas fa-plus hide-for-large"></i> Student Quick Links</h5>
+            </div>
+            
+            <div id="quick-1" class="show-for-large" data-toggler=".show-for-large">
+                <ul class="menu vertical">
+                    {{#each variables.historyFooterLinks1}}
+                        <li><a href="{{ href }}">{{ link }}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="nav-footer-block">
+            <div class="toggle-trigger" data-toggle="quick-1">
+                <h5 class="underline">Support <span class="thin"></span>History <i class="fas fa-plus hide-for-large"></i></h5>
+            </div>
+                
+            <div id="quick-1" class="show-for-large" data-toggler=".show-for-large">
+                <ul class="menu vertical">
+                    {{#each variables.historyFooterLinks2}}
+                        <li><a href="{{ href }}">{{ link }}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav-footer-block">
+            <h5 class="underline">Affiliated Programs</h5>
+            <div id="quick-1" class="show-for-large" data-toggler=".show-for-large">
+                <ul class="menu vertical">
+                    {{#each variables.historyFooterLinks3}}
+                        <li><a href="{{ href }}">{{ link }}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/ifequal}}
+
+    {{#ifequal type "gateway"}}
+
+        <div class="toggle-trigger" data-toggle="quick-1">
+            <h5 class="underline">Discover <span class="thin">UC Santa Cruz</span><i class="fas fa-plus hide-for-large"></i></h5>
+        </div>
+        <div id="quick-1" class="show-for-large fill-width" data-toggler=".show-for-large">
+            <ul class="menu horizontal">
+                <li><a href="javascript:void(0)" aria-label="">Take a Virtual Tour</a></li>
+                <li><a href="javascript:void(0)" aria-label="">Give</a></li>
+                <li><a href="javascript:void(0)" aria-label="">Newscenter</a></li>
+                <li><a href="javascript:void(0)" aria-label="">Events</a></li>
+                <li><a href="javascript:void(0)" aria-label="">Maps &amp; Directions</a></li>
+                <li><a href="javascript:void(0)" aria-label="">Directories</a></li>
+                <li><a href="javascript:void(0)" aria-label="">MyUCSC</a></li>
+                <li><a href="javascript:void(0)" aria-label="">Calendars</a></li>
+            </ul>
+        </div>
+    
+    {{/ifequal}}
+    </div>
+</div>

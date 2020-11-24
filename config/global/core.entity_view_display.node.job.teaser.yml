@@ -1,0 +1,42 @@
+uuid: 7ce08774-359e-4e4b-8953-16a35e3b33db
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job.field_closing_txt
+    - field.field.node.job.field_date
+    - field.field.node.job.field_date_closing
+    - field.field.node.job.field_job_category
+    - field.field.node.job.field_job_number
+    - field.field.node.job.field_job_type
+    - field.field.node.job.field_media
+    - field.field.node.job.field_rank_txt
+    - node.type.job
+  module:
+    - user
+id: node.job.teaser
+targetEntityType: node
+bundle: job
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_closing_txt: true
+  field_date: true
+  field_date_closing: true
+  field_job_category: true
+  field_job_number: true
+  field_job_type: true
+  field_media: true
+  field_rank_txt: true
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: f6422fea-8f20-42af-beb2-db3e6708cec5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_position
+    - paragraphs.paragraphs_type.profile_card__fullwidth
+  module:
+    - options
+id: paragraph.profile_card__fullwidth.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+bundle: profile_card__fullwidth
+label: 'Media Position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

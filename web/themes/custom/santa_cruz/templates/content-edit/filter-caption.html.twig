@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Theme override for a filter caption.
+ *
+ * Returns HTML for a captioned image, audio, video or other tag.
+ *
+ * Available variables
+ * - string node: The complete HTML tag whose contents are being captioned.
+ * - string tag: The name of the HTML tag whose contents are being captioned.
+ * - string caption: The caption text.
+ * - string classes: The classes of the captioned HTML tag.
+ */
+#}
+
+{% set img_width = '' %}
+{% if 'inline_content_small' in node|render %}
+  {% set img_width = '-25' %}
+{% elseif 'inline_content_medium' in node|render %}
+  {% set img_width = '-50' %}
+{% elseif 'inline_content_large' in node|render %}
+  {% set img_width = '-75' %}
+{% endif %}
+
+{% set img_align = '' %}
+{% if classes|trim == "align-left" %}
+  {% set img_align = '-left' %}
+{% elseif classes|trim == "align-right" %}
+  {% set img_align = '-right' %}
+{% elseif classes|trim == "align-center" %}
+  {% set img_align = '-center' %}
+{% endif %}
+
+{#{% if img_align == '' %}#}
+{#  {% set img_class = 'align-center' %}#}
+{#{% else %}#}
+{% set img_class = 'img' ~ img_align ~ img_width %}
+{#{% endif %}#}
+
+<figure role="group" class="{{ img_class }}">
+  {{ node }}
+  <figcaption>
+    <div class="caption-title"></div>
+    <div class="caption-desc">
+      <p>{{ caption }}</p>
+    </div>
+  </figcaption>
+</figure>

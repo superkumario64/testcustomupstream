@@ -1,0 +1,19 @@
+uuid: a9cc2f4c-98f8-4ef2-8a8f-2b240993cca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pre_title
+    - paragraphs.paragraphs_type.content_centered
+id: paragraph.content_centered.field_pre_title
+field_name: field_pre_title
+entity_type: paragraph
+bundle: content_centered
+label: 'Eyebrow Headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

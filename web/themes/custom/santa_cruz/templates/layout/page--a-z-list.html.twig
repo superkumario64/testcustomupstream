@@ -1,0 +1,174 @@
+{#
+/**
+ * @file
+ * Zurb Foundations's theme implementation to display a single page.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.meta_header
+ * - page.header
+ * - page.help
+ * - page.highlighted
+ * - page.content
+ * - page.sidebar_first
+ * - page.sidebar_second
+ * - page.footer_first
+ * - page.footer_middle
+ * - page.footer_last
+ *
+ * @see template_preprocess_page()
+ * @see bartik_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+<div id="page">
+  {% if page.alert_low %}
+    {{ page.alert_low }}
+  {% endif %}
+
+  {% if page.header or page.gateway_header or page.mobile_header or page.subsite_header or page.subsite_brand_name %}
+    <div data-sticky-container>
+      <div id="page-header" role="navigation" class="page-header sticky" aria-expanded="false" aria-label="Page header"
+           data-anchor="main-content" data-sticky data-margin-top='0'>
+        {% if page.header %}
+          <div class="global-header">
+            <div class="grid-container large">
+              {{ page.header }}
+            </div>
+          </div>
+        {% endif %}
+        {% if page.gateway_header and page.is_subsite is null %}
+          <div class="gateway-header">
+            <div class="grid-container large">
+              {{ page.gateway_header }}
+            </div>
+          </div>
+        {% endif %}
+        <div class="mobile-menu">
+          {% include '@santa_cruz/includes/static/mobile-menu-content.html.twig' %}
+        </div>
+        {% if page.is_subsite %}
+          {% include '@santa_cruz/includes/static/subsite-header.html.twig' %}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.alert_high %}
+    {{ page.alert_high }}
+  {% endif %}
+
+  {% if page.hero %}
+    {{ page.hero }}
+  {% endif %}
+
+  {% if page.page_utilities|render|striptags('<section>')|trim != '' %}
+    <div class="page-utilities">
+      <div class="grid-container large">
+        {{ page.page_utilities }}
+      </div>
+    </div>
+  {% endif %}
+  {% if page.helper %}
+    <div class="grid-container large">
+      {{ page.helper }}
+    </div>
+  {% endif %}
+
+  {% if page.above_content %}
+    <div class="grid-container large">
+      {{ page.above_content }}
+    </div>
+  {% endif %}
+
+  {% if page.sidebar_first.mainnavigation %}
+    <div class="grid-container hide-for-xlarge sidebar-navigation-mobile">
+      {{ page.sidebar_first.mainnavigation }}
+    </div>
+  {% endif %}
+
+  {% include '@santa_cruz/includes/static/search-bar.html.twig' %}
+
+  <div class="page-content pb-0 {{ main_grid }}" id="main-content" role="main">
+    <section class="content">
+      {% set layout_attribute = create_attribute() %}
+      {% set layout_classes = [
+        'large',
+      ] %}
+      {% if page.sidebar_first and page.sidebar_second %}
+        {% set layout_classes = layout_classes|merge(['layout-three-column', 'sidebar-left', 'sidebar-right']) %}
+      {% elseif page.sidebar_first and page.sidebar_second is empty %}
+        {% set layout_classes = layout_classes|merge(['layout-two-column', 'sidebar-left']) %}
+      {% elseif page.sidebar_second and page.sidebar_first is empty %}
+        {% set layout_classes = layout_classes|merge(['layout-two-column', 'sidebar-right']) %}
+      {% else %}
+        {% set layout_classes = layout_classes|merge(['layout-one-column']) %}
+      {% endif %}
+      <div {{ layout_attribute.addClass(layout_classes) }}>
+        <div class="wrap">
+          <div class="inner">
+            <div class="column-main">
+              {{ page.content }}
+            </div>
+            {% if page.sidebar_first %}
+              <div class="column-support sidebar-first">
+                {{ page.sidebar_first }}
+              </div>
+            {% endif %}
+            {% if page.sidebar_second %}
+              <div class="column-support sidebar-second">
+                <div class="content-block">
+                  {{ page.sidebar_second }}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  {% if page.content_bottom %}
+    <div class="component-wrapper">
+      {{ page.content_bottom }}
+    </div>
+  {% endif %}
+  <div class="site-footer">
+    <div class="grid-container large">
+      {% if page.footer_first %}
+        <div class="gateway-footer">
+          {{ page.footer_first }}
+        </div>
+      {% endif %}
+      <div class="global-footer">
+        {% if page.footer_middle %}
+          {{ page.footer_middle }}
+        {% endif %}
+        {% if page.footer_last %}
+          {{ page.footer_last }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

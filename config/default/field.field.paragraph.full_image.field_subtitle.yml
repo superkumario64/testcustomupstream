@@ -1,0 +1,19 @@
+uuid: b9aeb443-9901-4d67-b974-1cd807c46232
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.full_image
+id: paragraph.full_image.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: full_image
+label: Subheader
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

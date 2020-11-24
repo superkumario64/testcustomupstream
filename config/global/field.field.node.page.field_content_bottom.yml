@@ -1,0 +1,381 @@
+uuid: 9ca4d3eb-bacc-48a8-8884-0fa3f6ce0288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_bottom
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.article_card
+    - paragraphs.paragraphs_type.article_card_list
+    - paragraphs.paragraphs_type.content_centered
+    - paragraphs.paragraphs_type.content_left
+    - paragraphs.paragraphs_type.content_quote
+    - paragraphs.paragraphs_type.content_with_media
+    - paragraphs.paragraphs_type.document_card_list
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.factoid_card_list
+    - paragraphs.paragraphs_type.full_image
+    - paragraphs.paragraphs_type.full_video
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.generic_card_list
+    - paragraphs.paragraphs_type.grid_content_centered
+    - paragraphs.paragraphs_type.grid_content_left
+    - paragraphs.paragraphs_type.historical_timeline
+    - paragraphs.paragraphs_type.job_posting_card_list
+    - paragraphs.paragraphs_type.news_collection
+    - paragraphs.paragraphs_type.podcast_card
+    - paragraphs.paragraphs_type.podcast_card_list
+    - paragraphs.paragraphs_type.policy_card
+    - paragraphs.paragraphs_type.policy_card_list
+    - paragraphs.paragraphs_type.profile_card
+    - paragraphs.paragraphs_type.profile_card__fullwidth
+    - paragraphs.paragraphs_type.profile_list
+    - paragraphs.paragraphs_type.related_links_list
+    - paragraphs.paragraphs_type.related_links_list__view
+    - paragraphs.paragraphs_type.ribbon_image
+    - paragraphs.paragraphs_type.single_feature_story_list
+    - paragraphs.paragraphs_type.step_grid
+    - paragraphs.paragraphs_type.tabs_horizontal
+    - paragraphs.paragraphs_type.teaser_card_list
+    - paragraphs.paragraphs_type.three_story_teaser
+    - paragraphs.paragraphs_type.two_banner_promo
+    - paragraphs.paragraphs_type.two_feature_story_list
+    - paragraphs.paragraphs_type.views
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.page.field_content_bottom
+field_name: field_content_bottom
+entity_type: node
+bundle: page
+label: 'Page Bottom Paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      content_centered: content_centered
+      content_left: content_left
+      content_quote: content_quote
+      content_with_media: content_with_media
+      document_card_list: document_card_list
+      factoid_card_list: factoid_card_list
+      full_image: full_image
+      full_video: full_video
+      generic_card_list: generic_card_list
+      grid_content_centered: grid_content_centered
+      grid_content_left: grid_content_left
+      historical_timeline: historical_timeline
+      embed: embed
+      gallery: gallery
+      job_posting_card_list: job_posting_card_list
+      article_card: article_card
+      article_card_list: article_card_list
+      news_collection: news_collection
+      podcast_card: podcast_card
+      podcast_card_list: podcast_card_list
+      policy_card: policy_card
+      policy_card_list: policy_card_list
+      profile_card: profile_card
+      profile_card__fullwidth: profile_card__fullwidth
+      profile_list: profile_list
+      related_links_list: related_links_list
+      related_links_list__view: related_links_list__view
+      ribbon_image: ribbon_image
+      single_feature_story_list: single_feature_story_list
+      step_grid: step_grid
+      tabs_horizontal: tabs_horizontal
+      teaser_card_list: teaser_card_list
+      three_story_teaser: three_story_teaser
+      two_banner_promo: two_banner_promo
+      two_feature_story_list: two_feature_story_list
+      views: views
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 5
+        enabled: false
+      3_column_cta:
+        weight: 3
+        enabled: false
+      4_column_cta:
+        weight: 6
+        enabled: false
+      accordion:
+        enabled: true
+        weight: 45
+      accordion_item:
+        weight: 46
+        enabled: false
+      adjustable_media_and_content:
+        weight: 13
+        enabled: false
+      article_card:
+        enabled: true
+        weight: 71
+      article_card_list:
+        enabled: true
+        weight: 72
+      article_slideshow:
+        weight: 32
+        enabled: false
+      article_slideshow_item:
+        weight: 33
+        enabled: false
+      banner_promo:
+        weight: 97
+        enabled: false
+      button_list:
+        weight: 47
+        enabled: false
+      button_list_item:
+        weight: 34
+        enabled: false
+      column_section:
+        weight: 7
+        enabled: false
+      content_centered:
+        enabled: true
+        weight: 48
+      content_left:
+        enabled: true
+        weight: 49
+      content_quote:
+        enabled: true
+        weight: 50
+      content_with_media:
+        enabled: true
+        weight: 51
+      cta_buttons:
+        weight: 35
+        enabled: false
+      document_card_list:
+        enabled: true
+        weight: 52
+      embed:
+        enabled: true
+        weight: 63
+      factoid_card:
+        weight: 53
+        enabled: false
+      factoid_card_list:
+        enabled: true
+        weight: 54
+      feature_image:
+        weight: 36
+        enabled: false
+      feature_slideshow:
+        weight: 37
+        enabled: false
+      feature_slideshow_item:
+        weight: 38
+        enabled: false
+      flexible_bg_image_block:
+        weight: 20
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 22
+        enabled: false
+      flexible_cta_block:
+        weight: 17
+        enabled: false
+      flexible_cta_blocks:
+        weight: 18
+        enabled: false
+      full_image:
+        enabled: true
+        weight: 55
+      full_video:
+        enabled: true
+        weight: 56
+      full_width_image_section:
+        weight: 8
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 64
+      generic_card:
+        weight: 57
+        enabled: false
+      generic_card_list:
+        enabled: true
+        weight: 58
+      grid_content_centered:
+        enabled: true
+        weight: 59
+      grid_content_centered_item:
+        weight: 39
+        enabled: false
+      grid_content_left:
+        enabled: true
+        weight: 60
+      grid_content_left_item:
+        weight: 40
+        enabled: false
+      gridder:
+        weight: 23
+        enabled: false
+      gridder_item:
+        weight: 24
+        enabled: false
+      header_banner:
+        weight: 41
+        enabled: false
+      historical_fact_card:
+        weight: 61
+        enabled: false
+      historical_timeline:
+        enabled: true
+        weight: 62
+      image_gallery:
+        weight: 65
+        enabled: false
+      image_gallery_item:
+        weight: 66
+        enabled: false
+      interior_column_section:
+        weight: 15
+        enabled: false
+      interior_slideshow:
+        weight: 9
+        enabled: false
+      interior_slideshow_slide:
+        weight: 10
+        enabled: false
+      job_posting_card_list:
+        enabled: true
+        weight: 67
+      job_posting_list:
+        weight: 68
+        enabled: false
+      major_card:
+        weight: 69
+        enabled: false
+      major_card_list:
+        weight: 70
+        enabled: false
+      news_collection:
+        enabled: true
+        weight: 73
+      person_carousel:
+        weight: 26
+        enabled: false
+      podcast_card:
+        enabled: true
+        weight: 74
+      podcast_card_list:
+        enabled: true
+        weight: 75
+      policy_card:
+        enabled: true
+        weight: 76
+      policy_card_list:
+        enabled: true
+        weight: 77
+      profile_card:
+        enabled: true
+        weight: 78
+      profile_card__fullwidth:
+        enabled: true
+        weight: 79
+      profile_card_details_fields:
+        weight: 42
+        enabled: false
+      profile_list:
+        enabled: true
+        weight: 80
+      quick_link:
+        weight: 11
+        enabled: false
+      quick_link_minimal:
+        weight: 25
+        enabled: false
+      quicktab_item:
+        weight: 30
+        enabled: false
+      quicktabs:
+        weight: 28
+        enabled: false
+      quote:
+        weight: 43
+        enabled: false
+      recent_articles:
+        weight: 16
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 19
+        enabled: false
+      related_links_list:
+        enabled: true
+        weight: 81
+      related_links_list__view:
+        enabled: true
+        weight: 82
+      ribbon_image:
+        enabled: true
+        weight: 83
+      sidebar_button:
+        weight: 94
+        enabled: false
+      sidebar_content_block:
+        weight: 95
+        enabled: false
+      sidebar_content_block_department:
+        weight: 96
+        enabled: false
+      single_feature_story_list:
+        enabled: true
+        weight: 85
+      single_feature_story_list_interi:
+        weight: 99
+        enabled: false
+      step:
+        weight: 84
+        enabled: false
+      step_grid:
+        enabled: true
+        weight: 86
+      tabs_horizontal:
+        enabled: true
+        weight: 87
+      tabs_horizontal_item:
+        weight: 44
+        enabled: false
+      teaser_card_list:
+        enabled: true
+        weight: 88
+      three_story_teaser:
+        enabled: true
+        weight: 89
+      two_banner_promo:
+        enabled: true
+        weight: 90
+      two_feature_story_list:
+        enabled: true
+        weight: 91
+      upcoming_events:
+        weight: 21
+        enabled: false
+      video_embed:
+        weight: 27
+        enabled: false
+      video_tab_carousel:
+        weight: 29
+        enabled: false
+      video_tab_item:
+        weight: 31
+        enabled: false
+      views:
+        enabled: true
+        weight: 92
+      wysiwyg:
+        enabled: true
+        weight: 93
+field_type: entity_reference_revisions

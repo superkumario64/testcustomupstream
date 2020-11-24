@@ -1,0 +1,9 @@
+uuid: 594af7a1-b5cb-4d7c-a1dc-bdf1a2954c6a
+langcode: en
+status: true
+dependencies: {  }
+id: quicktab_item
+label: 'Quicktab Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

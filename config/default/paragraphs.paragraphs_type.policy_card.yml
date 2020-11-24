@@ -1,0 +1,10 @@
+uuid: f8fafce6-d2f4-434a-b652-cda69deaa78b
+langcode: en
+status: true
+dependencies: {  }
+id: policy_card
+label: 'Policy Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

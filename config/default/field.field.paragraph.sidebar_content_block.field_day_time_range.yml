@@ -1,0 +1,19 @@
+uuid: 88afaba3-fb28-4b2b-a7ad-25c142b2aad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_day_time_range
+    - paragraphs.paragraphs_type.sidebar_content_block
+id: paragraph.sidebar_content_block.field_day_time_range
+field_name: field_day_time_range
+entity_type: paragraph
+bundle: sidebar_content_block
+label: 'Day/Time Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

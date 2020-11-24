@@ -1,0 +1,36 @@
+uuid: 216a74c3-8abf-4fd0-96ab-76143ade5eed
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.quicklinks
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: 'cell large-4'
+id: quicklinks
+theme: santa_cruz
+region: subsite_footer_first
+weight: -22
+provider: null
+plugin: 'menu_block:quicklinks'
+settings:
+  id: 'menu_block:quicklinks'
+  label: Quicklinks
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'quicklinks:'
+  suggestion: quicklinks
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+visibility: {  }

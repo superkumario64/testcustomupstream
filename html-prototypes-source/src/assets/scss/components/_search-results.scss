@@ -1,0 +1,78 @@
+.search-results {
+    @include breakpoint(large){
+        background: rgba($white, 0.7);
+        border: 1px solid lighten($primary-gray, 65%);
+    }
+    
+    margin: 1rem 0;
+
+    .search-result {
+
+        border-top: 1px solid #e8e8e8;
+        padding: 2rem 2rem 1rem 2rem;
+        
+        a {
+            text-decoration: none;
+            @include xy-grid;
+            transition: color 1s;
+    
+            h2, h3, h4, p, div {
+                color: $primary-gray;
+            }
+    
+            &:hover {
+                h2, h3, h4 { color: $primary-blue; }
+          }
+        }
+
+        &:nth-child(even) {
+            background-color: rgba($primary-gray, .05);
+        }
+    
+        h3, h4 { margin-bottom: 0; }
+
+        p.btn-link {
+            margin-bottom: .5rem;
+        }
+
+        &:first-of-type {
+            border-top: none; 
+            padding-top: 0;
+
+            @include breakpoint(large) {
+                padding-top: 2rem;
+            }
+        }
+        
+        &:last-of-type { border-bottom: none; }
+
+        .content {
+            @include xy-grid;
+
+            .image {
+                width: 3.8rem;
+                height: 3.8rem;
+                margin-right: 1.25rem;
+                overflow: hidden;
+    
+                @include breakpoint(large) {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+    
+            .description {
+                margin-bottom: 0;
+                @include breakpoint(large){
+                    width: calc(100% - 6.25rem);
+                }
+            }
+            
+        }
+
+        .underline:after {
+            margin-top: 1rem;
+        }
+    }
+
+}

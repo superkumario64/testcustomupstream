@@ -1,0 +1,8 @@
+uuid: 78c81a9c-6ba3-485a-9248-bb29375ce8a5
+langcode: en
+status: true
+dependencies: {  }
+id: newscenter---featured
+label: 'Newscenter - Featured'
+description: ''
+locked: false

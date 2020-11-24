@@ -1,0 +1,102 @@
+<div class="news-list-block">
+    <nav>
+        <ul class="">
+
+            {{#ifequal listName "featuredSites"}}
+                {{#each variables.featuredSites}}
+                    <li>
+                        <a href="javascript:void(0)" aria-label="">
+                            {{#if img }}
+                                <div class="thumbnail">
+                                    <img src="{{img}}">
+                                </div>
+                            {{/if}}
+                            {{title}}
+                        </a>
+                    </li>
+                {{/each}}
+            {{/ifequal}}
+
+            {{#ifequal listName "specialReports"}}
+                {{#each variables.specialReports}}
+                    <li>
+                        <a href="javascript:void(0)" aria-label="">
+                            {{#if img }}
+                                <div class="thumbnail">
+                                    <img src="{{img}}">
+                                </div>
+                            {{/if}}
+                            {{title}}
+                        </a>
+                    </li>
+                {{/each}}
+            {{/ifequal}}
+
+            {{#ifequal listName "newsBriefs"}}
+                {{#each variables.newsBriefs}}
+                    <li>
+                        <a href="javascript:void(0)" aria-label="">
+                            {{#if img }}
+                                <div class="thumbnail">
+                                    <img src="{{img}}">
+                                </div>
+                            {{/if}}
+                            {{title}}
+                        </a>
+                    </li>
+                {{/each}}
+            {{/ifequal}}
+
+            {{#ifequal listName "campusMessages"}}
+                {{#each variables.campusMessages}}
+                    <li>
+                        <a href="javascript:void(0)" aria-label="">
+                            {{#if img }}
+                                <div class="thumbnail">
+                                    <img src="{{img}}">
+                                </div>
+                            {{/if}}
+                            {{title}}
+                        </a>
+                    </li>
+                {{/each}}
+            {{/ifequal}}
+
+            {{#ifequal listName "recentNews"}}
+                {{#each variables.recentNews}}
+                    <li>
+                        <a href="javascript:void(0)" style="padding: 10px 15px 0 0;">
+                            {{#if img }}
+                                <div class="thumbnail">
+                                    <img src="{{img}}">
+                                </div>
+                            {{/if}}
+                            <span class="category" style="margin-bottom: 0;">{{category}}</span>
+                            <br>
+                            <p>{{title}}</p>
+                        </a>
+                    </li>
+                {{/each}}
+            {{/ifequal}}
+
+            {{#ifequal listName "inTheNews"}}
+                {{#each variables.inTheNews}}
+                    <li>
+                        <a href="javascript:void(0)" style="padding: 10px 15px 0 0">
+                            {{#if img }}
+                                <div class="thumbnail">
+                                    <img src="{{img}}">
+                                </div>
+                            {{/if}}
+                            <span class="category" style="margin-bottom: 0; color: #333; font-weight: 300; letter-spacing: 3px;">{{source}}</span>
+                            <br>
+                            <p>>{{title}}</p>
+                        </a>
+                    </li>
+                {{/each}}
+            {{/ifequal}}
+
+        </ul>
+    </nav>
+
+</div>

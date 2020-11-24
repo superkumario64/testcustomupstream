@@ -1,0 +1,8 @@
+uuid: 165ca285-a93f-43c4-a639-26a82461c0f2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Article Topic'
+vid: article_topic
+description: ''
+weight: 0

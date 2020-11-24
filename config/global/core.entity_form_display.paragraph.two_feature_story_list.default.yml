@@ -1,0 +1,47 @@
+uuid: 5f3a738e-e000-4f43-a9b6-9c3d62d75d99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_feature_story_list.field_link
+    - field.field.paragraph.two_feature_story_list.field_node_max_2
+    - field.field.paragraph.two_feature_story_list.field_node_max_4
+    - paragraphs.paragraphs_type.two_feature_story_list
+  module:
+    - link
+id: paragraph.two_feature_story_list.default
+targetEntityType: paragraph
+bundle: two_feature_story_list
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_node_max_2:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_node_max_4:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

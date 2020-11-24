@@ -1,0 +1,229 @@
+uuid: eb93cf8e-21a6-4e4f-b80d-8a44fb0fc28d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.field_alumni_focus_html
+    - field.field.node.program.field_awards_html
+    - field.field.node.program.field_caption_formatted
+    - field.field.node.program.field_careers
+    - field.field.node.program.field_careers_html
+    - field.field.node.program.field_degrees
+    - field.field.node.program.field_department_ref
+    - field.field.node.program.field_eap_html
+    - field.field.node.program.field_education_abroad_html
+    - field.field.node.program.field_facilities_html
+    - field.field.node.program.field_first_year_html
+    - field.field.node.program.field_general_catalog_html
+    - field.field.node.program.field_hero_content
+    - field.field.node.program.field_lead_formatted
+    - field.field.node.program.field_more_information_html
+    - field.field.node.program.field_opportunities_html
+    - field.field.node.program.field_sidebar_content
+    - field.field.node.program.field_transfers_html
+    - node.type.program
+  module:
+    - fences
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_information:
+      children:
+        - field_careers_html
+        - field_opportunities_html
+        - field_first_year_html
+        - field_transfers_html
+        - field_facilities_html
+        - field_eap_html
+        - field_awards_html
+        - field_education_abroad_html
+        - field_alumni_focus_html
+        - field_general_catalog_html
+        - field_more_information_html
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Information
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  field_alumni_focus_html:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_awards_html:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_caption_formatted:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_careers:
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_careers_html:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_degrees:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_department_ref:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_eap_html:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_education_abroad_html:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_facilities_html:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_first_year_html:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_general_catalog_html:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_lead_formatted:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_more_information_html:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_opportunities_html:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_transfers_html:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_hero_content: true
+  field_sidebar_content: true
+  langcode: true
+  search_api_excerpt: true

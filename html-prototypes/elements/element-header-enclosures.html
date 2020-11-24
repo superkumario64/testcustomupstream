@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        
+        <div class="docs-heading">Header with Underlines</div>
+        <p>Headers that being a sections content</p>
+        <!--- The underline class can be used on an enclosing element or the header itself, however, the underline is intended to divide headers and body content -->
+        
+        <p><strong>DO</strong></p>
+        <div class="underline">
+            <h1>h1. This is a very large header.</h1>
+            <p class="subheader">Subheader</p>
+        </div>
+        <br><br>
+        
+        <p><strong>USE CAREFULLY</strong></p>
+        <div class="underline">
+            <h1>h1. This is a very large header.</h1>
+        </div>
+        <p class="subheader">Subheader</p>
+        <br><br>
+        
+        <p class="category">Eyebrow Headline</p>
+        <h2 class="underline">h2. This is a large header.</h2>
+        <br><br>
+        
+        <h3 class="underline">h3. This is a medium header.</h3>
+        <br><br>
+        
+        <!-- Used often in news and events-->
+        <div class="underline">
+            <h4>h4. This is a moderate header.</h4>
+            <p class="subheader">Eyebrow Headline</p>
+        </div>    
+        <br><br>
+        
+        
+        <h5 class="underline">h5. This is a small header.</h5>
+        <br><br>
+        
+        <h6 class="underline">h6. This is a tiny header.</h6>
+        
+        
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

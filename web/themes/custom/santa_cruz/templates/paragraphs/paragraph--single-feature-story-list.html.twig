@@ -1,0 +1,71 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
+{% set variation = content.field_variation[0]['#markup'] %}
+{% set read_more_style = content.field_read_more_style[0]['#markup'] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}
+      aria-label="content row">
+    {% block content %}
+
+      {% if content.field_title|field_value is not empty %}
+        <section class="heading">
+          <h2 class="underline">{{ content.field_title[0]['#context'].value }}</h2>
+        </section>
+      {% endif %}
+
+      <div class="grid-container large">
+        <div class="grid-x grid-margin-x">
+          <div class="cell xlarge-6 large-12">
+            {% if variation == 'advanced' %}
+              {% set view = drupal_view_result('single_feature_story_list', 'block_3', content.field_department[0]['#plain_text'])|length %}
+              {% if view > 0 %}
+                {{ drupal_view('single_feature_story_list', 'block_3', content.field_department[0]['#plain_text']) }}
+              {% endif %}
+            {% else %}
+              {% set view = drupal_view_result('single_feature_story_list', 'block_1', content.field_department[0]['#plain_text'])|length %}
+              {% if view > 0 %}
+                {{ drupal_view('single_feature_story_list', 'block_1', content.field_department[0]['#plain_text']) }}
+              {% endif %}
+            {% endif %}
+          </div>
+          <div class="cell xlarge-6 large-12">
+            <div class="news-card-list full-width has-thumbs">
+              {% if variation == 'advanced' %}
+                {% set view = drupal_view_result('single_feature_story_list', 'block_4', content.field_department[0]['#plain_text'])|length %}
+                {% if view > 0 %}
+                  {{ drupal_view('single_feature_story_list', 'block_4', content.field_department[0]['#plain_text']) }}
+                {% endif %}
+              {% else %}
+                {% set view = drupal_view_result('single_feature_story_list', 'block_2', content.field_department[0]['#plain_text'])|length %}
+                {% if view > 0 %}
+                  {{ drupal_view('single_feature_story_list', 'block_2', content.field_department[0]['#plain_text']) }}
+                {% endif %}
+              {% endif %}
+            </div>
+            {% if read_more_style == 'link' %}
+              {% if content.field_link|field_value is not empty %}
+                <a href="{{ content.field_link[0]['#url'] }}" class="btn-link right"
+                   target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </section>
+  {% if read_more_style == 'button' %}
+    {% if content.field_link|field_value is not empty %}
+      <div class="more no-border">
+        <a href="{{ content.field_link[0]['#url'] }}" class="button primary"
+           target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}"><span>{{ content.field_link[0]['#title'] }}</span></a>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endblock paragraph %}

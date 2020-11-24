@@ -1,0 +1,9 @@
+uuid: c680a867-2567-4cb5-a39f-ca1d1ec6bd3f
+langcode: en
+status: true
+dependencies: {  }
+id: person_carousel
+label: 'Person Carousel'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

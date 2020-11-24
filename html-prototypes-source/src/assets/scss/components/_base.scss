@@ -1,0 +1,91 @@
+body {
+    background: #f7f7f7;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: underline;
+    transition: color 400ms;
+    
+    &:hover, &:focus {
+        color: $secondary-blue;
+    }
+}
+
+@media (hover: none) {
+    a:hover { color: inherit; }
+}
+
+ol > li > ol {
+    list-style: lower-alpha;
+}
+
+ul > li > ul {
+    list-style: circle;
+}
+
+p {
+    margin-bottom: 1.3rem;
+}
+
+.lead {
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    max-width: none;
+}
+
+dl dd {
+    margin-bottom: .8rem;
+}
+
+blockquote {
+    font-size: 2rem;
+    padding: 1rem 1rem 3rem 0;
+    border: none;
+    position: relative;
+    color: lighten($primary-gray, 10%) !important;
+
+    cite {
+        position: absolute;
+        bottom: 1rem;
+        color: lighten($primary-gray, 15%) !important;
+    }
+   
+    &:before, &:after {
+        position: absolute;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: lighten($primary-gray, 40%) !important;
+    }
+
+    &:before {
+        top: -1.5rem;
+        content: '\f10d';
+        margin-left:-10px;
+    }
+
+    &:after {
+        content: '\f10e';
+        bottom: 3rem;
+        margin-left: 10px;
+    }
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+    > a {
+        text-decoration: none;
+    }
+}

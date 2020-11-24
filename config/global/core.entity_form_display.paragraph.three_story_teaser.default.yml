@@ -1,0 +1,67 @@
+uuid: 9352af59-d1e0-4f3d-9148-44136980a28e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_story_teaser.field_hide_teaser_text
+    - field.field.paragraph.three_story_teaser.field_link
+    - field.field.paragraph.three_story_teaser.field_taxonomy
+    - field.field.paragraph.three_story_teaser.field_title
+    - field.field.paragraph.three_story_teaser.field_view_reference
+    - paragraphs.paragraphs_type.three_story_teaser
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_display_options:
+      children:
+        - field_hide_teaser_text
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Options'
+id: paragraph.three_story_teaser.default
+targetEntityType: paragraph
+bundle: three_story_teaser
+mode: default
+content:
+  field_hide_teaser_text:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_taxonomy:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

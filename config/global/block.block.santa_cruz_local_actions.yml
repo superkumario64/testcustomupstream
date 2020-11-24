@@ -1,0 +1,20 @@
+uuid: 0a2c9e43-d592-4fdb-88cd-2726524a8a1a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - santa_cruz
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: santa_cruz_local_actions
+theme: santa_cruz
+region: content
+weight: -17
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

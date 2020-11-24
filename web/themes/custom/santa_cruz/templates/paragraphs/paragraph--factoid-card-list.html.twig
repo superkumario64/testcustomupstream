@@ -1,0 +1,35 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'component-wrapper',
+  'content-w-media',
+  'right',
+  'muted-blue-bg',
+  'wave-pattern',
+  'green'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% if content.field_title.0["#context"].value|length > 0 %}
+      <section class="heading">
+        <h2 class="underline">{{ content.field_title.0["#context"].value }}</h2>
+      </section>
+    {% endif %}
+    <div class="grid-container large">
+      <div class="factoid-card-list">
+        {% block content %}
+          {{ content|without('field_title', 'field_link') }}
+        {% endblock %}
+      </div>
+    </div>
+    {% if content.field_link.0['#title']|length > 0 %}
+      <div class="more no-border" style="width: 100%">
+        <a class="primary button" href="{{ content.field_link.0['#url'] }}">{{ content.field_link.0['#title'] }}</a>
+      </div>
+    {% endif %}
+  </section>
+{% endblock paragraph %}

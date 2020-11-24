@@ -1,0 +1,29 @@
+uuid: f50410f5-af38-4053-8c7b-2687e58cbadf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_banner_promo.field_paragraphs__max_2
+    - paragraphs.paragraphs_type.two_banner_promo
+  module:
+    - paragraphs
+id: paragraph.two_banner_promo.default
+targetEntityType: paragraph
+bundle: two_banner_promo
+mode: default
+content:
+  field_paragraphs__max_2:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

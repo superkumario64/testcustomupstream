@@ -1,0 +1,57 @@
+uuid: 94a21381-c985-4a0d-b017-dfe4b2d8af57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_collection.field_node_refs
+    - field.field.paragraph.news_collection.field_title
+    - field.field.paragraph.news_collection.field_view_reference
+    - paragraphs.paragraphs_type.news_collection
+  module:
+    - fences
+    - viewsreference
+id: paragraph.news_collection.default
+targetEntityType: paragraph
+bundle: news_collection
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_view_reference:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        page: page
+        block: block
+        attachment: 0
+        rest_export: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_node_refs: true

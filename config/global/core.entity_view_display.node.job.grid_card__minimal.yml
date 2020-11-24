@@ -1,0 +1,89 @@
+uuid: 3c9a86dd-5df7-4f55-9874-95af52ea03cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid_card__minimal
+    - field.field.node.job.field_closing_txt
+    - field.field.node.job.field_date
+    - field.field.node.job.field_date_closing
+    - field.field.node.job.field_job_category
+    - field.field.node.job.field_job_number
+    - field.field.node.job.field_job_type
+    - field.field.node.job.field_media
+    - field.field.node.job.field_rank_txt
+    - node.type.job
+  module:
+    - datetime
+    - fences
+    - user
+id: node.job.grid_card__minimal
+targetEntityType: node
+bundle: job
+mode: grid_card__minimal
+content:
+  field_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_date_closing:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_job_number:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+hidden:
+  field_closing_txt: true
+  field_job_category: true
+  field_job_type: true
+  field_rank_txt: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

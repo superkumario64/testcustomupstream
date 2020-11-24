@@ -1,0 +1,22 @@
+uuid: a5b144f1-7129-4ede-8520-d658797e1b76
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - santa_cruz
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: santa_cruz_messages
+theme: santa_cruz
+region: helper
+weight: -17
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

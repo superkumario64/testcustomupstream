@@ -1,0 +1,29 @@
+uuid: d9046b5e-a82b-4d0c-ad87-a613402a11c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_education_abroad_html
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.program.field_education_abroad_html
+field_name: field_education_abroad_html
+entity_type: node
+bundle: program
+label: 'Education Abroad Program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

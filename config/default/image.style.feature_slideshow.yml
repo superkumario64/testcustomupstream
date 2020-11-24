@@ -1,0 +1,15 @@
+uuid: 24eccc38-bb8c-47fd-9987-1054a84bc2dd
+langcode: en
+status: true
+dependencies: {  }
+name: feature_slideshow
+label: 'Feature Slideshow'
+effects:
+  c4b69a16-c78c-4638-abd0-dadcac508d5e:
+    uuid: c4b69a16-c78c-4638-abd0-dadcac508d5e
+    id: image_scale
+    weight: 1
+    data:
+      width: 900
+      height: null
+      upscale: false

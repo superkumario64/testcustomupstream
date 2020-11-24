@@ -1,0 +1,19 @@
+uuid: 65021512-80dc-4a69-86df-3de56bc66b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.step
+id: paragraph.step.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: step
+label: Caption
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

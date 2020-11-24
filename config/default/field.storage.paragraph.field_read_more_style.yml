@@ -1,0 +1,27 @@
+uuid: 4aa90846-0bd0-454a-a95b-f9905f3984a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_read_more_style
+field_name: field_read_more_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: link
+      label: Link
+    -
+      value: button
+      label: Button
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

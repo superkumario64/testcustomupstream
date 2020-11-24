@@ -1,0 +1,38 @@
+uuid: 779578a4-1c67-46a0-84fd-9abdfd61902d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+id: mainnavigation
+theme: santa_cruz
+region: sidebar_first
+weight: -19
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Left Sidebar Navigation'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 2
+  depth: 3
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: vertical
+  label_type: root
+  label_link: true
+  hide_on_nonactive: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '/about-ucsc/*'
+    negate: false
+    context_mapping: {  }

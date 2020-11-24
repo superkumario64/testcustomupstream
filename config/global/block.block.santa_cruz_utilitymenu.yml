@@ -1,0 +1,37 @@
+uuid: add6a526-c998-4111-918b-c5bc5b0809fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-menu
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - santa_cruz
+third_party_settings:
+  block_class:
+    classes: global-menu
+id: santa_cruz_utilitymenu
+theme: santa_cruz
+region: header
+weight: -21
+provider: null
+plugin: 'menu_block:utility-menu'
+settings:
+  id: 'menu_block:utility-menu'
+  label: 'Utility Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'utility-menu:'
+  suggestion: utility_menu
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+  expand: true
+visibility: {  }

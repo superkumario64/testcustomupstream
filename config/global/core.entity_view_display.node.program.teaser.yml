@@ -1,0 +1,63 @@
+uuid: d64cae9c-0842-488d-b8b8-56e1dc82ba4a
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_alumni_focus_html
+    - field.field.node.program.field_awards_html
+    - field.field.node.program.field_caption_formatted
+    - field.field.node.program.field_careers
+    - field.field.node.program.field_careers_html
+    - field.field.node.program.field_degrees
+    - field.field.node.program.field_department_ref
+    - field.field.node.program.field_eap_html
+    - field.field.node.program.field_education_abroad_html
+    - field.field.node.program.field_facilities_html
+    - field.field.node.program.field_first_year_html
+    - field.field.node.program.field_general_catalog_html
+    - field.field.node.program.field_hero_content
+    - field.field.node.program.field_lead_formatted
+    - field.field.node.program.field_more_information_html
+    - field.field.node.program.field_opportunities_html
+    - field.field.node.program.field_sidebar_content
+    - field.field.node.program.field_transfers_html
+    - node.type.program
+  module:
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_alumni_focus_html: true
+  field_awards_html: true
+  field_caption_formatted: true
+  field_careers: true
+  field_careers_html: true
+  field_degrees: true
+  field_department_ref: true
+  field_eap_html: true
+  field_education_abroad_html: true
+  field_facilities_html: true
+  field_first_year_html: true
+  field_general_catalog_html: true
+  field_hero_content: true
+  field_lead_formatted: true
+  field_more_information_html: true
+  field_opportunities_html: true
+  field_sidebar_content: true
+  field_transfers_html: true
+  langcode: true
+  search_api_excerpt: true

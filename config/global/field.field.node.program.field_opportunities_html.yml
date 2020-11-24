@@ -1,0 +1,29 @@
+uuid: 1aa75563-85bf-4844-9ef6-ec2e10e098af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opportunities_html
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.program.field_opportunities_html
+field_name: field_opportunities_html
+entity_type: node
+bundle: program
+label: 'Study & Research Opportunities'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

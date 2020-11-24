@@ -1,0 +1,37 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap':
+        type: external
+        minified: false
+      css/app.css: {}
+  js:
+    js/app/app.js: {}
+    js/scripts.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+theme:
+  js:
+    js/theme.behaviour.js: {}
+
+owl_carousel2:
+  js:
+    /libraries/owl-carousel2/dist/owl.carousel.min.js:
+      minified: true
+  css:
+    component:
+      /libraries/owl-carousel2/dist/assets/owl.carousel.min.css:
+        minified: true
+
+lightgallery:
+  js:
+    /libraries/lightGallery/dist/js/lightgallery-all.min.js:
+      minified: true
+  css:
+    component:
+      /libraries/lightGallery/dist/css/lightgallery.min.css:
+        minified: true

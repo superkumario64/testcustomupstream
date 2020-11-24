@@ -1,0 +1,23 @@
+uuid: 11d80614-6a14-41a8-bc3e-03590e19535c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.division
+  module:
+    - link
+id: node.division.field_link
+field_name: field_link
+entity_type: node
+bundle: division
+label: 'Website URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

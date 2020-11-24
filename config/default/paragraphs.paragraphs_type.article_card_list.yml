@@ -1,0 +1,10 @@
+uuid: e08e2668-0949-479d-9e7f-a69698f8380a
+langcode: en
+status: true
+dependencies: {  }
+id: article_card_list
+label: 'News Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

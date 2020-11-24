@@ -1,0 +1,21 @@
+uuid: 65337b59-7aaa-49e7-8737-5188a24edd47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phones
+    - paragraphs.paragraphs_type.sidebar_content_block_department
+  module:
+    - telephone
+id: paragraph.sidebar_content_block_department.field_phones
+field_name: field_phones
+entity_type: paragraph
+bundle: sidebar_content_block_department
+label: 'Phone Numbers'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

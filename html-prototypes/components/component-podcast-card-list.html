@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        
+        <!----------------------------------------------------->
+        <!-- Add list class to trim display for column usage -->
+        <!----------------------------------------------------->
+        
+        <div class="podcast-card-list  list">
+        
+            <a class="podcast-card" href="javascript:void(0)" aria-label="">
+                <div class="podcast-card-content">
+                    <div class="category">Storytelling</div>
+                    <div class="underline">
+                        <h4>UCSC News Roundup</h4>
+                        <p class="tags">
+                           April 17, 2019 
+                          <span class="btn-link author-name">UC Santa Cruz</span>
+                        </p>
+                    </div>
+                </div>
+             </a>
+            <a class="podcast-card" href="javascript:void(0)" aria-label="">
+                <div class="podcast-card-content">
+                    <div class="category">Science</div>
+                    <div class="underline">
+                        <h4>Can a drone weigh an elephant seal?</h4>
+                        <p class="tags">
+                           April 15, 2019 
+                          <span class="btn-link author-name">UC Santa Cruz</span>
+                        </p>
+                    </div>
+                    <p class="body">Diana Alvarado (Merrill ‘19, marine biology) takes drone photographs of female elephant seals at Año Nuevo Natural Reserve. She’s refining an image analysis tool that might enable scientists to easily track seals’ weight without disturbing them.</p>
+                </div>
+             </a>
+            <a class="podcast-card" href="javascript:void(0)" aria-label="">
+                <div class="podcast-card-content">
+                    <div class="underline">
+                        <h4>Oakes Renaming Ceremony Podcast AM</h4>
+                        <p class="tags">
+                           April 10, 2019 
+                          <span class="btn-link author-name">UC Santa Cruz</span>
+                        </p>
+                    </div>
+                    <p class="body">J. Herman Blake, the visionary founding provost of Oakes College, returned to campus for a momentous occasion: the rededication of the Oakes Provost House in his honor. On campus, he shared recollections of Oakes College before a crowd of well-wishers, including his family and former colleagues.</p>
+                </div>
+             </a>
+            <a class="podcast-card" href="javascript:void(0)" aria-label="">
+                <div class="podcast-card-content">
+                    <div class="category">Kresge Stories</div>
+                    <div class="underline">
+                        <h4>The Evolution of Kresge </h4>
+                        <p class="tags">
+                           April 1, 2019 
+                          <span class="btn-link author-name">S Bry Sarte</span>
+                        </p>
+                    </div>
+                    <p class="body">Voices of alumni, students, and other planners of the Kresge Renewal, with stories about what makes Kresge College special to them and their hopes for the project and the future of the college.</p>
+                </div>
+             </a>
+        
+        </div>
+        
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

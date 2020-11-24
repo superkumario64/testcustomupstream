@@ -1,0 +1,10 @@
+uuid: 68213a79-6481-4162-8a32-06c8ed0fb639
+langcode: en
+status: true
+dependencies: {  }
+id: button_list_item
+label: 'Button Row Item'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Button Row</em> paragraph'
+behavior_plugins: {  }

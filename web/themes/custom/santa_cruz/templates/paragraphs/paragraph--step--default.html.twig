@@ -1,0 +1,39 @@
+{% if content.field_image|field_value is not empty %}
+  {% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value|image_style('step_by_step')) %}
+  {% set image_title = content.field_image[0]['#item'].title %}
+  {% set image_alt = content.field_image[0]['#item'].alt %}
+{% endif %}
+
+{% block paragraph %}
+  {% if content.field_link|field_value is not empty %}
+    <a class="step" href="{{ content.field_link[0]['#url'] }}"
+    target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+  {% endif %}
+  <div class="step-container">
+    <div class="unit-container">
+      <div class="step-text">{{ 'Step'|t }}</div>
+      <div class="unit">{{ delta }}</div>
+    </div>
+
+    <div class="inner">
+      {% if image_url %}
+        <div class="image">
+          <img src="{{ image_url }}" alt="{{ image_alt }}" title="{{ image_title }}">
+        </div>
+      {% endif %}
+      <div class="step-content">
+        {% if content.field_title|field_value is not empty %}
+          <h4 class="header underline">{{ content.field_title }}</h4>
+        {% endif %}
+        {% if content.field_caption|field_value is not empty %}
+          <p class="event-description">
+            {{ content.field_caption|field_value }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if content.field_link|field_value is not empty %}
+    </a>
+  {% endif %}
+{% endblock paragraph %}

@@ -1,0 +1,55 @@
+name: Santa Cruz
+type: theme
+description: Santa Cruz zurb theme.
+screenshot: screenshot.png
+core_version_requirement: ^8 || ^9
+core: 8.x
+
+base theme: zurb_foundation
+
+libraries:
+  - santa_cruz/global
+  - santa_cruz/owl_carousel2
+  - santa_cruz/lightgallery
+
+libraries-override:
+  zurb_foundation/global: false
+
+regions:
+  alert_high: 'Alert High'
+  alert_low: 'Alert Low'
+  header: 'Header'
+  gateway_header: 'Global site - Gateway Header'
+  subsite_header: 'Subsite Header - Default'
+  subsite_header_align_bottom: 'Subsite Header - Align Bottom Variant - Desktop'
+  subsite_header_align_bottom_mobile: 'Subsite Header - Align Bottom Variant - Mobile'
+  subsite_header_collapse: 'Subsite Header - Collapse Variant - Desktop'
+  subsite_header_filter_featured: 'Subsite Header - Filter Featured'
+  subsite_header_filter_normal: 'Subsite Header - Filter Normal'
+  subsite_brand: 'Subsite Brand or Title'
+  subsite_brand_mobile: 'Subsite Brand or Title - Mobile Variant'
+  page_utilities: 'Page Utilities and Breadcrumbs'
+  hero: 'Hero'
+  helper: 'Helper'
+  above_content: 'Above Content'
+  content: 'Content'
+  sidebar_first: 'Sidebar Left'
+  sidebar_second: 'Sidebar Right'
+  content_bottom: 'Content Bottom'
+  footer_first: 'Footer Top'
+  footer_middle: 'Footer'
+  footer_last: 'Footer Bottom'
+  subsite_footer_first: 'Subsite Footer Top'
+  subsite_footer_middle: 'Subsite Footer'
+  left_off_canvas: 'Left off canvas'
+  right_off_canvas: 'Right off canvas'
+  mobile_menus: 'Mobile Menus'
+
+features:
+  - slogan
+  - favicon
+  - comment_user_picture
+  - node_user_picture
+
+ckeditor_stylesheets:
+  - css/app.css

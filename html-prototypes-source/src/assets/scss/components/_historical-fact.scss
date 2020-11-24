@@ -1,0 +1,68 @@
+.historical-section {
+
+    padding: 5rem 0;
+
+    .intro {
+        margin-bottom: 3rem;
+    }
+
+}
+
+.featured-historical-fact {
+
+    @include breakpoint(xxlarge) {
+
+        .inner {
+            @include xy-grid;
+        }
+
+    }
+
+    .content {
+
+        @include breakpoint(xxlarge) {
+            @include xy-cell(6);
+        }
+
+    }
+
+    .media {
+        background-color: #ccc;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 300px;
+
+        @include breakpoint(xxlarge) {
+            @include xy-cell(6);
+        }
+
+    }
+
+}
+
+.historical-fact {
+    max-width: 400px;
+    text-decoration: none;
+    
+    h2, h3, h4, p, div {
+        color: $primary-gray;
+    }
+
+    &:hover {
+        h2, h3, h4 { color: $primary-blue; }
+    }
+
+    .media {
+        margin-bottom: 1rem;
+    }
+
+}
+
+.fact-timeline {
+
+    .owl-nav {
+        margin-top: 3rem;
+    }
+
+}

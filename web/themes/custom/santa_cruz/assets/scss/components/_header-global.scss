@@ -1,0 +1,194 @@
+
+.global-header {
+    background-color: transparent;
+    display: none;
+
+    a { color:white; }
+
+    .aev-menu {
+        margin-top: 2px;
+        a{
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            font-size: .9rem;
+        }
+    }
+
+    .grid-container {
+        position: relative;
+        @include clearfix;
+    }
+
+    @include breakpoint(large) {
+        display: block;
+        padding: 0 0 .4rem 0;
+        margin: 0;
+    }
+}
+
+.global-menu {
+    position: relative;
+    left: 0;
+    right: auto;
+
+    @include breakpoint(large) {
+        right: 20px;
+        top: 0;
+        border-bottom: none;
+    }
+
+    .button {
+        background: transparent;
+    }
+
+    .menu {
+        @include breakpoint(large) {
+            float: right;
+        }
+
+        a {
+            color: white;
+            padding: .55rem .8rem;
+
+            @include breakpoint(xlarge) {
+                padding: .55rem .8rem;
+            }
+        }
+    }
+
+    .global-search-trigger {
+        display: none;
+
+        @include breakpoint(large) {
+            display: block;
+        }
+    }
+}
+
+.global-menu-trigger {
+    float: right;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    span {
+        display: none;
+        margin-right: 5px;
+
+        @include breakpoint(xlarge) {
+            display: inline-block;
+        }
+
+    }
+}
+
+.menu-explore {
+    background: $primary-blue;
+    color: #fff;
+    overflow: scroll;
+    height: 100%;
+    overflow-y: hidden;
+
+    &:before {
+      background: linear-gradient(135deg, $primary-blue 35%, lighten( $primary-blue, 15% ) 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      content: "";
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      background-image: url('../assets/img/build-resources/wave-pattern-turquiose.png');
+      background-repeat: repeat-x;
+      content: "";
+      opacity: .5;
+      z-index: 2;
+    }
+
+    .scroll {
+      min-height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 4rem 150px 4em;
+      z-index: 3;
+      position: relative;
+      text-align: center;
+
+      .white-ucsc-logo {
+          max-width: 150px !important;
+          margin-bottom: 2rem;
+      }
+
+      .close-button {
+          color: white;
+      }
+
+    }
+
+    .primary-links {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      a {
+          color: $white;
+      }
+  }
+
+  .utility-links {
+
+      margin-bottom: 2rem;
+
+      li {
+          margin-bottom: 5px;
+      }
+  }
+
+  .aev-links {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+
+      .button-group {
+          margin-bottom: 0;
+      }
+
+      a {
+          margin-bottom: 0;
+      }
+  }
+
+    .global-links {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+
+      > ul {
+
+        > li {
+
+          a {
+            background-color: transparent;
+            border-bottom: none;
+            color: #fff;
+
+          }
+
+        }
+
+      }
+    }
+
+  }

@@ -1,0 +1,21 @@
+uuid: 7d8cedfd-f099-46f4-98c6-5aa16d0b1c5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.podcast
+  module:
+    - datetime
+id: node.podcast.field_date
+field_name: field_date
+entity_type: node
+bundle: podcast
+label: 'Publish Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

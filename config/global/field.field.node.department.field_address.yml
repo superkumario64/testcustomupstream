@@ -1,0 +1,34 @@
+uuid: 90944c0f-2774-4f39-b981-67df27c23357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.department
+  module:
+    - address
+id: node.department.field_address
+field_name: field_address
+entity_type: node
+bundle: department
+label: 'Mailing Address'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    dependentLocality:
+      override: hidden
+  fields: {  }
+field_type: address

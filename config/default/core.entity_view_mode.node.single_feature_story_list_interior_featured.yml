@@ -1,0 +1,10 @@
+uuid: b627c133-fecc-47c6-abcf-b984da4ef90c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.single_feature_story_list_interior_featured
+label: 'Single-Feature Story List (Interior): Featured'
+targetEntityType: node
+cache: true

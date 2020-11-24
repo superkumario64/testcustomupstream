@@ -1,0 +1,10 @@
+uuid: f365c4cf-0125-4f65-94d0-c784868c3765
+langcode: en
+status: true
+dependencies: {  }
+id: job_posting_list
+label: 'Job Posting List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

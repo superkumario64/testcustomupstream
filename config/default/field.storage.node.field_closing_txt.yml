@@ -1,0 +1,19 @@
+uuid: 63b6a4c6-2353-4c84-83f8-966bf548810a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_closing_txt
+field_name: field_closing_txt
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

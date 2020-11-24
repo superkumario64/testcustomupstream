@@ -1,0 +1,104 @@
+    
+.podcast-card {
+    @include xy-cell(12);
+    max-width: none;
+    text-decoration: none;
+
+    h2, h3, h4, p, div {
+        color: $primary-gray;
+    }
+
+    &:hover {
+        h2, h3, h4 { color: $primary-blue; }
+    }
+
+    .date {
+        margin-right: 10px;
+    }
+}
+
+
+.podcast-card-list {
+    @include xy-grid;
+
+    .podcast-card {
+        margin-bottom: 1.5rem;
+        .category { display: none; }
+    }
+
+    &.list {
+        .podcast-card {
+            @extend %fa-icon;
+            @extend .fas;
+            margin-bottom: .2rem;
+            @include xy-cell(12);
+
+            &::after {
+                content: fa-content($fa-var-podcast);
+                margin-right: 2px;
+                color: $secondary-yellow;
+                font-size: 1rem;
+            }
+
+           .body, .author-name { display: none; }
+
+            h4 {
+                font-size: 1.25rem;
+                color: $primary-blue;
+                text-decoration: underline;
+            }
+
+            p { font-size: .8rem; }
+
+            .underline:after {
+                display: none;
+            }
+
+            .tags {
+                margin-bottom: 0;
+            }
+
+            p {
+                display: none;
+                @include breakpoint(large) {
+                    display: block;
+                }
+            }
+
+            .podcast-card-content {
+                display: inline;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+}
+
+.podcast-list-block {
+    border-bottom: none;
+    position: relative;
+    display: block;
+    margin: 0 0 1rem;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: block;
+            border-bottom: dashed 1px #cecfd0;
+
+            a {
+                text-decoration: none;
+                padding: 13px 20px 14px;
+                display: block;                
+            }
+        }
+    }
+
+    .thumbnail {
+        margin: 0;
+        border-width: 1px;
+    }
+}

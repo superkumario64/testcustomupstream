@@ -1,0 +1,10 @@
+uuid: 7c5e7ed5-dee5-42bc-88f1-703c146bfa4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.single_feature_story_list_list
+label: 'Single-Feature Story List: List'
+targetEntityType: node
+cache: true

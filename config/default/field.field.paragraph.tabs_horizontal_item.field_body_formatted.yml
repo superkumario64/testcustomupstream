@@ -1,0 +1,21 @@
+uuid: accd7ffd-93ab-4be0-8251-c71ec7e524dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_formatted
+    - paragraphs.paragraphs_type.tabs_horizontal_item
+  module:
+    - text
+id: paragraph.tabs_horizontal_item.field_body_formatted
+field_name: field_body_formatted
+entity_type: paragraph
+bundle: tabs_horizontal_item
+label: 'Tab Body'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

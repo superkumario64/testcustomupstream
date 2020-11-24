@@ -1,0 +1,29 @@
+uuid: f7c8c571-fc50-443a-9580-cde555ebd40d
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - santa_cruz
+id: abovecontent
+theme: santa_cruz
+region: above_content
+weight: -18
+provider: null
+plugin: 'entity_field:node:field_above_content'
+settings:
+  id: 'entity_field:node:field_above_content'
+  label: 'Above Content'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: default
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

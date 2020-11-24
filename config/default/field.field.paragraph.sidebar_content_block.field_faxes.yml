@@ -1,0 +1,21 @@
+uuid: fee69d2f-d710-496c-8dcb-2746f864849f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faxes
+    - paragraphs.paragraphs_type.sidebar_content_block
+  module:
+    - telephone
+id: paragraph.sidebar_content_block.field_faxes
+field_name: field_faxes
+entity_type: paragraph
+bundle: sidebar_content_block
+label: 'Fax Numbers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

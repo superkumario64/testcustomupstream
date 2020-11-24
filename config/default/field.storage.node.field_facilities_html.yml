@@ -1,0 +1,19 @@
+uuid: 5ede04b2-2e27-4508-820d-b4ad63138b36
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_facilities_html
+field_name: field_facilities_html
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

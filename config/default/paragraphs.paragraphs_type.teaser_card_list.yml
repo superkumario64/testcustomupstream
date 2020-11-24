@@ -1,0 +1,10 @@
+uuid: d2525f8a-d237-4cc5-9756-8eab33926175
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_card_list
+label: 'Teaser Card List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

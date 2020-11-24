@@ -1,0 +1,10 @@
+uuid: 9d8c1619-3a12-466a-8428-3bcf9c3ab6a6
+langcode: en
+status: true
+dependencies: {  }
+id: grid_content_centered_item
+label: 'Grid Item (Centered)'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Grid Content (Centered)</em> paragraph.'
+behavior_plugins: {  }

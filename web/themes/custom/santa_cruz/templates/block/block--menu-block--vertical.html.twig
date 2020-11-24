@@ -1,0 +1,41 @@
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<div role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
+  {# Menu. #}
+  {% block content %}
+    <div class="show-for-xlarge sidebar-navigation-desktop">
+      <div class="nav-sidebar">
+        <div id="page-menu-desktop" class="page-menu">
+          {# Label. If not displayed, we still provide it for screen readers. #}
+          {% if not configuration.label_display %}
+            {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+          {% endif %}
+          <ul class="vertical menu">
+            {{ title_prefix }}
+            <li class="title">{{ configuration.label }}</li>
+            {{ title_suffix }}
+          </ul>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <div class="hide-for-xlarge sidebar-navigation-mobile mt-50">
+      <div class="nav-sidebar">
+        <div class="page-menu-header" data-responsive-toggle="page-menu-mobile" data-hide-for="xlarge">
+          <a class="page-menu-trigger button tertiary" data-toggle="page-menu-mobile">{{ "In This Section"|t }}</a>
+        </div>
+        <div id="page-menu-mobile" class="page-menu">
+          {# Label. If not displayed, we still provide it for screen readers. #}
+          {% if not configuration.label_display %}
+            {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+          {% endif %}
+          <ul class="vertical menu">
+            {{ title_prefix }}
+            <li class="title">{{ configuration.label }}</li>
+            {{ title_suffix }}
+          </ul>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+</div>

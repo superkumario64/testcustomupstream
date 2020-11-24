@@ -1,0 +1,186 @@
+.page-intro {
+    padding: 3rem 0 0 0;
+    border-bottom: 1px solid #ccc;
+
+    .wrap {
+        @include xy-grid-container;
+    }
+
+    .inner  {
+        @include xy-grid;
+    }
+
+    .column-main {
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+    }
+
+}
+
+
+.layout-two-column {
+    
+    .wrap {
+        margin: 0 auto;
+        max-width: 60em;
+        clear: both;
+    }
+
+    &.large {
+        .wrap{
+            max-width: 70em;
+
+            @include breakpoint(xlarge){
+                max-width: 80em;
+            }
+
+            @include breakpoint(xxlarge){
+                max-width: 85em;
+                padding: 0 3rem;
+            }
+            
+            @include breakpoint(xxxlarge){
+                max-width: 90em;
+                padding: 0;
+                
+            }
+        }
+    }  
+    
+    .inner  {
+        @include xy-grid;
+    }
+
+    .column-main {
+        @include xy-cell(12);
+        
+        margin-bottom: 3rem;
+    }
+
+    .column-support {
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+
+        .content-block {
+            background: white;
+            padding: 1.5rem 1rem;
+            border-top: 2px solid #f4f1f1;
+            border-bottom: 2px solid #f4f1f1;
+
+            p {
+                font-size: .9rem;
+                margin-bottom: 1.25rem;
+            }
+        }
+
+    }
+
+    @include breakpoint(xlarge) {
+
+        .column-main {
+            @include xy-cell(auto);
+        }
+
+        .column-support {
+            @include xy-cell(3);
+        }
+
+    }
+
+    @include breakpoint(xxxlarge) {
+
+        .column-main {
+            @include xy-cell(auto);
+        }
+
+        .column-support {
+            @include xy-cell(3);
+        }
+
+    }
+
+    &.sidebar-left {
+        @include breakpoint(xlarge) {
+
+            .column-main {
+                @include flex-order(2);
+            }
+
+            .column-support {
+                @include flex-order(1);
+            }
+
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.layout-three-column {
+
+    .wrap {
+        @include xy-grid-container;
+    }
+
+    .inner  {
+        @include xy-grid;
+    }
+
+    .column-nav {
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+    }
+
+    .column-main {
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+}
+
+    .column-support {
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+    }
+
+
+    @include breakpoint(xlarge) {
+
+        .column-nav {
+            @include xy-cell(3);
+        }
+
+        .column-main {
+            @include xy-cell(9);
+        }
+
+        .column-support {
+            @include xy-cell(9);
+            @include grid-col-off(3);
+        }
+
+    }
+
+    @include breakpoint(xxxlarge) {
+
+        .column-nav {
+            @include xy-cell(3);
+        }
+
+        .column-main {
+            @include xy-cell(auto);
+        }
+
+        .column-support {
+            @include xy-cell(3);
+            @include grid-col-off(0);
+        }
+
+    }
+
+}

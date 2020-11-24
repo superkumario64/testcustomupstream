@@ -1,0 +1,21 @@
+uuid: 88821a1a-594d-4c66-9380-31ca64236b18
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wysiwyg_template
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  wysiwyg_template:
+    default_template: ''
+name: 'Job Posting'
+type: job
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

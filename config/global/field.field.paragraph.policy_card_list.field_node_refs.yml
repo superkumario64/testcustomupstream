@@ -1,0 +1,28 @@
+uuid: 47c99d89-ccdb-43a4-b81a-b8cc99d51095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_refs
+    - node.type.policy
+    - paragraphs.paragraphs_type.policy_card_list
+id: paragraph.policy_card_list.field_node_refs
+field_name: field_node_refs
+entity_type: paragraph
+bundle: policy_card_list
+label: 'Policy Nodes'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      policy: policy
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

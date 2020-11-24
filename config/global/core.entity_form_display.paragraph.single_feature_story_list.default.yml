@@ -1,0 +1,72 @@
+uuid: 2e37b7dc-404e-4ea7-aacb-5a982b4b42a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_feature_story_list.field_department
+    - field.field.paragraph.single_feature_story_list.field_link
+    - field.field.paragraph.single_feature_story_list.field_read_more_style
+    - field.field.paragraph.single_feature_story_list.field_title
+    - field.field.paragraph.single_feature_story_list.field_variation
+    - paragraphs.paragraphs_type.single_feature_story_list
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_display_options:
+      children:
+        - field_variation
+        - field_read_more_style
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Options'
+id: paragraph.single_feature_story_list.default
+targetEntityType: paragraph
+bundle: single_feature_story_list
+mode: default
+content:
+  field_department:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_read_more_style:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_variation:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

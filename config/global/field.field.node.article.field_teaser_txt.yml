@@ -1,0 +1,19 @@
+uuid: 6ff3b52b-18bc-46d9-8b9b-4ec88874cc0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_txt
+    - node.type.article
+id: node.article.field_teaser_txt
+field_name: field_teaser_txt
+entity_type: node
+bundle: article
+label: 'Teaser Text'
+description: 'Used as snippet text in various components throughout the site.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

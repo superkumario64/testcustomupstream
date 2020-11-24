@@ -1,0 +1,10 @@
+uuid: c2418e2a-25cf-4096-8a2d-cd92c398cd4c
+langcode: en
+status: true
+dependencies: {  }
+id: generic_card
+label: 'Generic Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

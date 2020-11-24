@@ -1,0 +1,20 @@
+uuid: 9262506e-562b-434a-9e80-880884cdf3fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_node_max_4
+field_name: field_node_max_4
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

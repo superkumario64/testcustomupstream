@@ -1,0 +1,13 @@
+providers_list:
+  facebook: facebook
+  twitter: twitter
+  linkedin: linkedin
+  reddit: reddit
+  email: email
+use_module_css: 1
+providers:
+  facebook: facebook
+  twitter: twitter
+  reddit: reddit
+  linkedin: linkedin
+  email: 0

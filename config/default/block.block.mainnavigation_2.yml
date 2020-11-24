@@ -1,0 +1,32 @@
+uuid: 3ce1762e-39e2-43e7-a147-ec025052ab15
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - santa_cruz
+id: mainnavigation_2
+theme: santa_cruz
+region: mobile_menus
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation [For mobile]'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: vertical_simple
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+visibility: {  }

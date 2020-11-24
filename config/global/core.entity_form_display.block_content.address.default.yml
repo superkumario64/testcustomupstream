@@ -1,0 +1,87 @@
+uuid: b9191deb-cade-4bd2-8893-de5c1582b7c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address
+    - field.field.block_content.address.body
+    - field.field.block_content.address.field_address
+    - field.field.block_content.address.field_emails
+    - field.field.block_content.address.field_faxes
+    - field.field.block_content.address.field_links
+    - field.field.block_content.address.field_phones
+  module:
+    - address
+    - link_class
+    - telephone
+    - text
+id: block_content.address.default
+targetEntityType: block_content
+bundle: address
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_emails:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_faxes:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_links:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: select_class
+      link_class_force: ''
+      link_class_select: "twitter|twitter\ninstagram|instagram\nfacebook|facebook\nyoutube|youtube\nlinkedin|linkedin\n"
+    third_party_settings: {  }
+    type: link_class_field_widget
+    region: content
+  field_phones:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

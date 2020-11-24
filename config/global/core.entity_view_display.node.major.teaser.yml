@@ -1,0 +1,61 @@
+uuid: 8c4da4f9-3557-4e05-9e31-59f2d064cc74
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.major.field_alumni_focus_html
+    - field.field.node.major.field_awards_html
+    - field.field.node.major.field_caption_formatted
+    - field.field.node.major.field_careers
+    - field.field.node.major.field_careers_html
+    - field.field.node.major.field_degrees
+    - field.field.node.major.field_eap_html
+    - field.field.node.major.field_facilities_html
+    - field.field.node.major.field_first_year_html
+    - field.field.node.major.field_general_catalog_html
+    - field.field.node.major.field_hero_content
+    - field.field.node.major.field_link
+    - field.field.node.major.field_media
+    - field.field.node.major.field_more_information_html
+    - field.field.node.major.field_opportunities_html
+    - field.field.node.major.field_sidebar_content
+    - field.field.node.major.field_transfers_html
+    - node.type.major
+  module:
+    - user
+id: node.major.teaser
+targetEntityType: node
+bundle: major
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_alumni_focus_html: true
+  field_awards_html: true
+  field_caption_formatted: true
+  field_careers: true
+  field_careers_html: true
+  field_degrees: true
+  field_eap_html: true
+  field_facilities_html: true
+  field_first_year_html: true
+  field_general_catalog_html: true
+  field_hero_content: true
+  field_link: true
+  field_media: true
+  field_more_information_html: true
+  field_opportunities_html: true
+  field_sidebar_content: true
+  field_transfers_html: true
+  langcode: true
+  search_api_excerpt: true

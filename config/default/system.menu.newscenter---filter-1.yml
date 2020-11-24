@@ -1,0 +1,8 @@
+uuid: 58065874-ce04-4133-87aa-00ef97b4d650
+langcode: en
+status: true
+dependencies: {  }
+id: newscenter---filter-1
+label: 'Newscenter - Filter #1'
+description: ''
+locked: false

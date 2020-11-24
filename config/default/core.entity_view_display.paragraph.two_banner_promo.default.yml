@@ -1,0 +1,24 @@
+uuid: 905ebcfb-146d-4587-adbf-49e588d56d1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_banner_promo.field_paragraphs__max_2
+    - paragraphs.paragraphs_type.two_banner_promo
+  module:
+    - entity_reference_revisions
+id: paragraph.two_banner_promo.default
+targetEntityType: paragraph
+bundle: two_banner_promo
+mode: default
+content:
+  field_paragraphs__max_2:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

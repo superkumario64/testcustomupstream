@@ -1,0 +1,10 @@
+uuid: 7e80ada2-7901-4bb5-8f6a-adf68ad00e77
+langcode: en
+status: true
+dependencies: {  }
+id: banner_promo
+label: 'Banner Promo'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Two-Banner Promo</em> paragraph.'
+behavior_plugins: {  }

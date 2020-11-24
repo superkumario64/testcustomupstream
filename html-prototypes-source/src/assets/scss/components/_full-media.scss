@@ -1,0 +1,46 @@
+.full-image {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    height: 80vh;
+    min-height: 300px;
+
+    .content {
+        width: 70%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        margin: 0 auto;
+        text-shadow: 2px 2px 3px rgba(black,0.25);
+        color: #fff;
+    }
+
+    .caption {
+        position: absolute;
+        top: calc(100%);
+        width: 50%;
+        background-color: #fff;
+        padding: 1rem;
+    }
+
+    @include breakpoint(small) {
+        min-height: 300px;
+    }
+
+    @include breakpoint(xlarge) {
+        min-height: 500px;
+    }
+
+    @include breakpoint(xxlarge) {
+        min-height: 600px;
+    }
+
+    @include breakpoint(xxxlarge) {
+        min-height: 700px;
+    }
+}

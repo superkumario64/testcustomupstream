@@ -1,0 +1,20 @@
+uuid: b0a1de93-7f39-48d5-9498-a1641ce8755e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+    - node.type.page
+  module:
+    - gnode
+    - node
+id: site_section-group_node-page
+label: 'Site Section: Group node (Basic page)'
+description: 'Adds <em class="placeholder">Basic page</em> content to groups both publicly and privately.'
+group_type: site_section
+content_plugin: 'group_node:page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false
+  node_form_group_menu: 1

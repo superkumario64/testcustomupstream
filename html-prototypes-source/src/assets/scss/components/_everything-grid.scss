@@ -1,0 +1,348 @@
+// Everything Item Sizing
+
+.everything-carousel {
+    @include clearfix();
+
+    .everything-item {
+        height: 400px;
+        background-color: white;
+
+        .highlight {
+            padding: 5%;
+            h1 {
+                font-size: 6rem;
+                font-weight: bold;
+            }
+        }
+
+        @include breakpoint(large){
+            height: 600px;
+        }
+
+        @include breakpoint(xxlarge) {
+            width: calc(20%);
+            height: 300px;
+            float: left;
+            color: $primary-gray;
+            background: white;
+            
+            &.featured {
+                width: calc(40%);
+                height: 600px;
+            }
+
+            // Highlighting stats
+            .highlight {
+
+                .cube-content {
+                    color: $primary-gray;
+                    text-align: center !important;
+            
+                    h1 {
+                        font-weight: bold;
+                        font-size: 6rem;
+                        margin-bottom: 0;
+                    }
+
+                    h4 { font-weight: bold;}
+                }
+            }
+        }
+
+        .news {
+            h4 { margin-bottom: 25px }
+        }
+
+        > div { height: 100% }
+    }
+
+    @include breakpoint(xlarge) {
+        display: block;
+    }
+
+}
+
+
+// Everything Item - Global Styling
+
+.everything-item {
+    position: relative;
+    overflow: hidden;
+
+    &.fullbleed { 
+        .image {
+            min-height: 100%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    a {
+        color: $primary-gray;
+        text-decoration: none;
+        display: block;
+        height: 100%;
+
+        .cube-actions {
+            display: flex;
+            align-items: center;
+
+            .action {
+                transition: transform 200ms ease-in, opacity 500ms;
+                transform: scale(.9) translateY(-10%);
+                opacity: 0;
+            }
+        }
+
+         &:hover, &:focus {
+
+            .cube-actions {
+                opacity: .95;
+
+                .action {
+                    opacity: 1;
+                    transform: scale(1) translateY(0%);
+                }
+            }
+
+        }
+    }
+
+    .facebook-text { color: #425a93; }
+
+    .instagram-text { color: #da216d; }
+
+    .youtube-text { color: #ea3525; }
+
+    .cube-mask {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    &.featured {
+
+        .image {
+            height: 100%;
+            width: 100%;
+
+            @include breakpoint(xxxlarge){
+                min-width: 100%;
+                height: auto;
+            }
+        }
+
+        .cube-content {
+            padding: 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            padding: 5%;
+
+            /* If Image is intended to only be a portion of window, next it in cube-content */
+            .image {
+                height: 55%;
+                
+                @include breakpoint(large){
+                    position: relative;
+                    margin-top: 2rem;
+                }
+            }
+        }        
+    }
+
+    .cube-content {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+       .image { min-height: auto; }
+
+        .copy {
+            padding: 1rem 1rem 0 1rem;
+            // Align text withing vertical space
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(xlarge){
+               
+                p {
+                    font-size: .9rem;
+                    line-height: 1.2;
+                }
+            }
+
+        }
+        
+    }
+
+    .cube-actions {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 3;
+        color: #fff;
+        transition: opacity .8s linear;
+        text-align: center;
+
+        &.blue { background: $primary-blue; }
+
+        &.yellow { background: $primary-yellow; }
+
+        &.orange { background: $secondary-orange; }
+
+        &.green { background: $secondary-green; }
+
+        &.sea-green { background: $secondary-seagreen; }
+
+        &.gray { background: $primary-gray; }
+
+        &.pink { background: $secondary-pink; }
+
+        &.youtube { background: #ea3525; }
+
+        &.instagram { background: #da216d; }
+
+        &.twitter { background: #13a5dc; }
+
+        &.facebook { background: #425a93; }
+
+        &.black { background: black; }
+        
+        .action {
+            padding: 5%;
+            transition: transform 300ms ease;
+            text-align: center;
+            margin: 0 auto;
+
+            p {
+                font-weight: 300;
+                font-size: 1em;
+            }
+
+            .btn-link {
+                font-weight: 700;
+            }
+
+        }
+    }
+
+    .circle-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        vertical-align: middle;
+        padding: 10px;
+
+        &.fab::before {
+            color: white;
+        }
+    }
+    
+    i.fab, i.fas, i.far {
+        display: inline-block;
+        position: absolute;
+        bottom: 15px;
+        right: 15px; 
+        z-index: 2;
+    }
+
+    &.featured {
+        i.fab, i.fas, i.far {
+            position: static;
+        }
+    }
+
+    .twitter-post {
+        .circle-icon { background: #0093c3; }
+    }
+
+    .facebook-post {
+        .circle-icon { background: #0093c3; }
+    }
+
+    .instagram-post {
+        .circle-icon { background: $secondary-pink; }
+    }
+
+    .social-channel {
+
+        .cube-content {
+            
+            &:after {
+                font-size: 4rem;
+                font-family: "Font Awesome 5 Brands";
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                color: #fff;
+                -webkit-font-smoothing: antialiased;
+                display: -ms-grid;
+                display: grid;
+                place-items: center;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                z-index: 3;
+
+            }
+
+        }
+
+        &.twitter-channel {
+            .cube-content {
+                background-color: #0093C3;
+                &:after {
+                    content: "\f099";
+                } 
+            }
+        }
+
+        &.instagram-channel {
+            .cube-content {
+                background-color: #da216d;
+                &:after {
+                    content: "\f16d";
+                }
+            }
+        }
+        &.youtube-channel {
+            .cube-content {
+                background-color: #ea3525;
+                &:after {
+                    content: "\f167";
+                }
+            }
+        }
+        &.facebook-channel {
+            .cube-content {
+                background-color: #425a93;
+                &:after {
+                    content: "\f09a";
+                }
+            }
+        }
+        &.googleplus-channel {
+            .cube-content {
+                background-color: #4285F4;
+                &:after {
+                    content: "\f0d4";
+                }
+            }
+        }
+
+    }
+
+}
+

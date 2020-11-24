@@ -1,0 +1,10 @@
+uuid: 20ff105a-36cb-43ef-bcbf-5e6c5f299370
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_content_block
+label: 'Sidebar Content Block'
+icon_uuid: null
+icon_default: null
+description: 'Modular sidebar with different contact info, links, locations and hours.'
+behavior_plugins: {  }

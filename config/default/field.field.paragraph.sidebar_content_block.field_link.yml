@@ -1,0 +1,23 @@
+uuid: de33d529-83b0-4e85-b137-0a2887df4e60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.sidebar_content_block
+  module:
+    - link
+id: paragraph.sidebar_content_block.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: sidebar_content_block
+label: 'Location Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

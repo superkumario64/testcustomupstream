@@ -1,0 +1,23 @@
+uuid: 6cd6d344-2551-4fd7-a6b3-afd19cbeb7da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author_link
+    - node.type.podcast
+  module:
+    - link
+id: node.podcast.field_author_link
+field_name: field_author_link
+entity_type: node
+bundle: podcast
+label: 'Author URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,35 @@
+uuid: 77b29610-d626-4776-9ba5-3480506b7ea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy
+    - paragraphs.paragraphs_type.related_links_list__view
+    - taxonomy.vocabulary.article_category
+    - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.event_category
+    - taxonomy.vocabulary.podcast_categories
+id: paragraph.related_links_list__view.field_taxonomy
+field_name: field_taxonomy
+entity_type: paragraph
+bundle: related_links_list__view
+label: Taxonomy
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      article_category: article_category
+      categories: categories
+      event_category: event_category
+      podcast_categories: podcast_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: podcast_categories
+field_type: entity_reference

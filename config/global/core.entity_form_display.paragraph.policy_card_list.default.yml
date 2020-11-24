@@ -1,0 +1,27 @@
+uuid: 038947f8-ac56-4b65-8202-b85629f2e9af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.policy_card_list.field_node_refs
+    - field.field.paragraph.policy_card_list.field_view_reference
+    - paragraphs.paragraphs_type.policy_card_list
+id: paragraph.policy_card_list.default
+targetEntityType: paragraph
+bundle: policy_card_list
+mode: default
+content:
+  field_node_refs:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

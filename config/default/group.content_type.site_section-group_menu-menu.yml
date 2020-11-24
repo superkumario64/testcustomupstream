@@ -1,0 +1,21 @@
+uuid: c8d83526-1685-4129-ae5e-c626fff33ed9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  module:
+    - groupmenu
+    - system
+id: site_section-group_menu-menu
+label: 'Site Section: Group menu'
+description: 'Adds menus to groups'
+group_type: site_section
+content_plugin: 'group_menu:menu'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false
+  auto_create_group_menu: 0
+  auto_create_home_link: 0
+  auto_create_home_link_title: Home

@@ -1,0 +1,10 @@
+uuid: 48f5a04e-6570-4853-b936-26e3ddcd21b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.header_banner
+label: 'Header Banner'
+targetEntityType: media
+cache: true

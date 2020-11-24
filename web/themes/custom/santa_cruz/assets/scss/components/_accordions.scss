@@ -1,0 +1,64 @@
+.accordion-title {
+    font-size: 1rem;
+    padding: .8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgba($white, 1);  
+}
+
+.hidden-content {
+    display: none;
+}
+
+.accordion {
+    background: white;
+
+    @include breakpoint(large){
+        border: 1px solid lighten($primary-gray, 70%);
+        border-top: 2px solid lighten($primary-gray, 70%);
+        border-bottom: 2px solid lighten($primary-gray, 70%);
+    }
+
+    &>li {
+
+        .text-toggle::before {
+            content: "More";
+        }
+
+        &.is-active {
+            .text-toggle::before {
+                content: "Less";
+            }
+
+            .accordion-title {
+                color: white;
+                background: $secondary-blue;
+            }
+        }
+
+        a {
+            margin-bottom: 0;
+        }
+    }
+
+    .accordion-title {
+        text-transform: none;
+        color: $primary-gray;
+        transition: color 400ms, background-color 400ms;
+
+        &:hover {
+            color: $primary-blue;
+        }
+
+        &::before {
+            margin-top: -.7rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    .accordion-content {
+        background: $white;
+        padding: 1rem 1.5rem 2rem;
+    }
+   
+}

@@ -1,0 +1,21 @@
+uuid: 30e3b5df-e767-4e2a-b05d-b2de0d34b5be
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_subheader
+field_name: field_subheader
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

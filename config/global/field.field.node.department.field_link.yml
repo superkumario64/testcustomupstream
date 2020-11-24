@@ -1,0 +1,23 @@
+uuid: 5e59d11d-4c9a-467e-9c0a-f2519df8b4c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.department
+  module:
+    - link
+id: node.department.field_link
+field_name: field_link
+entity_type: node
+bundle: department
+label: 'Website URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

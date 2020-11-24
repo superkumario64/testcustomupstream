@@ -1,0 +1,73 @@
+{% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value|image_style('profile_card_featured')) %}
+{% set image_title = content.field_image[0]['#item'].title %}
+{% set image_alt = content.field_image[0]['#item'].alt %}
+{% set show_background_style = content.field_show_background_style[0]['#markup'] %}
+{% set media_position = content.field_media_position[0]['#markup'] %}
+{% set read_more_style = content.field_read_more_style[0]['#markup'] %}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'profile-w-media',
+  media_position == 'right' ? 'right' : 'left',
+  'white-bg',
+  'top-bottom-borders'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      <div class="grid-container large">
+        <div class="profile">
+          {% set inner_attribute = create_attribute() %}
+          {% set inner_classes = [
+            'inner',
+            show_background_style == "On" ? 'wave-pattern',
+            'blue',
+          ] %}
+          <div {{ inner_attribute.addClass(inner_classes) }}>
+            <div class="content">
+              <div class="category">{{ content.field_pre_title }}</div>
+              {% if content.field_title|field_value is not empty %}
+                <h2 class="underline">{{ content.field_title[0]['#context'].value }}</h2>
+              {% endif %}
+              {% if content.field_body_formatted|field_value is not empty %}
+                {{ content.field_body_formatted|field_value }}
+              {% endif %}
+
+              {% if content.field_link|field_value is not empty %}
+                {% set read_more_attribute = create_attribute() %}
+                {% if read_more_style == 'link' %}
+                  {% set read_more_classes = [
+                    'btn-link'
+                  ] %}
+                {% else %}
+                  {% set read_more_classes = [
+                    'button',
+                    'primary'
+                  ] %}
+                {% endif %}
+                <a href="{{ content.field_link[0]['#url'] }}" {{ read_more_attribute.addClass(read_more_classes) }}
+                   rel="{{ content.field_link[0]['#url'].isExternal() ? 'nofollow' : '' }}"
+                   target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
+              {% endif %}
+            </div>
+
+            {% if image_url %}
+              <div class="media">
+                <div class="image">
+                  <a href="{{ content.field_link[0]['#url'] }}" aria-label="">
+                    <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+                  </a>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

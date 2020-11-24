@@ -1,0 +1,61 @@
+uuid: d9a55721-3f6f-4e86-a9b7-a427898dca8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_card.field_email
+    - field.field.paragraph.profile_card.field_image
+    - field.field.paragraph.profile_card.field_link
+    - field.field.paragraph.profile_card.field_subtitle
+    - field.field.paragraph.profile_card.field_title
+    - paragraphs.paragraphs_type.profile_card
+  module:
+    - link
+    - media_library
+id: paragraph.profile_card.default
+targetEntityType: paragraph
+bundle: profile_card
+mode: default
+content:
+  field_email:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

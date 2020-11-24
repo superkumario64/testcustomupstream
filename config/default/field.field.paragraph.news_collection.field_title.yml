@@ -1,0 +1,19 @@
+uuid: 01d3ef14-67e4-4fc5-9d9c-6ed232628f9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.news_collection
+id: paragraph.news_collection.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: news_collection
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

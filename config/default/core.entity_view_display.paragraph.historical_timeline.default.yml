@@ -1,0 +1,64 @@
+uuid: d95b4a58-88ab-40b0-a2e6-7bd55350fbe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.historical_timeline.field_body_formatted
+    - field.field.paragraph.historical_timeline.field_paragraphs
+    - field.field.paragraph.historical_timeline.field_title
+    - paragraphs.paragraphs_type.historical_timeline
+  module:
+    - entity_reference_revisions
+    - fences
+    - text
+id: paragraph.historical_timeline.default
+targetEntityType: paragraph
+bundle: historical_timeline
+mode: default
+content:
+  field_body_formatted:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_paragraphs:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden: {  }

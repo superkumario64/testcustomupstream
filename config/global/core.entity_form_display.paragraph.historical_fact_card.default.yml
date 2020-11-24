@@ -1,0 +1,52 @@
+uuid: 0453e0fd-9da4-4b13-b70e-ed8c5a710faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.historical_fact_card.field_caption
+    - field.field.paragraph.historical_fact_card.field_image
+    - field.field.paragraph.historical_fact_card.field_link
+    - field.field.paragraph.historical_fact_card.field_title
+    - paragraphs.paragraphs_type.historical_fact_card
+  module:
+    - link
+    - media_library
+id: paragraph.historical_fact_card.default
+targetEntityType: paragraph
+bundle: historical_fact_card
+mode: default
+content:
+  field_caption:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,80 @@
+.bot {
+  display: inline;
+  color:#ddd;
+  background: #ddd;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+.zone {
+
+
+
+    span:last-child {
+        display: none;
+    }
+
+    &.show-zone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        border: 1px dashed red;
+        padding: 2rem 1rem 2rem 1rem;
+
+        span:last-child {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: #fff;
+            padding: .25rem;
+            text-align: center;
+            font-size: 11px;
+            display: block;
+
+        }
+
+    }
+
+}
+
+.component-wrapper {
+    padding: 30px;
+
+    .docs-heading:first-child {
+        margin-top: 0;
+    }
+}
+
+.docs-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 3rem 0 1rem 0;
+}
+
+.docs-sub-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 3rem 0 1rem 0;
+}
+
+
+.docs-callout {
+    font-size: 14px;
+    margin: 1rem 0 2rem 0;
+    padding: 20px;
+    background-color: #eee;
+
+    & *:last-child {
+        margin-bottom: 0;
+    }
+}

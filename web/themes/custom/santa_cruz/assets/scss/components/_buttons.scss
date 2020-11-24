@@ -1,0 +1,302 @@
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1em;
+	padding: 1.1em 1.2em;
+	border: none;
+	background: none;
+	color: $primary-blue;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1; 
+	-webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 2px;
+    word-break: keep-all;
+    line-height: 1.4;
+    max-width: 350px;
+
+    &.tiny {
+        min-width: inherit;
+    }
+    
+    > span {
+        vertical-align: middle;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 3px;
+        background-color: $secondary-yellow;
+        width: 100%;
+        transition: transform 400ms ease-in-out;
+        transform: scaleX(0);
+    }
+
+    &:hover {
+        background: transparent;
+
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+
+
+    &.primary {
+        color: $primary-blue;
+        background: rgba($white, .6);
+        border: 2px solid $secondary-turquiose;
+
+        &:focus, &:focus:hover {
+            background: $secondary-blue;
+            color: white !important;
+            border: none;
+        }
+        
+        &:hover {
+            color: $primary-blue !important;
+            //background: rgba($secondary-turquiose, .3) !important;
+            background: transparent;
+            border: 2px solid transparent;
+        }
+        
+    }
+
+    &.secondary {
+        color: $primary-blue;
+        background: white;
+        border: 2px solid rgba($primary-gray, .3);
+
+        &:focus, &:focus:hover {
+            background: $secondary-blue;
+            color: white !important;
+        }
+
+        &:hover {
+            color: $primary-blue !important;
+            //background: rgba($primary-gray, .1) !important;
+            background: white;
+            border: 2px solid transparent;
+        }
+    }
+
+    &.tertiary {
+        color: $secondary-seagreen;
+        background: white;
+        border: 2px solid rgba($secondary-seagreen, .6);
+
+        &:focus, &:focus:hover {
+            background: $secondary-blue;
+            color: white !important;
+        }
+
+        &:hover {
+            color: $primary-blue !important;
+            //background: rgba($secondary-turquiose, .3) !important;
+            background: transparent;
+            border: 2px solid transparent;
+        }
+    }
+
+    &.alert {
+        color: white;
+        background: $alert-color;
+        border: none;
+
+        &:focus, &:focus:hover {
+            background: transparent;
+            color: $primary-gray !important;
+        }
+
+        &:hover {
+            color: $primary-gray !important;
+            border: none;
+            background: transparent;
+        }
+    }
+
+    &.clear {
+        color: $primary-blue;
+        background: transparent;
+        border: 2px solid rgba(255,255,255,.6);
+
+        &:focus, &:focus:hover {
+            background: $secondary-blue;
+            color: white !important;
+        }
+
+        &:hover {
+            background: rgba(white, .1) !important;
+            border: 2px solid transparent;
+        }
+    }
+
+    &.solid {
+        color: $white;
+        background: rgba($secondary-blue, .6);
+        border: none;
+
+        &:focus, &:focus:hover {
+            background: $primary-blue;
+            color: white !important;
+            border: none;
+        }
+        
+        &:hover {
+            color: $white !important;
+            background: rgba($secondary-turquiose, .3) !important;
+            border: none;
+        }
+        
+    }
+
+    &.primary, &.secondary, &.tertiary, &.clear, &.alert, &.solid {
+        transition: all 0.3s;
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+}
+
+.btn-link {     
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    color: $secondary-blue;
+    font-weight: 400;
+    width: fit-content;
+    transition: transform 400ms ease-in-out;
+    position: relative;
+    transform: scaleX(1);
+    border-bottom: 1px solid $secondary-turquiose;
+
+    @include breakpoint(large){
+        display: inline-block;
+        border: 0;
+    }
+
+    &:hover, &:focus, &:active {
+        &::after {
+            transform: scaleX(0);
+        }
+    }
+
+    &::after {
+        height: 2px;
+        display: none;
+        background-color: $secondary-yellow;
+        margin: 0;
+        content: '';
+        transform-origin: left;
+        transition: transform 400ms ease;
+        
+        @include breakpoint (large){
+            display: block;
+        }
+    }
+
+    &.small {
+        &:after {
+            height: 2px;
+        }
+    }
+    
+
+    &.light {
+       color: white;
+       
+       &.underline.isolated:hover {
+           color: white;
+
+           &::after {
+               background-color: white;
+           }
+       }
+
+       &:hover {
+           color: white !important;
+       }
+    }
+
+    &:hover, &:focus {
+        color: $secondary-seagreen !important;
+
+        &:after {
+            animation-name: shrinkline;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+     }
+
+}
+
+a {
+    .image {
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+            border: 0;
+            transition: transform .5s ease-in-out;
+            transform: scale(1);
+        }
+
+    }
+    
+    &:hover, &:focus {
+        .image img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@keyframes shrinkline {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0);}
+}
+
+@keyframes drawline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1);}
+}
+
+.fade-out-siblings {
+    outline: none !important;
+    pointer-events: none;
+
+    & > * {
+        cursor: pointer;
+        pointer-events: auto;
+        transition: 300ms opacity;
+    }
+
+    &:hover {
+        & > * {
+            opacity: 0.4;
+
+            &:hover { opacity: 1; }
+        }
+
+        & > :hover { opacity: 1; }
+    }
+
+    &:focus-within {
+        
+        & > * {
+            opacity: 0.4;
+        }
+
+        & > :focus {
+            opacity: 1;
+        }
+    }
+}
+
+.fade-out-siblings:hover > :focus:not(:hover) {
+    opacity: 1;
+}
+  

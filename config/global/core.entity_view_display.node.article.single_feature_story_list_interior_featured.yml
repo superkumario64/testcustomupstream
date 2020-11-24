@@ -1,0 +1,110 @@
+uuid: 1a54a03e-e487-4187-958b-251ebea0f2cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.single_feature_story_list_interior_featured
+    - field.field.node.article.body
+    - field.field.node.article.field_after_content
+    - field.field.node.article.field_audiences
+    - field.field.node.article.field_author
+    - field.field.node.article.field_author_link
+    - field.field.node.article.field_categories
+    - field.field.node.article.field_colleges_departments
+    - field.field.node.article.field_date
+    - field.field.node.article.field_featured
+    - field.field.node.article.field_media
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_subtitle_formatted
+    - field.field.node.article.field_teaser_image
+    - field.field.node.article.field_teaser_txt
+    - field.field.node.article.field_topics
+    - image.style.featured_article
+    - node.type.article
+  module:
+    - datetime
+    - fences
+    - media
+    - user
+_core:
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.single_feature_story_list_interior_featured
+targetEntityType: node
+bundle: article
+mode: single_feature_story_list_interior_featured
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_categories:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: site_format_1
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: datetime_default
+    region: content
+  field_teaser_image:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: featured_article
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_teaser_txt:
+    type: basic_string
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_after_content: true
+  field_audiences: true
+  field_author: true
+  field_author_link: true
+  field_colleges_departments: true
+  field_featured: true
+  field_media: true
+  field_meta_tags: true
+  field_subtitle_formatted: true
+  field_topics: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

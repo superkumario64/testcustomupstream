@@ -1,0 +1,17 @@
+{% if page.subsite_header_filter_featured or page.subsite_header_filter_normal %}
+  <div class="filter-box full-width" id="filter-form" data-toggler data-animate="fade-in fade-out">
+    <div class="grid-container">
+      <a href="javascript:void(0)" class="close-modal" data-toggle="filter-form">
+        <i class="fas fa-close"></i>
+      </a>
+      <div class="grid-x grid-margin-x">
+        {% if page.subsite_header_filter_featured %}
+          {{ page.subsite_header_filter_featured }}
+        {% endif %}
+        {% if page.subsite_header_filter_normal %}
+          {{ page.subsite_header_filter_normal }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,5 @@
+{% for item in items %}
+  <a href="{{ item.content['#url'] }}"
+     class="{{ item.content['#options'].attributes.class }}"
+     target="{{ item.content['#url'].isExternal() ? '_blank' : '' }}">{{ item.content['#title'] }}</a>
+{% endfor %}

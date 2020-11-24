@@ -1,0 +1,19 @@
+uuid: ed78fc1d-e696-42fa-9677-ea59dd7dac89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.profile_card
+id: paragraph.profile_card.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: profile_card
+label: 'Profile Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

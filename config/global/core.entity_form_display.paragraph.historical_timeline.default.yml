@@ -1,0 +1,48 @@
+uuid: 3b1c472b-1f55-436e-9005-cc225dbb1e27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.historical_timeline.field_body_formatted
+    - field.field.paragraph.historical_timeline.field_paragraphs
+    - field.field.paragraph.historical_timeline.field_title
+    - paragraphs.paragraphs_type.historical_timeline
+  module:
+    - paragraphs
+    - text
+id: paragraph.historical_timeline.default
+targetEntityType: paragraph
+bundle: historical_timeline
+mode: default
+content:
+  field_body_formatted:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_paragraphs:
+    weight: 2
+    settings:
+      title: Card
+      title_plural: Cards
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: historical_fact_card
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

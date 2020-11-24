@@ -1,0 +1,174 @@
+uuid: 3e0cc2d6-f1f1-4b28-8a36-83b389eac7b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_image.field_body_formatted
+    - field.field.paragraph.full_image.field_image
+    - field.field.paragraph.full_image.field_link
+    - field.field.paragraph.full_image.field_subtitle
+    - field.field.paragraph.full_image.field_title
+    - image.style.full_width
+    - paragraphs.paragraphs_type.full_image
+  module:
+    - custom_module
+    - fences
+    - field_group
+    - media
+    - text
+third_party_settings:
+  field_group:
+    group_viewport:
+      children:
+        - group_container
+        - group_container_top
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'hero-viewport inner-page'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Viewport
+    group_caption:
+      children:
+        - field_subtitle
+        - field_body_formatted
+        - field_link
+      parent_name: group_container_top
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'hero-caption wow'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Caption
+    group_container:
+      children:
+        - field_image
+      parent_name: group_viewport
+      weight: 22
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: hero-container
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+    group_container_top:
+      children:
+        - field_title
+        - group_caption
+      parent_name: group_viewport
+      weight: 23
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: container_top__full-image
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Container Top'
+id: paragraph.full_image.default
+targetEntityType: paragraph
+bundle: full_image
+mode: default
+content:
+  field_body_formatted:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: full_width
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: hero
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+  field_link:
+    weight: 8
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: ucsc_buttons_link
+    region: content
+  field_subtitle:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: secondary-blue-text
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: 'header-wrapper content-centered'
+        fences_field_item_tag: h1
+        fences_field_item_classes: white-text
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden: {  }

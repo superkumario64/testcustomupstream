@@ -1,0 +1,36 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'historical-section'
+] %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+
+      {% if content.field_title|field_value is not empty
+        or content.field_body_formatted|field_value is not empty %}
+        <div class="intro">
+          {% if content.field_title|field_value is not empty %}
+            <h1>{{ content.field_title }}</h1>
+          {% endif %}
+          {% if content.field_body_formatted|field_value is not empty %}
+            <div class="lead">
+              {{ content.field_body_formatted }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if content.field_paragraphs|field_value is not empty %}
+        <div class="owl-carousel fact-timeline">
+          {{ content|without('field_title', 'field_body_formatted') }}
+        </div>
+      {% endif %}
+
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

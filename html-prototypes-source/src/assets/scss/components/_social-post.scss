@@ -1,0 +1,327 @@
+
+
+// Sizing masonry social posts items
+
+.social-posts {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    margin: 1rem 0 8rem 0;
+    @include clearfix();
+   
+    .grid-sizer,
+    .social-post {
+      width: 100%;
+    }
+
+    .social-post {
+        border: 5px solid #fff;
+        float: left;
+        height: 250px;
+        padding: 30px;
+
+        @include breakpoint(large){ height: 500px; }
+        
+        @include breakpoint(xlarge){ height: 250px; }
+
+        a { text-decoration: none; }
+    
+        .facebook-text { color: #425a93; }
+    
+        .instagram-text { color: #da216d; }
+    
+        .youtube-text { color: #ea3525; }
+    
+        .cube-mask {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &.featured {
+            padding: 0;
+
+            .image {
+                position: absolute;
+                left: 0;
+                z-index: 1;
+                height: 100%;
+                min-width: 100%;
+            }
+
+            .cube-content {
+                padding: 2rem;
+                display: flex;
+                align-items: center;
+
+                // Do something like this if assessibility is required here
+                /*
+                .content {
+                    background: $secondary-blue;
+                    padding: 2rem;
+                }
+                */
+            }
+        }
+    
+        .cube-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            overflow: hidden;
+            text-align: center;
+    
+            .image {
+                min-width: 100%;
+                height: 100%;
+            }
+    
+            p {
+                font-size: 1.2rem;
+                @include breakpoint(large){
+                    font-size: 1rem;
+                }
+    
+            }
+            
+        }
+    
+        .cube-actions {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 5;
+            color: #fff;
+            transition: opacity .8s linear;
+            display: flex;
+            align-items: center;
+    
+            &.blue-post { background: $primary-blue; }
+    
+            &.yellow-post { background: $primary-yellow; }
+    
+            &.orange-post { background: $secondary-orange; }
+    
+            &.green-post { background: $secondary-green; }
+    
+            &.sea-green-post { background: $secondary-seagreen; }
+    
+            &.gray-post { background: $primary-gray; }
+    
+            &.pink-post { background: $secondary-pink; }
+    
+            &.youtube-post { background: #ea3525; }
+    
+            &.instagram-post { background: #da216d; }
+    
+            &.twitter-post { background: #13a5dc; }
+    
+            &.facebook-post { background: #425a93; }
+    
+            &.black-post { background: black; }
+            
+            .action {
+                width: 100%;
+                padding: 5%;
+                transition: transform 300ms ease;
+                text-align: center;
+    
+                p {
+                    font-weight: 300;
+                    font-size: 1em;
+                }
+    
+                .btn-link {
+                    font-weight: 700;
+                }
+    
+                h3 {
+                    align-self: center;
+                }
+    
+            }
+        }
+    
+        > div > a {
+            display: block;
+            height: 100%;
+    
+            .cube-actions {
+                .action {
+                    transition: transform 200ms ease-in, opacity 500ms;
+                    transform: scale(.9) translateY(-10%);
+                    opacity: 0;
+                }
+            }
+    
+                &:hover, &:focus {
+    
+                    .cube-actions {
+                        opacity: .95;
+    
+                        .action {
+                            opacity: 1;
+                            transform: scale(1) translateY(0%);
+                        }
+                    }
+    
+                }
+            }
+
+            .circle-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 30px;
+                vertical-align: middle;
+                padding: 10px;
+        
+                &.fab::before {
+                    color: white;
+                }
+            }
+            
+            i.fab, i.fas, i.far {
+                display: inline-block;
+                position: absolute;
+                bottom: 15px;
+                right: 15px; 
+                z-index: 2;
+            }
+        
+            &.featured {
+                i.fab, i.fas, i.far {
+                    position: static;
+                }
+            }
+        
+            .twitter-post {
+                .circle-icon { background: #0093c3; }
+            }
+
+            .facebook-post {
+                .circle-icon { background: #425a93; }
+            }
+        
+            .instagram-post {        
+                .circle-icon { background: $secondary-pink; }
+            }
+        
+            .social-channel {
+        
+                .cube-content {
+        
+                    &:after {
+                        font-size: 4rem;
+                        font-family: "Font Awesome 5 Brands";
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        color: #fff;
+                        -webkit-font-smoothing: antialiased;
+                        display: -ms-grid;
+                        display: grid;
+                        place-items: center;
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        z-index: 10;
+                        
+        
+                    }
+        
+                }
+        
+                &.twitter-channel {
+                    .cube-content {
+                        background-color: #0093C3;
+                        &:after {
+                            content: "\f099";
+                        }
+                    }
+                }
+        
+                &.instagram-channel {
+                    .cube-content {
+                        background-color: #da216d;
+                        &:after {
+                            content: "\f16d";
+                        }
+                    }
+                }
+                &.youtube-channel {
+                    .cube-content {
+                        background-color: #ea3525;
+                        &:after {
+                            content: "\f167";
+                        }
+                    }
+                }
+                &.facebook-channel {
+                    .cube-content {
+                        background-color: #425a93;
+                        &:after {
+                            content: "\f09a";
+                        }
+                    }
+                }
+                &.googleplus-channel {
+                    .cube-content {
+                        background-color: #4285F4;
+                        &:after {
+                            content: "\f0d4";
+                        }
+                    }
+                }
+        
+            }
+
+    }
+
+    @include breakpoint(xlarge) {
+
+        .grid-sizer, .social-post {
+            width: 50%;
+        }
+
+        .social-post {
+            height: 300px;
+        }
+
+        .featured {
+            width: 100%;
+            height: 600px;
+        }
+
+        .social-channel {
+            width: 50%;
+        }
+
+    }
+
+
+    @include breakpoint(xxxlarge) {
+
+        .grid-sizer, .social-post {
+            width: 25%;
+        }
+
+        .featured {
+            width: 50%;
+        }
+
+        .social-channel {
+            width: 25%;
+        }
+
+    }
+
+}

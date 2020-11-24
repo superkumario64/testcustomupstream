@@ -1,0 +1,29 @@
+uuid: 12fa4685-5e9b-47bd-8507-061d8fa6e0ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_catalog_html
+    - node.type.program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+    code: '0'
+id: node.program.field_general_catalog_html
+field_name: field_general_catalog_html
+entity_type: node
+bundle: program
+label: 'General Catalog Information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

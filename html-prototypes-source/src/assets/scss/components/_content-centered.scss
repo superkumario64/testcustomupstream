@@ -1,0 +1,9 @@
+.content-centered {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    position: relative;
+
+    &.tighten {
+        padding: 1rem 0;
+    }
+}

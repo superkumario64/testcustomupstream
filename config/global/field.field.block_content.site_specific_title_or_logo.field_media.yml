@@ -1,0 +1,28 @@
+uuid: e22746ee-4a12-4fd2-9481-e13d5c456ceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_specific_title_or_logo
+    - field.storage.block_content.field_media
+    - media.type.image
+id: block_content.site_specific_title_or_logo.field_media
+field_name: field_media
+entity_type: block_content
+bundle: site_specific_title_or_logo
+label: Logo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

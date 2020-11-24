@@ -1,0 +1,303 @@
+.site-footer {
+    position: relative;
+    z-index: 2;
+    background-color: $primary-blue;
+    font-size: .9rem;
+
+    @include breakpoint(large){
+        padding-top: 0;
+    }
+
+    &::after {
+        background: linear-gradient(0deg, rgba(0,74,134,1) 0%, rgba(0,60,109,1) 100%);
+    }
+
+    .white-ucsc-logo {
+        max-width: 140px;
+        margin-bottom: 10px;
+    }
+
+    h4, h5 {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 100;
+        }
+
+        &.underline {
+            &::after {
+                margin: 1rem 0;
+                padding: 0;
+                display: none;
+                @include breakpoint(large){
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    h4 {
+        font-size: 1rem;
+        display: block;
+        @include breakpoint(large){
+            font-size: 1.635rem;
+        }
+    }
+
+    .underline {
+        display: block;
+
+        @include breakpoint(large) {
+            display: inline-block;
+        }
+    }
+
+    .menu {
+        &.horizontal {
+            flex-direction: column;
+            @include breakpoint(large){
+                flex-direction: row;
+            }
+
+            li {
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                @include breakpoint(large){
+                    border: none;
+                }
+            }
+        }
+
+        a {
+            padding-left: 0;
+            font-weight: 400;
+            color: white;
+        
+            &:first-child {
+                @include breakpoint(large){
+                    padding-left: 0;
+                }
+            }
+    
+            &:hover {
+                text-decoration: underline;
+            }
+
+            @include breakpoint(large){
+                padding: 0.5rem 3rem;
+            }
+        }
+    }
+
+    .contact-card { width: 100%; }
+
+    .btn-link {
+        &:after {
+            color: white;
+        }
+    }
+
+    .global-footer {
+        padding: 0;
+        
+        color: white;
+        
+        .white-ucsc-logo {
+            max-width: 140px;
+            margin-bottom: 15px;
+        }
+
+        .menu {
+            li {
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                @include breakpoint(large){
+                    border: none;
+                }
+            }
+        }
+
+        a {
+            padding-left: 0;
+            @include breakpoint(large){
+                padding: 0.5rem 3rem;
+            }
+        }
+
+        .nav-social {
+            a {
+                padding: 0 .5rem;
+            }
+
+            .menu {
+                a { padding: .5rem 0;}
+            }
+        }
+
+        .nav-global {
+            margin: 0 auto 0 auto;
+            text-align: center;
+    
+            p, a {
+                font-size: .8rem;
+                color: #b5c4d0;
+            }
+    
+            p {
+                margin: 0;
+            }
+        
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+        
+                &.primary-set {
+                    margin-bottom: 5px;
+                    a {
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        
+            li {
+                display: inline-block;
+                margin-right: 1rem;
+                
+                a {
+                    padding: 0;
+                    text-decoration: none;
+        
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        
+        }
+
+        @include breakpoint(large) { padding: 2em 0; }
+    }
+    
+    
+}
+
+.footer-callouts {
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    padding: 1.5em 2em 0 2em;
+
+    .button {
+        margin-bottom: 1.5em;
+    }
+}
+
+.gateway-footer, .subsite-footer {
+    color: white;
+    padding: 2em 0 0;
+    margin-bottom: 0;
+
+    &::after {
+        content: '';
+        height: 10px;
+        display: block;
+        width: 100%;
+        background: transparent url(../../assets/img/build-resources/footer-divider.png) repeat-x bottom left;
+        position: relative;
+        top: 2.5rem;
+        display: none;
+
+        @include breakpoint(large){
+            display: block;
+        }
+    }
+
+    @include breakpoint(medium){
+        display: block;
+    }
+
+    @include breakpoint(large){
+        padding: 2.5em 0;
+        margin-bottom: 3rem;
+    }
+}
+
+/* .subsite-footer {
+    .toggle-trigger {
+        &:first-child {
+            margin-top: 2rem;
+
+            @include breakpoint(large){
+                margin-top: 0;
+            }
+        }
+    }
+} */
+
+.nav-social {
+    text-align: left;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        
+        display: inline-block;
+        font-size: 1.4rem;
+        margin: 0rem .2rem .25rem .2rem;
+
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+
+    a {
+        display: block;
+        line-height: 1;
+        color: white;
+
+        .fab {
+            font-size: 0.9rem;
+            @include breakpoint(large){
+                font-size: 1.3rem;
+            }
+        }
+        
+    }
+
+    .menu {
+        li {margin: 0 !important }
+        a {font-size: .8rem !important }
+    } 
+
+}
+
+.toggle-trigger {
+    padding: 10px 0;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    border-bottom: 1px solid #3977a7;
+    cursor: pointer;
+    text-align: left;
+
+    i {
+        margin-top: 5px;
+        margin-right: 10px;
+        float: right;
+    }
+
+    @include breakpoint(large) {
+        padding: 0;
+        background-color: transparent;
+        border-bottom: none;
+        font-weight: 900;
+        margin: 0;
+        cursor: default;
+    }
+}

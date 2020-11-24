@@ -1,0 +1,36 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'grid-container',
+  'large'
+] %}
+
+{% block paragraph %}
+  {% block content %}
+    <section{{ attributes.addClass(classes) }} aria-label="content row">
+      {% if content.field_title|field_value is not empty %}
+        <section class="heading">
+          <h2 class="underline">{{ content.field_title[0]['#context'].value }}</h2>
+        </section>
+      {% endif %}
+      {% if content.field_node_refs|field_value is not empty %}
+        <div class="grid-x grid-margin-x">
+          <div class="cell large-12">
+            <div class="job-posting-card-list owl-carousel list">
+              {{ content|without('field_title', 'field_link') }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </section>
+    {% if content.field_link|field_value is not empty %}
+      <div class="more">
+        <a href="{{ content.field_link.0['#url'] }}"
+           class="primary button">{{ content.field_link.0['#title'] }}</a>
+      </div>
+    {% endif %}
+  {% endblock %}
+{% endblock paragraph %}

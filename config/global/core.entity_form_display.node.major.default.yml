@@ -1,0 +1,330 @@
+uuid: ecc6103a-b28c-4d37-99b7-d96ea87668ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.major.field_alumni_focus_html
+    - field.field.node.major.field_awards_html
+    - field.field.node.major.field_caption_formatted
+    - field.field.node.major.field_careers
+    - field.field.node.major.field_careers_html
+    - field.field.node.major.field_degrees
+    - field.field.node.major.field_eap_html
+    - field.field.node.major.field_facilities_html
+    - field.field.node.major.field_first_year_html
+    - field.field.node.major.field_general_catalog_html
+    - field.field.node.major.field_hero_content
+    - field.field.node.major.field_link
+    - field.field.node.major.field_media
+    - field.field.node.major.field_more_information_html
+    - field.field.node.major.field_opportunities_html
+    - field.field.node.major.field_sidebar_content
+    - field.field.node.major.field_transfers_html
+    - node.type.major
+  module:
+    - content_moderation
+    - field_group
+    - link
+    - media_library
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_information:
+      children:
+        - field_caption_formatted
+        - field_opportunities_html
+        - field_first_year_html
+        - field_transfers_html
+        - field_careers_html
+        - field_facilities_html
+        - field_eap_html
+        - field_awards_html
+        - field_alumni_focus_html
+        - field_general_catalog_html
+        - field_more_information_html
+      parent_name: ''
+      weight: 14
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+      label: Information
+    group_categorization:
+      children:
+        - field_careers
+        - field_degrees
+      parent_name: ''
+      weight: 15
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+      label: Categorization
+    group_sideba:
+      children:
+        - field_sidebar_content
+      parent_name: ''
+      weight: 16
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Sidebar Content'
+    group_hero_content:
+      children:
+        - field_hero_content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Hero Content'
+id: node.major.default
+targetEntityType: node
+bundle: major
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_alumni_focus_html:
+    weight: 22
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_awards_html:
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_caption_formatted:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_careers:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_careers_html:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_degrees:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_eap_html:
+    weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_facilities_html:
+    weight: 19
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_first_year_html:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_general_catalog_html:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_hero_content:
+    weight: 11
+    settings:
+      title: 'Hero Image'
+      title_plural: 'Hero Images'
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_link:
+    weight: 12
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_media:
+    weight: 13
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_more_information_html:
+    weight: 24
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_opportunities_html:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_sidebar_content:
+    type: entity_reference_paragraphs
+    weight: 17
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_transfers_html:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 9
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

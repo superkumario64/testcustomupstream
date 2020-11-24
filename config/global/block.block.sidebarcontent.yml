@@ -1,0 +1,29 @@
+uuid: 48667043-79e1-441d-9ce2-7a36f7e864d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - santa_cruz
+id: sidebarcontent
+theme: santa_cruz
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'entity_field:node:field_sidebar_content'
+settings:
+  id: 'entity_field:node:field_sidebar_content'
+  label: 'Right Sidebar Content'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: sidebar
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

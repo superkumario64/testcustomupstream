@@ -1,0 +1,8 @@
+uuid: f3fd330f-8186-45fd-b135-c42ab80d4095
+langcode: en
+status: true
+dependencies: {  }
+id: site_format_1
+label: 'Site Format #1'
+locked: false
+pattern: 'F d, Y'

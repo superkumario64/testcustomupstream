@@ -1,0 +1,25 @@
+uuid: cc128157-e59c-428f-a4db-0ed79b35f803
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+id: site_section-group_content_edito
+label: 'Group Content Editor'
+weight: -10
+internal: false
+audience: member
+group_type: site_section
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'create group_node:page entity'
+  2: 'update any group_node:page entity'
+  3: 'update own group_node:page entity'
+  4: 'view group_node:page entity'
+  5: 'view unpublished group_node:page entity'
+  6: 'create group_node:page content'
+  7: 'update own group_node:page content'
+  8: 'view group_node:page content'
+  18: 'view group_node:webform entity'
+  19: 'view group_node:webform content'

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ */
+#}
+
+{% set file_url = file_url(content.field_media_image['#object'].field_media_image.entity.uri.value|image_style('inline_media_small')) %}
+{% set file_alt = content.field_media_image['#object'].field_media_image.alt %}
+{% set file_title = content.field_media_image['#object'].field_media_image.title %}
+
+<article{{ attributes }}>
+  <img src="{{ file_url }}" alt="{{ file_alt }}" title="{{ file_title }}">
+</article>

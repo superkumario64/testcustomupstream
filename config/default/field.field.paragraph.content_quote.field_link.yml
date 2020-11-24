@@ -1,0 +1,23 @@
+uuid: 65b1c286-b6ee-4821-8185-c81850cbbb87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.content_quote
+  module:
+    - link
+id: paragraph.content_quote.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: content_quote
+label: 'CTA Button'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

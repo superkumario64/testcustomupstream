@@ -1,0 +1,19 @@
+uuid: c9e7a61d-c6e1-4e25-84a8-e5f3d8bf44ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.grid_content_centered
+id: paragraph.grid_content_centered.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: grid_content_centered
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

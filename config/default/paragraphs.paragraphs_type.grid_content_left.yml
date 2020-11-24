@@ -1,0 +1,10 @@
+uuid: ca81dfd3-a2fc-4905-a1dc-c7d36abfb133
+langcode: en
+status: true
+dependencies: {  }
+id: grid_content_left
+label: 'Grid Content (Left)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

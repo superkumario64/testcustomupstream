@@ -1,0 +1,17 @@
+uuid: b673a472-3164-4f90-8365-340acb1a17fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  module:
+    - user
+id: site_section-group_membership
+label: 'Site Section: Group membership'
+description: 'Adds users to groups as members.'
+group_type: site_section
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

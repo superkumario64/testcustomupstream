@@ -1,0 +1,166 @@
+/* === IMAGE RULES === */
+
+figure {
+  display: table;
+}
+
+figcaption {
+  //display: table-caption;
+  caption-side: bottom;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-full {
+  margin-bottom: 2em;
+  width: 100%;
+  
+  display: block;
+  img { width: 100%; }
+}
+
+.grid-container {
+
+  .img-full { 
+    .image {
+      max-height: 500px;
+      overflow: hidden;
+    }
+  }
+
+  &.large {
+    .img-full { 
+      .image {
+        max-height: 650px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.img-75 {
+  margin-bottom: 2em;
+  img { width: 100%; }
+  @include breakpoint(large) { width: 75%; }
+}
+
+
+.img-50 {
+  margin-bottom: 2em;
+  img { width: 100%; }
+  @include breakpoint(large) { width: 50%; }
+}
+
+.img-25 {
+  margin-bottom: 2em;
+  img {width: 100%;}
+  figcaption { display: none; }
+  width: 100%;
+  
+  @include breakpoint(large) {
+      width: 25%;
+      figcaption { display: block; }
+  }
+}
+
+/* Centered Images */
+
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+}
+
+.img-center-75 {
+  @extend .img-75;
+  @extend .img-center;
+}
+
+.img-center-50 {
+  @extend .img-50;
+  @extend .img-center;
+}
+
+.img-center-25 {
+  @extend .img-25;
+  @extend .img-center;
+}
+
+
+/* Left Aligned Images */
+
+.img-left {
+  float: left;
+  margin-right: 2em;
+}
+
+.img-left-75 {
+  @extend .img-75;
+  @extend .img-left;
+}
+
+.img-left-50 {
+  @extend .img-50;
+  @extend .img-left;
+
+  @include breakpoint(medium down){ margin: 0; }
+}
+
+.img-left-25 {
+  @extend .img-25;
+  @extend .img-left;
+}
+
+
+/* Right Aligned Images */
+
+.img-right {
+  float: right;
+  margin-left: 2em;
+}
+
+.img-right-75 {
+  @extend .img-75;
+  @extend .img-right;
+}
+
+.img-right-50 {
+  @extend .img-50;
+  @extend .img-right;
+  @include breakpoint(medium down){ margin: 0; }
+}
+
+.img-right-25 {
+  @extend .img-25;
+  @extend .img-right;
+}
+
+
+
+
+/*==== Captions ===*/
+
+figcaption, .caption {
+  margin-top: 15px;
+
+  &:before {
+
+  }
+
+  .caption-title {
+    font-weight: bold;
+    color: #666;
+  }
+
+  .caption-desc {
+    color: #666;
+  }
+
+}
+
+
+.clearfloat {
+  @include clearfix;
+}

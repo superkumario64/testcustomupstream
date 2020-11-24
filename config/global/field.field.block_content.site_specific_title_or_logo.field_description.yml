@@ -1,0 +1,25 @@
+uuid: e76e98c8-6117-470c-b62d-43a96d9787df
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_specific_title_or_logo
+    - field.storage.block_content.field_description
+  module:
+    - markup
+id: block_content.site_specific_title_or_logo.field_description
+field_name: field_description
+entity_type: block_content
+bundle: site_specific_title_or_logo
+label: Description
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>Each subsite can have a different HTML output depends on which data prefilled.&nbsp;As a result, the site has three options:</strong></p>\r\n\r\n<ul>\r\n\t<li><strong>With a logo and a head link</strong></li>\r\n\t<li><strong>With a&nbsp;head link and a title</strong></li>\r\n\t<li><strong>With a head link only</strong></li>\r\n</ul>\r\n\r\n<p class=\"text-align-center\"><strong>Please, don't remove this block, it uses in a custom module and very important for the site.</strong></p>\r\n"
+    format: full_html
+field_type: markup

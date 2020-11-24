@@ -1,0 +1,19 @@
+uuid: 4aa11005-0a2c-4e95-b5e5-f6251bbcd502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_embed_txt
+    - node.type.podcast
+id: node.podcast.field_embed_txt
+field_name: field_embed_txt
+entity_type: node
+bundle: podcast
+label: 'Embed Code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

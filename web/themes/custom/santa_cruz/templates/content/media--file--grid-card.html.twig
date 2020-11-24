@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ */
+#}
+{% set file_url = file_url(content.field_media_file['#object'].field_media_file.entity.uri.value) %}
+{% set file_name = content.field_media_file['#object'].field_media_file.entity.filename.value %}
+
+<div{{ attributes.addClass('document-card') }}>
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    <span class="subheader">{{ content.field_subheader[0]['#context'].value }}</span>
+    <h5><a href="{{ file_url }}" target="_blank" download="{{ file_name }}">{{ content.name[0]['#context'].value }}</a></h5>
+    {{ content|without('name', 'field_subheader', 'field_media_file') }}
+  {% endif %}
+</div>

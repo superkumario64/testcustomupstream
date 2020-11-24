@@ -1,0 +1,117 @@
+<div class="subsite-header">
+    <!--------------------------------------------->
+    <!------------- Custom Subsite Logo ----------->
+    <!--------------------------------------------->
+    
+    {{#ifpage 'template-customlogo-subsite'}}
+        
+          <div class="grid-container large show-for-large">
+            <div class="grid-x grid-margin-x align-bottom">
+                <div class="cell large-3">
+                    <h1>{{>jbse-logo}}</h1>
+                    <a class="div" href="javascript:void(0)">Engineering Division</a>
+                </div>
+                <div class="cell large-auto show-for-xlarge">{{>jbse-menu }}</div>
+                <div class="cell large-auto hide-for-xlarge">{{>jbse-menu-tablet }}</div>
+            </div>  
+        </div>
+
+    {{/ifpage}}
+
+    <!--------------------------------------------->
+    <!--------------- Subsite Template ------------>
+    <!--------------------------------------------->
+
+    {{#ifpage 'template-home-subsite'}}
+        
+        <div class="grid-container large show-for-large">
+            <div class="grid-x grid-margin-x">
+                <div class="cell xxlarge-5 xlarge-12">
+                    <h1>History Department <span class="hide-for-xlarge"> | Humanities Division</span></h1>
+                    <a class="div show-for-xlarge" href="javascript:void(0)">Humanities Division</a>
+                </div>
+                <div class="cell xxlarge-7 xlarge-12">{{>history-menu}}</div>
+            </div>
+            
+        </div>
+        <div class="grid-container large hide-for-large">
+            <div class="grid-x grid-margin-x grid-collapse">
+                <div class="cell">
+                    <p>{{ pageTitle }}- Humanities Division</p>
+                </div>
+            </div>
+        </div>
+
+    {{/ifpage}}
+
+
+    <!--------------------------------------------->
+    <!--------------- News Template  -------------->
+    <!--------------------------------------------->
+    {{#ifpage 'template-news-editorial' 'template-news-home' 'template-news-filtered' 'template-news-filtered' 'template-news-post' 'template-news-collection'}}
+        
+        <div class="grid-container large">
+            <div class="grid-x large-padding-collapse large-margin-collapse">
+                <div class="cell large-3">
+                    {{>news-logo}}
+                </div>
+                <div class="cell auto">
+                    {{>news-filter}}
+                </div>
+            </div>
+        </div>
+        <div class="filter-box full-width" id="filter-form" data-toggler data-animate="fade-in fade-out">
+            
+            <div class="grid-container">
+                <a href="javascript:void(0)" class="close-modal" data-toggle="filter-form">
+                    <i class="fas fa-close"></i>
+                </a>
+                <div class="grid-x grid-margin-x">
+                    <div class="large-3 cell">
+                        <ul class="menu-list featured">
+                            <li><a href="javascript:void(0)" aria-label="">Tuesday Newsday</a></li>
+                            <li><a href="javascript:void(0)" aria-label="">Review Magazine</a></li>
+                            <li><a href="javascript:void(0)" aria-label="">Administrative Messages</a></li>
+                            <li><a href="javascript:void(0)" aria-label="">Budget Updates</a></li>
+                            <li><a href="javascript:void(0)" aria-label="">Featured Sites</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="large-9 cell">
+                       <div class="grid-container">
+
+                            <div class="grid-x grid-margin-x">  
+                                <div class="large-4 cell">
+                                    <ul class="menu-list">
+                                        <li><a href="javascript:void(0)" aria-label="">General</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">Special Topics</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">The UCSC Experience</a></li>
+                                    </ul>
+                                </div>
+        
+                                <div class="large-4 cell">
+                                    <ul class="menu-list">
+                                        <li><a href="javascript:void(0)" aria-label="">Arts</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">Engineering</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">Humanities</a></li>
+                                    </ul>
+                                </div>
+        
+                                <div class="large-4 cell">
+                                    <ul class="menu-list">
+                                        <li><a href="javascript:void(0)" aria-label="">Physical and Biological Sciences</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">Social Sciences</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">All Audience Areas</a></li>
+                                        <li><a href="javascript:void(0)" aria-label="">All Activities</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    {{/ifpage}}
+    
+</div>

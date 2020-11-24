@@ -1,0 +1,32 @@
+.quote {
+    padding: 5em 0;
+    min-height: 300px;
+
+    @include breakpoint(xxlarge) {
+        .inner {
+            @include xy-grid;
+        }
+    }
+
+    .content {
+        @include mui-animation(fade, slide($direction: left, $amount: 10%));
+        img {
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint(xxlarge) {
+            @include xy-cell(auto);
+            padding-left: 2rem;
+        }
+
+    }
+
+    .media {
+        @include mui-animation(fade, slide($direction: right, $amount: 10%));
+        @include breakpoint(xxlarge) {
+            @include xy-cell(4);
+        }
+
+    }
+
+}

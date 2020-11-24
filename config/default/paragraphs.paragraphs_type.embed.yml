@@ -1,0 +1,10 @@
+uuid: 5f62b1d9-6a3d-4b44-94cc-26b984dc2ace
+langcode: en
+status: true
+dependencies: {  }
+id: embed
+label: 'HTML Embed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

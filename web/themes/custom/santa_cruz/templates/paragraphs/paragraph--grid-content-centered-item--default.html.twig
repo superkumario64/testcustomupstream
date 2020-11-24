@@ -1,0 +1,60 @@
+<div class="grid-item">
+
+  {% if content.field_image[0] %}
+    {% set image_url = file_url(content.field_image[0]['#item'].entity.uri.value|image_style('grid_content')) %}
+    {% set image_title = content.field_image[0]['#item'].title %}
+    {% set image_alt = content.field_image[0]['#item'].alt %}
+
+    {% if image_url %}
+      <p>
+        <figure class="img-full">
+          <img alt="{{ image_alt }}" title="{{ image_title }}" src="{{ image_url }}"/>
+        </figure>
+      </p>
+    {% endif %}
+
+  {% else %}
+    <p>
+      <figure class="img-center">
+        <i class="fas {{ content.field_font_awesome_icon[0]['#icons'][0]['#name'] }} fa-6x"></i>
+      </figure>
+    </p>
+  {% endif %}
+
+  {# Opening head tag. #}
+  <{{ content.field_heading_level|field_value }}
+  class="{% if content.field_heading_level|field_value == "h2" %} title {% elseif content.field_body_unformatted|field_value %} underline {% endif %}
+  ">
+  {% if content.field_title|field_value is not empty %}
+    {# Link head tag if exist. #}
+    {% if content.field_link|field_value is not empty %}
+      <a href="{{ content.field_link[0]['#url'] }}">
+    {% endif %}
+
+    {{ content.field_title }}
+
+    {% if content.field_link|field_value is not empty %}
+      </a>
+    {% endif %}
+  {% endif %}
+  {# Closing head tag. #}
+</{{ content.field_heading_level|field_value }}>
+
+{% if content.field_body_unformatted|field_value is not empty %}
+  <p>{{ content.field_body_unformatted|field_value }}</p>
+{% endif %}
+
+{# As values are not more than 2 so put them static here. #}
+{% if content.field_links__max_2[0]['#title'] or content.field_links__max_2[1]['#title'] %}
+  <p>
+    <a class="button primary"
+       href="{{ content.field_links__max_2[0]['#url'] }}">{{ content.field_links__max_2[0]['#title'] }}</a>
+    {% if content.field_links__max_2[1]['#title'] %}
+      <a class="button primary"
+         href="{{ content.field_links__max_2[1]['#url'] }}">{{ content.field_links__max_2[1]['#title'] }}</a>
+    {% endif %}
+  </p>
+{% endif %}
+
+</div>
+

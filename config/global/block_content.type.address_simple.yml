@@ -1,0 +1,8 @@
+uuid: 14de0bc7-6be4-413c-ab36-c587f9490c57
+langcode: en
+status: true
+dependencies: {  }
+id: address_simple
+label: 'Address Simple'
+revision: 1
+description: 'Address as a plain text with logo.'

@@ -1,0 +1,20 @@
+uuid: 90e755bf-a5a8-48ef-9892-32edb6e691f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+  theme:
+    - santa_cruz
+id: subsitelogoortitleformobile
+theme: santa_cruz
+region: subsite_brand_mobile
+weight: 0
+provider: null
+plugin: custom_module_subsite_logo_mobile
+settings:
+  id: custom_module_subsite_logo_mobile
+  label: 'Subsite Logo or Title - For Mobile'
+  provider: custom_module
+  label_display: '0'
+visibility: {  }

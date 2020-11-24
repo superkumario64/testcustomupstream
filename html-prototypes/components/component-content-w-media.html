@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        <!------------------------------------------------------>
+        
+        <!--
+        Alignment Options: content-w-media "left" or "right"
+        
+        If overlap is desired add "haltered"
+        
+        the pattern background can be applied as well with "wave-pattern" class, make sure to indicate color as well (blue,green,etc)
+        
+        Animations can be applied by adding "wow" to the targeted divs and adding 
+         @include mui-animation(fade, slide($direction: right, $amount: 30%)); to css. Edit accordingly
+        
+        -->
+        
+        <!------------------------------------------------------>
+        <section class="content-w-media right">
+            <div class="grid-container large">
+                <div class="inner">
+        
+                    <div class="content">
+                        <h2 class="underline">Academic Divisions</h2>
+                        <p>Looking for a specific division, undergraduate major, or graduate program?</p>
+                        <div class="content-foot-links">
+                            <a href="javascript:void(0)" class="btn-link">Start Here</a>
+                        </div>
+                    </div>
+        
+                    <div class="media">
+                        <img src="../assets/img/content/divisions-small.jpg" />
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-w-media left wave-pattern haltered blue">
+            <div class="grid-container large">
+                <div class="inner">
+                    <div class="content">
+                        <h2 class="underline">The Colleges</h2>
+                        <h5 style="font-weight: 500">Ten Colleges = One University</h5>
+                        <p>UCSC residential learning colleges provide students with academic support, activities, and events
+                            that enhance the intellectual and social life of the campus.</p>
+        
+                        <div class="content-foot-links">
+                            <a class="btn-link" href="javascript:void(0)">Communities of Learning</a>
+                            <a class="btn-link" href="javascript:void(0)">See the Colleges</a>
+                        </div>
+                    </div>
+                    
+                    <div class="media">
+                        <img src="../assets/img/content/colleges-small.jpg" />
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

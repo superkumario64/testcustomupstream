@@ -1,0 +1,748 @@
+.hero-viewport {
+    margin-top: 0;
+    vertical-align: middle;
+
+    @include breakpoint(overlylarge){
+        max-width: 108rem;
+        margin: 0 auto;
+    }
+
+    &.yellow {
+        .hero-container {
+            .hero {
+                background: white !important;
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(253,199,2,1) 0%,rgba(253,199,2,1) 75%,rgba(253,199,2,0) 100%);
+                    }
+                }
+
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(253,199,2,1) 0%,rgba(253,199,2,1) 75%,rgba(253,199,2,0) 100%);
+                    }
+                }
+            }
+        }
+        .angle {
+            background: $primary-yellow !important;
+        }
+
+        .hero-text {
+            color: $primary-gray;
+            &::after {
+                background: $primary-yellow;
+            }
+        }
+
+    }
+
+    &.blue {
+
+        .hero-container {
+            .hero{
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(0,60,108,1) 0%,rgba(0,60,108,1) 75%,rgba(0,60,108,0) 100%);
+                    }
+                }
+
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(0,60,108,1) 0%,rgba(0,60,108,1) 75%,rgba(0,60,108,0) 100%);
+                    }
+                }
+            }
+        }
+
+        .angle {
+            background: $primary-blue !important;
+        }
+
+        .hero-text {
+            color: white;
+            &::after {
+                background: $primary-blue;
+            }
+        }
+    }
+
+    &.secondary-blue {
+        .hero-container {
+            .hero{
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(0,106,173,1) 0%,rgba(0,106,173,1) 75%,rgba(0,106,173,0) 100%);
+                    }
+                }
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(0,106,173,1) 0%,rgba(0,106,173,1) 75%,rgba(0,106,173,0) 100%);
+                    }
+                }
+            }
+        }
+
+        .angle {
+            background: $secondary-blue !important;
+        }
+
+        .hero-text {
+            color: white;
+            &::after {
+                background: $secondary-blue;
+            }
+        }
+    }
+
+    &.seagreen {
+
+        .hero-container {
+            .hero{
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(0,121,136,1) 0%,rgba(0,121,136,1) 75%,rgba(0,121,136,0) 100%);
+                    }
+                }
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(0,121,136,1) 0%,rgba(0,121,136,1) 75%,rgba(0,121,136,0) 100%);
+                    }
+                }
+            }
+        }
+    
+        .angle {
+            background: $secondary-seagreen !important;
+        }
+
+        .hero-text {
+            color: white;
+            &::after {
+                background: $secondary-seagreen;
+            }
+        }
+    }
+
+    &.green {
+        .hero-container {
+            .hero {
+                
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(darken($secondary-green, 20%),1) 0%, rgba(darken($secondary-green, 20%),1) 75%, rgba(darken($secondary-green, 20%),0) 100%);
+                    }
+                }
+
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(darken($secondary-green, 20%),1) 0%,rgba(darken($secondary-green, 20%),1) 75%,rgba(darken($secondary-green, 20%),0) 100%);
+                    }
+                }
+                    
+            }
+        }
+
+        .angle {
+            background: darken($secondary-green, 20%) !important;
+        }
+
+        .hero-text {
+            color: white;
+            &::after {
+                background: $secondary-green;
+            }
+        }
+    }
+
+    &.turquiose {
+        .hero-container {
+            .hero{
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(19,165,220,1) 0%,rgba(19,165,220,1) 75%,rgba(19,165,220,0) 100%);
+                    }
+                }
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(19,165,220,1) 0%,rgba(19,165,220,1) 75%,rgba(19,165,220,0) 100%);
+                    }
+                }
+            }
+        }
+
+        .angle {
+            background: $secondary-turquiose !important;
+        }
+
+        .hero-text {
+            color: white;
+            &::after {
+                background: $secondary-turquiose;
+            }
+        }
+    }
+
+    &.orange {
+        .hero-container {
+            .hero{
+                &.hero-text-left {
+                    .gradient-overlay {
+                        background: linear-gradient(to left, rgba(242, 152, 19, 1) 0%,rgba(242, 152, 19,1) 75%,rgba(242, 152, 19,0) 100%);
+                    }
+                }
+
+                &.hero-text-right {
+                    .gradient-overlay {
+                        background: linear-gradient(to right, rgba(242, 152, 19, 1) 0%,rgba(242, 152, 19,1) 75%,rgba(242, 152, 19,0) 100%);
+                    }
+                }
+            }
+        }
+
+        .angle {
+            background: $secondary-orange !important;
+        }
+
+        .hero-text {
+            color: $primary-gray;
+            &::after {
+                background: $secondary-orange;
+            }
+        }
+    }
+
+    .header-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 120px;
+        z-index: 1;
+    }
+
+    a.div {
+        position: relative;
+        background: #006aad;
+        color: white !important;
+        padding: .2rem 1rem;
+        text-align: center;
+        z-index: 1001;
+        top: -6px;
+        left: 0;
+        font-size: .6rem !important;
+        bottom: auto;
+        
+    }
+
+    h1 {
+        &.hero-header{
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+
+            @include breakpoint(xlarge){
+                font-size: 2.7rem;
+            }
+
+            @include breakpoint(xxxlarge){
+                font-size: 3.8rem;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    h2 {
+        &.hero-header{
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            @include breakpoint(xlarge){
+                font-size: 2.4rem;
+            }
+
+            @include breakpoint(xxxlarge){
+                font-size: 3.2rem;
+                line-height: 1.2;
+            }
+        }  
+    }
+
+    &.inner-page-standard {
+        @include breakpoint(xlarge){
+            padding-top: 40px;
+        }
+
+        .grid-container{
+            padding: 0;
+            
+            @include breakpoint(large){
+                padding: inherit;
+            }
+        }
+
+        .hero-container {
+            background: transparent;
+            max-height: 1200px;
+            color: $primary-gray;
+            
+            .hero {
+                @include breakpoint(xlarge) {
+                    width: 55%;
+                    float: right;
+                }
+
+                &.hero-text-left {
+                    img {
+                        @include breakpoint(xlarge) {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            .hero-text {
+                padding: 20px 25px 0;
+                left: 0;
+                
+                h1 {
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+            
+                    @include breakpoint(xlarge){
+                        font-size: 2rem;
+                    }
+
+                    @include breakpoint(xxlarge){
+                        font-size: 2.4rem;
+                    }
+            
+                    @include breakpoint(xxxlarge){
+                        font-size: 3.2rem;
+                        line-height: 1.1;
+                    }
+                }
+            }
+        }
+
+        .hero-text {
+            background: transparent;
+            
+            &.flush {
+                h1, p, a, a::after {
+                    color: white;
+                    
+                    @include breakpoint(xlarge) {
+                        color: $primary-gray;
+                    }
+                }
+    
+                &::after {
+                    display: none;
+                }
+            }
+
+            h1 { 
+                color: #fff;
+                @include breakpoint(xlarge) {
+                    color: $primary-blue;
+                }
+            }
+
+            p {
+                color: #fff;
+                @include breakpoint(xlarge) {
+                    color: $primary-gray;
+                 }
+            }
+
+            .btn-link {
+                color: white;
+                @include breakpoint(xlarge) {
+                    color: $primary-blue;
+                }
+                &::after{
+                    color: white;
+                    @include breakpoint(xlarge) {
+                        color: $primary-blue;
+                    } 
+                }
+            }
+    
+        }
+
+        .button-list {
+            top: 0px;
+            @include breakpoint(xlarge) {
+                top: 10px;
+            }
+        }
+
+       @include breakpoint(xlarge){
+            padding: 2em 0 1rem;
+        }
+
+    }
+
+    &.inner-page {
+        
+        .header-wrapper {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            float: left;
+            top: 45%;
+            z-index: 2;
+
+            h1 {
+                text-transform: uppercase;
+                text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.22);
+                font-size: 5rem;
+
+                &:after {
+                    content: '';
+                    height: 4px;
+                    background: $secondary-turquiose;
+                    width: 70%;
+                    display: block;
+                    margin: 10px auto;   
+                }
+            }
+        }
+
+        .hero {
+            overflow: visible;
+        }
+
+        .hero-text {
+            position: relative;
+
+            @include breakpoint(xlarge){
+                padding: 0rem 2rem 0 4rem;
+                height: 400px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 40%;
+                display: flex;
+            }
+        }
+
+        .hero-caption {
+            background: rgba($white, .9); 
+            color: $primary-gray;
+            width: 60%;
+            bottom: 170px;
+            left: 50%;
+            margin-left: -30%;
+            position: absolute;
+            padding: 2rem;
+            z-index: 3;
+            @include mui-animation(fade, slide($direction: up, $amount: 30%));
+        }
+
+        .angle {
+            min-height: 400px;
+            width: 50%;
+            height: 400px;
+            bottom: 0;
+            opacity: .9;
+            display: none;
+
+            @include breakpoint(xlarge){
+                display: block;
+            }
+        }
+
+        .hero-text-left {
+
+            .hero-text {
+                left: 0; 
+            }
+
+            .angle {
+                width: 43%;
+                left: -47px;
+                height: 400px;
+        
+            }
+        }
+
+        .hero-text-right {
+            .hero-text {
+                @include breakpoint(xlarge){
+                    right: 50px;
+                }
+            } 
+            .hero-video {
+                left: 0;
+            }
+        }
+    }
+
+    &.inner-page-angle {
+
+        background: transparent;
+        // ??
+        //max-height: 600px;
+        color: $primary-gray;
+
+        .hero-container {
+
+            .hero-video {
+                @include breakpoint(xlarge) {
+                    width: 68% !important;
+                }
+            }            
+            
+            .hero {
+                background: $primary-blue;
+                
+                img { 
+                    @include breakpoint(xlarge) {
+                        min-width: 60%;
+                        width: 75%;
+                    }
+                }
+
+                
+
+            }
+        }
+
+        .button-list { top: 60px; }
+    }
+
+}
+
+.hero-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 87px;
+    max-height: none;
+    margin: 0 auto;
+    top: 0;
+    height: 100%;
+    background: $primary-blue;
+
+    .hero-link {
+        .angle {
+            transition: all 450ms ease-in-out;
+        }
+
+        .hero-text { transition: all 600ms ease-in-out; }
+        
+        &:hover {
+            .angle {
+                transform: skewX(-10deg) translateX(1%);
+
+                .inner-angle {
+                    transform: translateX(100%);
+                }
+            }
+        }
+    }
+
+    .hero-text-left {
+        .hero-link {
+           &:hover {
+                .hero-text {
+                    transform: translateX(1%);
+                }
+            }
+        }
+    }
+
+    .hero-text-right {
+        .hero-link {
+           &:hover {
+
+                .hero-text {
+                    transform: translateX(-1%);
+                }
+            }
+        }
+    }
+
+    a { text-decoration: none;}
+
+    @include breakpoint(xlarge){
+        max-height: 420px;
+    }
+
+    @include breakpoint(xxlarge){
+        max-height: 500px;
+    }
+
+    @include breakpoint(xxxlarge){
+        max-height: 770px;
+    }
+
+    @include breakpoint(xxxxlarge){
+        max-height: 750px; 
+    }
+
+}
+
+.hero {
+    width: auto;
+    overflow: hidden;
+
+    .gradient-overlay {
+        width: 52%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        display: none;
+        transform: skewX(-10deg);
+        right: -8%;
+
+        @include breakpoint(xlarge){
+            display: block;
+        }
+    }
+
+    .angle {
+        background: $primary-blue;
+        overflow: hidden;
+        &.transparent { opacity: .8; } 
+
+        .inner-angle {
+            background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.05) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            transition: transform 200ms ease-in;
+        }
+
+       .gradient-overlay {
+            left: auto;
+            right: 0;
+        }
+
+        @include breakpoint(xlarge) {
+            display: block;
+            height: 100%;
+            transform: skewX(-10deg);
+            /* @include mui-animation(fade, slide($direction: left, $amount: 10%));
+            animation-duration: 2s; */
+            left: 55%; 
+        }
+    }
+
+    &.hero-text-left {      
+        .gradient-overlay {
+           left: -12%;
+        }
+
+        .hero-video {
+            left: 25%;
+        }
+
+        img {
+            @include breakpoint(xlarge) {
+                left: 25%;
+                min-width: inherit;
+            }
+        }
+
+        .angle {
+            @include breakpoint(xlarge) {
+                left: inherit;
+                right: 51.5%;
+            }
+        }
+
+        .hero-text {
+            @include breakpoint(xlarge) {
+                left: 5%;
+                right: inherit;  
+            }
+
+            &.flush {
+                @include breakpoint(xlarge) {
+                    left: 2%;
+                }
+            }
+        }
+    
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 0;
+        position: relative;
+        
+        .cut {
+            top: 50%;
+            margin-top: -50%;
+        }
+
+        @include breakpoint(xlarge) {
+            min-width: 100%;
+            max-width: none;
+        }
+        
+        @include breakpoint(xlarge) {
+            transform: scale(1);
+            opacity: 1;
+            transition: transform 0.5s ease-out;
+        }
+    }
+}
+
+.hero-text {
+    position: relative;
+    margin-top: 0;
+    padding: 20px 25px 20px;
+    transition: right .5s ease-out;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    right: 0;
+    width: 100%;
+    height: auto; 
+    font-size: 0.8rem;
+    z-index: 2;
+    @include flex-order(2);
+    color: white;
+
+    h1 { 
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(xlarge) {
+        margin-top: -40px;
+        position: absolute;
+        background: transparent;
+        right: 4%;
+        padding: 60px 0 40px;
+        width: 36%;
+        height: 100%;
+        bottom: 0; 
+        font-size: 1.2rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: $primary-blue;
+        display: block;
+        margin-bottom: 2rem;
+
+        @include breakpoint(xlarge) {
+            display: none;
+        }
+        
+    }
+    
+}

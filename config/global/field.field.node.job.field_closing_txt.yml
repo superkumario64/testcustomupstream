@@ -1,0 +1,19 @@
+uuid: 3f66f77f-44f4-4374-a5c4-549636475bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_closing_txt
+    - node.type.job
+id: node.job.field_closing_txt
+field_name: field_closing_txt
+entity_type: node
+bundle: job
+label: 'Closing Notes'
+description: 'ex. "Open Until Filled. For full consideration, apply by January 15, 2018"'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

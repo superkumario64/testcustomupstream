@@ -1,0 +1,11 @@
+uuid: 4bae6c02-3c51-44ea-a05f-f1643ab92082
+langcode: en
+status: true
+dependencies: {  }
+id: site_section
+label: 'Site Section'
+description: 'Use "<em>Site Section</em>" to group together nodes of the site for specific users (I.E - Library - for library editors/publishers only)'
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - site_section-g

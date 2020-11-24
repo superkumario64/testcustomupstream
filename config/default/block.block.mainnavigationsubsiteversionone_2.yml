@@ -1,0 +1,39 @@
+uuid: 8724cd86-0720-4f10-88c6-52f1bf846b3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-navigation-subsite-version1
+  module:
+    - menu_block
+    - system
+  theme:
+    - santa_cruz
+id: mainnavigationsubsiteversionone_2
+theme: santa_cruz
+region: subsite_header_align_bottom_mobile
+weight: 0
+provider: null
+plugin: 'menu_block:main-navigation-subsite-version1'
+settings:
+  id: 'menu_block:main-navigation-subsite-version1'
+  label: 'Main navigation - Subsite Version One'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main-navigation-subsite-version1:'
+  suggestion: horizontal
+  label_type: block
+  label_link: false
+  hide_on_nonactive: 0
+  expand: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /testing-global-nav-and-menus-template-home-subsite
+    negate: false
+    context_mapping: {  }

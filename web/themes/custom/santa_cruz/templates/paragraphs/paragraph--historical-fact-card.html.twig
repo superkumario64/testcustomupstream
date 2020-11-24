@@ -1,0 +1,40 @@
+{% set image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value|image_style('historical_fact_card')) %}
+{% set image_title = content.field_image[0]['#media'].field_media_image[0].title %}
+{% set image_alt = content.field_image[0]['#media'].field_media_image[0].alt %}
+{% set image_caption = content.field_image[0]['#media'].field_caption[0].value %}
+
+{% block paragraph %}
+  {% block content %}
+    {% if content.field_link|field_value is not empty %}
+      <a href="{{ content.field_link[0]['#url'] }}"
+      class="historical-fact"
+      target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+    {% endif %}
+
+    {% if image_url == true %}
+      <div class="image">
+        <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}">
+      </div>
+    {% endif %}
+
+    {% if content.field_title|field_value is not empty
+      or content.field_caption|field_value is not empty
+      or image_caption == true %}
+      <div class="card-text">
+        {% if image_caption == true %}
+          <span class="category label">{{ image_caption }}</span>
+        {% endif %}
+        {% if content.field_title|field_value is not empty %}
+          <h4 class="underline">{{ content.field_title }}</h4>
+        {% endif %}
+        {% if content.field_caption|field_value is not empty %}
+          <p>{{ content.field_caption }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if content.field_link|field_value is not empty %}
+      </a>
+    {% endif %}
+  {% endblock %}
+{% endblock paragraph %}

@@ -1,0 +1,14 @@
+---
+layout: viewer-components
+---
+
+<!-- This style list can be used in a large content area and used in a carousel-->
+<h1>Block List Example</h1><br>
+{{> job-posting-card-list }}
+<br><br>
+
+<!-- This style list can be used in a sidebar area. Add "list" to job-posting-card-list container -->
+<h1>Concise Listing Example</h1><br>
+<div style="max-width: 450px"> <!-- max width here only to demonstrated a column-->
+    {{> job-posting-card-list class="list"}}
+</div>

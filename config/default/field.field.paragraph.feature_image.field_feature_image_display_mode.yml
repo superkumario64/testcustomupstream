@@ -1,0 +1,23 @@
+uuid: b42efea4-4087-4f08-9925-c8b37e506782
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature_image_display_mode
+    - paragraphs.paragraphs_type.feature_image
+  module:
+    - options
+id: paragraph.feature_image.field_feature_image_display_mode
+field_name: field_feature_image_display_mode
+entity_type: paragraph
+bundle: feature_image
+label: 'Feature Image Display Mode'
+description: 'Changing the Display Mode will hide or show some fields.'
+required: true
+translatable: false
+default_value:
+  -
+    value: split
+default_value_callback: ''
+settings: {  }
+field_type: list_string

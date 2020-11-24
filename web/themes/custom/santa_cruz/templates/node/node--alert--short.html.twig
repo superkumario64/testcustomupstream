@@ -1,0 +1,31 @@
+{% set level = content.field_alert_level[0]['#markup'] %}
+{% set alert_style = '' %}
+{% set link_style = '' %}
+
+{% if level == 'Emergency' %}
+  {% set alert_style = 'alert' %}
+  {% set link_style = 'alert' %}
+{% elseif level == 'Notice' %}
+  {% set alert_style = 'secondary' %}
+  {% set link_style = 'primary' %}
+{% elseif level == 'Warning' %}
+  {% set alert_style = 'primary' %}
+  {% set link_style = 'clear' %}
+{% endif %}
+
+<div class="alert-low">
+  <div class="callout {{ alert_style }}">
+    <div class="grid-container large">
+      <div><p><strong>{{ label[0]['#context'].value }}</strong>:
+          {% if content.field_link|field_value is not empty %}
+            {{ content.field_alert_body[0]['#text']|striptags }}
+          {% endif %}
+          {% if content.field_link|field_value is not empty %}
+            <a href="{{ content.field_link[0]['#url'] }}" class="btn-link"
+               target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">{{ content.field_link[0]['#title'] }}</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+uuid: 9dced07d-4228-4982-9c5e-6a893322a207
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - santa_cruz
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: santa_cruz_breadcrumbs
+theme: santa_cruz
+region: page_utilities
+weight: -13
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academics\n/academics/graduate\n/academics/undergraduate\n/academics/certificate\n/user\n/user/*\n"
+    negate: true
+    context_mapping: {  }

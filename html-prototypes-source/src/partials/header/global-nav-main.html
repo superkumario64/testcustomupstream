@@ -1,0 +1,215 @@
+<div class="menu-explore off-canvas position-right wave-pattern secondary-blue" id="mobile-menu" data-off-canvas>
+
+    <div class="scroll">
+        <div class="close-main">
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+                  
+        <div class="menu-id">
+            <img class="white-ucsc-logo" src="{{root}}assets/img/build-resources/uc-santa-cruz-reverse.svg" />
+            {{#ifpage 'template-home-subsite'}}
+                <h4>History Department</h4>
+                <h5>Humanities Division</h5>
+            {{/ifpage}}
+        </div>
+        
+        <div class="aev-links">
+            <div class="expanded button-group">
+                <a class="button solid white-text" href="javascript:void(0)">Apply</a>
+                <a class="button solid white-text" href="javascript:void(0)">Visit</a>
+                <a class="button solid white-text" href="javascript:void(0)">Engage</a>
+            </div>
+        </div>
+
+        {{#ifpage 'template-home-gateway' 'template-major' 'template-feature' 'template-division' 'template-basic' 'template-basic-alternate ''template-alert-high' 'template-alert-low' 'template-a-z-list' 'template-image-gallery' ' template-landing-storytelling' ' template-landing-traditional' 'template-program' 'template-search-results' 'template-social-post'}}
+            <div class="primary-links lower-divider">
+                <ul class="vertical menu">
+                    <li><a href="javascript:void(0)">About UCSC</a></li>
+                    <li><a href="javascript:void(0)">Admissions</a></li>
+                    <li><a href="javascript:void(0)">Academics</a></li>
+                    <li><a href="javascript:void(0)">Research</a></li>
+                    <li><a href="javascript:void(0)">Student Life</a></li>
+                </ul>
+            </div>
+        {{/ifpage}}
+
+        {{#ifpage 'template-home-subsite'}}
+
+            <!-- Subsite Menu-->
+            <div class="primary-links lower-divider">
+                <ul class="vertical menu">
+                    <li><a href="javascript:void(0)" aria-label="">About</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Undergraduate</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Graduate</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Faculty</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Courses</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">News &amp; Events</a></li>
+                </ul>
+            </div>
+
+        {{/ifpage}}
+
+        {{#ifpage 'template-customlogo-subsite'}}
+
+            <!-- Subsite Menu-->
+            <div class="primary-links lower-divider">
+                <ul class="vertical menu">
+                    <li><a href="javascript:void(0)" aria-label="">About Us</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Academics</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Departments</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Degree Programs</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Industry</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">People</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Research</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Quick Links</a></li>
+                </ul>
+            </div>
+
+        {{/ifpage}}
+
+        {{#ifpage 'template-news-editorial' 'template-news-home' 'template-news-filtered' 'template-news-filtered' 'template-news-post' 'template-news-collection'}}
+
+            <!-- Subsite Menu-->
+            <div class="primary-links lower-divider">
+                <ul class="vertical menu">
+                    <li><a href="javascript:void(0)" aria-label="">Sections</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Awards &amp; Honors</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">Videos</a></li>
+                    <li><a href="javascript:void(0)" aria-label="">In the News</a></li>
+                </ul>
+            </div>
+
+        {{/ifpage}}
+
+
+        <div class="global-links">
+            <ul class="vertical menu">
+                <li><a href="javascript:void(0)" aria-label=""><span>MyUCSC</span></a></li>
+                <li><a href="javascript:void(0)" aria-label=""><span>Calendars</span></a></li>
+                <li><a href="javascript:void(0)" aria-label=""><span>Directories</span></a></li>
+            </ul>
+        </div>
+            
+                <!-- <li>
+                    <a href="javascript:void(0)">About UCSC</a>
+                    <ul class="vertical menu nested">
+                        <li>
+                            <a href="javascript:void(0)">Overview</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">President and Leadership</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Facts and Figures</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Rankings and Awards</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">History and Traditions</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Academic Profiles</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">A-Z Index</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">Student Life</a>
+                    <ul class="vertical menu nested">
+                        <li>
+                            <a href="javascript:void(0)">Overview</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Clubs and Organizations</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Athletics and Recreation</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Health and Wellness</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Residence Halls and Dining</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">The Central Coast</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">Academics</a>
+                    <ul class="vertical menu nested">
+                        <li>
+                            <a href="javascript:void(0)">Overview</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Undergraduate</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Graduate</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Colleges</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Centers and Institutes</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Study Abroad</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Internships and Co-ops</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Research</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Library</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Academic Calendar</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Academic Advising and Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">UCSC Catalog</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)">Admissions</a></li>
+                <li>
+                    <a href="javascript:void(0)">Costs and Affordability</a>
+                    <ul class="vertical menu nested">
+                        <li>
+                            <a href="javascript:void(0)">Overview</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Financial Aid</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Student Accounts</a>
+                        </li>
+                    </ul>
+                </li> -->
+                
+            </ul>
+        </div>
+
+        <!-- <div class="bottom-links">
+            <ul class="vertical menu">
+                <li><a class="button primary expanded" href="javascript:void(0)">Students</a></li>
+                <li><a class="button primary expanded" href="javascript:void(0)">Faculty and Staff</a></li>
+                <li><a class="button primary expanded" href="javascript:void(0)">Parents</a></li>
+                <li><a class="button primary expanded" href="javascript:void(0)">Alumni</a></li>
+            </ul>
+        </div> -->
+
+    </div>
+
+</div>

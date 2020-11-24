@@ -1,0 +1,28 @@
+{% set classes = [
+  'bef-links',
+  is_nested ? 'bef-nested'
+] %}
+{% set is_nested = true %}
+
+<div class="filter-controls text-center">
+  <a class="filter-control filter-category" data-toggle="filter-category" aria-controls="filter-category"> <i class="fas fa-angle-down"></i></a>
+  <a class="filter-control filter-year" data-toggle="filter-year" aria-controls="filter-year">{{ app.request.get("year") }} <i class="fas fa-angle-down"></i></a>
+</div>
+
+<div class="filter-box" id="filter-category" data-toggler="6ic7t7-toggler" data-animate="fade-in fade-out" aria-expanded="false" style="display: none;">
+  <a href="javascript:void(0)" class="close-modal" data-toggle="filter-category" aria-controls="filter-category">
+    <i class="fas fa-times"></i>
+  </a>
+  <h4>Filter by Category</h4>
+  <br>
+  {% set current_nesting_level = 0 %}
+  {% for child in children %}
+    {% set item = attribute(element, child) %}
+    {% set new_nesting_level = attribute(depth, child) %}
+    <ul class="menu-list">
+      <li>{{ item }}</li>
+    </ul>
+    {#    {% include '@better_exposed_filters/bef-nested-elements.html.twig' %}#}
+    {% set current_nesting_level = new_nesting_level %}
+  {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+uuid: 646a4874-bcbe-42af-9788-8e61a9d68739
+langcode: en
+status: true
+dependencies:
+  module:
+    - curator
+title: 'Default cron handler'
+id: curator_cron
+weight: 0
+module: curator
+callback: curator_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

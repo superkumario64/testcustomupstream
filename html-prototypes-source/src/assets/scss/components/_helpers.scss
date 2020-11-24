@@ -1,0 +1,368 @@
+.subheader {
+    margin-top: 0;
+}
+
+.last-mod-date {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #444;
+    font-size: .8rem;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+/* Overlay z-indexing due to menu overhaul */
+.off-canvas.is-transition-overlap {
+    z-index: 2000;
+}
+
+.tags {
+    font-size: .9rem;
+    line-height: 1.3;
+    margin-bottom: 5px;
+
+    p { 
+        font-size: .9rem; 
+        line-height: 1.3;
+    }
+    
+    .topics-title {
+        display: inline-block;
+    }
+}
+
+.podcast-embed {
+    width: 100%;
+    padding: 1rem 2rem 1rem 2rem;
+    background: #ccc;
+    margin: 2rem 0;
+
+    .category {
+        margin-bottom: .2rem;
+    }
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-bottom: .2rem;
+    display: block;
+
+    @include breakpoint(large){
+        margin-bottom: .6rem;
+    }
+
+    &.lighten {
+       
+        a {
+            color: white;
+             background-color: darken($primary-blue, 10%);
+             padding: .2rem .5rem;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        color: $primary-gray;
+    }
+
+}
+
+.small {
+    font-size: .8em;
+}
+
+.underline{
+    display: inline-block;
+    position: relative;
+    margin-bottom: .3rem;
+
+    @include breakpoint(large){
+        margin-bottom: 0;
+    }
+
+    &::after {
+        height: 2px;
+        display: none;
+        background-color: $secondary-turquiose;
+        width: 50%;
+        margin: .4rem 0;
+        content: '';
+        transform-origin: left;
+        transition: transform 400ms ease;
+        
+        @include breakpoint (large){
+            display: block;
+            margin: 1.4rem 0;
+        }
+    }
+
+    &.isolated {
+        &:after {
+           width: 100%;
+           transform: scaleX(0);
+           margin: .7rem 0;
+        }
+    }
+
+    &.tighten {
+        &::after {
+            margin: .3rem 0;
+            @include breakpoint (large){
+                margin: .7rem 0;
+            }
+        }
+    }
+    
+    
+}
+
+a {
+    &.pill {
+        background: #888;
+        color: white;
+        padding: .1rem .5rem;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: .9rem;
+        background-color: $secondary-blue;
+        transition: background-color 800ms;
+    }
+
+    &:hover {
+        &.pill {
+            background-color: $secondary-seagreen;
+            color: white;
+        }
+
+        .underline {
+            &::after {
+                transform: scaleX(2);
+            }
+
+            &.isolated {
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+.close-modal {
+    height: 40px;
+    width: 40px;
+    z-index: 10000;
+    border-radius: 50%;
+    text-align: center;
+    padding: .5rem;
+    color: white;
+}
+
+.more {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid lighten($secondary-turquiose, 30%);
+    position: relative;
+
+    @include breakpoint(large){
+        margin: 2rem 0 1rem;
+        padding: 1rem 0;
+    }
+
+   &.no-border{
+       border: none;
+       margin-bottom: 0;
+   }
+}
+
+.angle {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    color: #333;
+    padding: 0;
+    transition: left .5s ease-out;
+    z-index: 2; 
+}
+
+.box-shadow {
+    @include breakpoint (large){
+        box-shadow: rgba(12, 12, 13, 0.1) 0px 1px 4px 0px;
+        transition: all 700ms ease;
+    } 
+}
+
+.transparent { opacity: .8; } 
+
+.blue-bg {background-color: $primary-blue !important };
+.secondary-blue-bg { background-color: $secondary-blue !important };
+.yellow-bg {background-color: $primary-yellow !important };
+.seagreen-bg {background-color: $secondary-seagreen !important }; 
+.green-bg {background-color: $secondary-green !important };
+.turquiose-bg {background-color: $secondary-turquiose !important };
+.pink-bg {background-color: $secondary-pink !important} ;
+.white-bg {background-color: white !important };
+.lightgray-bg {background-color: #ebe6ec !important };
+.twitter-bg {background-color: #079ace !important };
+.muted-blue-bg { background-color: #e9eef1 !important };
+
+.top-bottom-borders {
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.blue-gradient {
+    background: $secondary-blue;
+    background: radial-gradient(circle, rgba(0,60,108,1) 0%,rgba(0,79,108,1) 100%) !important;
+};
+
+.secondary-blue-gradient {
+    background: $secondary-blue;
+    background: radial-gradient(circle, rgba(0,106,173,1) 0%, rgba(0,75,173,1) 100%) !important;
+}
+
+.yellow-gradient {
+    background: $primary-yellow;
+    background: radial-gradient(circle, rgba(253,199,2,1) 0%, rgba(253,176,2,1) 100%) !important;
+}
+
+.seagreen-gradient {
+    background: $secondary-seagreen;
+    background: radial-gradient(circle, rgba(0,121,136,1) 0%, rgba(0,107,136,1) 100%) !important;
+}; 
+
+.green-gradient {
+    background: darken($secondary-green, 40%);
+    background: radial-gradient(circle, rgba(darken($secondary-green, 40%),1) 0%, rgba(darken($secondary-green, 40%),1) 100%) !important;
+};
+
+.turquiose-gradient {
+    background: $secondary-turquiose;
+    background: radial-gradient(circle, rgba(19,165,220,1) 0%, rgba(19,143,220,1) 100%) !important;
+};
+
+.bordered {
+    border-top: 1px solid $secondary-seagreen;
+    border-bottom: 1px solid $secondary-seagreen;
+}
+
+.fill-width { width: 100%; }
+
+.upper-divider {
+    &::before {
+        content: '';
+        height: 10px;
+        display: block;
+        width: 100%;
+        background: transparent url(../../assets/img/build-resources/footer-divider.png) repeat-x bottom left;
+        position: relative;
+        bottom: 2.5rem;
+        display: none;
+        padding: 3rem 0 2rem;
+
+        @include breakpoint(large){
+            display: block;
+        }
+    }
+}
+
+.lower-divider {
+    &::after {
+        content: '';
+        height: 10px;
+        display: block;
+        width: 100%;
+        background: transparent url(../../assets/img/build-resources/footer-divider.png) repeat-x bottom left;
+        position: relative;
+        top: 2.5rem;
+        //display: none;
+
+        @include breakpoint(large){
+            display: block;
+        }
+    }
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.reveal {
+    padding: 2rem;
+    h5, p {
+        margin: 0;
+    }
+
+    p { 
+        margin-bottom: .4rem;
+    }
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mt-10 { margin-top: 10px !important; }
+.mt-25 { margin-top: 25px !important; }
+.mt-50 { margin-top: 50px !important; }
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-10 { margin-bottom: 10px !important; }
+.mb-25 { margin-bottom: 25px !important; }
+.mb-50 { margin-bottom: 50px !important; }
+
+.pb-0 { padding-bottom: 0 !important; }
+.pb-25 { padding-bottom: 25px !important; }
+.pb-50 { padding-bottom: 50px !important; }
+
+.owl-carousel {
+    .owl-nav {
+        position: relative;
+        width: 100%;
+        right: auto;
+        left: 0;
+        text-align: center;
+        margin-top: 1rem;
+       
+        button.owl-next, button.owl-prev {
+            font-size: 30px;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 25px;
+            text-align: center;
+            display: inline-block;
+            padding: 0;
+            color: $primary-gray;
+            transition: color 400ms;
+
+            &:hover, &:focus {
+                background-color: lighten($secondary-color, 40%);
+                outline: none;
+            }
+
+            &.disabled {
+                color: lighten($primary-gray, 40%);
+                cursor: disabled;
+            }
+
+            span {
+                display: inline-block;
+                height: 30px;
+            }
+
+        }
+
+        button.owl-prev { margin-right: 10px }
+    }
+}
+
+

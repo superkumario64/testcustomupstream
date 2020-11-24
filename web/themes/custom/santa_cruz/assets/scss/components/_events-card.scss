@@ -1,0 +1,253 @@
+.events-card {
+    margin-bottom: 1rem;
+    max-width: none;
+    text-decoration: none;
+    transition: color 1s;
+    padding: 0 1em;
+
+    @include breakpoint(xxlarge) {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    h2, h3, h4, p, div {
+        color: $primary-gray;
+    }
+    
+
+    &:hover {
+        h2, h3, h4 { color: $primary-blue; }
+    }
+
+    .events-card-content {
+        text-align: left;
+        @include xy-grid;
+
+        .date {
+            @include xy-cell(12, true, 0);
+            
+            @include breakpoint(large) {
+                margin-bottom: 0;
+                font-size: .75rem;
+                @include xy-cell(1);
+                padding: 0 2rem .4rem 0;
+           }
+
+            @include breakpoint(xlarge) {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                line-height: 0.5;
+                padding: 0 .5rem .4rem 0;
+            }
+
+            .month {
+                display: inline;
+                font-size: 1.5rem;
+               
+                @include breakpoint(xlarge) {
+                    font-size: 1.8em;
+                    margin-bottom: 0.9rem;
+                    display: block;
+                }
+            }
+
+           .day {
+                font-size: 1.5rem;
+                font-weight: bold;
+                display: inline;
+                color: $primary-blue;
+
+                @include breakpoint(xlarge) {
+                    font-size: 2.5em;
+                    display: block;
+                }
+            }
+        }
+
+
+        .inner {
+            @include xy-cell(auto, true, 0);
+            @include xy-grid;
+    
+            .image {
+               @include xy-cell(12, true, 0);
+                max-height: 155px;
+                margin-bottom: 1rem;
+                min-height: none;
+
+               /*  @include breakpoint(medium){
+                    max-height: 200px;
+                } */
+
+                @include breakpoint(large){
+                    @include xy-cell(3);
+                }
+
+                @include breakpoint(xlarge){
+                    max-height: 250px;
+                }
+
+                
+            }
+    
+            .card-content {
+                @include xy-cell(12);   
+    
+                @include breakpoint(large){
+                    @include xy-cell(9);
+                }
+
+                .header {
+                    margin-bottom: 15px;
+                    
+                    @include breakpoint(large){
+                        margin-bottom: .3rem;
+                    }
+                }
+            }
+    
+            .time {
+                margin-bottom: .5rem;
+            } 
+        }
+
+        .event-description {
+            display: none;
+            @include breakpoint(large) {
+                display: block;
+            }
+        } 
+    }
+
+    &.split-column {
+        max-width: none;
+        @include xy-cell(12);
+        margin-bottom: 3rem;
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+        }
+
+        @include breakpoint(xlarge) {
+            @include xy-cell(6);
+        }
+    }
+
+    &.full-width, &.featured {
+        max-width: none;
+        @include xy-cell(12);
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    
+        .events-card-content {
+            order: 2;
+            padding: 0 1rem;
+        }
+
+    }    
+
+}
+
+.events-card-list {
+    @include xy-grid;
+    @include xy-grid-layout(1, '.events-card');
+
+    @include breakpoint(xxlarge) {
+        @include xy-grid-layout(3, '.events-card');
+    }
+
+    .events-card {
+        @include xy-cell(12, true, 0);
+
+        @include breakpoint(xxlarge){
+            @include xy-cell(4, true, 0);
+        }
+
+        .inner {
+            @include xy-grid;
+
+            .image {
+                @include xy-cell(12, true, 0);
+
+                @include breakpoint(large){
+                    @include xy-cell(3, true, 0);
+                }
+
+                @include breakpoint(xxlarge){
+                    @include xy-cell(12);
+                }
+            }
+
+            .card-content {
+                @include xy-cell(12, true, 0);
+                margin-bottom: 1rem;
+
+                @include breakpoint(large){
+                    @include xy-cell(9);
+                }
+
+                @include breakpoint(xxlarge){
+                    @include xy-cell(12);
+                    padding: .5rem 1rem 1rem;
+                }
+            }
+
+            .time {
+                margin-bottom: .5rem;
+            } 
+        }
+    }
+    
+}
+
+.event-list-block {
+    @include xy-grid-layout(1, '.events-card');
+    @include xy-grid-collapse('.events-card', $gutter-type:margin);
+    margin-bottom: 1rem;
+   
+    .events-card {
+        width: 100%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        .events-card-content {
+            @include xy-grid;
+            @include xy-grid-collapse('.inner', $gutter-type:margin);
+    
+            .date {
+                @include xy-cell(12);
+                margin-left: 0;
+                padding-left: 0;
+                margin-right: 0;
+                width: 100%;
+                padding-top: .5rem;
+
+                @include breakpoint(large){
+                    @include xy-cell(1);
+                }
+
+                .month, .day {
+                    font-size: 1.2rem;
+                }
+            }
+         }
+
+         .inner {
+            @include xy-cell(auto);
+            @include xy-grid;
+            @include xy-grid-collapse('.card-content', $gutter-type:margin);
+            margin-left: 0;
+            padding-left: 0;
+
+            .card-content {
+                width: 100%;
+            }
+        }
+
+        .image, .event-description  {
+            display: none;
+        }
+    } 
+}

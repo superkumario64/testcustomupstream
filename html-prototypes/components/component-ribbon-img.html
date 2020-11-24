@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        <div class="intro">
+            <h1>Block Text Bottom Left</h1>
+        </div>
+        <div class="hero-wrapper hero-image textBottomLeft">
+        
+            <div class="grid-container large overflow">
+        
+                <div class="hero-ribbon white">
+                    <h1>Title</h1>
+                    <p class="lead">Progressive, bold, fearless education that benefits both the individual and the planet.</p>
+                    <p>UC Santa Cruz is a public university like no other in California, combining the intimacy of a small,
+                        liberal arts college with the depth and rigor of a major research university.</p>
+                </div>
+        
+            </div>
+        
+        </div>
+        <br><br>
+        <div class="intro">
+            <h1>Text Left</h1>
+        </div>
+        <div class="hero-wrapper hero-image textLeft">
+            
+            <div class="grid-container large overflow">
+        
+                <div class="hero-ribbon">
+                    <p class="category"><a href="javascript:void(0)" aria-label="">Category</a></p>
+                    <h1>Counterculture collection</h1>
+                    <div class="specs">
+                        <span class="tags" style="border: none; margin: 0; padding: 0">
+                            <span class="topics-title"><a class="topic">Vol 5 </a></span>
+                            <span class="topics-title"><a class="topic">Issue 13 <small></small></small></a></span>
+                        </span>
+                    </div>
+                    <p>A massive collection of works by famed author Hunter S. Thompson has been donated to Special Collections &amp; Archives<br>
+                    </p>
+                    <!--<p>Last updated: Month Day Year</p>-->
+        
+                </div>
+        
+            </div>
+        </div>
+        
+        <br><br>
+        <div class="intro">
+            <h1>Block Text Bottom</h1>
+        </div>
+        <div class="hero-wrapper hero-image-featured-news textBottom">
+            <div class="grid-container large">
+                <div class="hero-ribbon white">
+                    <p class="category"><a href="javascript:void(0)" aria-label="">Category</a></p>
+                    <h1>Featured News Title</h1>
+                    <div class="specs" style="margin-bottom: 20px">
+                        <span class="date">Month Day, Year</span>
+                        <span class="tags">
+                            <span class="topics-title">By: </span>
+                            <a href="mailto:"" class="topic">Author</a>
+                        </span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nostrum eligendi
+                            soluta accusantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla nostrum
+                            eligendi soluta accusantium.
+                    </p>
+                    <a class="button primary" href="javascript:void(0)">Read More </a>
+                </div>
+            </div>
+        </div>
+        
+        <br><br>
+        <div class="intro">
+            <h1>Caption Text Small Image</h1>
+        </div>
+        <div class="hero">
+            <div class="grid-container large">
+                <div class="hero-wrapper hero-image-small-optional empty textBottomRight textRight textCaption">
+                    <div class="grid-container large overflow">
+                        <div class="hero-ribbon empty">
+                            <p>&gt; View from the Philosophy Department</a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+.job-posting-card {
+    display: block;
+    text-decoration: none;
+    color: $primary-gray;
+    transition: color 1s;
+
+    &:hover, &:focus {
+        color: $primary-gray;
+        h4, h5 { color: $primary-blue; }
+        p {color: $primary-gray;}
+        outline: none;
+        .category { color: $primary-gray; }
+    }   
+    
+    p { margin-bottom: 1rem; }
+
+    .btn-link {
+        margin: 1rem 0;
+    }
+
+    .specs {
+        font-size: 1rem;
+
+        .date {
+            margin-bottom: .5rem;
+        }
+
+        .tags {
+            margin-top: 1rem;
+            font-size: .7rem;
+        }
+    }
+    
+     @include breakpoint(xlarge) {
+        @include xy-cell(12);
+    }
+
+}
+
+.job-posting-card-list {
+
+    &.list {
+        .job-posting-card {
+            margin-bottom: .6rem;
+            @include xy-cell(12);
+
+            .category { display: none; }
+
+            h4 { font-size: 1.25rem;}
+
+            p { font-size: .8rem; }
+
+            .tags { margin: 0;}
+
+            .date { margin-bottom: 4px; }
+
+            .underline:after {
+                display: none;
+            }
+        }
+    }
+
+    @include xy-grid;
+
+    .job-posting-card {
+        @include xy-cell(4);
+            
+         margin-bottom: 1.5rem;
+
+        @include breakpoint(large) {
+            @include xy-cell(4);
+        }
+
+    }
+
+}

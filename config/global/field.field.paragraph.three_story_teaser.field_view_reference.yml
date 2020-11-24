@@ -1,0 +1,88 @@
+uuid: 72a9f248-39b1-4f1c-b1b1-bd97f332ea6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.three_story_teaser
+    - views.view.three_story_teaser_grid
+  module:
+    - viewsreference
+id: paragraph.three_story_teaser.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: three_story_teaser
+label: 'View Reference'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    options:
+      argument: '[paragraph:field_taxonomy:target_id]'
+      title: 0
+    display_id: three_story_teaser_grid_block__news
+    data: 'a:5:{s:5:"pager";N;s:8:"argument";s:36:"[paragraph:field_taxonomy:target_id]";s:5:"limit";N;s:6:"offset";N;s:5:"title";i:0;}'
+    target_uuid: 7a8660ae-36de-4355-9ee0-de91b6c075f0
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    block: block
+    attachment: 0
+    page: 0
+    rest_export: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    three_story_teaser_grid: three_story_teaser_grid
+    alerts: 0
+    a_z_list: 0
+    block_content: 0
+    carousels: 0
+    content: 0
+    content_recent: 0
+    directory: 0
+    events: 0
+    events_calendar: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    locations: 0
+    major_card_list: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    moderated_content: 0
+    news: 0
+    news_card_grid: 0
+    podcast_card_list: 0
+    policy_card_list: 0
+    redirect: 0
+    related_content_grid: 0
+    related_links_list: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    teaser_card_list: 0
+    user_admin_people: 0
+    view_search: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    title: title
+    pager: 0
+    limit: 0
+    offset: 0
+field_type: viewsreference

@@ -1,0 +1,28 @@
+uuid: e743415b-03e5-4eb6-9176-7a8dd8b2c5d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.alert
+  module:
+    - link
+id: node.alert.field_link
+field_name: field_link
+entity_type: node
+bundle: alert
+label: Link
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: 'View Details'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

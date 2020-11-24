@@ -1,0 +1,8 @@
+uuid: 72d077f0-25e9-4d13-8466-b9f3c7933986
+langcode: en
+status: true
+dependencies: {  }
+id: site_specific_title_or_logo
+label: 'Site specific Title or Logo'
+revision: 0
+description: 'Please use Title or Logo. If added both, a Logo has priority and will display instead of a Title.'

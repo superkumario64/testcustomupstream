@@ -1,0 +1,17 @@
+uuid: aae64a60-f5c9-4186-82fd-8e99fea99f41
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: step_by_step
+label: 'Step By Step'
+effects:
+  541215bd-dc08-4c3e-83fa-d53a13c826e2:
+    uuid: 541215bd-dc08-4c3e-83fa-d53a13c826e2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 502
+      height: 165
+      crop_type: focal_point

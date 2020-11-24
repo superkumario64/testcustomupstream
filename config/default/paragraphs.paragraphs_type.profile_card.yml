@@ -1,0 +1,10 @@
+uuid: 95fcc1ac-2042-4d9e-ae69-e26f0e7be39b
+langcode: en
+status: true
+dependencies: {  }
+id: profile_card
+label: 'Profile Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

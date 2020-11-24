@@ -1,0 +1,23 @@
+uuid: 662b0d80-6f8c-4955-afee-04ee8cd6fa49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_position
+    - paragraphs.paragraphs_type.header_banner
+  module:
+    - options
+id: paragraph.header_banner.field_media_position
+field_name: field_media_position
+entity_type: paragraph
+bundle: header_banner
+label: 'Media Position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

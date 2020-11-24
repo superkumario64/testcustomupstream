@@ -1,0 +1,21 @@
+uuid: e5f44950-a619-4914-ad99-2b7b8d6ca821
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address
+    - field.storage.block_content.field_faxes
+  module:
+    - telephone
+id: block_content.address.field_faxes
+field_name: field_faxes
+entity_type: block_content
+bundle: address
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

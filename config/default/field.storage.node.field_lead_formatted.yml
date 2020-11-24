@@ -1,0 +1,19 @@
+uuid: 81e82885-f833-4af4-84aa-463b49531b09
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_lead_formatted
+field_name: field_lead_formatted
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

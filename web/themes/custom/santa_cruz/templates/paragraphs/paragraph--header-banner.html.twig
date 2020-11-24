@@ -1,0 +1,168 @@
+{% set is_imabe_banner = false %}
+{% set is_local_video_banner = false %}
+{% set is_remote_video_banner = false %}
+{% if content.field_media[0]['#media'].field_media_image is not null %}
+  {% set is_imabe_banner = true %}
+  {% set image_url = file_url(content.field_media[0]['#media'].field_media_image.entity.uri.value|image_style('full_width')) %}
+  {% set image_title = content.field_media[0]['#media'].field_media_image[0].title %}
+  {% set image_alt = content.field_media[0]['#media'].field_media_image[0].alt %}
+{% endif %}
+{% if content.field_image[0]['#media'].field_media_image is not null %}
+  {% set backup_image_url = file_url(content.field_image[0]['#media'].field_media_image.entity.uri.value|image_style('full_width')) %}
+  {% set backup_image_title = content.field_image[0]['#media'].field_media_image[0].title %}
+  {% set backup_image_alt = content.field_image[0]['#media'].field_media_image[0].alt %}
+{% endif %}
+{% if content.field_media[0]['#media'].field_media_video_file is not null %}
+  {% set is_local_video_banner = true %}
+  {% set video_url = file_url(content.field_media[0]['#media'].field_media_video_file.entity.uri.value) %}
+{% endif %}
+{% if content.field_media[0]['#media'].field_media_oembed_video.value is not null %}
+  {% set is_remote_video_banner = true %}
+  {% set video_url = file_url(content.field_media[0]['#media'].field_media_oembed_video.value|replace({'watch?v=': 'embed/'})) %}
+  {% set domain = url('<front>')['#markup']|trim('/') %}
+{% endif %}
+{% set overlay_color = content.field_overlay_color[0]['#markup']|replace({'#': ''}) %}
+{% set media_position = content.field_media_position[0]['#markup'] %}
+{% set theme_color = content.field_theme_color[0]['#markup'] %}
+
+{# Allowed colours: #fdc702,#003c6c,#006aad,#007988,#546d1a,#13a5db,#f29813. #}
+{% if overlay_color == 'fdc702' %}
+  {% set overlay_color = 'yellow' %}
+{% elseif overlay_color == '003c6c' %}
+  {% set overlay_color = 'blue' %}
+{% elseif overlay_color == '006aad' %}
+  {% set overlay_color = 'secondary-blue' %}
+{% elseif overlay_color == '007988' %}
+  {% set overlay_color = 'seagreen' %}
+{% elseif overlay_color == '546d1a' %}
+  {% set overlay_color = 'green' %}
+{% elseif overlay_color == '13a5db' %}
+  {% set overlay_color = 'turquiose' %}
+{% elseif overlay_color == 'f29813' %}
+  {% set overlay_color = 'orange' %}
+{% else %}
+  {% set overlay_color = 'unknow' %}
+{% endif %}
+
+{# In template we should use text position. #}
+{% if media_position == 'Media on the Left' %}
+  {% set text_position = 'right' %}
+{% elseif media_position == 'Media on the Right' %}
+  {% set text_position = 'left' %}
+{% else %}
+  {% set text_position = 'unknow' %}
+{% endif %}
+
+{% if theme_color == 'Basic' %}
+  {% set theme_color = 'basic' %}
+{% elseif theme_color == 'Alternative' %}
+  {% set theme_color = 'alternative' %}
+{% elseif theme_color == 'Black' %}
+  {% set theme_color = 'black' %}
+{% else %}
+  {% set theme_color = 'black' %}
+{% endif %}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'hero-viewport',
+  overlay_color
+] %}
+
+{% set hero_header_attributes = create_attribute() %}
+{% set hero_header_classes = [
+  'hero-header',
+  theme_color == 'basic' ? 'yellow-text'
+] %}
+
+{% if overlay_color == 'yellow' or overlay_color == 'orange' %}
+  {% set hero_header_classes = [
+    'hero-header',
+    'blue-text'
+  ] %}
+{% endif %}
+
+{% if theme_color == 'black' %}
+  {% set hero_header_classes = [
+    'hero-header'
+  ] %}
+{% endif %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      <div class="hero-container">
+        <div id="hero" class="hero hero-text-{{ text_position }} {{ is_local_video_banner == true ? 'video-banner' : 'image-banner' }}">
+          <div class="gradient-overlay"></div>
+          {% if is_imabe_banner == true %}
+            <img src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}" style="position:relative;top: 50%;margin-top: -10%;">
+          {% endif %}
+          {% if is_local_video_banner == true or is_remote_video_banner == true %}
+            <div class="hero-video">
+              <div class="hero-video-container">
+                {% if is_local_video_banner == true %}
+                  <video autoplay="autoplay" muted="muted" loop width="100%" height="750">
+                    <source src="{{ video_url }}" type="video/mp4">
+                    {{ 'Your browser does not support the video tag.'|t }}
+                  </video>
+                {% else %}
+                  <iframe id="muteYouTubeVideoPlayer" frameborder="0" allowfullscreen="1"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          title="YouTube video player" width="640" height="360"
+                          src="{{ video_url }}?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;loop=1&amp;fs=0&amp;cc_load_policy=0&amp;iv_load_policy=3&amp;autohide=0&amp;rel=0&amp;enablejsapi=1&amp;origin={{ domain|url_encode }}&amp;widgetid=1&amp;mute=1"></iframe>
+                {% endif %}
+              </div>
+            </div>
+            <img style="position: relative; top: 50%; margin-top: -10%; display: none;" src="{{ backup_image_url }}"
+                 alt="{{ backup_image_alt }}" title="{{ backup_image_title }}">
+          {% endif %}
+          {% if content.field_link|field_value is not empty
+            and content.field_link_2|field_value is empty
+            and content.field_links|field_value is empty %}
+          <a href="{{ content.field_link[0]['#url'] }}" class="hero-link"
+             target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}">
+            {% endif %}
+            <div class="angle transparent wow"></div>
+            <div class="hero-text">
+              {% if content.field_head_title[0]['#context'].value|length > 0 %}
+                <div class="category">{{ content.field_head_title[0]['#context'].value }}</div>
+              {% endif %}
+              <h1 {{ hero_header_attributes.addClass(hero_header_classes) }}>{{ content.field_title[0]['#context'].value }}</h1>
+              {% if content.field_caption[0]['#context'].value|length > 0 %}
+                <p class="hero-body">{{ content.field_caption[0]['#context'].value }}</p>
+              {% endif %}
+              {% if content.field_link_2|field_value is not empty %}
+                <h4 class="subhead"><a href="{{ content.field_link_2[0]['#url'] }}"
+                                       class="yellow-text">{{ content.field_link_2[0]['#title'] }}</a></h4>
+              {% endif %}
+              {% if content.field_links|field_value is not empty %}
+                {{ content.field_links }}
+              {% endif %}
+            </div>
+            {% if node_type == "gallery" %}
+              <div class="gallery-featured-links show-for-large">
+                <a class="button clear show-for-xlarge" href="#gallery-description"
+                   data-smooth-scroll="abbh0j-smooth-scroll" id="y4qxyx-smooth-scroll"><i class="fas fa-info"></i>
+                  Gallery Description</a>
+                <a class="button clear" href="javascript:void(0)" data-toggle="social-sharing"
+                   aria-controls="social-sharing"><i class="fas fa-share-alt"></i> Share</a>
+                <div class="social-sharing hero-docked" id="social-sharing" data-toggler="9fdrup-toggler"
+                     data-animate="fade-in fade-out" aria-expanded="false">
+                  {{ drupal_block('kwall_share_bar_block', {'use_module_css': false}) }}
+                </div>
+              </div>
+            {% endif %}
+            {% if content.field_link|field_value is not empty
+              and content.field_link_2|field_value is empty
+              and content.field_links|field_value is empty %}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

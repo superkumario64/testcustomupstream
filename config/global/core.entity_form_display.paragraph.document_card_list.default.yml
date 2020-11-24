@@ -1,0 +1,24 @@
+uuid: 4fa006c8-235d-4926-8129-9c4030486e9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document_card_list.field_media_refs
+    - paragraphs.paragraphs_type.document_card_list
+  module:
+    - media_library
+id: paragraph.document_card_list.default
+targetEntityType: paragraph
+bundle: document_card_list
+mode: default
+content:
+  field_media_refs:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

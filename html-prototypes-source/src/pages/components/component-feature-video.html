@@ -1,0 +1,77 @@
+---
+layout: viewer-components
+---
+<h1>Video with left aligned text</h1>
+<br />
+<div class="hero-viewport inner-page-angle yellow">
+    <div class="hero-container">
+        <!-- ' hero-text-left ' -->
+        <div id="hero" class="hero hero-text-left">
+            <div class="angle transparent"></div>
+            <div class="gradient-overlay"></div>
+            <!-- This hero can always take a video in place of the image. Always provide a backup image for mobile.-->
+            <div class="hero-video">
+                <div class="hero-video-container">
+                    <div id="muteYouTubeVideoPlayer"></div>
+                </div>
+            </div>
+            <img style="position: relative; top: 50%; margin-top: -10%" src="{{root}}assets/img/content/sammygirl.jpg" />
+            <div class="hero-text">
+                <h1 class="hero-header">We are Banana Slugs!</h1>
+                <p class="hero-body">In a world of beavers, bears, and bobcats, UCSC is home to the mighty Banana Slug — which students voted in 1986 to adopt as the official campus mascot.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br /><br /><br />
+<h1>Video with right aligned text</h1>
+<br />  
+<div class="hero-viewport inner-page-angle yellow">
+    <div class="hero-container">
+        <!-- ' hero-text-right ' -->
+        <div id="hero" class="hero hero-text-right">
+            <div class="angle transparent"></div>
+            <div class="gradient-overlay"></div>
+            <div class="hero-video">
+                <div class="hero-video-container">
+                    <div id="muteYouTubeVideoPlayer"></div>
+                </div>
+            </div>
+            <img style="position: relative; top: 50%; margin-top: -10%" src="{{root}}assets/img/content/sammygirl.jpg" />
+            <div class="hero-text">
+                <h1 class="hero-header">We are Banana Slugs!</h1>
+                <p class="hero-body">In a world of beavers, bears, and bobcats, UCSC is home to the mighty Banana Slug — which students voted in 1986 to adopt as the official campus mascot.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+    function onYouTubeIframeAPIReady() {
+        var player;
+        player = new YT.Player('muteYouTubeVideoPlayer', {
+            videoId: 'mHvCQSGanJg', // YouTube Video ID
+            playerVars: {
+                autoplay: 1, // Auto-play the video on load
+                controls: 0, // Show pause/play buttons in player
+                showinfo: 0, // Hide the video title
+                modestbranding: 1, // Hide the Youtube Logo
+                loop: 1, // Run the video in a loop
+                fs: 0, // Hide the full screen button
+                cc_load_policy: 0, // Hide closed captions
+                iv_load_policy: 3, // Hide the Video Annotations
+                autohide: 0, // Hide video controls when playing
+                rel: 0
+            },
+            events: {
+                onReady: function(e) {
+                    e.target.mute();
+                    $("#muteYouTubeVideoPlayer").removeAttr("height").removeAttr("width");
+                }
+            }
+        });
+
+    }
+</script>

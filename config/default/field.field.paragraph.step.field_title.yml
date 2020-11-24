@@ -1,0 +1,19 @@
+uuid: 54a96881-a040-4463-a0b9-45f7fc8e04bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.step
+id: paragraph.step.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: step
+label: 'Step Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

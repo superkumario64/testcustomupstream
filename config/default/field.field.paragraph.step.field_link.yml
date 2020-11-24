@@ -1,0 +1,23 @@
+uuid: c93c375b-2281-48b0-8125-4f7d7281d8a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.step
+  module:
+    - link
+id: paragraph.step.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: step
+label: 'Link URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

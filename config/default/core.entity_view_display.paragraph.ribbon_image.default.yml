@@ -1,0 +1,130 @@
+uuid: 95c46b53-d6f7-4eac-9b96-08e223f36d88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ribbon_image.field_image
+    - field.field.paragraph.ribbon_image.field_link
+    - field.field.paragraph.ribbon_image.field_title
+    - image.style.full_width
+    - paragraphs.paragraphs_type.ribbon_image
+  module:
+    - custom_module
+    - fences
+    - field_group
+    - media
+third_party_settings:
+  field_group:
+    group_ribbon:
+      children:
+        - group_figure
+        - group_figcaption
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'ribbon show-for-large suppress_padding_lr_30 suppress_padding_b_30'
+      label: Ribbon
+    group_figure:
+      children:
+        - field_image
+      parent_name: group_ribbon
+      weight: 4
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Figure
+    group_figcaption:
+      children:
+        - field_title
+        - field_link
+      parent_name: group_ribbon
+      weight: 5
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: figcaption
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Figcaption
+id: paragraph.ribbon_image.default
+targetEntityType: paragraph
+bundle: ribbon_image
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: full_width
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: img-mask
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: ucsc_buttons_link
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h2
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

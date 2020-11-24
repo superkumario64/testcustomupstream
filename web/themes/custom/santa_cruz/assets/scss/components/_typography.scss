@@ -1,0 +1,46 @@
+.blue-text{ color: $primary-blue !important }
+.secondary-blue-text { color: $secondary-blue !important }
+.yellow-text{ color: $primary-yellow !important }
+.seagreen-text{ color: $secondary-seagreen !important }
+.green-text{ color: darken($secondary-green, 20%) !important }
+.turquiose-text{ color: $secondary-turquiose !important }
+.pink-text{ color: $secondary-pink !important }
+.white-text {color: white !important };
+.gray-text {color: $primary-gray !important; }
+
+.subhead {
+    color: $secondary-blue;
+    margin: 0 0 1.5rem 0;
+}
+
+h1, h2, h3, h4, h5, p {
+    text-rendering: auto;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+
+    h1, h2 {
+        color: $primary-gray;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+        display: inline-block;
+        text-align: center;
+
+        &:after {
+            content: '';
+            height: 2px;
+            background: $secondary-turquiose;
+            width: 70%;
+            display: block;
+            margin: 10px auto;
+        }
+    }
+
+    h5 {
+        text-transform: uppercase;
+        color: $secondary-blue;
+    }
+}

@@ -1,0 +1,20 @@
+uuid: d459a93a-c4c3-4ccd-8dd3-6a4d25f5de60
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+  theme:
+    - santa_cruz
+id: ucscsearchformblock
+theme: santa_cruz
+region: gateway_header
+weight: 0
+provider: null
+plugin: ucsc_search_form
+settings:
+  id: ucsc_search_form
+  label: 'UCSC Search Form Block'
+  provider: custom_module
+  label_display: '0'
+visibility: {  }

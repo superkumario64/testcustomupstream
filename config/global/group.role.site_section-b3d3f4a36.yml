@@ -1,0 +1,17 @@
+uuid: 1a331400-b8d0-406c-81f2-5c5cb1a5e6bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+  enforced:
+    config:
+      - user.role.event_editor
+id: site_section-b3d3f4a36
+label: 'Event Editor'
+weight: -7
+internal: true
+audience: outsider
+group_type: site_section
+permissions_ui: false
+permissions: {  }

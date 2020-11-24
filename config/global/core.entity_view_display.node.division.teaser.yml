@@ -1,0 +1,48 @@
+uuid: 2e8cd968-8474-47e1-ab65-5642f1185c97
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.division.body
+    - field.field.node.division.field_address
+    - field.field.node.division.field_email_address
+    - field.field.node.division.field_link
+    - field.field.node.division.field_location_txt
+    - field.field.node.division.field_phone_numbers_txt
+    - field.field.node.division.field_profile
+    - node.type.division
+  module:
+    - text
+    - user
+id: node.division.teaser
+targetEntityType: node
+bundle: division
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address: true
+  field_email_address: true
+  field_link: true
+  field_location_txt: true
+  field_phone_numbers_txt: true
+  field_profile: true
+  langcode: true

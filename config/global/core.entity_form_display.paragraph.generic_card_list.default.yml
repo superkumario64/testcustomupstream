@@ -1,0 +1,29 @@
+uuid: 08f84c90-d18c-462d-a56d-dcd3b99e90c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.generic_card_list.field_paragraphs
+    - paragraphs.paragraphs_type.generic_card_list
+  module:
+    - paragraphs
+id: paragraph.generic_card_list.default
+targetEntityType: paragraph
+bundle: generic_card_list
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    settings:
+      title: Card
+      title_plural: Cards
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: generic_card
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true

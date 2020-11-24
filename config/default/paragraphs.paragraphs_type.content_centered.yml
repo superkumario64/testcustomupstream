@@ -1,0 +1,10 @@
+uuid: 4f42ad30-2025-4d74-8e10-bdb4a9f14382
+langcode: en
+status: true
+dependencies: {  }
+id: content_centered
+label: 'Content Centered'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

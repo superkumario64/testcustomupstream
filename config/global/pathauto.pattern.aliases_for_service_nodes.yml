@@ -1,0 +1,31 @@
+uuid: 1090bbf6-82ff-4ca3-9e07-42872a56349a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: aliases_for_service_nodes
+label: 'Aliases for service nodes'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  07f47ab5-9bb1-4abe-83df-cfb6292ca04f:
+    id: node_type
+    bundles:
+      alert: alert
+      a_z_link: a_z_link
+      document_card: document_card
+      job_posting_card: job_posting_card
+      location: location
+      major_card: major_card
+      person: person
+      policy_card: policy_card
+      profile_card: profile_card
+      program: program
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 07f47ab5-9bb1-4abe-83df-cfb6292ca04f
+selection_logic: and
+weight: -10
+relationships: {  }

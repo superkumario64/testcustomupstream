@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSC</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <div class="component-wrapper">
+
+        
+        <section class="gallery-description" id="gallery-description">
+            <div class="grid-container large">
+                <h1>Image Galleries Title</h1>
+                <p>These are a collection of galleries related to a specified topic. Each will link to their gallery page.</p>
+            </div>
+        </section>
+        
+        <div class="image-gallery-carousel owl-carousel">
+        
+            <div class="featured carousel-item">
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-1.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+            </div>
+        
+            <div class="landscape carousel-item">
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-1.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-2.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+            </div>
+        
+            <div class="landscape carousel-item">
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-3.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-4.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+            </div>
+        
+            <div class="portrait carousel-item">
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-5.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+            </div>
+        
+            <div class="landscape carousel-item">
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-6.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-7.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+            </div>
+        
+        <div class="landscape carousel-item">
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-1.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+                <div class="gallery-image" style="background-image: url(../assets/img/content/gallery-2.jpg)">
+                    <a href="javascript:void(0)"></a>
+                </div>
+            </div>
+        
+        </div>
+        
+
+    </div>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+            $(window).on('load resize', function () {
+                //document.getElementById("width_px").innerHTML = window.innerWidth;
+                //document.getElementById("width_ems").innerHTML = window.innerWidth / parseFloat($("body").css("font-size"));
+                var viewportWidth = window.innerWidth / parseFloat($("body").css("font-size"));
+
+                var breakpointSize = function(){
+                    if (viewportWidth < 25) { console.log("Breakpoint Size is small") } else
+                    if (viewportWidth < 40) { console.log("Breakpoint Size is medium") } else
+                    if (viewportWidth < 64) { console.log("Breakpoint Size is large") } else
+                    if (viewportWidth < 75) { console.log("Breakpoint Size is xlarge") } else
+                    if (viewportWidth < 90) { console.log("Breakpoint Size is xxlarge") } else
+                    console.log("Breakpoint Size is xxxlarge")
+                }
+                console.log("Viewport width is = " + viewportWidth + "rems");
+                console.log("---------------");
+                breakpointSize();
+            });
+    </script>
+</body>
+
+</html>

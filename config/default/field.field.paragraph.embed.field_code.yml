@@ -1,0 +1,29 @@
+uuid: f69c2e96-8435-4d0e-815d-d50492735bfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_code
+    - paragraphs.paragraphs_type.embed
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    code: code
+    full_html: '0'
+    basic_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+id: paragraph.embed.field_code
+field_name: field_code
+entity_type: paragraph
+bundle: embed
+label: 'HTML Embed'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,28 @@
+uuid: 17e70aeb-b9f3-4bd4-b594-31618d251504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.profile_card
+id: paragraph.profile_card.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: profile_card
+label: 'Profile Thumbnail'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 862c4706-c582-40ab-ab9e-c05108f6ed66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_colleges_departments
+    - node.type.article
+    - taxonomy.vocabulary.college_department
+id: node.article.field_colleges_departments
+field_name: field_colleges_departments
+entity_type: node
+bundle: article
+label: Colleges/Departments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      college_department: college_department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

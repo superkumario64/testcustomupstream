@@ -1,0 +1,10 @@
+uuid: d45c71dd-cb37-4b1a-8bbb-0404bdf338be
+langcode: en
+status: true
+dependencies: {  }
+id: single_feature_story_list_interi
+label: 'Single-Feature Story List (Interior)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

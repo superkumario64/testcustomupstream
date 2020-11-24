@@ -1,0 +1,19 @@
+uuid: 2b4e96da-c1fc-402e-9172-75df99bbf5e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_section
+id: site_section-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: site_section
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'view group_node:page entity'
+  2: 'view group_node:page content'
+  6: 'view group_node:webform entity'
+  7: 'view group_node:webform content'

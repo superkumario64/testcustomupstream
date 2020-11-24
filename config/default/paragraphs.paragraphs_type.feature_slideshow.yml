@@ -1,0 +1,10 @@
+uuid: 02add539-957f-49cc-916e-14f6c82ec091
+langcode: en
+status: true
+dependencies: {  }
+id: feature_slideshow
+label: 'Feature Slideshow'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

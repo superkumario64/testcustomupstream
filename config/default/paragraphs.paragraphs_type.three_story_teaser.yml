@@ -1,0 +1,10 @@
+uuid: a296a949-bbf2-46de-b389-8bdb2fae9547
+langcode: en
+status: true
+dependencies: {  }
+id: three_story_teaser
+label: 'Three-Story Teaser Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

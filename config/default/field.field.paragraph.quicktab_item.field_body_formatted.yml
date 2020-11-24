@@ -1,0 +1,21 @@
+uuid: 1143186d-b7ba-47e6-b180-4e09271dc32f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_formatted
+    - paragraphs.paragraphs_type.quicktab_item
+  module:
+    - text
+id: paragraph.quicktab_item.field_body_formatted
+field_name: field_body_formatted
+entity_type: paragraph
+bundle: quicktab_item
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

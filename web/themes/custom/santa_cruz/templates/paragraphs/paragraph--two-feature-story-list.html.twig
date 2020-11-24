@@ -1,0 +1,33 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_id,
+  'paragraph--id--' ~ paragraph.id()|clean_id,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_id,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'grid-container',
+  'large'
+] %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} aria-label="content row">
+    {% block content %}
+      <div class="grid-x grid-margin-x">
+        <div class="cell xlarge-7 large-12">
+          {{ content.field_node_max_2 }}
+        </div>
+        <div class="cell xlarge-5 large-12">
+          <div class="news-card-list full-width has-thumbs">
+            {{ content.field_node_max_4 }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+  {% if content.field_link|field_value is not empty %}
+    <div class="more">
+      <a href="{{ content.field_link[0]['#url'] }}" class="button primary"
+         rel="{{ content.field_link[0]['#url'].isExternal() ? 'nofollow' : '' }}"
+         target="{{ content.field_link[0]['#url'].isExternal() ? '_blank' : '' }}"><span>{{ content.field_link[0]['#title'] }}</span></a>
+    </div>
+  {% endif %}
+{% endblock paragraph %}

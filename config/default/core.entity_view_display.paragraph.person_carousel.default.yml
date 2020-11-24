@@ -1,0 +1,136 @@
+uuid: ffc43cf5-bd5d-472e-9f07-c707eacded7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person_carousel.field_boolean
+    - field.field.paragraph.person_carousel.field_display_count
+    - field.field.paragraph.person_carousel.field_fluid_width
+    - field.field.paragraph.person_carousel.field_hide_overflow
+    - field.field.paragraph.person_carousel.field_link
+    - field.field.paragraph.person_carousel.field_scroll_count
+    - field.field.paragraph.person_carousel.field_title
+    - field.field.paragraph.person_carousel.field_view_reference
+    - paragraphs.paragraphs_type.person_carousel
+  module:
+    - field_group
+    - link
+    - options
+    - viewsreference
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_content
+      parent_name: ''
+      weight: 7
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: row
+      region: content
+    group_column_content:
+      children:
+        - field_view_reference
+      parent_name: group_row
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: col-md-12
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Column Content'
+      region: content
+id: paragraph.person_carousel.default
+targetEntityType: paragraph
+bundle: person_carousel
+mode: default
+content:
+  field_boolean:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_display_count:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_fluid_width:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_hide_overflow:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_link:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_scroll_count:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_view_reference:
+    weight: 3
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

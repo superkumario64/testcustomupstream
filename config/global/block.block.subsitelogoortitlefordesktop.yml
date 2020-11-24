@@ -1,0 +1,20 @@
+uuid: a3e6eec2-5df6-4f45-ad9d-c1eefbae3bf4
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+  theme:
+    - santa_cruz
+id: subsitelogoortitlefordesktop
+theme: santa_cruz
+region: subsite_brand
+weight: 0
+provider: null
+plugin: custom_module_subsite_logo_desktop
+settings:
+  id: custom_module_subsite_logo_desktop
+  label: 'Subsite Logo or Title - For Desktop'
+  provider: custom_module
+  label_display: '0'
+visibility: {  }

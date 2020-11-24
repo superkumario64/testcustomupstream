@@ -1,0 +1,8 @@
+uuid: 3f686009-6609-4448-84ed-b53702995449
+langcode: en
+status: true
+dependencies: {  }
+name: 'Faculty Type'
+vid: faculty_type
+description: ''
+weight: 0
